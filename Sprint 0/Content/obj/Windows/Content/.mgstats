@@ -1,4 +1,0 @@
-Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/evans/source/repos/Sprint 0/Sprint 0/Content/File.spritefont","C:/Users/evans/source/repos/Sprint 0/Sprint 0/Content/bin/Windows/Content/Text.xnb","FontDescriptionProcessor","SpriteFontContent",2005,21521,0.3071796
-"C:/Users/evans/source/repos/Sprint 0/Sprint 0/Content/FrontFacingLinkSprite.png","C:/Users/evans/source/repos/Sprint 0/Sprint 0/Content/bin/Windows/Content/FrontFacingLinkSprite.xnb","TextureProcessor","Texture2DContent",800,66585,0.1487906
-"C:/Users/evans/source/repos/Sprint 0/Sprint 0/Content/WalkingLinkSprites.png","C:/Users/evans/source/repos/Sprint 0/Sprint 0/Content/bin/Windows/Content/WalkingLinkSprites.xnb","TextureProcessor","Texture2DContent",1093,128297,0.0179183
