@@ -42,11 +42,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
-    <Compile Include="ICommand.cs" />
     <Compile Include="IController.cs" />
+    <Compile Include="ILinkState.cs" />
     <Compile Include="ISprite.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="LinkDownIdleSprite.cs" />
+    <Compile Include="LinkDownRunSprite.cs" />
+    <Compile Include="LinkMoveDownState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Texture2DStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -8,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace _3902_ocho
 {
-    public interface ISprite
+    public interface ILinkState
     {
-        //Vector2 Location { get; set; }
-
         void Update();
-        //void Draw();
     }
 }
