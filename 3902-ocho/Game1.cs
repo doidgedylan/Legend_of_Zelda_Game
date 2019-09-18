@@ -14,6 +14,7 @@ namespace _3902_ocho
         public int screenWidth;
         public int screenHeight;
         Link link;
+        ISprite sprite;
 
         public Game1()
         {
@@ -44,6 +45,7 @@ namespace _3902_ocho
 
             Texture2DStorage.LoadAllTextures(Content);
             link = new Link(spriteBatch);
+            sprite = new CollectableArrowSprite(spriteBatch);
         }
 
         /// <summary>
@@ -59,6 +61,7 @@ namespace _3902_ocho
             GraphicsDevice.Clear(Color.White);
 
             link.Update();
+            sprite.Update();
         }
     }
 }
