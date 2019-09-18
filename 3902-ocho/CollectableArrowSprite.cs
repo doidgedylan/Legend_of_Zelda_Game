@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _3902_ocho
 {
-    public class CollectableArrowSprite : ISprite
+    public class CollectableArrowSprite //: ISprite
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;

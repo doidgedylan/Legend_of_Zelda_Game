@@ -7,12 +7,8 @@ namespace _3902_ocho
     public class LinkMoveDownState : ILinkState
     {
         private Link link;
-        Rectangle sourceRectangle;
-        Rectangle destinationRectangle;
         int currentFrame;
         int totalFrames;
-        int xPos;
-        int yPos;
         int endPosition;
 
         public LinkMoveDownState(Link link)
@@ -20,36 +16,30 @@ namespace _3902_ocho
             this.link = link;
             currentFrame = 0;
             totalFrames = 20;
-            xPos = 400;
-            yPos = 0;
             endPosition = 400;
         }
 
         public void Update()
         {
-            LinkDownIdleSprite linkDownIdleSprite = new LinkDownIdleSprite();
-            LinkDownRunSprite linkDownRunSprite = new LinkDownRunSprite();
+            LinkMoveDownSprite1 linkMoveDownSprite1 = new LinkMoveDownSprite1(link);
+            LinkMoveDownSprite2 linkMoveDownSprite2 = new LinkMoveDownSprite2(link);
 
             currentFrame++;
-            yPos = yPos + 2;
+            link.Location = Vector2.Add(link.Location, new Vector2(0, 2));
 
             if (currentFrame <= 10)
             {
-                sourceRectangle = linkDownIdleSprite.GetSourceRectangle();
+                linkMoveDownSprite1.Draw();
             }
             else if (currentFrame > 10 && currentFrame <= 20)
             {
-                sourceRectangle = linkDownRunSprite.GetSourceRectangle();
+                linkMoveDownSprite2.Draw();
             }
-
-            destinationRectangle = new Rectangle(xPos, yPos, 16 * 3, 16 * 3);
-
-            link.Draw(sourceRectangle, destinationRectangle);
 
             if (currentFrame == totalFrames)
                 currentFrame = 0;
-            if (yPos == endPosition)
-                yPos = 0;
+            if (link.Location.Y == endPosition)
+                link.Location = new Vector2(link.Location.X, 0);
         }
     }
 }

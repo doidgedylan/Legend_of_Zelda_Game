@@ -14,14 +14,12 @@ namespace _3902_ocho
         public int screenWidth;
         public int screenHeight;
         Link link;
-        ISprite sprite;
+        CollectableArrowSprite sprite;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            //screenWidth = graphics.GraphicsDevice.PresentationParameters.Bounds.Width;
-            //screenHeight = graphics.GraphicsDevice.PresentationParameters.Bounds.Height;
         }
 
         /// <summary>
@@ -61,7 +59,7 @@ namespace _3902_ocho
             GraphicsDevice.Clear(Color.White);
 
             link.Update();
-            sprite.Update();
+            //sprite.Update();
         }
     }
 }

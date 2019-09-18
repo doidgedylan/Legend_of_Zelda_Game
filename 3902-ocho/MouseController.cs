@@ -39,7 +39,7 @@ namespace _3902_ocho
             }
             else if(CursorIsInBounds(CurrentState, WindowSize[0], WindowSize[1]) && (CurrentState.LeftButton == ButtonState.Pressed))
             {
-                buttonMappings[Buttons.LeftClick].Execute(null);
+                //buttonMappings[Buttons.LeftClick].Execute(null);
             }
         }
     }
