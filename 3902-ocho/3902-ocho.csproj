@@ -56,10 +56,12 @@
     <Compile Include="ILinkState.cs" />
     <Compile Include="ICollectable.cs" />
     <Compile Include="ISprite.cs" />
+    <Compile Include="KeyboardController.cs" />
     <Compile Include="Link.cs" />
-    <Compile Include="LinkDownIdleSprite.cs" />
-    <Compile Include="LinkDownRunSprite.cs" />
+    <Compile Include="LinkMoveDownSprite1.cs" />
+    <Compile Include="LinkMoveDownSprite2.cs" />
     <Compile Include="LinkMoveDownState.cs" />
+    <Compile Include="MouseController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Texture2DStorage.cs" />

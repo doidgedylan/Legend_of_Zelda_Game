@@ -10,9 +10,6 @@ namespace _3902_ocho
 {
     public interface ISprite
     {
-        //Vector2 Location { get; set; }
-
-        void Update();
-        //void Draw();
+        void Draw();
     }
 }
