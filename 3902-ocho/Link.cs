@@ -10,6 +10,7 @@ namespace _3902_ocho
         public ILinkState state;
         public SpriteBatch spriteBatch;
         public Vector2 Location { get; set; }
+        public float speed = 2;
 
         public Link(SpriteBatch spriteBatch)
         {

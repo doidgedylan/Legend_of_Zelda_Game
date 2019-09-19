@@ -4,42 +4,42 @@ using System;
 namespace _3902_ocho
 {
 
-    public class LinkMoveDownState : ILinkState
+    public class LinkMoveUpState : ILinkState
     {
         private Link link;
         int currentFrame;
         int totalFrames;
         int endPosition;
 
-        public LinkMoveDownState(Link link)
+        public LinkMoveUpState(Link link)
         {
             this.link = link;
             currentFrame = 0;
             totalFrames = 20;
-            endPosition = 400;
+            endPosition = 0;
         }
 
         public void Update()
         {
-            LinkMoveDownSprite1 linkMoveDownSprite1 = new LinkMoveDownSprite1(link);
-            LinkMoveDownSprite2 linkMoveDownSprite2 = new LinkMoveDownSprite2(link);
+            LinkMoveUpSprite1 linkMoveUpSprite1 = new LinkMoveUpSprite1(link);
+            LinkMoveUpSprite2 linkMoveUpSprite2 = new LinkMoveUpSprite2(link);
 
             currentFrame++;
-            link.Location = Vector2.Add(link.Location, new Vector2(0, link.speed));
+            link.Location = Vector2.Subtract(link.Location, new Vector2(0, link.speed));
 
             if (currentFrame <= 10)
             {
-                linkMoveDownSprite1.Draw();
+                linkMoveUpSprite1.Draw();
             }
             else if (currentFrame > 10 && currentFrame <= 20)
             {
-                linkMoveDownSprite2.Draw();
+                linkMoveUpSprite2.Draw();
             }
 
             if (currentFrame == totalFrames)
                 currentFrame = 0;
-            if (link.Location.Y >= endPosition)
-                link.Location = new Vector2(link.Location.X, 0);
+            if (link.Location.Y <= endPosition)
+                link.Location = new Vector2(link.Location.X, 400);
         }
     }
 }
