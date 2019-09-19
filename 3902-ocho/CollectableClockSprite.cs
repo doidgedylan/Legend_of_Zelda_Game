@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace _3902_ocho
 {
-    public class CollectableArrowSprite : ICollectable
+    public class CollectableClockSprite : ICollectable
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        int xPos = 154;
+        int xPos = 58;
         int yPos = 0;
-        int width = 5;
+        int width = 11;
         int height = 16;
 
-        public CollectableArrowSprite(SpriteBatch spriteBatch)
+        public CollectableClockSprite(SpriteBatch spriteBatch)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             this.spriteBatch = spriteBatch;
@@ -30,7 +30,7 @@ namespace _3902_ocho
 
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle(200, 200, width * 3, height * 3);
+            Rectangle destinationRectangle = new Rectangle(300, 200, width * 3, height * 3);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

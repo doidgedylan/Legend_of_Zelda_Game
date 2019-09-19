@@ -14,7 +14,7 @@ namespace _3902_ocho
         public int screenWidth;
         public int screenHeight;
         Link link;
-        ISprite sprite;
+        ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart, littleHeart;
 
         public Game1()
         {
@@ -45,7 +45,16 @@ namespace _3902_ocho
 
             Texture2DStorage.LoadAllTextures(Content);
             link = new Link(spriteBatch);
-            sprite = new CollectableArrowSprite(spriteBatch);
+            arrow = new CollectableArrowSprite(spriteBatch);
+            bomb = new CollectableBombSprite(spriteBatch);
+            boomerang = new CollectableBoomerangSprite(spriteBatch);
+            bow = new CollectableBowSprite(spriteBatch);
+            clock = new CollectableClockSprite(spriteBatch);
+            compass = new CollectableCompassSprite(spriteBatch);
+            fairy = new CollectableFairySprite(spriteBatch);
+            bigHeart = new CollectableBigHeartSprite(spriteBatch);
+            littleHeart = new CollectableLittleHeartSprite(spriteBatch);
+
         }
 
         /// <summary>
@@ -61,7 +70,15 @@ namespace _3902_ocho
             GraphicsDevice.Clear(Color.White);
 
             link.Update();
-            sprite.Update();
+            arrow.Update();
+            bomb.Update();
+            boomerang.Update();
+            bow.Update();
+            clock.Update();
+            compass.Update();
+            fairy.Update();
+            bigHeart.Update();
+            littleHeart.Update();
         }
     }
 }

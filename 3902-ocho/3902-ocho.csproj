@@ -41,11 +41,20 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CollectableBigHeartSprite.cs" />
+    <Compile Include="CollectableClockSprite.cs" />
+    <Compile Include="CollectableBoomerangSprite.cs" />
+    <Compile Include="CollectableBombSprite.cs" />
     <Compile Include="CollectableArrowSprite.cs" />
+    <Compile Include="CollectableBowSprite.cs" />
+    <Compile Include="CollectableCompassSprite.cs" />
+    <Compile Include="CollectableFairySprite.cs" />
+    <Compile Include="CollectableLittleHeartSprite.cs" />
     <Compile Include="HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="ILinkState.cs" />
+    <Compile Include="ICollectable.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="Link.cs" />
     <Compile Include="LinkDownIdleSprite.cs" />
