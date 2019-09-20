@@ -12,10 +12,13 @@ namespace _3902_ocho
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        int xPos = 144;
-        int yPos = 0;
-        int width = 8;
-        int height = 16;
+        private int xPos = 144;
+        private int yPos = 0;
+        private int width = 8;
+        private int height = 16;
+        private int scale = 3;
+        private int destinationXPos = 270;
+        private int destinationYPos = 200;
 
         public CollectableBowSprite(SpriteBatch spriteBatch)
         {
@@ -30,7 +33,7 @@ namespace _3902_ocho
 
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle(270, 200, width * 3, height * 3);
+            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

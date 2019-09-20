@@ -12,10 +12,13 @@ namespace _3902_ocho
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        int xPos = 25;
-        int yPos = 1;
-        int width = 13;
-        int height = 13;
+        private int xPos = 25;
+        private int yPos = 1;
+        private int width = 13;
+        private int height = 13;
+        private int scale = 3;
+        private int destinationXPos = 260;
+        private int destinationYPos = 270;
 
         public CollectableBigHeartSprite(SpriteBatch spriteBatch)
         {
@@ -30,7 +33,7 @@ namespace _3902_ocho
 
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle(270, 260, width * 3, height * 3);
+            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

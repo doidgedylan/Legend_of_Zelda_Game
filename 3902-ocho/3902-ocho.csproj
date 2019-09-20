@@ -49,7 +49,13 @@
     <Compile Include="CollectableBowSprite.cs" />
     <Compile Include="CollectableCompassSprite.cs" />
     <Compile Include="CollectableFairySprite.cs" />
+    <Compile Include="CollectableKeySprite.cs" />
+    <Compile Include="CollectableLetterSprite.cs" />
     <Compile Include="CollectableLittleHeartSprite.cs" />
+    <Compile Include="CollectableMultipleRupeeSprite.cs" />
+    <Compile Include="CollectableSingleRupeeSprite.cs" />
+    <Compile Include="CollectableSwordSprite.cs" />
+    <Compile Include="CollectableTriforceSprite.cs" />
     <Compile Include="HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />

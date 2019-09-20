@@ -12,10 +12,13 @@ namespace _3902_ocho
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        int xPos = 58;
-        int yPos = 0;
-        int width = 11;
-        int height = 16;
+        private int xPos = 58;
+        private int yPos = 0;
+        private int width = 11;
+        private int height = 16;
+        private int scale = 3;
+        private int destinationXPos = 300;
+        private int destinationYPos = 200;
 
         public CollectableClockSprite(SpriteBatch spriteBatch)
         {
@@ -30,7 +33,7 @@ namespace _3902_ocho
 
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle(300, 200, width * 3, height * 3);
+            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

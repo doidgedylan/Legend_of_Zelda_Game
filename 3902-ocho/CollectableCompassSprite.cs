@@ -12,10 +12,13 @@ namespace _3902_ocho
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        int xPos = 258;
-        int yPos = 1;
-        int width = 11;
-        int height = 12;
+        private int xPos = 258;
+        private int yPos = 1;
+        private int width = 11;
+        private int height = 12;
+        private int scale = 3;
+        private int destinationXPos = 200;
+        private int destinationYPos = 260;
 
         public CollectableCompassSprite(SpriteBatch spriteBatch)
         {
@@ -30,7 +33,7 @@ namespace _3902_ocho
 
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle(200, 260, width * 3, height * 3);
+            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

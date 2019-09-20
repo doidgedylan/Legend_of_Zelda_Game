@@ -20,6 +20,9 @@ namespace _3902_ocho
         private int yPos = 0;
         private int width = 8;
         private int height = 16;
+        private int scale = 3;
+        private int destinationXPos = 240;
+        private int destinationYPos = 260;
 
         public CollectableFairySprite(SpriteBatch spriteBatch)
         {
@@ -51,7 +54,7 @@ namespace _3902_ocho
 
         public void Draw()
         {
-            destinationRectangle = new Rectangle(240, 260, width * 3, height * 3);
+            destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
             sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

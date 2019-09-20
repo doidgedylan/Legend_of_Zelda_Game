@@ -14,7 +14,8 @@ namespace _3902_ocho
         public int screenWidth;
         public int screenHeight;
         Link link;
-        ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart, littleHeart;
+        ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
+            littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
 
         public Game1()
         {
@@ -54,7 +55,12 @@ namespace _3902_ocho
             fairy = new CollectableFairySprite(spriteBatch);
             bigHeart = new CollectableBigHeartSprite(spriteBatch);
             littleHeart = new CollectableLittleHeartSprite(spriteBatch);
-
+            key = new CollectableKeySprite(spriteBatch);
+            letter = new CollectableLetterSprite(spriteBatch);
+            singleRupee = new CollectableSingleRupeeSprite(spriteBatch);
+            multipleRupee = new CollectableMultipleRupeeSprite(spriteBatch);
+            sword = new CollectableSwordSprite(spriteBatch);
+            triforce = new CollectableTriforceSprite(spriteBatch);
         }
 
         /// <summary>
@@ -79,6 +85,12 @@ namespace _3902_ocho
             fairy.Update();
             bigHeart.Update();
             littleHeart.Update();
+            key.Update();
+            letter.Update();
+            singleRupee.Update();
+            multipleRupee.Update();
+            sword.Update();
+            triforce.Update();
         }
     }
 }

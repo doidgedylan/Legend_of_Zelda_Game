@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace _3902_ocho
 {
-    public class CollectableArrowSprite : ICollectable
+    public class CollectableKeySprite : ICollectable
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        private int xPos = 154;
+        private int xPos = 240;
         private int yPos = 0;
-        private int width = 5;
+        private int width = 8;
         private int height = 16;
         private int scale = 3;
         private int destinationXPos = 200;
-        private int destinationYPos = 200;
+        private int destinationYPos = 320;
 
-        public CollectableArrowSprite(SpriteBatch spriteBatch)
+        public CollectableKeySprite(SpriteBatch spriteBatch)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             this.spriteBatch = spriteBatch;
