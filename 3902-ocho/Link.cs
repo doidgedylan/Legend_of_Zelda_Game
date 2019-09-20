@@ -10,13 +10,16 @@ namespace _3902_ocho
         public ILinkState state;
         public SpriteBatch spriteBatch;
         public Vector2 Location { get; set; }
-        public float speed = 2;
+        public float speed;
+        public int currentFrame;
 
         public Link(SpriteBatch spriteBatch)
         {
             this.spriteBatch = spriteBatch;
-            state = new LinkMoveDownState(this);
+            state = new LinkIdleDownState(this);
             Location = new Vector2(350, 200);
+            speed = 2;
+            currentFrame = 0;
         }
 
         public void Update()
