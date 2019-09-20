@@ -14,8 +14,8 @@ namespace _3902_ocho
         public int screenWidth;
         public int screenHeight;
         Link link;
-        ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
-            littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
+        ICollectable arrow, bigHeart, bomb, boomerang, bow, clock, compass, fairy, key,
+            letter, littleHeart, multipleRupee, singleRupee, sword, triforce;
 
         public Game1()
         {
@@ -45,22 +45,24 @@ namespace _3902_ocho
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Texture2DStorage.LoadAllTextures(Content);
+            CollectableSpriteFactory.Instance.LoadAllTextures(Content);
             link = new Link(spriteBatch);
-            arrow = new CollectableArrowSprite(spriteBatch);
-            bomb = new CollectableBombSprite(spriteBatch);
-            boomerang = new CollectableBoomerangSprite(spriteBatch);
-            bow = new CollectableBowSprite(spriteBatch);
-            clock = new CollectableClockSprite(spriteBatch);
-            compass = new CollectableCompassSprite(spriteBatch);
-            fairy = new CollectableFairySprite(spriteBatch);
-            bigHeart = new CollectableBigHeartSprite(spriteBatch);
-            littleHeart = new CollectableLittleHeartSprite(spriteBatch);
-            key = new CollectableKeySprite(spriteBatch);
-            letter = new CollectableLetterSprite(spriteBatch);
-            singleRupee = new CollectableSingleRupeeSprite(spriteBatch);
-            multipleRupee = new CollectableMultipleRupeeSprite(spriteBatch);
-            sword = new CollectableSwordSprite(spriteBatch);
-            triforce = new CollectableTriforceSprite(spriteBatch);
+            arrow = CollectableSpriteFactory.Instance.CreateArrowSprite();
+            bigHeart = CollectableSpriteFactory.Instance.CreateBigHeartSprite();
+            bomb = CollectableSpriteFactory.Instance.CreateBombSprite();
+            boomerang = CollectableSpriteFactory.Instance.CreateBoomerangSprite();
+            bow = CollectableSpriteFactory.Instance.CreateBowSprite();
+            clock = CollectableSpriteFactory.Instance.CreateClockSprite();
+            compass = CollectableSpriteFactory.Instance.CreateCompassSprite();
+            fairy = CollectableSpriteFactory.Instance.CreateFairySprite();
+            key = CollectableSpriteFactory.Instance.CreateKeySprite();
+            letter = CollectableSpriteFactory.Instance.CreateLetterSprite();
+            littleHeart = CollectableSpriteFactory.Instance.CreateLittleHeartSprite();
+            multipleRupee = CollectableSpriteFactory.Instance.CreateMultipleRupeeSprite();
+            singleRupee = CollectableSpriteFactory.Instance.CreateSingleRupeeSprite();
+            sword = CollectableSpriteFactory.Instance.CreateSwordSprite();
+            triforce = CollectableSpriteFactory.Instance.CreateTriforceSprite();
+
         }
 
         /// <summary>
@@ -76,21 +78,30 @@ namespace _3902_ocho
             GraphicsDevice.Clear(Color.White);
 
             link.Update();
-            arrow.Update();
-            bomb.Update();
-            boomerang.Update();
-            bow.Update();
-            clock.Update();
-            compass.Update();
             fairy.Update();
-            bigHeart.Update();
             littleHeart.Update();
-            key.Update();
-            letter.Update();
-            singleRupee.Update();
-            multipleRupee.Update();
-            sword.Update();
-            triforce.Update();
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+            arrow.Draw(spriteBatch, new Vector2(200, 200));
+            bigHeart.Draw(spriteBatch, new Vector2(230, 200));
+            bomb.Draw(spriteBatch, new Vector2(270, 200));
+            boomerang.Draw(spriteBatch, new Vector2(310, 200));
+            bow.Draw(spriteBatch, new Vector2(340, 200));
+            clock.Draw(spriteBatch, new Vector2(200, 260));
+            compass.Draw(spriteBatch, new Vector2(240, 260));
+            fairy.Draw(spriteBatch, new Vector2(280, 260));
+            key.Draw(spriteBatch, new Vector2(310, 260));
+            letter.Draw(spriteBatch, new Vector2(340, 260));
+            littleHeart.Draw(spriteBatch, new Vector2(200, 320));
+            multipleRupee.Draw(spriteBatch, new Vector2(230, 320));
+            singleRupee.Draw(spriteBatch, new Vector2(260, 320));
+            sword.Draw(spriteBatch, new Vector2(290, 320));
+            triforce.Draw(spriteBatch, new Vector2(330, 320));
+
+            base.Draw(gameTime);
         }
     }
 }

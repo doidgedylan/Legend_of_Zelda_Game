@@ -54,6 +54,7 @@
     <Compile Include="CollectableLittleHeartSprite.cs" />
     <Compile Include="CollectableMultipleRupeeSprite.cs" />
     <Compile Include="CollectableSingleRupeeSprite.cs" />
+    <Compile Include="CollectableSpriteFactory.cs" />
     <Compile Include="CollectableSwordSprite.cs" />
     <Compile Include="CollectableTriforceSprite.cs" />
     <Compile Include="HealthStateMachine.cs" />

@@ -11,29 +11,24 @@ namespace _3902_ocho
     public class CollectableCompassSprite : ICollectable
     {
         Texture2D spriteSheet;
-        SpriteBatch spriteBatch;
         private int xPos = 258;
         private int yPos = 1;
         private int width = 11;
         private int height = 12;
         private int scale = 3;
-        private int destinationXPos = 200;
-        private int destinationYPos = 260;
 
-        public CollectableCompassSprite(SpriteBatch spriteBatch)
+        public CollectableCompassSprite()
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            this.spriteBatch = spriteBatch;
         }
 
         public void Update()
         {
-            this.Draw();
         }
 
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
-            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

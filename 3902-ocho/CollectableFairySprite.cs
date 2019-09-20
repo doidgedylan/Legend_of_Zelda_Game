@@ -11,9 +11,6 @@ namespace _3902_ocho
     public class CollectableFairySprite : ICollectable
     {
         Texture2D spriteSheet;
-        SpriteBatch spriteBatch;
-        Rectangle destinationRectangle;
-        Rectangle sourceRectangle;
         private int currentFrame = 0;
         private int totalFrames = 20;
         private int xPos = 40;
@@ -21,16 +18,30 @@ namespace _3902_ocho
         private int width = 8;
         private int height = 16;
         private int scale = 3;
-        private int destinationXPos = 240;
-        private int destinationYPos = 260;
+        private int horizontalMovement = 0;
+        private int veriticalMovement = 0;
 
-        public CollectableFairySprite(SpriteBatch spriteBatch)
+        public CollectableFairySprite()
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            this.spriteBatch = spriteBatch;
         }
 
         public void Update()
+        {
+            this.ApplyAnimation();
+        }
+
+        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        {
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
+        }
+
+        private void ApplyAnimation()
         {
             currentFrame++;
 
@@ -48,18 +59,6 @@ namespace _3902_ocho
                 currentFrame = 0;
                 xPos = 40;
             }
-
-            this.Draw();
-        }
-
-        public void Draw()
-        {
-            destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
-            sourceRectangle = new Rectangle(xPos, yPos, width, height);
-
-            spriteBatch.Begin();
-            spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
         }
     }
 }
