@@ -4,27 +4,19 @@ using System;
 namespace _3902_ocho
 {
 
-    public class LinkMoveUpState : ILinkState
+    public class LinkIdleUpState : ILinkState
     {
         private Link link;
-        int totalFrames;
-        int endPosition;
 
-        public LinkMoveUpState(Link link)
+        public LinkIdleUpState(Link link)
         {
             this.link = link;
-            link.currentFrame = 0;
-            totalFrames = 20;
-            endPosition = 0;
         }
 
         public void Update()
         {
             LinkMoveUpSprite1 linkMoveUpSprite1 = new LinkMoveUpSprite1(link);
             LinkMoveUpSprite2 linkMoveUpSprite2 = new LinkMoveUpSprite2(link);
-
-            link.currentFrame++;
-            link.Location = Vector2.Subtract(link.Location, new Vector2(0, link.speed));
 
             if (link.currentFrame <= 10)
             {
@@ -34,11 +26,6 @@ namespace _3902_ocho
             {
                 linkMoveUpSprite2.Draw();
             }
-
-            if (link.currentFrame == totalFrames)
-                link.currentFrame = 0;
-            if (link.Location.Y <= endPosition)
-                link.Location = new Vector2(link.Location.X, 400);
         }
     }
 }
