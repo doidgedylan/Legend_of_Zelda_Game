@@ -16,6 +16,7 @@ namespace _3902_ocho
         Link link;
         ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
+        IEnemies dragon;
 
         public Game1()
         {
@@ -62,6 +63,8 @@ namespace _3902_ocho
             multipleRupee = new CollectableMultipleRupeeSprite(spriteBatch);
             sword = new CollectableSwordSprite(spriteBatch);
             triforce = new CollectableTriforceSprite(spriteBatch);
+
+            dragon = new EnemiesDragonSprite(spriteBatch);
         }
 
         /// <summary>
@@ -85,6 +88,8 @@ namespace _3902_ocho
             multipleRupee.Update();
             sword.Update();
             triforce.Update();
+
+            dragon.Update();
         }
     }
 }
