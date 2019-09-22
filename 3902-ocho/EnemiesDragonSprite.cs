@@ -1,0 +1,68 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _3902_ocho
+{
+    public class EnemiesDragonSprite : IEnemies
+    {
+        Texture2D spriteSheet;
+        SpriteBatch spriteBatch;
+        Rectangle destinationRectangle;
+        Rectangle sourceRectangle;
+        
+        private int currentFrame = 0;
+        private int totalFrames = 20;
+        private int xPos = 0;
+        private int yPos = 10;
+        private int width = 24;
+        private int height = 32;
+        private int scale = 3;
+        private int destinationXPos = 100;
+        private int destinationYPos = 100;
+
+        public EnemiesDragonSprite(SpriteBatch spriteBatch)
+        {
+            spriteSheet = Texture2DStorage.GetBossesSpriteSheet();
+            this.spriteBatch = spriteBatch;
+        }
+
+        public void Update()
+        {
+            currentFrame++;
+
+            if (currentFrame <= 10)
+            {
+                xPos = 0;
+            }
+            else if (currentFrame > 10 && currentFrame <= 20)
+            {
+                xPos = 20;
+            }
+
+            if (currentFrame == totalFrames)
+            {
+                currentFrame = 0;
+                xPos = 0;
+            }
+
+            this.Draw();
+        }
+
+        public void Draw()
+        {
+            destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
+            sourceRectangle = new Rectangle(xPos, yPos, width, height);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
+        }
+
+
+    }
+}
