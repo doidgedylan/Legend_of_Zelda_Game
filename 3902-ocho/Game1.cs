@@ -16,7 +16,6 @@ namespace _3902_ocho
         Link link;
         ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
-        IEnemies dragon;
 
         public Game1()
         {
@@ -46,6 +45,7 @@ namespace _3902_ocho
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Texture2DStorage.LoadAllTextures(Content);
+            CollectableSpriteFactory.Instance.LoadAllTextures(Content);
             link = new Link(spriteBatch);
             arrow = new CollectableArrowSprite(spriteBatch);
             bomb = new CollectableBombSprite(spriteBatch);
@@ -62,8 +62,6 @@ namespace _3902_ocho
             multipleRupee = new CollectableMultipleRupeeSprite(spriteBatch);
             sword = new CollectableSwordSprite(spriteBatch);
             triforce = new CollectableTriforceSprite(spriteBatch);
-
-            dragon = new EnemiesDragonSprite(spriteBatch);
         }
 
         /// <summary>
@@ -79,14 +77,7 @@ namespace _3902_ocho
             GraphicsDevice.Clear(Color.White);
 
             link.Update();
-            arrow.Update();
-            bomb.Update();
-            boomerang.Update();
-            bow.Update();
-            clock.Update();
-            compass.Update();
             fairy.Update();
-            bigHeart.Update();
             littleHeart.Update();
             key.Update();
             letter.Update();
@@ -94,8 +85,6 @@ namespace _3902_ocho
             multipleRupee.Update();
             sword.Update();
             triforce.Update();
-
-            dragon.Updata();
         }
     }
 }
