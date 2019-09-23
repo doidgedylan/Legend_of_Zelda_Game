@@ -23,6 +23,21 @@ namespace _3902_ocho
             keyMappings.Add(Keys.D2, Buttons.D2);
             keyMappings.Add(Keys.D3, Buttons.D3);
             keyMappings.Add(Keys.D4, Buttons.D4);
+            keyMappings.Add(Keys.Up, Buttons.Up);
+            keyMappings.Add(Keys.Down, Buttons.Down);
+            keyMappings.Add(Keys.Left, Buttons.Left);
+            keyMappings.Add(Keys.Right, Buttons.Right);
+            keyMappings.Add(Keys.W, Buttons.W);
+            keyMappings.Add(Keys.A, Buttons.A);
+            keyMappings.Add(Keys.S, Buttons.S);
+            keyMappings.Add(Keys.D, Buttons.D);
+            keyMappings.Add(Keys.E, Buttons.E);
+            keyMappings.Add(Keys.Z, Buttons.Z);
+            keyMappings.Add(Keys.N, Buttons.N);
+            keyMappings.Add(Keys.Q, Buttons.Q);
+            keyMappings.Add(Keys.R, Buttons.R);
+            keyMappings.Add(Keys.X, Buttons.X);
+            keyMappings.Add(Keys.M, Buttons.M);
         }
 
         public void RegisterCommand(Buttons button, ICommand command)
