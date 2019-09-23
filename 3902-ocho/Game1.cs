@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Windows.Input;
 
 namespace _3902_ocho
 {
@@ -17,13 +18,15 @@ namespace _3902_ocho
         ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
         IEnemies dragon;
+        private KeyboardController keyboardController;
+        private MouseController mouseController;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            //screenWidth = graphics.GraphicsDevice.PresentationParameters.Bounds.Width;
-            //screenHeight = graphics.GraphicsDevice.PresentationParameters.Bounds.Height;
+            keyboardController = new KeyboardController();
+            mouseController = new MouseController();
         }
 
         /// <summary>
@@ -35,6 +38,7 @@ namespace _3902_ocho
         protected override void Initialize()
         {
             base.Initialize();
+
         }
 
         /// <summary>
@@ -48,23 +52,36 @@ namespace _3902_ocho
             Texture2DStorage.LoadAllTextures(Content);
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
             link = new Link(spriteBatch);
-            arrow = new CollectableArrowSprite(spriteBatch);
-            bomb = new CollectableBombSprite(spriteBatch);
-            boomerang = new CollectableBoomerangSprite(spriteBatch);
-            bow = new CollectableBowSprite(spriteBatch);
-            clock = new CollectableClockSprite(spriteBatch);
-            compass = new CollectableCompassSprite(spriteBatch);
-            fairy = new CollectableFairySprite(spriteBatch);
-            bigHeart = new CollectableBigHeartSprite(spriteBatch);
-            littleHeart = new CollectableLittleHeartSprite(spriteBatch);
-            key = new CollectableKeySprite(spriteBatch);
-            letter = new CollectableLetterSprite(spriteBatch);
-            singleRupee = new CollectableSingleRupeeSprite(spriteBatch);
-            multipleRupee = new CollectableMultipleRupeeSprite(spriteBatch);
-            sword = new CollectableSwordSprite(spriteBatch);
-            triforce = new CollectableTriforceSprite(spriteBatch);
+            arrow = CollectableSpriteFactory.Instance.CreateArrowSprite();
+            bomb = CollectableSpriteFactory.Instance.CreateBombSprite();
+            boomerang = CollectableSpriteFactory.Instance.CreateBoomerangSprite();
+            bow = CollectableSpriteFactory.Instance.CreateBowSprite();
+            compass = CollectableSpriteFactory.Instance.CreateCompassSprite();
+            fairy = CollectableSpriteFactory.Instance.CreateFairySprite();
+            bigHeart = CollectableSpriteFactory.Instance.CreateBigHeartSprite();
+            littleHeart = CollectableSpriteFactory.Instance.CreateLittleHeartSprite();
+            key = CollectableSpriteFactory.Instance.CreateKeySprite();
+            letter = CollectableSpriteFactory.Instance.CreateLetterSprite();
+            singleRupee = CollectableSpriteFactory.Instance.CreateSingleRupeeSprite();
+            multipleRupee = CollectableSpriteFactory.Instance.CreateMultipleRupeeSprite();
+            sword = CollectableSpriteFactory.Instance.CreateSwordSprite();
+            triforce = CollectableSpriteFactory.Instance.CreateTriforceSprite();
 
             dragon = new EnemiesDragonSprite(spriteBatch);
+
+            HealthStateMachine healthStateMachine = new HealthStateMachine();
+
+            keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
+            keyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));
+            keyboardController.RegisterCommand(Buttons.A, new LinkMoveLeftCommand(link));
+            keyboardController.RegisterCommand(Buttons.S, new LinkMoveDownCommand(link));
+            keyboardController.RegisterCommand(Buttons.D, new LinkMoveRightCommand(link));
+            keyboardController.RegisterCommand(Buttons.Up, new LinkMoveUpCommand(link));
+            keyboardController.RegisterCommand(Buttons.Left, new LinkMoveLeftCommand(link));
+            keyboardController.RegisterCommand(Buttons.Down, new LinkMoveDownCommand(link));
+            keyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
+            keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
+            keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
         }
 
         /// <summary>
@@ -90,6 +107,9 @@ namespace _3902_ocho
             triforce.Update();
 
             dragon.Update();
+
+            keyboardController.Update();
+            mouseController.Update();
         }
     }
 }

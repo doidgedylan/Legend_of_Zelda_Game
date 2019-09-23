@@ -10,7 +10,7 @@ namespace _3902_ocho
 {
     public enum Buttons
     {
-        Up, Down, Left, Right, W, A, S, D, E, Z, N, Q, R, X, M, D0, D1, D2, D3, D4, RightClick, LeftClick
+        Up, Down, Left, Right, W, A, S, D, E, Z, N, Q, R, X, M, D0, D1, D2, D3, D4, RightClick, LeftClick, NoButtonsPressed
     }
     interface IController
     {

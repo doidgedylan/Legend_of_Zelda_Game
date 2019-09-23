@@ -58,8 +58,10 @@
     <Compile Include="CollectableSwordSprite.cs" />
     <Compile Include="CollectableTriforceSprite.cs" />
     <Compile Include="EnemiesDragonSprite.cs" />
+    <Compile Include="ExitCommand.cs" />
     <Compile Include="HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="HurtLinkCommand.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IEnemies.cs" />
     <Compile Include="ILinkState.cs" />
@@ -69,20 +71,25 @@
     <Compile Include="Link.cs" />
     <Compile Include="LinkIdleDownState.cs" />
     <Compile Include="LinkIdleLeftState.cs" />
+    <Compile Include="LinkMoveDownCommand.cs" />
+    <Compile Include="LinkMoveLeftCommand.cs" />
     <Compile Include="LinkMoveLeftState.cs" />
     <Compile Include="LinkMoveLeftSprite1.cs" />
     <Compile Include="LinkMoveLeftSprite2.cs" />
     <Compile Include="LinkIdleRightState.cs" />
+    <Compile Include="LinkMoveRightCommand.cs" />
     <Compile Include="LinkMoveRightState.cs" />
     <Compile Include="LinkMoveRightSprite2.cs" />
     <Compile Include="LinkMoveRightSprite1.cs" />
     <Compile Include="LinkIdleUpState.cs" />
+    <Compile Include="LinkMoveUpCommand.cs" />
     <Compile Include="LinkMoveUpState.cs" />
     <Compile Include="LinkMoveUpSprite2.cs" />
     <Compile Include="LinkMoveUpSprite1.cs" />
     <Compile Include="LinkMoveDownSprite1.cs" />
     <Compile Include="LinkMoveDownSprite2.cs" />
     <Compile Include="LinkMoveDownState.cs" />
+    <Compile Include="LinkStopCommand.cs" />
     <Compile Include="MouseController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,11 +103,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Windows\x86\Debug\3902-ocho.exe" />
+    <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
+    <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
+    <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.Direct3D11.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.Direct3D11.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.DXGI.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.DXGI.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.XAudio2.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.XAudio2.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.dll" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
+    <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
     <Content Include="Icon.ico" />
+    <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\3902-ocho.exe" />
+    <Content Include="obj\x86\Debug\3902-ocho.pdb" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="bin\Windows\x86\Debug\Content\ItemSpriteSheet.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\LinkSpriteSheet.xnb" />
+    <None Include="obj\x86\Debug\3902-ocho.csproj.CopyComplete" />
+    <None Include="obj\x86\Debug\3902-ocho.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x86\Debug\3902-ocho.csprojAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\build.force" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Release\3902-ocho.csproj.CoreCompileInputs.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Windows\Content\" />
+    <Folder Include="bin\Windows\x86\Release\" />
+    <Folder Include="obj\Windows\Content\" />
+    <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

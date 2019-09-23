@@ -38,6 +38,7 @@ namespace _3902_ocho
             keyMappings.Add(Keys.R, Buttons.R);
             keyMappings.Add(Keys.X, Buttons.X);
             keyMappings.Add(Keys.M, Buttons.M);
+            keyMappings.Add(Keys.None, Buttons.NoButtonsPressed);
         }
 
         public void RegisterCommand(Buttons button, ICommand command)
@@ -54,6 +55,10 @@ namespace _3902_ocho
                 {
                     commandMappings[keyMappings[key]].Execute(null);
                 }
+            }
+            if (pressedKeys.Length == 0)
+            {
+                commandMappings[keyMappings[Keys.None]].Execute(null);
             }
         }
     }
