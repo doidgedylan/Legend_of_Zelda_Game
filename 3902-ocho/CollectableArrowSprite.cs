@@ -11,29 +11,24 @@ namespace _3902_ocho
     public class CollectableArrowSprite : ICollectable
     {
         Texture2D spriteSheet;
-        SpriteBatch spriteBatch;
         private int xPos = 154;
         private int yPos = 0;
         private int width = 5;
         private int height = 16;
         private int scale = 3;
-        private int destinationXPos = 200;
-        private int destinationYPos = 200;
 
-        public CollectableArrowSprite(SpriteBatch spriteBatch)
+        public CollectableArrowSprite()
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            this.spriteBatch = spriteBatch;
         }
 
         public void Update()
         {
-            this.Draw();
         }
 
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
-            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();

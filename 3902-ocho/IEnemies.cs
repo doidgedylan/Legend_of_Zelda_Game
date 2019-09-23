@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace _3902_ocho
 {
-    public interface ICollectable
+    public interface IEnemies
     {
         void Update();
-        void Draw(SpriteBatch spriteBatch, Vector2 location);
+        void Draw();
     }
 }

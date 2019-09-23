@@ -54,6 +54,7 @@
     <Compile Include="CollectableLittleHeartSprite.cs" />
     <Compile Include="CollectableMultipleRupeeSprite.cs" />
     <Compile Include="CollectableSingleRupeeSprite.cs" />
+    <Compile Include="CollectableSpriteFactory.cs" />
     <Compile Include="CollectableSwordSprite.cs" />
     <Compile Include="CollectableTriforceSprite.cs" />
     <Compile Include="HealthStateMachine.cs" />
@@ -64,12 +65,16 @@
     <Compile Include="ISprite.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="Link.cs" />
+    <Compile Include="LinkIdleDownState.cs" />
+    <Compile Include="LinkIdleLeftState.cs" />
     <Compile Include="LinkMoveLeftState.cs" />
     <Compile Include="LinkMoveLeftSprite1.cs" />
     <Compile Include="LinkMoveLeftSprite2.cs" />
+    <Compile Include="LinkIdleRightState.cs" />
     <Compile Include="LinkMoveRightState.cs" />
     <Compile Include="LinkMoveRightSprite2.cs" />
     <Compile Include="LinkMoveRightSprite1.cs" />
+    <Compile Include="LinkIdleUpState.cs" />
     <Compile Include="LinkMoveUpState.cs" />
     <Compile Include="LinkMoveUpSprite2.cs" />
     <Compile Include="LinkMoveUpSprite1.cs" />

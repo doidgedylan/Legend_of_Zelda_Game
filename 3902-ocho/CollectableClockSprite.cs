@@ -11,29 +11,24 @@ namespace _3902_ocho
     public class CollectableClockSprite : ICollectable
     {
         Texture2D spriteSheet;
-        SpriteBatch spriteBatch;
         private int xPos = 58;
         private int yPos = 0;
         private int width = 11;
         private int height = 16;
         private int scale = 3;
-        private int destinationXPos = 300;
-        private int destinationYPos = 200;
 
-        public CollectableClockSprite(SpriteBatch spriteBatch)
+        public CollectableClockSprite()
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            this.spriteBatch = spriteBatch;
         }
 
         public void Update()
         {
-            this.Draw();
         }
 
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
-            Rectangle destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Begin();
