@@ -37,17 +37,17 @@ namespace _3902_ocho
 
             if (currentFrame <= 10)
             {
-                xPos = 0;
+                xPos = 1;
             }
             else if (currentFrame > 10 && currentFrame <= 20)
             {
-                xPos = 20;
+                xPos = 26;
             }
 
             if (currentFrame == totalFrames)
             {
                 currentFrame = 0;
-                xPos = 0;
+                xPos = 1;
             }
 
             this.Draw();
