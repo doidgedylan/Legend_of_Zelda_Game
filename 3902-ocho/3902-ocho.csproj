@@ -59,8 +59,11 @@
     <Compile Include="CollectableSpriteFactory.cs" />
     <Compile Include="CollectableSwordSprite.cs" />
     <Compile Include="CollectableTriforceSprite.cs" />
+    <Compile Include="EnemiesTrapSprite.cs" />
     <Compile Include="EnemiesDragonSprite.cs" />
     <Compile Include="EnemiesGelSprite.cs" />
+    <Compile Include="EnemiesKeeseSprite.cs" />
+    <Compile Include="EnemiesWallmasterSprite.cs" />
     <Compile Include="ExitCommand.cs" />
     <Compile Include="HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
