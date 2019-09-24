@@ -9,6 +9,7 @@ namespace _3902_ocho
         private static Texture2D linkSpriteSheet;
         private static Texture2D collectableSpriteSheet;
         private static Texture2D bossesSpriteSheet;
+        private static Texture2D blockSpriteSheet;
 
         public Texture2DStorage()
         {
@@ -19,6 +20,7 @@ namespace _3902_ocho
             linkSpriteSheet = content.Load<Texture2D>("LinkSpriteSheet");
             collectableSpriteSheet = content.Load<Texture2D>("ItemSpriteSheet");
             bossesSpriteSheet = content.Load<Texture2D>("BossesSpriteSheet");
+            blockSpriteSheet = content.Load<Texture2D>("BlockSpriteSheet");
         }
 
         public static Texture2D GetLinkSpriteSheet()
@@ -34,6 +36,11 @@ namespace _3902_ocho
         public static Texture2D GetBossesSpriteSheet()
         {
             return bossesSpriteSheet;
+        }
+
+        public static Texture2D GetBlockSpriteSheet()
+        {
+            return blockSpriteSheet;
         }
 
     }

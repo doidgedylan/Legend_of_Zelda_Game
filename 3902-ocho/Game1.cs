@@ -18,6 +18,7 @@ namespace _3902_ocho
         ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
         IEnemies dragon;
+        IBlock pyramidBlock;
         private KeyboardController keyboardController;
         private MouseController mouseController;
 
@@ -25,8 +26,6 @@ namespace _3902_ocho
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            keyboardController = new KeyboardController();
-            mouseController = new MouseController();
         }
 
         /// <summary>
@@ -67,10 +66,15 @@ namespace _3902_ocho
             sword = CollectableSpriteFactory.Instance.CreateSwordSprite();
             triforce = CollectableSpriteFactory.Instance.CreateTriforceSprite();
 
+            BlockSpriteFactory.Instance.LoadAllTextures(Content);
+            pyramidBlock = BlockSpriteFactory.Instance.CreateBlockPyramidSprite();
+
             dragon = new EnemiesDragonSprite(spriteBatch);
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
 
+            keyboardController = new KeyboardController();
+            mouseController = new MouseController();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
             keyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));
             keyboardController.RegisterCommand(Buttons.A, new LinkMoveLeftCommand(link));
@@ -82,6 +86,12 @@ namespace _3902_ocho
             keyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
             keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
             keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
+            keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
+        }
+
+        public void ReloadContent()
+        {
+            LoadContent();
         }
 
         /// <summary>
