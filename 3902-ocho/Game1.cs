@@ -17,7 +17,7 @@ namespace _3902_ocho
         Link link;
         ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
-        IEnemies dragon, gel, keese, wallmaster, trap, goriya;
+        IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
 
         IBlock pyramidBlock;
         private KeyboardController keyboardController;
@@ -76,6 +76,7 @@ namespace _3902_ocho
             wallmaster = new EnemiesWallmasterSprite(spriteBatch);
             trap = new EnemiesTrapSprite(spriteBatch);
             goriya = new EnemiesGoriyaSprite(spriteBatch);
+            stalfos = new EnemiesStalfosSprite(spriteBatch);
 
 
 
@@ -130,6 +131,7 @@ namespace _3902_ocho
             wallmaster.Update();
             trap.Update();
             goriya.Update();
+            stalfos.Update();
 
             keyboardController.Update();
             mouseController.Update();

@@ -60,6 +60,7 @@
     <Compile Include="CollectableSwordSprite.cs" />
     <Compile Include="CollectableTriforceSprite.cs" />
     <Compile Include="EnemiesGoriyaSprite.cs" />
+    <Compile Include="EnemiesStalfosSprite.cs" />
     <Compile Include="EnemiesTrapSprite.cs" />
     <Compile Include="EnemiesDragonSprite.cs" />
     <Compile Include="EnemiesGelSprite.cs" />

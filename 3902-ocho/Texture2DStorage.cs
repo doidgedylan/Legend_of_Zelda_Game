@@ -12,6 +12,7 @@ namespace _3902_ocho
         private static Texture2D blockSpriteSheet;
         private static Texture2D enemiesSpriteSheet;
         private static Texture2D goriyaSpriteSheet;
+        private static Texture2D stalfosSpriteSheet;
 
 
         public Texture2DStorage()
@@ -26,6 +27,7 @@ namespace _3902_ocho
             blockSpriteSheet = content.Load<Texture2D>("BlockSpriteSheet");
             enemiesSpriteSheet = content.Load<Texture2D>("DungeonEnemiesSpriteSheet");
             goriyaSpriteSheet = content.Load<Texture2D>("GoriyaSpriteSheet");
+            stalfosSpriteSheet = content.Load<Texture2D>("StalfosSpriteSheet");
         }
 
         public static Texture2D GetLinkSpriteSheet()
@@ -56,6 +58,10 @@ namespace _3902_ocho
         public static Texture2D GetGoriyaSpriteSheet()
         {
             return goriyaSpriteSheet;
+        }
+        public static Texture2D GetStalfosSpriteSheet()
+        {
+            return stalfosSpriteSheet;
         }
 
     }
