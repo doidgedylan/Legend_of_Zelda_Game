@@ -18,7 +18,6 @@ namespace _3902_ocho
         }
         public bool CanExecute(object parameter)
         {
-            // exit should always be able to execute
             return true;
         }
 

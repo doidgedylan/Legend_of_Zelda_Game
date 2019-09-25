@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using _3902_ocho.Commands;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Windows.Input;
@@ -15,11 +16,10 @@ namespace _3902_ocho
         public int screenWidth;
         public int screenHeight;
         Link link;
-        ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
+        public ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
-        IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
-
-        IBlock pyramidBlock;
+        public IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
+        public IBlock pyramidBlock;
         private KeyboardController keyboardController;
         private MouseController mouseController;
 
@@ -95,6 +95,8 @@ namespace _3902_ocho
             keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
             keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
+            keyboardController.RegisterCommand(Buttons.T, new DrawBlocksCommand(this, spriteBatch));
+            keyboardController.RegisterCommand(Buttons.Y, new DrawCollectablesCommand(this, spriteBatch));
         }
 
         public void ReloadContent()

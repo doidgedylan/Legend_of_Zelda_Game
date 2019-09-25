@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BlockSprites\BlockPyramidSprite.cs" />
+    <Compile Include="Commands\DrawBlocksCommand.cs" />
+    <Compile Include="Commands\DrawCollectablesCommand.cs" />
     <Compile Include="SpriteFactories\BlockSpriteFactory.cs" />
     <Compile Include="CollectableSprites\CollectableBigHeartSprite.cs" />
     <Compile Include="CollectableSprites\CollectableClockSprite.cs" />

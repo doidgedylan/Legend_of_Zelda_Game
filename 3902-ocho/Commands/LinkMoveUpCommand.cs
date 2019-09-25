@@ -19,7 +19,7 @@ namespace _3902_ocho
         }
         public bool CanExecute(object parameter)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Execute(object parameter)
