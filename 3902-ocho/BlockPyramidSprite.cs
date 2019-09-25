@@ -11,8 +11,8 @@ namespace _3902_ocho
     public class BlockPyramidSprite : IBlock
     {
         Texture2D spriteSheet;
-        private int xPos = 150;
-        private int yPos = 150;
+        private int xPos = 0;
+        private int yPos = 0;
         private int width = 18;
         private int height = 18;
         private int scale = 2;
