@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using _3902_ocho.Interfaces;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Windows.Input;
 using System.Threading.Tasks;
 
 namespace _3902_ocho
@@ -35,11 +35,11 @@ namespace _3902_ocho
             int MouseY = CurrentState.Y;
             if (CursorIsInBounds(CurrentState, WindowSize[0], WindowSize[1]) && (CurrentState.RightButton == ButtonState.Pressed))
             {
-                buttonMappings[Buttons.RightClick].Execute(null);
+                buttonMappings[Buttons.RightClick].Execute();
             }
             else if(CursorIsInBounds(CurrentState, WindowSize[0], WindowSize[1]) && (CurrentState.LeftButton == ButtonState.Pressed))
             {
-                buttonMappings[Buttons.LeftClick].Execute(null);
+                buttonMappings[Buttons.LeftClick].Execute();
             }
         }
     }

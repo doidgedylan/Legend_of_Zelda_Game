@@ -42,11 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BlockSprites\BlockPyramidSprite.cs" />
-    <Compile Include="Commands\DrawBlocksCommand.cs" />
-    <Compile Include="Commands\DrawCollectablesCommand.cs" />
     <Compile Include="Commands\LinkPickUpItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="LinkSprites\LinkUseItemLeftSprite1.cs" />
     <Compile Include="LinkSprites\LinkUseItemRightSprite1.cs" />
     <Compile Include="LinkSprites\LinkWoodSwordLeftSprite1.cs" />
@@ -105,7 +104,7 @@
     <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Link\HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Link\HurtLinkCommand.cs" />
+    <Compile Include="Commands\HurtLinkCommand.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IEnemies.cs" />

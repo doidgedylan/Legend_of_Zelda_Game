@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using _3902_ocho.Interfaces;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace _3902_ocho
 {
@@ -37,8 +37,6 @@ namespace _3902_ocho
             keyMappings.Add(Keys.N, Buttons.N);
             keyMappings.Add(Keys.Q, Buttons.Q);
             keyMappings.Add(Keys.R, Buttons.R);
-            keyMappings.Add(Keys.T, Buttons.T);
-            keyMappings.Add(Keys.Y, Buttons.Y);
             keyMappings.Add(Keys.None, Buttons.NoButtonsPressed);
         }
 
@@ -54,12 +52,12 @@ namespace _3902_ocho
             {
                 if (keyMappings.ContainsKey(key))
                 {
-                    commandMappings[keyMappings[key]].Execute(null);
+                    commandMappings[keyMappings[key]].Execute();
                 }
             }
             if (pressedKeys.Length == 0)
             {
-                commandMappings[keyMappings[Keys.None]].Execute(null);
+                commandMappings[keyMappings[Keys.None]].Execute();
             }
         }
     }

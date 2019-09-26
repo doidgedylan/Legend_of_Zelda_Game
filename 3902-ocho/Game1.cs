@@ -1,4 +1,4 @@
-﻿using _3902_ocho.Commands;
+﻿using _3902_ocho.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -11,12 +11,12 @@ namespace _3902_ocho
     /// </summary>
     public class Game1 : Game
     {
-        SpriteBatch spriteBatch;
-        Link link;
-        public ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
+        private SpriteBatch spriteBatch;
+        private Link link;
+        private ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
-        public IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
-        public IBlock pyramidBlock;
+        private IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
+        private IBlock pyramidBlock;
         private KeyboardController keyboardController;
         private MouseController mouseController;
 
@@ -97,12 +97,13 @@ namespace _3902_ocho
             keyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
             keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
             keyboardController.RegisterCommand(Buttons.Z, new LinkWoodSwordCommand(link));
+            keyboardController.RegisterCommand(Buttons.N, new LinkWoodSwordCommand(link));
+            mouseController.RegisterCommand(Buttons.LeftClick, new LinkWoodSwordCommand(link));
+            mouseController.RegisterCommand(Buttons.RightClick, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
             keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
-            keyboardController.RegisterCommand(Buttons.T, new DrawBlocksCommand(this, spriteBatch));
-            keyboardController.RegisterCommand(Buttons.Y, new DrawCollectablesCommand(this, spriteBatch));
         }
 
         public void ReloadContent()
