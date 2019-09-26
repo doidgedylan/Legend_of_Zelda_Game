@@ -11,10 +11,7 @@ namespace _3902_ocho
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        public int screenWidth;
-        public int screenHeight;
         Link link;
         public ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
@@ -99,6 +96,8 @@ namespace _3902_ocho
             keyboardController.RegisterCommand(Buttons.Down, new LinkMoveDownCommand(link));
             keyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
             keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
+            keyboardController.RegisterCommand(Buttons.Z, new LinkUseItemCommand(link));
+            keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
             keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
             keyboardController.RegisterCommand(Buttons.T, new DrawBlocksCommand(this, spriteBatch));
@@ -118,6 +117,7 @@ namespace _3902_ocho
         protected override void Update(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LightGray);
+
 
             keyboardController.Update();
             mouseController.Update();
@@ -141,6 +141,7 @@ namespace _3902_ocho
             goriya.Update();
             stalfos.Update();
             Draw();
+
 
             spriteBatch.End();
         }

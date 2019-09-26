@@ -29,8 +29,11 @@ namespace _3902_ocho
             keyMappings.Add(Keys.A, Buttons.A);
             keyMappings.Add(Keys.S, Buttons.S);
             keyMappings.Add(Keys.D, Buttons.D);
-            keyMappings.Add(Keys.E, Buttons.E);
             keyMappings.Add(Keys.Z, Buttons.Z);
+            keyMappings.Add(Keys.X, Buttons.X);
+            keyMappings.Add(Keys.C, Buttons.C);
+            keyMappings.Add(Keys.V, Buttons.V);
+            keyMappings.Add(Keys.E, Buttons.E);
             keyMappings.Add(Keys.N, Buttons.N);
             keyMappings.Add(Keys.Q, Buttons.Q);
             keyMappings.Add(Keys.R, Buttons.R);
