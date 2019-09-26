@@ -19,9 +19,7 @@ namespace _3902_ocho
         {
             Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y, 16 * 3, 16 * 3);
             SpriteEffects s = SpriteEffects.FlipHorizontally;
-            link.spriteBatch.Begin();
             link.spriteBatch.Draw(spriteSheet, destinationRectangle, GetSourceRectangle(), Color.White, 0, new Vector2(0,0), s, 0f);
-            link.spriteBatch.End();
         }
 
         public Rectangle GetSourceRectangle()

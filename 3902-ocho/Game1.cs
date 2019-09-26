@@ -117,10 +117,12 @@ namespace _3902_ocho
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            GraphicsDevice.Clear(Color.LightGray);
 
-            GraphicsDevice.Clear(Color.White);
+            keyboardController.Update();
+            mouseController.Update();
+
+            spriteBatch.Begin();
 
             link.Update();
             fairy.Update();
@@ -131,7 +133,6 @@ namespace _3902_ocho
             multipleRupee.Update();
             sword.Update();
             triforce.Update();
-
             dragon.Update();
             gel.Update();
             keese.Update();
@@ -139,14 +140,13 @@ namespace _3902_ocho
             trap.Update();
             goriya.Update();
             stalfos.Update();
+            Draw();
 
-            keyboardController.Update();
-            mouseController.Update();
+            spriteBatch.End();
         }
 
-        protected override void Draw(GameTime gameTime)
+        public void Draw()
         {
-            base.Draw(gameTime);
             pyramidBlock.Draw(spriteBatch, new Vector2(40, 30));
             bomb.Draw(spriteBatch, new Vector2(80, 50));
             boomerang.Draw(spriteBatch, new Vector2(120, 50));

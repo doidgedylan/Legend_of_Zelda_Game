@@ -31,9 +31,8 @@ namespace _3902_ocho
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
-            spriteBatch.Begin();
+
             spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
         }
     }
 }

@@ -13,7 +13,6 @@ namespace _3902_ocho
         public LinkMoveRightState(Link link)
         {
             this.link = link;
-            link.currentFrame = 0;
             totalFrames = 20;
             endPosition = 750;
         }
