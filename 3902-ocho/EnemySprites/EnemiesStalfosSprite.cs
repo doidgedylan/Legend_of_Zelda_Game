@@ -18,7 +18,7 @@ namespace _3902_ocho
         private int currentFrame = 0;
         private int totalFrames = 20;
         private int xPos = 0;
-        private int yPos = 7;
+        private int yPos = 5;
         private int width = 16;
         private int height = 16;
         private int scale = 3;
@@ -37,17 +37,17 @@ namespace _3902_ocho
 
             if (currentFrame <= 10)
             {
-                xPos = 496;
+                xPos = 356;
             }
             else if (currentFrame > 10 && currentFrame <= 20)
             {
-                xPos = 520;
+                xPos = 373;
             }
 
             if (currentFrame == totalFrames)
             {
                 currentFrame = 0;
-                xPos = 496;
+                xPos = 356;
             }
 
             this.Draw();

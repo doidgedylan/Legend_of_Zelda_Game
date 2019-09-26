@@ -25,8 +25,14 @@ namespace _3902_ocho
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            GraphicsDeviceManager graphics = new GraphicsDeviceManager(this);
+            graphics.DeviceCreated += OnDeviceCreated;
             Content.RootDirectory = "Content";
+        }
+
+        private void OnDeviceCreated(object sender, System.EventArgs e)
+        {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
         /// <summary>
