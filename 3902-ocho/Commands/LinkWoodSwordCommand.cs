@@ -7,12 +7,12 @@ using System.Windows.Input;
 
 namespace _3902_ocho
 {
-    class LinkUseItemCommand : ICommand
+    class LinkWoodSwordCommand : ICommand
     {
         private Link link;
         public event EventHandler CanExecuteChanged;
 
-        public LinkUseItemCommand(Link link)
+        public LinkWoodSwordCommand(Link link)
         {
             this.link = link;
         }
@@ -25,19 +25,19 @@ namespace _3902_ocho
         {
             if (link.state.GetType().Name == "LinkMoveDownState" || link.state.GetType().Name == "LinkIdleDownState")
             {
-                link.state = new LinkUseItemDownState(link);
+                link.state = new LinkWoodSwordDownState(link);
             }
             else if (link.state.GetType().Name == "LinkMoveUpState" || link.state.GetType().Name == "LinkIdleUpState")
             {
-                link.state = new LinkUseItemUpState(link);
+                link.state = new LinkWoodSwordUpState(link);
             }
             else if (link.state.GetType().Name == "LinkMoveLeftState" || link.state.GetType().Name == "LinkIdleLeftState")
             {
-                link.state = new LinkUseItemLeftState(link);
+                link.state = new LinkWoodSwordLeftState(link);
             }
             else if (link.state.GetType().Name == "LinkMoveRightState" || link.state.GetType().Name == "LinkIdleRightState")
             {
-                link.state = new LinkUseItemRightState(link);
+                link.state = new LinkWoodSwordRightState(link);
             }
         }
     }

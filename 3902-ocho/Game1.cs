@@ -96,7 +96,8 @@ namespace _3902_ocho
             keyboardController.RegisterCommand(Buttons.Down, new LinkMoveDownCommand(link));
             keyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
             keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
-            keyboardController.RegisterCommand(Buttons.Z, new LinkUseItemCommand(link));
+            keyboardController.RegisterCommand(Buttons.Z, new LinkWoodSwordCommand(link));
+            keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
             keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
