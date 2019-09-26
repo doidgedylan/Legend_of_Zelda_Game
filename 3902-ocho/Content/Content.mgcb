@@ -37,6 +37,13 @@
 /processorParam:TextureFormat=Color
 /build:BossesSpriteSheet.png
 
+#begin Controls.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Controls.spritefont
+
 #begin DungeonEnemiesSpriteSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor

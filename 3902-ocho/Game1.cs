@@ -12,6 +12,7 @@ namespace _3902_ocho
     public class Game1 : Game
     {
         private SpriteBatch spriteBatch;
+        private SpriteFont controls;
         private Link link;
         private ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
@@ -53,6 +54,7 @@ namespace _3902_ocho
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Texture2DStorage.LoadAllTextures(Content);
+            controls = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
             link = new Link(spriteBatch);
             arrow = CollectableSpriteFactory.Instance.CreateArrowSprite();
@@ -120,7 +122,6 @@ namespace _3902_ocho
         {
             GraphicsDevice.Clear(Color.LightGray);
 
-
             keyboardController.Update();
             mouseController.Update();
 
@@ -150,6 +151,8 @@ namespace _3902_ocho
 
         public void Draw()
         {
+            spriteBatch.DrawString(controls, "Controls:\nMovement = arrow keys or wasd\nAttack = z, n, left click\nUse Item = x, right click\nPick up item = c\nHurt Link = e\nReset = r\nQuit = q", new Vector2(100, 250), Color.Black);
+
             pyramidBlock.Draw(spriteBatch, new Vector2(40, 30));
             bomb.Draw(spriteBatch, new Vector2(80, 50));
             boomerang.Draw(spriteBatch, new Vector2(120, 50));

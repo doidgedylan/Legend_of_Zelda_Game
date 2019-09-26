@@ -18,9 +18,6 @@ namespace _3902_ocho
             commandMappings = new Dictionary<Buttons, ICommand>();
             keyMappings = new Dictionary<Keys, Buttons>();
 
-            keyMappings.Add(Keys.D1, Buttons.D1);
-            keyMappings.Add(Keys.D2, Buttons.D2);
-            keyMappings.Add(Keys.D3, Buttons.D3);
             keyMappings.Add(Keys.Up, Buttons.Up);
             keyMappings.Add(Keys.Down, Buttons.Down);
             keyMappings.Add(Keys.Left, Buttons.Left);
@@ -32,7 +29,6 @@ namespace _3902_ocho
             keyMappings.Add(Keys.Z, Buttons.Z);
             keyMappings.Add(Keys.X, Buttons.X);
             keyMappings.Add(Keys.C, Buttons.C);
-            keyMappings.Add(Keys.V, Buttons.V);
             keyMappings.Add(Keys.E, Buttons.E);
             keyMappings.Add(Keys.N, Buttons.N);
             keyMappings.Add(Keys.Q, Buttons.Q);
