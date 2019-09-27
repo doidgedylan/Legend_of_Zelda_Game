@@ -13,7 +13,7 @@ namespace Legend_of_zelda_game
         private int currentFrame = 0;
         private int totalFrames = 20;
         private int xPos = 0;
-        private int yPos = 5;
+        private int yPos = 8;
         private int width = 16;
         private int height = 16;
         private int scale = 3;
@@ -32,17 +32,17 @@ namespace Legend_of_zelda_game
 
             if (currentFrame <= 10)
             {
-                xPos = 356;
+                xPos = 7;
             }
             else if (currentFrame > 10 && currentFrame <= 20)
             {
-                xPos = 373;
+                xPos = 29;
             }
 
             if (currentFrame == totalFrames)
             {
                 currentFrame = 0;
-                xPos = 356;
+                xPos = 7;
             }
 
             this.Draw();
