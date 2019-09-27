@@ -18,7 +18,7 @@ namespace _3902_ocho
         public void Draw()
         {
             Rectangle sourceRectangle = GetSourceRectangle();
-            Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
+            Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y - (sourceRectangle.Height - 16) * 3, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
             link.spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
         }
 

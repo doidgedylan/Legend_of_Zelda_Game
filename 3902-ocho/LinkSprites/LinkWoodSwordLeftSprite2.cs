@@ -18,7 +18,7 @@ namespace _3902_ocho
         public void Draw()
         {
             Rectangle sourceRectangle = GetSourceRectangle();
-            Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
+            Rectangle destinationRectangle = new Rectangle((int)link.Location.X - (sourceRectangle.Width - 16) * 3, (int)link.Location.Y, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
             SpriteEffects s = SpriteEffects.FlipHorizontally;
             link.spriteBatch.Draw(spriteSheet, destinationRectangle, GetSourceRectangle(), Color.White, 0, new Vector2(0, 0), s, 0f);
         }
@@ -27,7 +27,7 @@ namespace _3902_ocho
         {
             int xPos = 18;
             int yPos = 77;
-            int width = 26;
+            int width = 27;
             int height = 16;
 
             return new Rectangle(xPos, yPos, width, height);

@@ -30,15 +30,15 @@ namespace _3902_ocho
             {
                 linkWoodSwordRightSprite1.Draw();
             }
-            else if (currentFrame > 5 && link.currentFrame <= 10)
+            else if (currentFrame > 5 && currentFrame <= 10)
             {
                 linkWoodSwordRightSprite2.Draw();
             }
-            else if (currentFrame > 10 && link.currentFrame <= 15)
+            else if (currentFrame > 10 && currentFrame <= 15)
             {
                 linkWoodSwordRightSprite3.Draw();
             }
-            else if (currentFrame > 15 && link.currentFrame <= 20)
+            else if (currentFrame > 15 && currentFrame <= 20)
             {
                 linkWoodSwordRightSprite4.Draw();
             }

@@ -14,7 +14,7 @@ namespace _3902_ocho
         {
             this.link = link;
             totalFrames = 20;
-            endPosition = 400;
+            endPosition = 434;
         }
 
         public void Update()

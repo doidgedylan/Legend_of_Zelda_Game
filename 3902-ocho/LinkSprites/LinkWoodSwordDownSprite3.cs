@@ -27,7 +27,7 @@ namespace _3902_ocho
             int xPos = 35;
             int yPos = 47;
             int width = 16;
-            int height = 22;
+            int height = 23;
 
             return new Rectangle(xPos, yPos, width, height);
         }

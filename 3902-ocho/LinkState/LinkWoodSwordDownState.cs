@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Timers;
-
+﻿
 namespace _3902_ocho
 {
 
@@ -30,15 +28,15 @@ namespace _3902_ocho
             {
                 linkWoodSwordDownSprite1.Draw();
             }
-            else if (currentFrame > 5 && link.currentFrame <= 10)
+            else if (currentFrame > 5 && currentFrame <= 10)
             {
                 linkWoodSwordDownSprite2.Draw();
             }
-            else if (currentFrame > 10 && link.currentFrame <= 15)
+            else if (currentFrame > 10 && currentFrame <= 15)
             {
                 linkWoodSwordDownSprite3.Draw();
             }
-            else if (currentFrame > 15 && link.currentFrame <= 20)
+            else if (currentFrame > 15 && currentFrame <= 20)
             {
                 linkWoodSwordDownSprite4.Draw();
             }
