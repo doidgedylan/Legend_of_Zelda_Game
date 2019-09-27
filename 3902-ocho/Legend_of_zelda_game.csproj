@@ -169,7 +169,9 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
+    <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
+    <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
     <Content Include="Icon.ico" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />

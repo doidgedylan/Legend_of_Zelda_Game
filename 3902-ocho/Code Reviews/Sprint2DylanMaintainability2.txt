@@ -1,0 +1,10 @@
+﻿Maintainability
+Author: Xinyi Zhao
+Date: 9/27/2019
+Sprint: 2
+Name of .cs: CollectableBigHeartSprite.cs
+Author of the .cs: Dylan Doidge
+Comments: Quality is good, and we can easily manage code and maintenance code. 
+The code is simple with a few variables and methods, and with high cohesion with the interfaces and the main class.
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change: 
+If we change the sprite or change the Bigheart Sprite to disappeared in some moments, the general logic will not be affected.
