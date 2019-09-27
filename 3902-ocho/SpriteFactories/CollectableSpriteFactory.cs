@@ -1,10 +1,6 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _3902_ocho
 {
@@ -68,7 +64,7 @@ namespace _3902_ocho
 
         public ICollectable CreateFairySprite()
         {
-            return new CollectableFairySprite();
+            return new CollectableFairySprite(new Vector2(280, 50));
         }
 
         public ICollectable CreateKeySprite()
