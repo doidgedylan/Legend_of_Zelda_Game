@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _3902_ocho
+namespace Legend_of_zelda_game
 {
 #if WINDOWS || LINUX
     /// <summary>

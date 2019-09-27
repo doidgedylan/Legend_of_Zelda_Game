@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3902_ocho
+namespace Legend_of_zelda_game
 {
     public interface ISprite
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3902-ocho", "3902-ocho\3902-ocho.csproj", "{65D5FE40-E166-4D94-935E-7609EA4A1DB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Legend_of_zelda_game", "3902-ocho\Legend_of_zelda_game.csproj", "{65D5FE40-E166-4D94-935E-7609EA4A1DB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

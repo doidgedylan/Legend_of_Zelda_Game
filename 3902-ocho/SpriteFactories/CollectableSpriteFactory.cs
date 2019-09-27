@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace _3902_ocho
+namespace Legend_of_zelda_game
 {
     public class CollectableSpriteFactory
     {

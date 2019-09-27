@@ -1,5 +1,5 @@
 ﻿
-namespace _3902_ocho
+namespace Legend_of_zelda_game
 {
 
     public class LinkWoodSwordDownState : ILinkState
