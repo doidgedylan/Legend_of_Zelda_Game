@@ -1,0 +1,10 @@
+﻿Author: Dylan Doidge
+Date: 9/26/19
+Sprint: 2
+Name of reviewed file: LinkIdleDownState.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 15
+Specific comments: The class is concise where the reader can understand what the main point of it is. There is no way of
+telling the difference between the two sprites being used because they are named linkMoveDownSprite1 and linkMoveDownSprite2.
+This could be possibly named differently to a starting position and ending position for the movement or just a little more
+descriptive as to what they might look like.

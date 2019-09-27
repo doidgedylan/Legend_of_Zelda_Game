@@ -170,6 +170,9 @@
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />
+    <Content Include="Sprint2XinyiMaintainability.txt" />
+    <Content Include="Sprint2MasonReadability.txt" />
+    <Content Include="Sprint2ReflectionDylan.txt" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />

@@ -1,0 +1,8 @@
+﻿Sprint Reflection
+
+In the beginning, we divided our resposibilities between each other depending on the tasks in Sprint2.  This was the first time we've started this
+process, so it was confusing to get adjusted.  The biggest issue that may have made things more difficult to progress throughout the sprint was not
+communicating enough how we were going to implement our parts.  This was an issue because when we eventually did meet to discuss our progess, there
+were multiple ways we used our interfaces and update/draw methods.  In the end, it was nothing too detrimental, but we learned that checking in more
+often would be necessary.  We also now have a plan going forward to try and make our code the best it can be.  It is good to realize this essential need
+for better communication earlier in the project, so it makes tasks a little easier every meeting we have.
