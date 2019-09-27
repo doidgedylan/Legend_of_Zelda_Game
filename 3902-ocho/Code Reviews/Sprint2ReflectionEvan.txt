@@ -1,0 +1,9 @@
+﻿Evan's Sprint 2 Reflection
+
+At the start of the sprint, we met up and discussed who would take what jobs, and we agreed on when we'd have them done by.
+However, we didn't go into details on how we planned on implementing them, and we didn't really think about how all the pieces would
+fit together. Further into the sprint, as things began to come together, we realized there were some inconsistencies within the code
+arising from the fact that we had only a loose unified plan. This made the project as a whole take longer, and it was sloppier than it 
+easily could have been. We plan to rectify this mistake by meeting more frequently and spending more time coding together, so we can discuss
+our team plans as a whole, ensuring that when we finish our individual responsibilities and start to put things together, it will go
+much more smoothly.

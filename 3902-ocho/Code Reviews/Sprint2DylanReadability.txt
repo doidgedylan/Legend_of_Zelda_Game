@@ -1,0 +1,10 @@
+﻿Author: Evan Standerwick
+Date: 9/27/19
+Sprint: 2
+Name of reviewed file: CollectableBoomerangSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 10
+Specific comments: This class, as a whole, is very easy to understand and read through.
+	Additionally, all the other classes in the CollectableSprites folder are similarly easy to understand and read through,
+	as they follow similar conventions. The private members are concise and descriptive, the class name is concise and descriptive,
+	and the Draw() method is easy to understand and read through if you understand how sprite drawing in monogame works.

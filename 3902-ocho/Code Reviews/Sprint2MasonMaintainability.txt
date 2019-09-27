@@ -1,0 +1,14 @@
+﻿Author: Evan Standerwick
+Date: 9/27/19
+Sprint: 2
+Name of reviewed file: Link.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 15
+Specific comments on code quality: As a whole, this class appears to be very maintainable. There are relatively few fields,
+	and none of them are unnecessary. The class is loosely coupled, so any major changes to the game would only require few,
+	if any, changes to the Link.cs class. The class is also highly cohesive, as it concisely accomplishes its goal of holding the necessary
+	information for the Link class, and it does nothing else.
+Hypothetical change and response: Hypothetically, it may become the case that we want to use a different,
+	more detailed spritesheet for Link. In that case, the Link.cs class would handle that change without requiring any modifications,
+	as the spriteBatch is passed into the class through a constructor parameter. The sprites are handled in a different class,
+	and the frame is initialized to 0, so that wouldn't be an issue either.
