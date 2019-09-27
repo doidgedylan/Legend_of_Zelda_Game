@@ -46,6 +46,7 @@
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\INPC.cs" />
     <Compile Include="LinkSprites\LinkUseItemLeftSprite1.cs" />
     <Compile Include="LinkSprites\LinkUseItemRightSprite1.cs" />
     <Compile Include="LinkSprites\LinkWoodSwordLeftSprite1.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="LinkState\LinkUseItemUpState.cs" />
     <Compile Include="LinkState\LinkUseItemDownState.cs" />
     <Compile Include="LinkState\LinkPickUpItemState.cs" />
+    <Compile Include="NPCSprites\OldManNPCSprite.cs" />
     <Compile Include="SpriteFactories\BlockSpriteFactory.cs" />
     <Compile Include="CollectableSprites\CollectableBigHeartSprite.cs" />
     <Compile Include="CollectableSprites\CollectableClockSprite.cs" />
@@ -167,10 +169,9 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
-    <Content Include="Code Reviews\Sprint2DylanReadability.txt" />
+    <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
-    <Content Include="Code Reviews\Sprint2MasonMaintainability.txt" />
-    <Content Include="Code Reviews\Sprint2ReflectionEvan.txt" />
+    <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
     <Content Include="Icon.ico" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
@@ -194,7 +195,6 @@
   <ItemGroup>
     <Folder Include="bin\Windows\Content\" />
     <Folder Include="bin\Windows\x86\Release\" />
-    <Folder Include="NPCSprites\" />
     <Folder Include="obj\Windows\Content\" />
     <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>

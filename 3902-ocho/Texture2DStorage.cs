@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Legend_of_zelda_game
 {
@@ -13,6 +12,7 @@ namespace Legend_of_zelda_game
         private static Texture2D enemiesSpriteSheet;
         private static Texture2D goriyaSpriteSheet;
         private static Texture2D stalfosSpriteSheet;
+        private static Texture2D oldManNPCSpriteSheet;
 
 
         public Texture2DStorage()
@@ -28,6 +28,7 @@ namespace Legend_of_zelda_game
             enemiesSpriteSheet = content.Load<Texture2D>("DungeonEnemiesSpriteSheet");
             goriyaSpriteSheet = content.Load<Texture2D>("GoriyaSpriteSheet");
             stalfosSpriteSheet = content.Load<Texture2D>("StalfosSpriteSheet");
+            oldManNPCSpriteSheet = content.Load<Texture2D>("NPCOldMan");
         }
 
         public static Texture2D GetLinkSpriteSheet()
@@ -62,6 +63,11 @@ namespace Legend_of_zelda_game
         public static Texture2D GetStalfosSpriteSheet()
         {
             return stalfosSpriteSheet;
+        }
+
+        public static Texture2D GetOldManSpriteSheet()
+        {
+            return oldManNPCSpriteSheet;
         }
 
     }

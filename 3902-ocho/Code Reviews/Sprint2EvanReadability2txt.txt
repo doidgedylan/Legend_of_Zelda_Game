@@ -1,0 +1,9 @@
+﻿Readability
+Author: Xinyi Zhao
+Date: 9/27/2019
+Sprint: 2
+Reviewing: KeyboardController.cs
+Author of .cs file: Evan Standerwick
+Minutes: 10 min
+Comments: The functions use straightforward names that directly convey what they are supposed to do, and formatting is concise. 
+The update function is also easy to read and understand, seems to have everything that would be needed.
