@@ -1,0 +1,11 @@
+﻿Author: Mason Rye
+Date: 9/27/19
+Sprint: 2
+Name of reviewed file: MouseController.cs
+Author of reviewed file: Evan Standerwick
+Minutes to complete review: 15
+This class is a good readable class. The methods are named appropiatly for their function
+and I was able to distinguish what each of the vairables did pretty much immediatly. The 
+only change that I would recommend is adding the word "position" or "pos" to the MouseX and
+MouseY variable. This was the only variable that I say may need a name change, and it is 
+not a difficult change.

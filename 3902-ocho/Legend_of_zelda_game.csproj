@@ -166,13 +166,15 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.dll" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
+    <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
+    <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
     <Content Include="Icon.ico" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />
-    <Content Include="Sprint2XinyiMaintainability.txt" />
-    <Content Include="Sprint2MasonReadability.txt" />
-    <Content Include="Sprint2ReflectionDylan.txt" />
+    <Content Include="Code Reviews\Sprint2XinyiMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint2MasonReadability.txt" />
+    <Content Include="Code Reviews\Sprint2ReflectionDylan.txt" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
@@ -189,6 +191,7 @@
   <ItemGroup>
     <Folder Include="bin\Windows\Content\" />
     <Folder Include="bin\Windows\x86\Release\" />
+    <Folder Include="NPCSprites\" />
     <Folder Include="obj\Windows\Content\" />
     <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>

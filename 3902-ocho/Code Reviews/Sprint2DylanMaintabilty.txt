@@ -1,0 +1,11 @@
+﻿Author: Mason Rye
+Date: 9/27/19
+Sprint: 2
+Name of reviewed file: CollectableArrowSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 15
+CollectableArrowSprite seems to be very maintable. It uses an interface that all collectables use, which makes it a standard sprite class.
+It also is very cohesive because it just draws the collectable arrow sprite, which is good for maintablity. Finally, it has very low cohesive
+because it does not relay on many classes. The only class it uses is the Texture2D class, which is also good for maintainability. The only
+suggestion I would have is load the spritesheets via the Texture2D class in the sprite factory and then pass it the texture when the sprite
+class is instainiated. This would not be too difficult of a change but may require rewriting other classes.
