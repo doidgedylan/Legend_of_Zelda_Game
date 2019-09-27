@@ -46,6 +46,7 @@
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\INPC.cs" />
     <Compile Include="LinkSprites\LinkUseItemLeftSprite1.cs" />
     <Compile Include="LinkSprites\LinkUseItemRightSprite1.cs" />
     <Compile Include="LinkSprites\LinkWoodSwordLeftSprite1.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="LinkState\LinkUseItemUpState.cs" />
     <Compile Include="LinkState\LinkUseItemDownState.cs" />
     <Compile Include="LinkState\LinkPickUpItemState.cs" />
+    <Compile Include="NPCSprites\OldManNPCSprite.cs" />
     <Compile Include="SpriteFactories\BlockSpriteFactory.cs" />
     <Compile Include="CollectableSprites\CollectableBigHeartSprite.cs" />
     <Compile Include="CollectableSprites\CollectableClockSprite.cs" />
@@ -191,7 +193,6 @@
   <ItemGroup>
     <Folder Include="bin\Windows\Content\" />
     <Folder Include="bin\Windows\x86\Release\" />
-    <Folder Include="NPCSprites\" />
     <Folder Include="obj\Windows\Content\" />
     <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>

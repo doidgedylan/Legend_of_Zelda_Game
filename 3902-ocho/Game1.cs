@@ -14,9 +14,11 @@ namespace Legend_of_zelda_game
         private ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
             littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
         private IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
+        private INPC oldMan;
         private IBlock pyramidBlock;
         private KeyboardController keyboardController;
         private MouseController mouseController;
+        
 
         public Game1()
         {
@@ -54,6 +56,7 @@ namespace Legend_of_zelda_game
             controls = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
             link = new Link(spriteBatch);
+            oldMan = new OldManNPCSprite(spriteBatch);
             arrow = CollectableSpriteFactory.Instance.CreateArrowSprite();
             bomb = CollectableSpriteFactory.Instance.CreateBombSprite();
             boomerang = CollectableSpriteFactory.Instance.CreateBoomerangSprite();
@@ -140,6 +143,7 @@ namespace Legend_of_zelda_game
             trap.Update();
             goriya.Update();
             stalfos.Update();
+            oldMan.Update();
             Draw();
 
 
@@ -166,6 +170,7 @@ namespace Legend_of_zelda_game
             sword.Draw(spriteBatch, new Vector2(560, 50));
             triforce.Draw(spriteBatch, new Vector2(600, 50));
             arrow.Draw(spriteBatch, new Vector2(640, 50));
+            oldMan.Draw(spriteBatch, new Vector2(250, 100));
         }
     }
 }
