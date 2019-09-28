@@ -120,7 +120,7 @@
     <Compile Include="Interfaces\IEnemies.cs" />
     <Compile Include="Interfaces\ILinkState.cs" />
     <Compile Include="Interfaces\ICollectable.cs" />
-    <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Interfaces\ILinkSprite.cs" />
     <Compile Include="Controllers\KeyboardController.cs" />
     <Compile Include="Link\Link.cs" />
     <Compile Include="LinkState\LinkIdleDownState.cs" />

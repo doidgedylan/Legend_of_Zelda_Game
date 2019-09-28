@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game.LinkSprites
 {
-    public class LinkMoveDownSprite2 : ISprite
+    public class LinkMoveDownSprite2 : ILinkSprite
     {
         private Link link;
         Texture2D spriteSheet;

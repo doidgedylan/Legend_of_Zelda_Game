@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Legend_of_zelda_game.EnemySprites;
 
 namespace Legend_of_zelda_game
 {
