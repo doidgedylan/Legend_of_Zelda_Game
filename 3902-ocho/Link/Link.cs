@@ -10,6 +10,7 @@ namespace Legend_of_zelda_game
         public Vector2 Location { get; set; }
         public float speed;
         public int currentFrame;
+        public Color tint;
 
         public Link(SpriteBatch spriteBatch)
         {
@@ -18,6 +19,7 @@ namespace Legend_of_zelda_game
             Location = new Vector2(350, 200);
             speed = 2;
             currentFrame = 0;
+            tint = Color.White;
         }
 
         public void Update()

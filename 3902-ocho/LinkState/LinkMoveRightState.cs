@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Legend_of_zelda_game.LinkSprites;
 
 namespace Legend_of_zelda_game
 {

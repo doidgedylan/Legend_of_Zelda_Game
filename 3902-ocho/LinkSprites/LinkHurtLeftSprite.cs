@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game.LinkSprites
 {
-    public class LinkWoodSwordRightSprite1 : ISprite
+    public class LinkHurtLeftSprite : ISprite
     {
         private Link link;
         Texture2D spriteSheet;
 
-        public LinkWoodSwordRightSprite1(Link link)
+        public LinkHurtLeftSprite(Link link)
         {
             spriteSheet = Texture2DStorage.GetLinkSpriteSheet();
             this.link = link;
@@ -16,15 +16,15 @@ namespace Legend_of_zelda_game.LinkSprites
 
         public void Draw()
         {
-            Rectangle sourceRectangle = GetSourceRectangle();
-            Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
-            link.spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y, 16 * 3, 16 * 3);
+            SpriteEffects s = SpriteEffects.FlipHorizontally;
+            link.spriteBatch.Draw(spriteSheet, destinationRectangle, GetSourceRectangle(), link.tint, 0, new Vector2(0, 0), s, 0f);
         }
 
         public Rectangle GetSourceRectangle()
         {
-            int xPos = 1;
-            int yPos = 77;
+            int xPos = 35;
+            int yPos = 11;
             int width = 16;
             int height = 16;
 

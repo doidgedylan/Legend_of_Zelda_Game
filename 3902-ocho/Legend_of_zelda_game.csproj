@@ -47,6 +47,10 @@
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\INPC.cs" />
+    <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
+    <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
+    <Compile Include="LinkSprites\LinkHurtUpSprite.cs" />
+    <Compile Include="LinkSprites\LinkHurtDownSprite.cs" />
     <Compile Include="LinkSprites\LinkUseItemLeftSprite1.cs" />
     <Compile Include="LinkSprites\LinkUseItemRightSprite1.cs" />
     <Compile Include="LinkSprites\LinkWoodSwordLeftSprite1.cs" />
@@ -69,6 +73,10 @@
     <Compile Include="LinkSprites\LinkUseItemDownSprite1.cs" />
     <Compile Include="LinkSprites\LinkPickUpItemSprite2.cs" />
     <Compile Include="LinkSprites\LinkPickUpItemSprite1.cs" />
+    <Compile Include="LinkState\LinkHurtRightState.cs" />
+    <Compile Include="LinkState\LinkHurtLeftState.cs" />
+    <Compile Include="LinkState\LinkHurtUpState.cs" />
+    <Compile Include="LinkState\LinkHurtDownState.cs" />
     <Compile Include="LinkState\LinkWoodSwordLeftState.cs" />
     <Compile Include="LinkState\LinkWoodSwordRightState.cs" />
     <Compile Include="LinkState\LinkWoodSwordUpState.cs" />

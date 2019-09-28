@@ -104,7 +104,7 @@ namespace Legend_of_zelda_game
             mouseController.RegisterCommand(Buttons.RightClick, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
-            keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine));
+            keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine, link));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
         }
 

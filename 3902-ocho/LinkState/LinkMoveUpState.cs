@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Legend_of_zelda_game.LinkSprites;
 
 namespace Legend_of_zelda_game
 {
@@ -36,7 +37,7 @@ namespace Legend_of_zelda_game
             if (link.currentFrame == totalFrames)
                 link.currentFrame = 0;
             if (link.Location.Y <= endPosition)
-                link.Location = new Vector2(link.Location.X, 400);
+                link.Location = new Vector2(link.Location.X, 434);
         }
     }
 }

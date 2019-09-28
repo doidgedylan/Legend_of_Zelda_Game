@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Legend_of_zelda_game
+namespace Legend_of_zelda_game.LinkSprites
 {
     public class LinkWoodSwordDownSprite2 : ISprite
     {
