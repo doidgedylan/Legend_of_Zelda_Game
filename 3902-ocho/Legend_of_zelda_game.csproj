@@ -41,12 +41,19 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BlockSprites\BlockPyramidSprite.cs" />
+    <Compile Include="BackgroundSprites\BackgroundSpriteBottom.cs" />
+    <Compile Include="BackgroundSprites\BackgroundSpriteTopLeft.cs" />
+    <Compile Include="BackgroundSprites\BackgroundSpriteTopRight.cs" />
+    <Compile Include="Blocks\Block.cs" />
+    <Compile Include="Blocks\WaterBlock.cs" />
     <Compile Include="Commands\LinkPickUpItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
+    <Compile Include="Interfaces\IBackground.cs" />
+    <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\INPC.cs" />
+    <Compile Include="LevelLoader.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtUpSprite.cs" />
@@ -115,7 +122,6 @@
     <Compile Include="Link\HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Commands\HurtLinkCommand.cs" />
-    <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IEnemies.cs" />
     <Compile Include="Interfaces\ILinkState.cs" />
@@ -160,6 +166,7 @@
   <ItemGroup>
     <Content Include="bin\Windows\x86\Debug\3902-ocho.exe" />
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
+    <Content Include="bin\Windows\x86\Debug\Content\LevelFile.xml" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />

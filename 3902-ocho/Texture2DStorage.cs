@@ -8,12 +8,13 @@ namespace Legend_of_zelda_game
         private static Texture2D linkSpriteSheet;
         private static Texture2D collectableSpriteSheet;
         private static Texture2D bossesSpriteSheet;
-        private static Texture2D blockSpriteSheet;
         private static Texture2D enemiesSpriteSheet;
         private static Texture2D goriyaSpriteSheet;
         private static Texture2D stalfosSpriteSheet;
         private static Texture2D oldManNPCSpriteSheet;
-
+        private static Texture2D backgroundSpriteSheetBottom;
+        private static Texture2D backgroundSpriteSheetTopLeft;
+        private static Texture2D backgroundSpriteSheetTopRight;
 
         public Texture2DStorage()
         {
@@ -24,11 +25,13 @@ namespace Legend_of_zelda_game
             linkSpriteSheet = content.Load<Texture2D>("LinkSpriteSheet");
             collectableSpriteSheet = content.Load<Texture2D>("ItemSpriteSheet");
             bossesSpriteSheet = content.Load<Texture2D>("BossesSpriteSheet");
-            blockSpriteSheet = content.Load<Texture2D>("BlockSpriteSheet");
             enemiesSpriteSheet = content.Load<Texture2D>("DungeonEnemiesSpriteSheet");
             goriyaSpriteSheet = content.Load<Texture2D>("GoriyaSpriteSheet");
             stalfosSpriteSheet = content.Load<Texture2D>("StalfosSpriteSheet");
             oldManNPCSpriteSheet = content.Load<Texture2D>("NPCOldMan");
+            backgroundSpriteSheetBottom = content.Load<Texture2D>("BackgroundSpriteSheetBottom");
+            backgroundSpriteSheetTopLeft = content.Load<Texture2D>("BackgroundSpriteSheetTopLeft");
+            backgroundSpriteSheetTopRight = content.Load<Texture2D>("BackgroundSpriteSheetTopRight");
         }
 
         public static Texture2D GetLinkSpriteSheet()
@@ -44,11 +47,6 @@ namespace Legend_of_zelda_game
         public static Texture2D GetBossesSpriteSheet()
         {
             return bossesSpriteSheet;
-        }
-
-        public static Texture2D GetBlockSpriteSheet()
-        {
-            return blockSpriteSheet;
         }
 
         public static Texture2D GetEnemiesSpriteSheet()
@@ -68,6 +66,21 @@ namespace Legend_of_zelda_game
         public static Texture2D GetOldManSpriteSheet()
         {
             return oldManNPCSpriteSheet;
+        }
+
+        public static Texture2D GetBackgroundSpriteSheetBottom()
+        {
+            return backgroundSpriteSheetBottom;
+        }
+
+        public static Texture2D GetBackgroundSpriteSheetTopLeft()
+        {
+            return backgroundSpriteSheetTopLeft;
+        }
+
+        public static Texture2D GetBackgroundSpriteSheetTopRight()
+        {
+            return backgroundSpriteSheetTopRight;
         }
 
     }

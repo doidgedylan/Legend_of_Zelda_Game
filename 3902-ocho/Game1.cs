@@ -1,6 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Legend_of_zelda_game.EnemySprites;
+using _3902_ocho;
+using _3902_ocho.Interfaces;
+using System.Collections.Generic;
+using System.IO;
+using System.Xml;
 
 namespace Legend_of_zelda_game
 {
@@ -11,14 +16,14 @@ namespace Legend_of_zelda_game
     {
         private SpriteBatch spriteBatch;
         private SpriteFont controls;
-        private Link link;
-        private ICollectable arrow, bomb, boomerang, bow, clock, compass, fairy, bigHeart,
-            littleHeart, key, letter, singleRupee, multipleRupee, sword, triforce;
-        private IEnemies dragon, gel, keese, wallmaster, trap, goriya, stalfos;
-        private INPC oldMan;
-        private IBlock pyramidBlock;
         private KeyboardController keyboardController;
         private MouseController mouseController;
+        private Link link;
+        private ISet<ICollectable> collectables;
+        private ISet<IEnemies> enemies;
+        private ISet<INPC> NPCs;
+        private ISet<IBlock> blocks;
+        private ISet<IBackground> backgrounds;
         
 
         public Game1()
@@ -52,41 +57,23 @@ namespace Legend_of_zelda_game
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
             Texture2DStorage.LoadAllTextures(Content);
             controls = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
-            link = new Link(spriteBatch);
-            oldMan = new OldManNPCSprite(spriteBatch);
-            arrow = CollectableSpriteFactory.Instance.CreateArrowSprite();
-            bomb = CollectableSpriteFactory.Instance.CreateBombSprite();
-            boomerang = CollectableSpriteFactory.Instance.CreateBoomerangSprite();
-            bow = CollectableSpriteFactory.Instance.CreateBowSprite();
-            clock = CollectableSpriteFactory.Instance.CreateClockSprite();
-            compass = CollectableSpriteFactory.Instance.CreateCompassSprite();
-            fairy = CollectableSpriteFactory.Instance.CreateFairySprite();
-            bigHeart = CollectableSpriteFactory.Instance.CreateBigHeartSprite();
-            littleHeart = CollectableSpriteFactory.Instance.CreateLittleHeartSprite();
-            key = CollectableSpriteFactory.Instance.CreateKeySprite();
-            letter = CollectableSpriteFactory.Instance.CreateLetterSprite();
-            singleRupee = CollectableSpriteFactory.Instance.CreateSingleRupeeSprite();
-            multipleRupee = CollectableSpriteFactory.Instance.CreateMultipleRupeeSprite();
-            sword = CollectableSpriteFactory.Instance.CreateSwordSprite();
-            triforce = CollectableSpriteFactory.Instance.CreateTriforceSprite();
 
-            BlockSpriteFactory.Instance.LoadAllTextures(Content);
-            pyramidBlock = BlockSpriteFactory.Instance.CreateBlockPyramidSprite();
+            FileStream LevelFile = new FileStream("LevelFile.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            XmlReader Reader = XmlReader.Create(LevelFile);
+            LevelLoader Loader = new LevelLoader(spriteBatch);
+            Loader.Load(LevelFile, Reader);
 
-            dragon = new EnemiesDragonSprite(spriteBatch);
-            gel = new EnemiesGelSprite(spriteBatch);
-            keese = new EnemiesKeeseSprite(spriteBatch);
-            wallmaster = new EnemiesWallmasterSprite(spriteBatch);
-            trap = new EnemiesTrapSprite(spriteBatch);
-            goriya = new EnemiesGoriyaSprite(spriteBatch);
-            stalfos = new EnemiesStalfosSprite(spriteBatch);
+            this.collectables = Loader.Collectables;
+            this.enemies = Loader.Enemies;
+            this.link = Loader.Link;
+            this.backgrounds = Loader.Backgrounds;
+            this.blocks = Loader.Blocks;
+            this.NPCs = Loader.NPCs;
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
-
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
@@ -128,23 +115,32 @@ namespace Legend_of_zelda_game
 
             spriteBatch.Begin();
 
+            foreach (IBackground background in backgrounds){
+                background.Draw();
+            }
+
+            foreach (ICollectable collectable in collectables)
+            {
+                collectable.Update();
+            }
+
+            foreach (IEnemies enemy in enemies)
+            {
+                enemy.Update();
+            }
+
+            foreach (INPC NPC in NPCs)
+            {
+                NPC.Update();
+            }
+
+            foreach (IBlock block in blocks)
+            {
+                block.Update();
+            }
+
             link.Update();
-            fairy.Update();
-            littleHeart.Update();
-            key.Update();
-            letter.Update();
-            singleRupee.Update();
-            multipleRupee.Update();
-            sword.Update();
-            triforce.Update();
-            dragon.Update();
-            gel.Update();
-            keese.Update();
-            wallmaster.Update();
-            trap.Update();
-            goriya.Update();
-            stalfos.Update();
-            oldMan.Update();
+
             Draw();
 
 
@@ -156,6 +152,7 @@ namespace Legend_of_zelda_game
             spriteBatch.DrawString(controls, "Controls:\nMovement = arrow keys or wasd\nAttack = z, n, left click\nUse Item = x, right click\nPick up item = c\nHurt Link = e\nReset = r\nQuit = q", new Vector2(100, 250), Color.Black);
 
             pyramidBlock.Draw(spriteBatch, new Vector2(40, 30));
+
             bomb.Draw(spriteBatch, new Vector2(80, 50));
             boomerang.Draw(spriteBatch, new Vector2(120, 50));
             bow.Draw(spriteBatch, new Vector2(160, 50));
@@ -171,6 +168,7 @@ namespace Legend_of_zelda_game
             sword.Draw(spriteBatch, new Vector2(560, 50));
             triforce.Draw(spriteBatch, new Vector2(600, 50));
             arrow.Draw(spriteBatch, new Vector2(640, 50));
+
             oldMan.Draw(spriteBatch, new Vector2(250, 100));
         }
     }
