@@ -5,6 +5,8 @@ namespace Legend_of_zelda_game
 {
     public class CollectableFairySprite : ICollectable
     {
+        SpriteBatch spriteBatch;
+        private Vector2 location;
         Texture2D spriteSheet;
         private Rectangle destinationRectangle;
         private int currentFrame = 0;
@@ -21,11 +23,13 @@ namespace Legend_of_zelda_game
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
-            this.Draw(spriteBatch, location);
+            this.spriteBatch = spriteBatch;
+            this.location = location;
         }
 
         public void Update()
         {
+            this.Draw(spriteBatch, location);
             this.ApplyAnimation();
             this.ApplyMovement();
         }

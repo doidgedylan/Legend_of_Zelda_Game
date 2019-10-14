@@ -5,6 +5,8 @@ namespace Legend_of_zelda_game
 {
     public class CollectableClockSprite : ICollectable
     {
+        SpriteBatch spriteBatch;
+        private Vector2 location;
         Texture2D spriteSheet;
         private int xPos = 58;
         private int yPos = 0;
@@ -15,11 +17,13 @@ namespace Legend_of_zelda_game
         public CollectableClockSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            this.Draw(spriteBatch, location);
+            this.spriteBatch = spriteBatch;
+            this.location = location;
         }
 
         public void Update()
         {
+            this.Draw(spriteBatch, location);
         }
 
         public void Draw(SpriteBatch spriteBatch, Vector2 location)
