@@ -27,79 +27,79 @@ namespace Legend_of_zelda_game
             collectableSpriteSheet = content.Load<Texture2D>("ItemSpriteSheet");
         }
 
-        public ICollectable CreateArrowSprite()
+        public ICollectable CreateArrowSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableArrowSprite();
+            return new CollectableArrowSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateBigHeartSprite()
+        public ICollectable CreateBigHeartSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableBigHeartSprite();
+            return new CollectableBigHeartSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateBombSprite()
+        public ICollectable CreateBombSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableBombSprite();
+            return new CollectableBombSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateBoomerangSprite()
+        public ICollectable CreateBoomerangSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableBoomerangSprite();
+            return new CollectableBoomerangSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateBowSprite()
+        public ICollectable CreateBowSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableBowSprite();
+            return new CollectableBowSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateClockSprite()
+        public ICollectable CreateClockSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableClockSprite();
+            return new CollectableClockSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateCompassSprite()
+        public ICollectable CreateCompassSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableCompassSprite();
+            return new CollectableCompassSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateFairySprite()
+        public ICollectable CreateFairySprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableFairySprite(new Vector2(280, 50));
+            return new CollectableFairySprite(spriteBatch, location);
         }
 
-        public ICollectable CreateKeySprite()
+        public ICollectable CreateKeySprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableKeySprite();
+            return new CollectableKeySprite(spriteBatch, location);
         }
 
-        public ICollectable CreateLetterSprite()
+        public ICollectable CreateLetterSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableLetterSprite();
+            return new CollectableLetterSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateLittleHeartSprite()
+        public ICollectable CreateLittleHeartSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableLittleHeartSprite();
+            return new CollectableLittleHeartSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateMultipleRupeeSprite()
+        public ICollectable CreateMultipleRupeeSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableMultipleRupeeSprite();
+            return new CollectableMultipleRupeeSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateSingleRupeeSprite()
+        public ICollectable CreateSingleRupeeSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableSingleRupeeSprite();
+            return new CollectableSingleRupeeSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateSwordSprite()
+        public ICollectable CreateSwordSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableSwordSprite();
+            return new CollectableSwordSprite(spriteBatch, location);
         }
 
-        public ICollectable CreateTriforceSprite()
+        public ICollectable CreateTriforceSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableTriforceSprite();
+            return new CollectableTriforceSprite(spriteBatch, location);
         }
     }
 }

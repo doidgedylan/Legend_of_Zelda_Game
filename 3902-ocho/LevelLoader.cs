@@ -91,49 +91,49 @@ namespace Legend_of_zelda_game
                     this.Blocks.Add(new Block(Location));
                     break;
                 case "Arrow":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateArrowSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateArrowSprite(spriteBatch, Location));
                     break;
                 case "BigHeart":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBigHeartSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBigHeartSprite(spriteBatch, Location));
                     break;
                 case "Bomb":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBombSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBombSprite(spriteBatch, Location));
                     break;
                 case "Boomerang":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBoomerangSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBoomerangSprite(spriteBatch, Location));
                     break;
                 case "Bow":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBowSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateBowSprite(spriteBatch, Location));
                     break;
                 case "Clock":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateClockSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateClockSprite(spriteBatch, Location));
                     break;
                 case "Compass":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateCompassSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateCompassSprite(spriteBatch, Location));
                     break;
                 case "Fairy":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateFairySprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateFairySprite(spriteBatch, Location));
                     break;
                 case "Key":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateKeySprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateKeySprite(spriteBatch, Location));
                     break;
                 case "Letter":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateLetterSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateLetterSprite(spriteBatch, Location));
                     break;
                 case "LittleHeart":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateLittleHeartSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateLittleHeartSprite(spriteBatch, Location));
                     break;
                 case "MultipleRupee":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateMultipleRupeeSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateMultipleRupeeSprite(spriteBatch, Location));
                     break;
                 case "SingleRupee":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateSingleRupeeSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateSingleRupeeSprite(spriteBatch, Location));
                     break;
                 case "Sword":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateSwordSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateSwordSprite(spriteBatch, Location));
                     break;
                 case "Triforce":
-                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateTriforceSprite(Location));
+                    this.Collectables.Add(CollectableSpriteFactory.Instance.CreateTriforceSprite(spriteBatch, Location));
                     break;
                 case "Dragon":
                     this.Enemies.Add(new EnemiesDragonSprite(spriteBatch, Location);

@@ -141,35 +141,7 @@ namespace Legend_of_zelda_game
 
             link.Update();
 
-            Draw();
-
-
             spriteBatch.End();
-        }
-
-        public void Draw()
-        {
-            spriteBatch.DrawString(controls, "Controls:\nMovement = arrow keys or wasd\nAttack = z, n, left click\nUse Item = x, right click\nPick up item = c\nHurt Link = e\nReset = r\nQuit = q", new Vector2(100, 250), Color.Black);
-
-            pyramidBlock.Draw(spriteBatch, new Vector2(40, 30));
-
-            bomb.Draw(spriteBatch, new Vector2(80, 50));
-            boomerang.Draw(spriteBatch, new Vector2(120, 50));
-            bow.Draw(spriteBatch, new Vector2(160, 50));
-            clock.Draw(spriteBatch, new Vector2(200, 50));
-            compass.Draw(spriteBatch, new Vector2(240, 50));
-            fairy.Draw(spriteBatch, new Vector2(280, 50));
-            bigHeart.Draw(spriteBatch, new Vector2(320, 50));
-            littleHeart.Draw(spriteBatch, new Vector2(360, 50));
-            key.Draw(spriteBatch, new Vector2(400, 50));
-            letter.Draw(spriteBatch, new Vector2(440, 50));
-            singleRupee.Draw(spriteBatch, new Vector2(480, 50));
-            multipleRupee.Draw(spriteBatch, new Vector2(520, 50));
-            sword.Draw(spriteBatch, new Vector2(560, 50));
-            triforce.Draw(spriteBatch, new Vector2(600, 50));
-            arrow.Draw(spriteBatch, new Vector2(640, 50));
-
-            oldMan.Draw(spriteBatch, new Vector2(250, 100));
         }
     }
 }

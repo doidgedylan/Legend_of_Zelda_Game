@@ -17,10 +17,11 @@ namespace Legend_of_zelda_game
         private int horizontalPosition = -1;
         private int verticalPosition = -1;
 
-        public CollectableFairySprite(Vector2 location)
+        public CollectableFairySprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            this.Draw(spriteBatch, location);
         }
 
         public void Update()

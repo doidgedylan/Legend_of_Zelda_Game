@@ -12,9 +12,10 @@ namespace Legend_of_zelda_game
         private int height = 12;
         private int scale = 3;
 
-        public CollectableCompassSprite()
+        public CollectableCompassSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
+            this.Draw(spriteBatch, location);
         }
 
         public void Update()
