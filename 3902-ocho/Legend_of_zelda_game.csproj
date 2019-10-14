@@ -94,7 +94,6 @@
     <Compile Include="LinkState\LinkUseItemDownState.cs" />
     <Compile Include="LinkState\LinkPickUpItemState.cs" />
     <Compile Include="NPCSprites\OldManNPCSprite.cs" />
-    <Compile Include="SpriteFactories\BlockSpriteFactory.cs" />
     <Compile Include="CollectableSprites\CollectableBigHeartSprite.cs" />
     <Compile Include="CollectableSprites\CollectableClockSprite.cs" />
     <Compile Include="CollectableSprites\CollectableBoomerangSprite.cs" />
@@ -166,7 +165,6 @@
   <ItemGroup>
     <Content Include="bin\Windows\x86\Debug\3902-ocho.exe" />
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
-    <Content Include="bin\Windows\x86\Debug\Content\LevelFile.xml" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />
@@ -188,6 +186,7 @@
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="bin\Windows\x86\Debug\Content\LevelFile.xml" />
     <Content Include="LevelFile.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
