@@ -47,7 +47,6 @@ namespace Legend_of_zelda_game
         protected override void Initialize()
         {
             base.Initialize();
-
         }
 
         /// <summary>

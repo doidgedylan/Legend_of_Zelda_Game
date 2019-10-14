@@ -45,6 +45,8 @@
     <Compile Include="BackgroundSprites\BackgroundSpriteTopLeft.cs" />
     <Compile Include="BackgroundSprites\BackgroundSpriteTopRight.cs" />
     <Compile Include="Blocks\Block.cs" />
+    <Compile Include="Blocks\HorizontalWall.cs" />
+    <Compile Include="Blocks\VerticalWall.cs" />
     <Compile Include="Blocks\WaterBlock.cs" />
     <Compile Include="Commands\LinkPickUpItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />

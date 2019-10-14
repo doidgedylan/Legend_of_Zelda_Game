@@ -6,9 +6,11 @@ namespace _3902_ocho.Blocks
     public class WaterBlock : IBlock
     {
         private Vector2 location;
+        public Rectangle Area { get; }
         public WaterBlock(Vector2 location)
         {
             this.location = location;
+            this.Area = new Rectangle((int)location.X, (int)location.Y, 36, 36);
         }
         public void Update()
         {
