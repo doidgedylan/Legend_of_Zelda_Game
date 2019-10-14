@@ -188,6 +188,7 @@
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="LevelFile.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />

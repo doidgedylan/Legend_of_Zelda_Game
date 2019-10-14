@@ -1,0 +1,39 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>BackgroundSpriteBottom</ObjectName>
+      <Location>800 1650</Location>
+    </Item>
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>BackgroundSpriteTopLeft</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>BackgroundSpriteTopRight</ObjectName>
+      <Location>2400 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName>
+      <Location>250 160</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectables</ObjectType>
+      <ObjectName>Key</ObjectName>
+      <Location>100 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemies</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>500 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemies</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>700 400</Location>
+    </Item>
+  </Asset>
+</XnaContent>

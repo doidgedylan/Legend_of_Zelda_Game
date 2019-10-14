@@ -136,25 +136,25 @@ namespace Legend_of_zelda_game
                     this.Collectables.Add(CollectableSpriteFactory.Instance.CreateTriforceSprite(spriteBatch, Location));
                     break;
                 case "Dragon":
-                    this.Enemies.Add(new EnemiesDragonSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesDragonSprite(spriteBatch, Location));
                     break;
                 case "Gel":
-                    this.Enemies.Add(new EnemiesGelSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesGelSprite(spriteBatch, Location));
                     break;
                 case "Goriya":
-                    this.Enemies.Add(new EnemiesGoriyaSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesGoriyaSprite(spriteBatch, Location));
                     break;
                 case "Keese":
-                    this.Enemies.Add(new EnemiesKeeseSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesKeeseSprite(spriteBatch, Location));
                     break;
                 case "Stalfos":
-                    this.Enemies.Add(new EnemiesStalfosSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesStalfosSprite(spriteBatch, Location));
                     break;
                 case "Trap":
-                    this.Enemies.Add(new EnemiesTrapSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesTrapSprite(spriteBatch, Location));
                     break;
                 case "Wallmaster":
-                    this.Enemies.Add(new EnemiesWallmasterSprite(spriteBatch, Location);
+                    this.Enemies.Add(new EnemiesWallmasterSprite(spriteBatch, Location));
                     break;
                 case "Link":
                     this.Link = new Link(spriteBatch, Location);

@@ -9,21 +9,24 @@ namespace Legend_of_zelda_game
         SpriteBatch spriteBatch;
         private int currentFrame = 0;
         private int totalFrames = 30;
+        private Vector2 location;
         private int xPos = 1;
         private int yPos = 11;
         private int width = 16;
         private int height = 16;
         private int scale = 3;
 
-        public OldManNPCSprite(SpriteBatch spriteBatch)
+        public OldManNPCSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetOldManSpriteSheet();
+            this.location = location;
             this.spriteBatch = spriteBatch;
         }
 
         public void Update()
         {
             this.ApplyAnimation();
+            this.Draw(spriteBatch, this.location);
         }
 
         public void Draw(SpriteBatch spriteBatch, Vector2 location)
