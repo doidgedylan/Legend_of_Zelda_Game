@@ -23,7 +23,7 @@ namespace Legend_of_zelda_game
             LinkMoveUpSprite2 linkMoveUpSprite2 = new LinkMoveUpSprite2(link);
 
             link.currentFrame++;
-            link.Location = Vector2.Subtract(link.Location, new Vector2(0, link.speed));
+            link.location = Vector2.Subtract(link.location, new Vector2(0, link.speed));
 
             if (link.currentFrame <= 10)
             {
@@ -36,8 +36,8 @@ namespace Legend_of_zelda_game
 
             if (link.currentFrame == totalFrames)
                 link.currentFrame = 0;
-            if (link.Location.Y <= endPosition)
-                link.Location = new Vector2(link.Location.X, 434);
+            if (link.location.Y <= endPosition)
+                link.location = new Vector2(link.location.X, 434);
         }
     }
 }

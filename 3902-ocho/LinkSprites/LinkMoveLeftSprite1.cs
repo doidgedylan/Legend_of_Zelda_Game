@@ -16,7 +16,7 @@ namespace Legend_of_zelda_game.LinkSprites
 
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle((int)link.Location.X, (int)link.Location.Y, 16 * 3, 16 * 3);
+            Rectangle destinationRectangle = new Rectangle((int)link.location.X, (int)link.location.Y, 16 * 3, 16 * 3);
             SpriteEffects s = SpriteEffects.FlipHorizontally;
             link.spriteBatch.Draw(spriteSheet, destinationRectangle, GetSourceRectangle(), Color.White, 0, new Vector2(0,0), s, 0f);
         }

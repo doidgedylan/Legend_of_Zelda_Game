@@ -24,17 +24,17 @@ namespace Legend_of_zelda_game
             LinkHurtDownSprite linkHurtDownSprite = new LinkHurtDownSprite(link);
 
             currentFrame++;
-            if (currentFrame <= 15 && link.Location.Y >= endPosition)
+            if (currentFrame <= 15 && link.location.Y >= endPosition)
             {
-                link.Location = Vector2.Subtract(link.Location, new Vector2(0, 5));
+                link.location = Vector2.Subtract(link.location, new Vector2(0, 5));
             }
-            else if (link.Location.Y >= endPosition)
+            else if (link.location.Y >= endPosition)
             {
-                link.Location = Vector2.Add(link.Location, new Vector2(0, 5));
+                link.location = Vector2.Add(link.location, new Vector2(0, 5));
             }
             else
             {
-                link.Location = new Vector2(link.Location.X, 0);
+                link.location = new Vector2(link.location.X, 0);
             }
 
             if (currentFrame <= 5)
