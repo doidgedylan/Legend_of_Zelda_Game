@@ -9,8 +9,6 @@ namespace Legend_of_zelda_game
         SpriteBatch spriteBatch;
         private Vector2 location;
 
-        private int currentFrame = 0;
-        private int totalFrames = 20;
         private int xPos = 164;
         private int yPos = 59;
         private int width = 16;
