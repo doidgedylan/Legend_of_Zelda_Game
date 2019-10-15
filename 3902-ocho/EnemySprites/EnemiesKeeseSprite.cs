@@ -7,8 +7,7 @@ namespace Legend_of_zelda_game.EnemySprites
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
-        Rectangle destinationRectangle;
-        Rectangle sourceRectangle;
+        private Vector2 location;
 
         private int currentFrame = 0;
         private int totalFrames = 10;
@@ -17,13 +16,13 @@ namespace Legend_of_zelda_game.EnemySprites
         private int width = 16;
         private int height = 10;
         private int scale = 3;
-        private int destinationXPos = 500;
-        private int destinationYPos = 200;
 
-        public EnemiesKeeseSprite(SpriteBatch spriteBatch)
+
+        public EnemiesKeeseSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetEnemiesSpriteSheet();
             this.spriteBatch = spriteBatch;
+            this.location = location;
         }
 
         public void Update()
@@ -45,13 +44,13 @@ namespace Legend_of_zelda_game.EnemySprites
                 xPos = 183;
             }
 
-            this.Draw();
+            this.Draw(spriteBatch, location);
         }
 
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
-            destinationRectangle = new Rectangle(destinationXPos, destinationYPos, width * scale, height * scale);
-            sourceRectangle = new Rectangle(xPos, yPos, width, height);
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
         }
