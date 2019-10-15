@@ -38,6 +38,7 @@ namespace Legend_of_zelda_game
             while (reader.Name.Equals("Item"))
             {
                 ProcessItem(input, reader);
+                reader.ReadToFollowing("Item");
             }
         }
 
@@ -71,7 +72,7 @@ namespace Legend_of_zelda_game
             }
 
             int X = Int32.Parse(LocationStr.Substring(0, LocationStr.IndexOf(" ")));
-            int Y = Int32.Parse(LocationStr.Substring(LocationStr.IndexOf(" ") + 1, LocationStr.Length));
+            int Y = Int32.Parse(LocationStr.Substring(LocationStr.IndexOf(" ") + 1));
             Location = new Vector2(X, Y);
             switch (ObjectName)
             {
