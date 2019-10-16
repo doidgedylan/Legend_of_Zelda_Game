@@ -32,6 +32,9 @@ namespace Legend_of_zelda_game
             GraphicsDeviceManager graphics = new GraphicsDeviceManager(this);
             graphics.DeviceCreated += OnDeviceCreated;
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 550;
+            graphics.ApplyChanges();
         }
 
         private void OnDeviceCreated(object sender, System.EventArgs e)
@@ -133,11 +136,6 @@ namespace Legend_of_zelda_game
             foreach (INPC NPC in NPCs)
             {
                 NPC.Update();
-            }
-
-            foreach (IBlock block in blocks)
-            {
-                block.Update();
             }
 
             link.LinkCollisionBlock(blocks);

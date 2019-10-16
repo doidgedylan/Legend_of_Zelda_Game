@@ -20,9 +20,5 @@ namespace _3902_ocho.Blocks
         {
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
         }
-        public void Update()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

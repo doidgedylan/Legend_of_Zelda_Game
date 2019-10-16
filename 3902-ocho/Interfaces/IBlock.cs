@@ -11,6 +11,5 @@ namespace _3902_ocho.Interfaces
     {
         Rectangle LocationRect { get; set; }
 
-        void Update();
     }
 }

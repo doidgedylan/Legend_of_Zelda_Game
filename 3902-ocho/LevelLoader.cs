@@ -94,6 +94,12 @@ namespace Legend_of_zelda_game
                 case "Block":
                     this.Blocks.Add(new Block(Location));
                     break;
+                case "HorizontalWall":
+                    this.Blocks.Add(new HorizontalWall(Location));
+                    break;
+                case "VerticalWall":
+                    this.Blocks.Add(new VerticalWall(Location));
+                    break;
                 case "Arrow":
                     this.Collectables.Add(CollectableSpriteFactory.Instance.CreateArrowSprite(spriteBatch, Location));
                     break;
