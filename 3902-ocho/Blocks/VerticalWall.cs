@@ -10,13 +10,15 @@ namespace _3902_ocho.Blocks
 {
     public class VerticalWall : IBlock
     {
-        private Vector2 location;
-        public Rectangle Area { get; }
+        public Rectangle locationRect;
+        public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
+        public int scale = 1;
+        public int width = 100;
+        public int height = 550;
 
         public VerticalWall(Vector2 location)
         {
-            this.location = location;
-            this.Area = new Rectangle((int)location.X, (int)location.Y, 100, 550);
+            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
         }
         public void Update()
         {

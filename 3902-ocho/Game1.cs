@@ -138,6 +138,7 @@ namespace Legend_of_zelda_game
                 block.Update();
             }
 
+            link.LinkCollisionBlock(blocks);
             link.Update();
 
             spriteBatch.End();
