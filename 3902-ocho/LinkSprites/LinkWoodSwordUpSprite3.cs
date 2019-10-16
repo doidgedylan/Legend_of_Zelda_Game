@@ -7,26 +7,28 @@ namespace Legend_of_zelda_game.LinkSprites
     {
         private Link link;
         Texture2D spriteSheet;
+        private int width;
+        private int height;
 
         public LinkWoodSwordUpSprite3(Link link)
         {
             spriteSheet = Texture2DStorage.GetLinkSpriteSheet();
             this.link = link;
+            width = 16;
+            height = 26;
         }
 
         public void Draw()
         {
-            Rectangle sourceRectangle = GetSourceRectangle();
-            Rectangle destinationRectangle = new Rectangle((int)link.location.X, (int)link.location.Y - (sourceRectangle.Height - 16) * 3, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
-            link.spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            link.locationRect = new Rectangle((int)link.location.X, (int)link.location.Y - (height - 16) * link.scale, width * link.scale, height * link.scale);
+            SpriteEffects s = SpriteEffects.FlipHorizontally;
+            link.spriteBatch.Draw(spriteSheet, link.locationRect, GetSourceRectangle(), link.tint, 0, new Vector2(0, 0), s, 0f);
         }
 
         public Rectangle GetSourceRectangle()
         {
             int xPos = 35;
             int yPos = 98;
-            int width = 16;
-            int height = 26;
 
             return new Rectangle(xPos, yPos, width, height);
         }

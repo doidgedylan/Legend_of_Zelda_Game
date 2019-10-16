@@ -6,6 +6,7 @@ using _3902_ocho.Interfaces;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using Legend_of_zelda_game.Controllers;
 
 namespace Legend_of_zelda_game
 {
@@ -60,9 +61,12 @@ namespace Legend_of_zelda_game
             controls = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
 
+            keyboardController = new KeyboardController();
+            mouseController = new MouseController();
+
             FileStream LevelFile = new FileStream("LevelFile.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
             XmlReader Reader = XmlReader.Create(LevelFile);
-            LevelLoader Loader = new LevelLoader(spriteBatch);
+            LevelLoader Loader = new LevelLoader(spriteBatch, keyboardController);
             Loader.Load(LevelFile, Reader);
 
             this.collectables = Loader.Collectables;
@@ -73,8 +77,6 @@ namespace Legend_of_zelda_game
             this.NPCs = Loader.NPCs;
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
-            keyboardController = new KeyboardController();
-            mouseController = new MouseController();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
             keyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));
             keyboardController.RegisterCommand(Buttons.A, new LinkMoveLeftCommand(link));

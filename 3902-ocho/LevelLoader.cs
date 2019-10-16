@@ -9,12 +9,14 @@ using Microsoft.Xna.Framework;
 using _3902_ocho;
 using _3902_ocho.Blocks;
 using Legend_of_zelda_game.EnemySprites;
+using Legend_of_zelda_game.Controllers;
 
 namespace Legend_of_zelda_game
 {
     public class LevelLoader
     {
         private SpriteBatch spriteBatch;
+        private KeyboardController keyboardController;
         public ISet<IBackground> Backgrounds { get; set; }
         public Link Link { get; set; }
         public ISet<IEnemies> Enemies { get; set; }
@@ -22,9 +24,10 @@ namespace Legend_of_zelda_game
         public ISet<ICollectable> Collectables { get; set; }
         public ISet<INPC> NPCs { get; set; }
 
-        public LevelLoader(SpriteBatch spriteBatch)
+        public LevelLoader(SpriteBatch spriteBatch, KeyboardController keyboardController)
         {
             this.spriteBatch = spriteBatch;
+            this.keyboardController = keyboardController;
             this.Backgrounds = new HashSet<IBackground>();
             this.Enemies = new HashSet<IEnemies>();
             this.Blocks = new HashSet<IBlock>();
@@ -158,7 +161,7 @@ namespace Legend_of_zelda_game
                     this.Enemies.Add(new EnemiesWallmasterSprite(spriteBatch, Location));
                     break;
                 case "Link":
-                    this.Link = new Link(spriteBatch, Location);
+                    this.Link = new Link(spriteBatch, keyboardController, Location);
                     break;
                 case "OldMan":
                     this.NPCs.Add(new OldManNPCSprite(spriteBatch, Location));

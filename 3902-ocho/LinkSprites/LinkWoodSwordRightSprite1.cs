@@ -7,26 +7,27 @@ namespace Legend_of_zelda_game.LinkSprites
     {
         private Link link;
         Texture2D spriteSheet;
+        private int width;
+        private int height;
 
         public LinkWoodSwordRightSprite1(Link link)
         {
             spriteSheet = Texture2DStorage.GetLinkSpriteSheet();
             this.link = link;
+            width = 16;
+            height = 16;
         }
 
         public void Draw()
         {
-            Rectangle sourceRectangle = GetSourceRectangle();
-            Rectangle destinationRectangle = new Rectangle((int)link.location.X, (int)link.location.Y, sourceRectangle.Width * 3, sourceRectangle.Height * 3);
-            link.spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            link.locationRect = new Rectangle((int)link.location.X, (int)link.location.Y, width * link.scale, height * link.scale);
+            link.spriteBatch.Draw(spriteSheet, link.locationRect, GetSourceRectangle(), Color.White);
         }
 
         public Rectangle GetSourceRectangle()
         {
             int xPos = 1;
             int yPos = 77;
-            int width = 16;
-            int height = 16;
 
             return new Rectangle(xPos, yPos, width, height);
         }

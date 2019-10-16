@@ -1,4 +1,5 @@
 ﻿using _3902_ocho.Interfaces;
+using Legend_of_zelda_game.Controllers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -9,19 +10,22 @@ namespace Legend_of_zelda_game
     {
         public ILinkState state;
         public SpriteBatch spriteBatch;
+        public KeyboardController keyboardController;
         public Vector2 location { get; set; }
         public Rectangle locationRect;
-        public float speed;
+        public int moveSpeed;
         public int currentFrame;
         public Color tint;
         public int scale;
+        public readonly Color[] hurtColors = new[] { Color.Green, Color.Gray, Color.Red, Color.Black, Color.Orange, Color.DarkRed, Color.Blue };
 
-        public Link(SpriteBatch spriteBatch, Vector2 location)
+        public Link(SpriteBatch spriteBatch, KeyboardController keyboardController, Vector2 location)
         {
             this.spriteBatch = spriteBatch;
+            this.keyboardController = keyboardController;
             state = new LinkIdleDownState(this);
             location = new Vector2(350, 200);
-            speed = 2;
+            moveSpeed = 3;
             scale = 3;
             currentFrame = 0;
             tint = Color.White;
@@ -31,7 +35,6 @@ namespace Legend_of_zelda_game
         public void Update()
         {
             state.Update();
-            locationRect = new Rectangle((int)location.X, (int)location.Y, 16 * scale, 16 * scale);
         }
 
         public void LinkCollisionBlock(ISet<IBlock> blocks)
@@ -51,11 +54,11 @@ namespace Legend_of_zelda_game
                 (blockCollisionSides.Contains("right") && state.GetType().Equals(new LinkMoveRightState(this).GetType())) ||
                 (blockCollisionSides.Contains("left") && state.GetType().Equals(new LinkMoveLeftState(this).GetType())))
             {
-                speed = 0;
+                moveSpeed = 0;
             }
             else
             {
-                speed = 2;
+                moveSpeed = 2;
             }
         }
 
@@ -76,11 +79,11 @@ namespace Legend_of_zelda_game
                 (enemyCollisionSides.Contains("right") && state.GetType().Equals(new LinkMoveRightState(this).GetType())) ||
                 (enemyCollisionSides.Contains("left") && state.GetType().Equals(new LinkMoveLeftState(this).GetType())))
             {
-                speed = 0;
+                moveSpeed = 0;
             }
             else
             {
-                speed = 2;
+                moveSpeed = 2;
             }
         }
 

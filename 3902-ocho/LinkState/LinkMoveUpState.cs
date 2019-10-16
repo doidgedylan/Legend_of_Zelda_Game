@@ -23,7 +23,7 @@ namespace Legend_of_zelda_game
             LinkMoveUpSprite2 linkMoveUpSprite2 = new LinkMoveUpSprite2(link);
 
             link.currentFrame++;
-            link.location = Vector2.Subtract(link.location, new Vector2(0, link.speed));
+            link.location = Vector2.Subtract(link.location, new Vector2(0, link.moveSpeed));
 
             if (link.currentFrame <= 10)
             {

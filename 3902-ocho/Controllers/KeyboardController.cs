@@ -2,15 +2,19 @@
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace Legend_of_zelda_game
+namespace Legend_of_zelda_game.Controllers
 {
     public class KeyboardController : IController
     {
         private Dictionary<Buttons, ICommand> commandMappings;
         private Dictionary<Keys, Buttons> keyMappings;
+        public KeyboardState previousState;
+        public KeyboardState currentState;
 
         public KeyboardController()
         {
+            previousState = Keyboard.GetState();
+            currentState = Keyboard.GetState();
             commandMappings = new Dictionary<Buttons, ICommand>();
             keyMappings = new Dictionary<Keys, Buttons>();
 
@@ -39,7 +43,9 @@ namespace Legend_of_zelda_game
 
         public void Update()
         {
-            Keys[] pressedKeys = Keyboard.GetState().GetPressedKeys();
+            previousState = currentState;
+            currentState = Keyboard.GetState();
+            Keys[] pressedKeys = currentState.GetPressedKeys();
             foreach (Keys key in pressedKeys)
             {
                 if (keyMappings.ContainsKey(key))

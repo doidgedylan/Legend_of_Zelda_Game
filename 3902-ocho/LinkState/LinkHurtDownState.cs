@@ -37,34 +37,7 @@ namespace Legend_of_zelda_game
                 link.location = new Vector2(link.location.X, 0);
             }
 
-            if (currentFrame <= 5)
-            {
-                link.tint = Color.Green;
-            }
-            else if (currentFrame > 10 && currentFrame <= 15)
-            {
-                link.tint = Color.Gray;
-            }
-            else if (currentFrame > 15 && currentFrame <= 20)
-            {
-                link.tint = Color.Red;
-            }
-            else if (currentFrame > 20 && currentFrame <= 25)
-            {
-                link.tint = Color.Black;
-            }
-            else if (currentFrame > 25 && currentFrame <= 30)
-            {
-                link.tint = Color.Orange;
-            }
-            else if (currentFrame > 25 && currentFrame <= 30)
-            {
-                link.tint = Color.DarkRed;
-            }
-            else if (currentFrame > 25 && currentFrame <= 30)
-            {
-                link.tint = Color.Blue;
-            }
+            link.tint = link.hurtColors[currentFrame / 5];
 
             if (currentFrame == totalFrames)
                 currentFrame = 0;

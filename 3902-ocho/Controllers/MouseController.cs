@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace Legend_of_zelda_game
+namespace Legend_of_zelda_game.Controllers
 {
     public class MouseController : IController
     {
