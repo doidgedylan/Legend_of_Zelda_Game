@@ -27,7 +27,6 @@ namespace Legend_of_zelda_game.EnemySprites
             this.spriteBatch = spriteBatch;
             this.location = location;
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
-
         }
 
         public void Update()
@@ -49,10 +48,10 @@ namespace Legend_of_zelda_game.EnemySprites
                 xPos = 1;
             }
 
-            this.Draw(spriteBatch, location);
+            this.Draw(spriteBatch);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 

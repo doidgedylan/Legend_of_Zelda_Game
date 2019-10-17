@@ -7,6 +7,8 @@ namespace Legend_of_zelda_game
     {
         SpriteBatch spriteBatch;
         private Vector2 location;
+        public Rectangle locationRect;
+        public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
         Texture2D spriteSheet;
         private int xPos = 72;
         private int yPos = 16;
@@ -19,19 +21,19 @@ namespace Legend_of_zelda_game
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             this.spriteBatch = spriteBatch;
             this.location = location;
+            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
         }
 
         public void Update()
         {
-            this.Draw(spriteBatch, location);
+            this.Draw(spriteBatch);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch)
         {
-            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
-            spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White);
         }
     }
 }

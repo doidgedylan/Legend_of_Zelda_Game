@@ -29,10 +29,10 @@ namespace Legend_of_zelda_game
 
         public void Update()
         {
-            this.Draw(spriteBatch, location);
+            this.Draw(spriteBatch);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 

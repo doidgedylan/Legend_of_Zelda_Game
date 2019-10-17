@@ -17,6 +17,7 @@ namespace Legend_of_zelda_game
         public Color tint;
         public int scale;
         public readonly Color[] hurtColors = new[] { Color.Green, Color.Gray, Color.Red, Color.Black, Color.Orange, Color.DarkRed, Color.Blue };
+        public HealthStateMachine HealthStateMachine;
 
         public Link(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -29,6 +30,7 @@ namespace Legend_of_zelda_game
             currentFrame = 0;
             tint = Color.White;
             locationRect = new Rectangle((int)location.X, (int)location.Y, 16 * scale, 16 * scale);
+            HealthStateMachine = new HealthStateMachine();
         }
 
         public void Update()
@@ -81,6 +83,11 @@ namespace Legend_of_zelda_game
                 }
             }
 
+            if(enemyCollisionSides.Count != 0)
+            {
+                HealthStateMachine.BeHurt();
+            }
+
             if (enemyCollisionSides.Contains("bottom") && state is LinkMoveDownState)
             {
                 state = new LinkHurtDownState(this);
@@ -97,9 +104,26 @@ namespace Legend_of_zelda_game
             {
                 state = new LinkHurtRightState(this);
             }
-            else
+        }
+
+        public void LinkCollisionCollectable(ISet<ICollectable> collectables)
+        {
+            IList<string> blockCollisionSides = new List<string>();
+            foreach (ICollectable collectable in collectables)
             {
-                moveSpeed = 3;
+                string linkCollision = LinkCollison(locationRect, collectable.LocationRect);
+                if (linkCollision != "none")
+                {
+                    blockCollisionSides.Add(linkCollision);
+                }
+            }
+
+            if ((blockCollisionSides.Contains("top") && state is LinkMoveUpState) ||
+                (blockCollisionSides.Contains("bottom") && state is LinkMoveDownState) ||
+                (blockCollisionSides.Contains("right") && state is LinkMoveRightState) ||
+                (blockCollisionSides.Contains("left") && state is LinkMoveLeftState))
+            {
+                state = new LinkPickUpItemState(this);
             }
         }
 

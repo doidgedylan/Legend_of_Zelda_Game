@@ -7,8 +7,9 @@ namespace Legend_of_zelda_game
     {
         SpriteBatch spriteBatch;
         private Vector2 location;
+        public Rectangle locationRect;
+        public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
         Texture2D spriteSheet;
-        private Rectangle destinationRectangle;
         private int currentFrame = 0;
         private int totalFrames = 20;
         private int xPos = 40;
@@ -22,22 +23,22 @@ namespace Legend_of_zelda_game
         public CollectableFairySprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             this.spriteBatch = spriteBatch;
             this.location = location;
         }
 
         public void Update()
         {
-            this.Draw(spriteBatch, location);
+            this.Draw(spriteBatch);
             this.ApplyAnimation();
             this.ApplyMovement();
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
-            spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White);
         }
 
         private void ApplyAnimation()
@@ -62,6 +63,7 @@ namespace Legend_of_zelda_game
 
         private void ApplyMovement()
         {
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             if (horizontalPosition == -1 && verticalPosition == -1)
             {
                 destinationRectangle.Y -= 1;
@@ -90,6 +92,7 @@ namespace Legend_of_zelda_game
             {
                 horizontalPosition *= -1;
             }
+            LocationRect = destinationRectangle;
         }
     }
 }

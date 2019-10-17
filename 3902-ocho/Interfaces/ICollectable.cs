@@ -5,7 +5,8 @@ namespace Legend_of_zelda_game
 {
     public interface ICollectable
     {
+        Rectangle LocationRect { get; set; }
         void Update();
-        void Draw(SpriteBatch spriteBatch, Vector2 location);
+        void Draw(SpriteBatch spriteBatch);
     }
 }
