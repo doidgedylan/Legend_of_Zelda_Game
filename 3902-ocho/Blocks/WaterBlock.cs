@@ -1,7 +1,7 @@
-﻿using _3902_ocho.Interfaces;
+﻿using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 
-namespace _3902_ocho.Blocks
+namespace Legend_of_zelda_game.Blocks
 {
     public class WaterBlock : IBlock
     {

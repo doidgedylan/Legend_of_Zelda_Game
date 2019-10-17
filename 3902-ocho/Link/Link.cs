@@ -1,5 +1,4 @@
-﻿using _3902_ocho.Interfaces;
-using Legend_of_zelda_game.Controllers;
+﻿using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -10,22 +9,22 @@ namespace Legend_of_zelda_game
     {
         public ILinkState state;
         public SpriteBatch spriteBatch;
-        public KeyboardController keyboardController;
         public Vector2 location { get; set; }
         public Rectangle locationRect;
         public int moveSpeed;
+        public int hurtSpeed;
         public int currentFrame;
         public Color tint;
         public int scale;
         public readonly Color[] hurtColors = new[] { Color.Green, Color.Gray, Color.Red, Color.Black, Color.Orange, Color.DarkRed, Color.Blue };
 
-        public Link(SpriteBatch spriteBatch, KeyboardController keyboardController, Vector2 location)
+        public Link(SpriteBatch spriteBatch, Vector2 location)
         {
             this.spriteBatch = spriteBatch;
-            this.keyboardController = keyboardController;
             state = new LinkIdleDownState(this);
             location = new Vector2(350, 200);
             moveSpeed = 3;
+            hurtSpeed = 5;
             scale = 3;
             currentFrame = 0;
             tint = Color.White;
@@ -49,41 +48,58 @@ namespace Legend_of_zelda_game
                 }
             }
 
-            if ((blockCollisionSides.Contains("top") && state.GetType().Equals(new LinkMoveUpState(this).GetType())) ||
-                (blockCollisionSides.Contains("bottom") && state.GetType().Equals(new LinkMoveDownState(this).GetType())) ||
-                (blockCollisionSides.Contains("right") && state.GetType().Equals(new LinkMoveRightState(this).GetType())) ||
-                (blockCollisionSides.Contains("left") && state.GetType().Equals(new LinkMoveLeftState(this).GetType())))
+            if ((blockCollisionSides.Contains("top") && state is LinkMoveUpState) ||
+                (blockCollisionSides.Contains("bottom") && state is LinkMoveDownState) ||
+                (blockCollisionSides.Contains("right") && state is LinkMoveRightState) ||
+                (blockCollisionSides.Contains("left") && state is LinkMoveLeftState))
             {
                 moveSpeed = 0;
             }
+            else if ((blockCollisionSides.Contains("top") && state is LinkHurtDownState) ||
+                (blockCollisionSides.Contains("bottom") && state is LinkHurtUpState) ||
+                (blockCollisionSides.Contains("right") && state is LinkHurtLeftState) ||
+                (blockCollisionSides.Contains("left") && state is LinkHurtRightState))
+            {
+                hurtSpeed = 0;
+            }
             else
             {
-                moveSpeed = 2;
+                moveSpeed = 3;
+                hurtSpeed = 5;
             }
         }
 
-        public void LinkCollisionEnemy(IBlock[] blocks)
+        public void LinkCollisionEnemy(ISet<IEnemies> enemies)
         {
             IList<string> enemyCollisionSides = new List<string>();
-            foreach (IBlock block in blocks)
+            foreach (IEnemies enemy in enemies)
             {
-                string linkCollision = LinkCollison(locationRect, block.LocationRect);
+                string linkCollision = LinkCollison(locationRect, enemy.LocationRect);
                 if (linkCollision != "none")
                 {
                     enemyCollisionSides.Add(linkCollision);
                 }
             }
 
-            if ((enemyCollisionSides.Contains("top") && state.GetType().Equals(new LinkMoveUpState(this).GetType())) ||
-                (enemyCollisionSides.Contains("bottom") && state.GetType().Equals(new LinkMoveDownState(this).GetType())) ||
-                (enemyCollisionSides.Contains("right") && state.GetType().Equals(new LinkMoveRightState(this).GetType())) ||
-                (enemyCollisionSides.Contains("left") && state.GetType().Equals(new LinkMoveLeftState(this).GetType())))
+            if (enemyCollisionSides.Contains("bottom") && state is LinkMoveDownState)
             {
-                moveSpeed = 0;
+                state = new LinkHurtDownState(this);
+            }
+            else if (enemyCollisionSides.Contains("top") && state is LinkMoveUpState)
+            {
+                state = new LinkHurtUpState(this);
+            }
+            else if (enemyCollisionSides.Contains("left") && state is LinkMoveLeftState)
+            {
+                state = new LinkHurtLeftState(this);
+            }
+            else if (enemyCollisionSides.Contains("right") && state is LinkMoveRightState)
+            {
+                state = new LinkHurtRightState(this);
             }
             else
             {
-                moveSpeed = 2;
+                moveSpeed = 3;
             }
         }
 

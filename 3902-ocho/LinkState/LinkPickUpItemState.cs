@@ -35,7 +35,7 @@ namespace Legend_of_zelda_game
             if (currentFrame == totalFrames)
             {
                 currentFrame = 0;
-                link.keyboardController.currentState = link.keyboardController.previousState;
+                link.state = new LinkIdleDownState(link);
             }
         }
     }

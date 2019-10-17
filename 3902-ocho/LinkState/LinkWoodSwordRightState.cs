@@ -43,7 +43,10 @@ namespace Legend_of_zelda_game
             }
 
             if (currentFrame == totalFrames)
+            {
                 currentFrame = 0;
+                link.state = new LinkIdleRightState(link);
+            }
         }
     }
 }

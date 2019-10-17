@@ -26,24 +26,23 @@ namespace Legend_of_zelda_game
             currentFrame++;
             if (currentFrame <= 15 && link.location.Y >= endPosition)
             {
-                link.location = Vector2.Subtract(link.location, new Vector2(0, 5));
+                link.location = Vector2.Subtract(link.location, new Vector2(0, link.hurtSpeed));
             }
-            else if (link.location.Y >= endPosition)
-            {
-                link.location = Vector2.Add(link.location, new Vector2(0, 5));
-            }
-            else
+            else if (link.location.X <= endPosition)
             {
                 link.location = new Vector2(link.location.X, 0);
             }
 
+
             link.tint = link.hurtColors[currentFrame / 5];
+            linkHurtDownSprite.Draw();
 
             if (currentFrame == totalFrames)
+            {
                 currentFrame = 0;
-
-            linkHurtDownSprite.Draw();
-            link.tint = Color.White;
+                link.state = new LinkIdleDownState(link);
+                link.tint = Color.White;
+            }
         }
     }
 }

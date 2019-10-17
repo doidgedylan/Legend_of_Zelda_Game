@@ -1,12 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Legend_of_zelda_game.EnemySprites;
-using _3902_ocho;
-using _3902_ocho.Interfaces;
+using Legend_of_zelda_game.Interfaces;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using Legend_of_zelda_game.Controllers;
+using Legend_of_zelda_game.Blocks;
 
 namespace Legend_of_zelda_game
 {
@@ -69,7 +68,7 @@ namespace Legend_of_zelda_game
 
             FileStream LevelFile = new FileStream("LevelFile.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
             XmlReader Reader = XmlReader.Create(LevelFile);
-            LevelLoader Loader = new LevelLoader(spriteBatch, keyboardController);
+            LevelLoader Loader = new LevelLoader(spriteBatch);
             Loader.Load(LevelFile, Reader);
 
             this.collectables = Loader.Collectables;
@@ -114,8 +113,17 @@ namespace Legend_of_zelda_game
         {
             GraphicsDevice.Clear(Color.LightGray);
 
-            keyboardController.Update();
-            mouseController.Update();
+            if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
+                !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
+                !(link.state is LinkHurtDownState) && !(link.state is LinkHurtUpState) &&
+                !(link.state is LinkHurtLeftState) && !(link.state is LinkHurtRightState) &&
+                !(link.state is LinkUseItemDownState) && !(link.state is LinkUseItemUpState) &&
+                !(link.state is LinkUseItemLeftState) && !(link.state is LinkUseItemRightState) &&
+                !(link.state is LinkPickUpItemState)) 
+            {
+                keyboardController.Update();
+                mouseController.Update();
+            }
 
             spriteBatch.Begin();
 
@@ -137,7 +145,8 @@ namespace Legend_of_zelda_game
             {
                 NPC.Update();
             }
-
+            
+            link.LinkCollisionEnemy(enemies);
             link.LinkCollisionBlock(blocks);
             link.Update();
 

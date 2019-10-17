@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace _3902_ocho.Interfaces
+namespace Legend_of_zelda_game.Interfaces
 {
     public interface IBackground
     {

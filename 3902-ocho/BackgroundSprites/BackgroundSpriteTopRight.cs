@@ -1,4 +1,4 @@
-﻿using _3902_ocho.Interfaces;
+﻿using Legend_of_zelda_game.Interfaces;
 using Legend_of_zelda_game;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3902_ocho
+namespace Legend_of_zelda_game
 {
     public class BackgroundSpriteTopRight : IBackground
     {

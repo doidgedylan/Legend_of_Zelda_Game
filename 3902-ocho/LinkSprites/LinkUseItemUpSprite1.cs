@@ -21,7 +21,7 @@ namespace Legend_of_zelda_game.LinkSprites
         public void Draw()
         {
             link.locationRect = new Rectangle((int)link.location.X, (int)link.location.Y, width * link.scale, height * link.scale);
-            link.spriteBatch.Draw(spriteSheet, link.locationRect, GetSourceRectangle(), Color.White);
+            link.spriteBatch.Draw(spriteSheet, link.locationRect, GetSourceRectangle(), link.tint);
         }
 
         public Rectangle GetSourceRectangle()

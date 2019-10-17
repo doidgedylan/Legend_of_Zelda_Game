@@ -1,12 +1,8 @@
-﻿using _3902_ocho.Interfaces;
+﻿using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _3902_ocho.Blocks
+
+namespace Legend_of_zelda_game.Blocks
 {
     public class HorizontalWall : IBlock
     {
