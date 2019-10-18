@@ -44,9 +44,7 @@
     <Compile Include="BackgroundSprites\BackgroundSpriteBottom.cs" />
     <Compile Include="BackgroundSprites\BackgroundSpriteTopLeft.cs" />
     <Compile Include="BackgroundSprites\BackgroundSpriteTopRight.cs" />
-    <Compile Include="BackgroundSprites\SampleRoom1Sprite.cs" />
-    <Compile Include="BackgroundSprites\SampleRoom2Sprite.cs" />
-    <Compile Include="BackgroundSprites\SampleRoom3Sprite.cs" />
+    <Compile Include="BackgroundSprites\RoomSprite.cs" />
     <Compile Include="Blocks\Block.cs" />
     <Compile Include="Blocks\HorizontalWall.cs" />
     <Compile Include="Blocks\VerticalWall.cs" />
@@ -207,6 +205,7 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="LevelFiles\Room1File.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />

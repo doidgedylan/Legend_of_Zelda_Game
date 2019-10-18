@@ -67,7 +67,7 @@ namespace Legend_of_zelda_game
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
 
-            FileStream LevelFile = new FileStream("SampleRoom1File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream LevelFile = new FileStream("Room1File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
             XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
             Loader.Load(LevelFile, Reader);
@@ -104,7 +104,7 @@ namespace Legend_of_zelda_game
 
         public void LoadRoomContent(int roomNumber)
         {
-            FileStream LevelFile = new FileStream("SampleRoom" + roomNumber + "File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream LevelFile = new FileStream("Room" + roomNumber + "File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
             XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
             Loader.Load(LevelFile, Reader);

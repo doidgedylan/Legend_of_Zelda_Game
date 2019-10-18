@@ -10,22 +10,23 @@ using System.Threading.Tasks;
 
 namespace Legend_of_zelda_game
 {
-    public class SampleRoom1Sprite : IBackground
+    public class RoomSprite : IBackground
     {
         private SpriteBatch spriteBatch;
         private Texture2D spriteSheet;
         private Vector2 location;
 
-        public SampleRoom1Sprite(SpriteBatch spriteBatch, Vector2 location)
+        public RoomSprite(SpriteBatch spriteBatch, Vector2 location, Texture2D spriteSheet)
         {
             this.spriteBatch = spriteBatch;
-            this.spriteSheet = Texture2DStorage.GetSampleRoom1SpriteSheet();
+            this.spriteSheet = spriteSheet;
             this.location = location;
         }
         public void Draw()
         {
-            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, (int)location.X + 800, (int)location.Y + 550);
-            spriteBatch.Draw(spriteSheet, destinationRectangle, Color.White);
+            Rectangle sourceRectangle = new Rectangle((int)location.X, (int)location.Y, 802, 550);
+            Rectangle destinationRectangle = new Rectangle(0, 0, 802, 550);
+            spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
         }
     }
 }
