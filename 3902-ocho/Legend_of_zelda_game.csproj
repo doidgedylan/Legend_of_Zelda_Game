@@ -213,10 +213,10 @@
     <Content Include="Code Reviews\Sprint2XinyiMaintainability.txt" />
     <Content Include="Code Reviews\Sprint2MasonReadability.txt" />
     <Content Include="Code Reviews\Sprint2ReflectionDylan.txt" />
-    <Content Include="SampleRoom1File.xml" />
-    <Content Include="SampleRoom2File.xml" />
-    <Content Include="SampleRoom3File.xml" />
-    <Content Include="WholeLevelFile.xml" />
+    <Content Include="LevelFiles\SampleRoom1File.xml" />
+    <Content Include="LevelFiles\SampleRoom2File.xml" />
+    <Content Include="LevelFiles\SampleRoom3File.xml" />
+    <Content Include="LevelFiles\WholeLevelFile.xml" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
