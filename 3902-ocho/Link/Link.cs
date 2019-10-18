@@ -74,55 +74,72 @@ namespace Legend_of_zelda_game
         public void LinkCollisionEnemy(ISet<IEnemies> enemies)
         {
             IList<string> enemyCollisionSides = new List<string>();
+            IList<IEnemies> enemyCollisions = new List<IEnemies>();
             foreach (IEnemies enemy in enemies)
             {
                 string linkCollision = LinkCollison(locationRect, enemy.LocationRect);
                 if (linkCollision != "none")
                 {
                     enemyCollisionSides.Add(linkCollision);
+                    enemyCollisions.Add(enemy);
                 }
-            }
-
-            if(enemyCollisionSides.Count != 0)
-            {
-                HealthStateMachine.BeHurt();
             }
 
             if (enemyCollisionSides.Contains("bottom") && state is LinkMoveDownState)
             {
                 state = new LinkHurtDownState(this);
+                HealthStateMachine.BeHurt();
             }
             else if (enemyCollisionSides.Contains("top") && state is LinkMoveUpState)
             {
                 state = new LinkHurtUpState(this);
+                HealthStateMachine.BeHurt();
             }
             else if (enemyCollisionSides.Contains("left") && state is LinkMoveLeftState)
             {
                 state = new LinkHurtLeftState(this);
+                HealthStateMachine.BeHurt();
             }
             else if (enemyCollisionSides.Contains("right") && state is LinkMoveRightState)
             {
                 state = new LinkHurtRightState(this);
+                HealthStateMachine.BeHurt();
+            }
+            else if ((enemyCollisionSides.Contains("bottom") && state is LinkWoodSwordDownState) ||
+                (enemyCollisionSides.Contains("top") && state is LinkWoodSwordUpState) ||
+                (enemyCollisionSides.Contains("left") && state is LinkWoodSwordLeftState) ||
+                (enemyCollisionSides.Contains("right") && state is LinkWoodSwordRightState))
+            {
+                foreach (IEnemies enemy in enemyCollisions)
+                {
+                    enemies.Remove(enemy);
+                }
             }
         }
 
         public void LinkCollisionCollectable(ISet<ICollectable> collectables)
         {
-            IList<string> blockCollisionSides = new List<string>();
+            IList<string> collectableCollisionSides = new List<string>();
+            IList<ICollectable> collectableCollisions = new List<ICollectable>();
             foreach (ICollectable collectable in collectables)
             {
                 string linkCollision = LinkCollison(locationRect, collectable.LocationRect);
                 if (linkCollision != "none")
                 {
-                    blockCollisionSides.Add(linkCollision);
+                    collectableCollisionSides.Add(linkCollision);
+                    collectableCollisions.Add(collectable);
                 }
             }
 
-            if ((blockCollisionSides.Contains("top") && state is LinkMoveUpState) ||
-                (blockCollisionSides.Contains("bottom") && state is LinkMoveDownState) ||
-                (blockCollisionSides.Contains("right") && state is LinkMoveRightState) ||
-                (blockCollisionSides.Contains("left") && state is LinkMoveLeftState))
+            if ((collectableCollisionSides.Contains("top") && state is LinkMoveUpState) ||
+                (collectableCollisionSides.Contains("bottom") && state is LinkMoveDownState) ||
+                (collectableCollisionSides.Contains("right") && state is LinkMoveRightState) ||
+                (collectableCollisionSides.Contains("left") && state is LinkMoveLeftState))
             {
+                foreach (ICollectable collectable in collectableCollisions)
+                {
+                    collectables.Remove(collectable);
+                }
                 state = new LinkPickUpItemState(this);
             }
         }
