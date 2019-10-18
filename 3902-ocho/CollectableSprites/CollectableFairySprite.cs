@@ -23,7 +23,7 @@ namespace Legend_of_zelda_game
         public CollectableFairySprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
-            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            LocationRect = new Rectangle((int)this.location.X, (int)this.location.Y, width * scale, height * scale);
             this.spriteBatch = spriteBatch;
             this.location = location;
         }

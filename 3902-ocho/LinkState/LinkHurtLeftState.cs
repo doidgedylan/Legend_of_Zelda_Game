@@ -24,13 +24,13 @@ namespace Legend_of_zelda_game
             LinkHurtLeftSprite linkHurtLeftSprite = new LinkHurtLeftSprite(link);
 
             currentFrame++;
-            if (currentFrame <= 15 && link.location.X <= endPosition)
+            if (currentFrame <= 15 && link.Location.X <= endPosition)
             {
-                link.location = Vector2.Add(link.location, new Vector2(link.hurtSpeed, 0));
+                link.Location = Vector2.Add(link.Location, new Vector2(link.hurtSpeed, 0));
             }
-            else if (link.location.X >= endPosition)
+            else if (link.Location.X >= endPosition)
             { 
-                link.location = new Vector2(750, link.location.Y);
+                link.Location = new Vector2(750, link.Location.Y);
             }
 
             link.tint = link.hurtColors[currentFrame / 5];
