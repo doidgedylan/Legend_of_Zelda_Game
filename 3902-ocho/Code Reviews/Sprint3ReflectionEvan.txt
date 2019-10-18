@@ -1,0 +1,9 @@
+﻿Evan's Sprint 3 Reflection
+
+At the beginning of the sprint, we decided what would need to be finished, and who should be responsible for those tasks.
+However as we progressed and learned more about the project, these tasks changed, but we didn't smoothly shift
+responsibilities with them. As a result, a couple people were left doing a lot of work, while the others weren't left with
+much to do. In the future, we must be more adaptable to changing plans and designs, and be more effective at
+communicating these changes with one another, so that work may be split up evenly between group members. This may be achieved
+through more frequent face-to-face meetings so that we may all discuss challenges about the project, and come to a final group
+decision about how we would face these challenges.

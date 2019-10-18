@@ -174,7 +174,6 @@
   <ItemGroup>
     <Content Include="bin\Windows\x86\Debug\3902-ocho.exe" />
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
-    <Content Include="bin\Windows\x86\Debug\LevelFile.xml" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
@@ -197,8 +196,14 @@
     <Content Include="bin\Windows\x86\Debug\WholeLevelFile.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
     <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
+    <Content Include="Code Reviews\Sprint2DylanReadability.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
+    <Content Include="Code Reviews\Sprint2MasonMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint2ReflectionEvan.txt" />
+    <Content Include="Code Reviews\Sprint3DylanReadability.txt" />
+    <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />

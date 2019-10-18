@@ -1,0 +1,12 @@
+﻿Author: Evan Standerwick
+Date: 10/18/19
+Sprint: 3
+Name of reviewed file: LinkIdleUpState.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review:
+Specific comments on code quality: As a whole, the class is highly cohesive, as it just selects one of two sprites to
+	draw based on Link's current frame. The class is also lowly coupled, as it's only dependent on few external classes:
+	Link, LinkMoveUpSprite1, and LinkMoveUpSprite2.
+Hypothetical change and response: It may be beneficial to make it so that you don't need both sprites to be loaded at the
+	same time, on a large scale it may be memory inefficient. However, for the purposes of this project it will almost
+	certainly not be a problem.

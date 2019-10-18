@@ -1,0 +1,8 @@
+﻿Author: Evan Standerwick
+Date: 10/18/19
+Sprint: 3
+Name of reviewed file: CollectableTriforceSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 10
+Specific comments: The class, as a whole, I find very readable and easy to understand. All fields, methods, and variables
+	are well-named and it's clear how they fit in with the rest of the class, and with the project as a whole.
