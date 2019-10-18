@@ -1,0 +1,10 @@
+﻿Author: Mason Rye
+Date: 9/27/19
+Sprint: 3
+Name of reviewed file: CollectableBigHeartSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 15
+CollectableBigHeartSprite seems very maintianable. The sprite class is very cohesive and only serves to update
+and draw the collectable big heart sprite. It also has low coupling and does not rely on many external classes
+for code. It also follows the same conventions as other sprite classes. Overall no recoomendations really other
+than see if the one can use less of the overall classes variables. 
