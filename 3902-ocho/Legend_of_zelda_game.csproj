@@ -177,7 +177,6 @@
     <Content Include="bin\Windows\x86\Debug\LevelFile.xml" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
-    <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom2File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom3File.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />
@@ -199,6 +198,8 @@
     <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
+    <Content Include="Code Reviews\Sprint3XinyiMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint3MasonReadability.txt" />
     <Content Include="Icon.ico" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
@@ -206,7 +207,7 @@
     <Content Include="Code Reviews\Sprint2XinyiMaintainability.txt" />
     <Content Include="Code Reviews\Sprint2MasonReadability.txt" />
     <Content Include="Code Reviews\Sprint2ReflectionDylan.txt" />
-    <Content Include="SampleRoom1File.xml" />
+    <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
     <Content Include="SampleRoom2File.xml" />
     <Content Include="SampleRoom3File.xml" />
     <Content Include="WholeLevelFile.xml" />

@@ -1,0 +1,13 @@
+﻿Author: Dylan Doidge
+Date: 10/18/19
+Sprint: 3
+Name of reviewed file: Link.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 20
+Specific comments: The class has multiple conditions based on collisions that need to be handled
+so it is split between four methods based on what the Link character is interacting with.  The main LinkCollision
+method is at the bottom of the class which might make it more difficult to read since it is referenced before it
+is used, but the method goes through all cases of location and object collision to add to a list and execute.
+The execution is also based on the current state of Link which is specified in the case conditions.  The class
+covers all cases and organizes them well to give the reader an idea of the process the class goes through each
+update.

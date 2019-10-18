@@ -1,0 +1,10 @@
+﻿Author: Dylan Doidge
+Date: 10/18/19
+Sprint: 
+Name of reviewed file: EnemiesKeeseSprite.cs
+Author of reviewed file: Xinyi Zhao
+Specific comments on code quality: The location of the sprite and the spritebatch are passed in as parameters for the constructor.
+The Update method is using the frames to animate the sprite, and the Draw method puts it all together to put it into the game.
+There is low coupling which will help with maintainability since there won't be as many differences to the dependencies as other
+classes.  The class is also concise with each method focusing on their one main purpose to aid to higher cohesion.  Variables are
+able to be changed at the top of the class with different values easily and everything is understandable.
