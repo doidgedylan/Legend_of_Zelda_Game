@@ -1,0 +1,12 @@
+﻿Maintainability
+Author: Xinyi Zhao
+Date: 10/18/2019
+Sprint: 3
+Name of .cs: CollectableFairySprite.cs
+Author of the .cs: Dylan Doidge
+
+Quality of the CollectableFairySprite class is good, and we can easily manage code and maintenance code. 
+The code is simple with a few variables and methods, and every function is necessary. 
+It also has high cohesion since the functions in it are well defined, and when need to add some method, it is easy. 
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+If we want to change the fairy’s location or add some new features, the general logic will not be affected.
