@@ -53,9 +53,7 @@
     <Compile Include="Commands\LinkPickUpItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
-    <Compile Include="Commands\LoadRoom1Command.cs" />
-    <Compile Include="Commands\LoadRoom2Command.cs" />
-    <Compile Include="Commands\LoadRoom3Command.cs" />
+    <Compile Include="Commands\LoadRoomCommand.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
@@ -205,6 +203,7 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="LevelFiles\Room18File.xml" />
     <Content Include="LevelFiles\Room1File.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />

@@ -35,6 +35,21 @@ namespace Legend_of_zelda_game.Controllers
             keyMappings.Add(Keys.D1, Buttons.D1);
             keyMappings.Add(Keys.D2, Buttons.D2);
             keyMappings.Add(Keys.D3, Buttons.D3);
+            keyMappings.Add(Keys.D4, Buttons.D4);
+            keyMappings.Add(Keys.D5, Buttons.D5);
+            keyMappings.Add(Keys.D6, Buttons.D6);
+            keyMappings.Add(Keys.D7, Buttons.D7);
+            keyMappings.Add(Keys.D8, Buttons.D8);
+            keyMappings.Add(Keys.D9, Buttons.D9);
+            keyMappings.Add(Keys.D0, Buttons.D0);
+            keyMappings.Add(Keys.NumPad1, Buttons.NumPad1);
+            keyMappings.Add(Keys.NumPad2, Buttons.NumPad2);
+            keyMappings.Add(Keys.NumPad3, Buttons.NumPad3);
+            keyMappings.Add(Keys.NumPad4, Buttons.NumPad4);
+            keyMappings.Add(Keys.NumPad5, Buttons.NumPad5);
+            keyMappings.Add(Keys.NumPad6, Buttons.NumPad6);
+            keyMappings.Add(Keys.NumPad7, Buttons.NumPad7);
+            keyMappings.Add(Keys.NumPad8, Buttons.NumPad8);
             keyMappings.Add(Keys.None, Buttons.NoButtonsPressed);
         }
 

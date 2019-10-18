@@ -97,9 +97,24 @@ namespace Legend_of_zelda_game
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
-            keyboardController.RegisterCommand(Buttons.D1, new LoadRoom1Command(this));
-            keyboardController.RegisterCommand(Buttons.D2, new LoadRoom2Command(this));
-            keyboardController.RegisterCommand(Buttons.D3, new LoadRoom3Command(this));
+            keyboardController.RegisterCommand(Buttons.D1, new LoadRoomCommand(this, 1));
+            keyboardController.RegisterCommand(Buttons.D2, new LoadRoomCommand(this, 2));
+            keyboardController.RegisterCommand(Buttons.D3, new LoadRoomCommand(this, 3));
+            keyboardController.RegisterCommand(Buttons.D4, new LoadRoomCommand(this, 4));
+            keyboardController.RegisterCommand(Buttons.D5, new LoadRoomCommand(this, 5));
+            keyboardController.RegisterCommand(Buttons.D6, new LoadRoomCommand(this, 6));
+            keyboardController.RegisterCommand(Buttons.D7, new LoadRoomCommand(this, 7));
+            keyboardController.RegisterCommand(Buttons.D8, new LoadRoomCommand(this, 8));
+            keyboardController.RegisterCommand(Buttons.D9, new LoadRoomCommand(this, 9));
+            keyboardController.RegisterCommand(Buttons.D0, new LoadRoomCommand(this, 10));
+            keyboardController.RegisterCommand(Buttons.NumPad1, new LoadRoomCommand(this, 11));
+            keyboardController.RegisterCommand(Buttons.NumPad2, new LoadRoomCommand(this, 12));
+            keyboardController.RegisterCommand(Buttons.NumPad3, new LoadRoomCommand(this, 13));
+            keyboardController.RegisterCommand(Buttons.NumPad4, new LoadRoomCommand(this, 14));
+            keyboardController.RegisterCommand(Buttons.NumPad5, new LoadRoomCommand(this, 15));
+            keyboardController.RegisterCommand(Buttons.NumPad6, new LoadRoomCommand(this, 16));
+            keyboardController.RegisterCommand(Buttons.NumPad7, new LoadRoomCommand(this, 17));
+            keyboardController.RegisterCommand(Buttons.NumPad8, new LoadRoomCommand(this, 18));
         }
 
         public void LoadRoomContent(int roomNumber)

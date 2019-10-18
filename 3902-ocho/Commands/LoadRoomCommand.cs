@@ -4,16 +4,18 @@ using System;
 
 namespace _3902_ocho.Commands
 {
-    public class LoadRoom1Command : ICommand
+    public class LoadRoomCommand : ICommand
     {
         private Game1 game;
-        public LoadRoom1Command(Game1 game)
+        private int roomNum;
+        public LoadRoomCommand(Game1 game, int roomNum)
         {
             this.game = game;
+            this.roomNum = roomNum;
         }
         public void Execute()
         {
-            this.game.LoadRoomContent(1);
+            this.game.LoadRoomContent(roomNum);
         }
     }
 }
