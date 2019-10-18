@@ -21,7 +21,7 @@ namespace Legend_of_zelda_game
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             this.spriteBatch = spriteBatch;
             this.location = location;
-            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            LocationRect = new Rectangle((int)this.location.X, (int)this.location.Y, width * scale, height * scale);
         }
 
         public void Update()

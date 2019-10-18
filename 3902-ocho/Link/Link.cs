@@ -9,7 +9,7 @@ namespace Legend_of_zelda_game
     {
         public ILinkState state;
         public SpriteBatch spriteBatch;
-        public Vector2 location { get; set; }
+        public Vector2 Location { get; set; }
         public Rectangle locationRect;
         public int moveSpeed;
         public int hurtSpeed;
@@ -23,7 +23,7 @@ namespace Legend_of_zelda_game
         {
             this.spriteBatch = spriteBatch;
             state = new LinkIdleDownState(this);
-            location = new Vector2(350, 200);
+            this.Location = location;
             moveSpeed = 3;
             hurtSpeed = 5;
             scale = 3;

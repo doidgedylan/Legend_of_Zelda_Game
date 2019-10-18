@@ -20,7 +20,7 @@ namespace Legend_of_zelda_game.LinkSprites
 
         public void Draw()
         {
-            link.locationRect = new Rectangle((int)link.location.X, (int)link.location.Y - (height - 16) * link.scale, width * link.scale, height * link.scale);
+            link.locationRect = new Rectangle((int)link.Location.X, (int)link.Location.Y - (height - 16) * link.scale, width * link.scale, height * link.scale);
             SpriteEffects s = SpriteEffects.FlipHorizontally;
             link.spriteBatch.Draw(spriteSheet, link.locationRect, GetSourceRectangle(), link.tint, 0, new Vector2(0, 0), s, 0f);
         }
