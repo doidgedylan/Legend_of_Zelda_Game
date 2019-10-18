@@ -74,6 +74,15 @@ namespace Legend_of_zelda_game
             Location = new Vector2(X, Y);
             switch (ObjectName)
             {
+                case "SampleRoom1":
+                    this.Backgrounds.Add(new SampleRoom1Sprite(spriteBatch, Location));
+                    break;
+                case "SampleRoom2":
+                    this.Backgrounds.Add(new SampleRoom2Sprite(spriteBatch, Location));
+                    break;
+                case "SampleRoom3":
+                    this.Backgrounds.Add(new SampleRoom3Sprite(spriteBatch, Location));
+                    break;
                 case "BackgroundSpriteBottom":
                     this.Backgrounds.Add(new BackgroundSpriteBottom(spriteBatch, Location));
                     break;

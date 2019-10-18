@@ -6,6 +6,7 @@ using System.IO;
 using System.Xml;
 using Legend_of_zelda_game.Controllers;
 using Legend_of_zelda_game.Blocks;
+using _3902_ocho.Commands;
 
 namespace Legend_of_zelda_game
 {
@@ -66,7 +67,7 @@ namespace Legend_of_zelda_game
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
 
-            FileStream LevelFile = new FileStream("LevelFile.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream LevelFile = new FileStream("SampleRoom1File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
             XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
             Loader.Load(LevelFile, Reader);
@@ -95,8 +96,24 @@ namespace Legend_of_zelda_game
             mouseController.RegisterCommand(Buttons.RightClick, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
-            keyboardController.RegisterCommand(Buttons.E, new HurtLinkCommand(healthStateMachine, link));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
+            keyboardController.RegisterCommand(Buttons.D1, new LoadRoom1Command(this));
+            keyboardController.RegisterCommand(Buttons.D2, new LoadRoom2Command(this));
+            keyboardController.RegisterCommand(Buttons.D3, new LoadRoom3Command(this));
+        }
+
+        public void LoadRoomContent(int roomNumber)
+        {
+            FileStream LevelFile = new FileStream("SampleRoom" + roomNumber + "File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            XmlReader Reader = XmlReader.Create(LevelFile);
+            LevelLoader Loader = new LevelLoader(spriteBatch);
+            Loader.Load(LevelFile, Reader);
+
+            this.collectables = Loader.Collectables;
+            this.enemies = Loader.Enemies;
+            this.backgrounds = Loader.Backgrounds;
+            this.blocks = Loader.Blocks;
+            this.NPCs = Loader.NPCs;
         }
 
         public void ReloadContent()

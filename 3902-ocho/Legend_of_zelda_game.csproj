@@ -44,6 +44,9 @@
     <Compile Include="BackgroundSprites\BackgroundSpriteBottom.cs" />
     <Compile Include="BackgroundSprites\BackgroundSpriteTopLeft.cs" />
     <Compile Include="BackgroundSprites\BackgroundSpriteTopRight.cs" />
+    <Compile Include="BackgroundSprites\SampleRoom1Sprite.cs" />
+    <Compile Include="BackgroundSprites\SampleRoom2Sprite.cs" />
+    <Compile Include="BackgroundSprites\SampleRoom3Sprite.cs" />
     <Compile Include="Blocks\Block.cs" />
     <Compile Include="Blocks\HorizontalWall.cs" />
     <Compile Include="Blocks\VerticalWall.cs" />
@@ -52,6 +55,9 @@
     <Compile Include="Commands\LinkPickUpItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
+    <Compile Include="Commands\LoadRoom1Command.cs" />
+    <Compile Include="Commands\LoadRoom2Command.cs" />
+    <Compile Include="Commands\LoadRoom3Command.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
@@ -171,6 +177,9 @@
     <Content Include="bin\Windows\x86\Debug\LevelFile.xml" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
+    <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
+    <Content Include="bin\Windows\x86\Debug\SampleRoom2File.xml" />
+    <Content Include="bin\Windows\x86\Debug\SampleRoom3File.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct3D11.dll" />
@@ -185,18 +194,22 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.dll" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
+    <Content Include="bin\Windows\x86\Debug\WholeLevelFile.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
     <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint2EvanReadability2txt.txt" />
     <Content Include="Icon.ico" />
-    <Content Include="LevelFile.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />
     <Content Include="Code Reviews\Sprint2XinyiMaintainability.txt" />
     <Content Include="Code Reviews\Sprint2MasonReadability.txt" />
     <Content Include="Code Reviews\Sprint2ReflectionDylan.txt" />
+    <Content Include="SampleRoom1File.xml" />
+    <Content Include="SampleRoom2File.xml" />
+    <Content Include="SampleRoom3File.xml" />
+    <Content Include="WholeLevelFile.xml" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
