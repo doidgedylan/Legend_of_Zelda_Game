@@ -9,7 +9,7 @@
     <Item>
       <ObjectType>Link</ObjectType>
       <ObjectName>Link</ObjectName> 
-      <Location>300 200</Location>
+      <Location>650 250</Location>
     </Item>
 
     <!--Walls-->
@@ -40,24 +40,24 @@
     <Item>
       <ObjectType>Collectable</ObjectType>
       <ObjectName>Key</ObjectName>
-      <Location>320 256</Location>
+      <Location>500 400</Location>
     </Item>
 
     <!--Enemies-->
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 96</Location>
+      <Location>150 150</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 224</Location>
+      <Location>150 350</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>160 128</Location>
+      <Location>250 200</Location>
     </Item>
   </Asset>
 </XnaContent>
