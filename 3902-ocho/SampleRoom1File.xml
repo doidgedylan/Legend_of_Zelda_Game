@@ -1,0 +1,78 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>SampleRoom1</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName> 
+      <Location>300 200</Location>
+    </Item>
+
+    <!--Walls-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 450</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>700 0</Location>
+    </Item>
+    
+    <!--Blocks-->
+
+    <!--Collectables-->
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Arrow</ObjectName>
+      <Location>150 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Boomerang</ObjectName>
+      <Location>200 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Bow</ObjectName>
+      <Location>250 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Compass</ObjectName>
+      <Location>300 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Fairy</ObjectName>
+      <Location>350 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Key</ObjectName>
+      <Location>400 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Sword</ObjectName>
+      <Location>450 150</Location>
+    </Item>
+
+    <!--Enemies-->
+  </Asset>
+</XnaContent>
