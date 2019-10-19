@@ -191,6 +191,7 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
     <Content Include="bin\Windows\x86\Debug\WholeLevelFile.xml" />
     <Content Include="bin\Windows\x86\Debug\Room10File.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room11File.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
     <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2DylanReadability.txt" />
@@ -204,8 +205,18 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="LevelFiles\Room10File.xml" />
+    <Content Include="LevelFiles\Room11File.xml" />
     <Content Include="LevelFiles\Room18File.xml" />
     <Content Include="LevelFiles\Room1File.xml" />
+    <Content Include="LevelFiles\Room2File.xml" />
+    <Content Include="LevelFiles\Room3File.xml" />
+    <Content Include="LevelFiles\Room4File.xml" />
+    <Content Include="LevelFiles\Room5File.xml" />
+    <Content Include="LevelFiles\Room6File.xml" />
+    <Content Include="LevelFiles\Room7File.xml" />
+    <Content Include="LevelFiles\Room8File.xml" />
+    <Content Include="LevelFiles\Room9File.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />

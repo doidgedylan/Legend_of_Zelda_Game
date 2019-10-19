@@ -2,14 +2,19 @@
   <Asset Type="MyDataTypes.LevelObjectData[]">
     <Item>
       <ObjectType>Background</ObjectType>
-      <ObjectName>Room1</ObjectName>
-      <Location>0 1110</Location>
+      <ObjectName>Room8</ObjectName>
+      <Location>2 1109</Location>
     </Item>
 
     <Item>
       <ObjectType>Link</ObjectType>
-      <ObjectName>Link</ObjectName> 
-      <Location>300 200</Location>
+      <ObjectName>Link</ObjectName>
+      <Location>200 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>NPC</ObjectType>
+      <ObjectName>OldMan</ObjectName>
+      <Location>400 200</Location>
     </Item>
 
     <!--Walls-->
@@ -33,31 +38,12 @@
       <ObjectName>VerticalWall</ObjectName>
       <Location>700 0</Location>
     </Item>
-    
+
     <!--Blocks-->
 
     <!--Collectables-->
-    <Item>
-      <ObjectType>Collectable</ObjectType>
-      <ObjectName>Key</ObjectName>
-      <Location>320 256</Location>
-    </Item>
 
     <!--Enemies-->
-    <Item>
-      <ObjectType>Enemy</ObjectType>
-      <ObjectName>Keese</ObjectName>
-      <Location>96 96</Location>
-    </Item>
-    <Item>
-      <ObjectType>Enemy</ObjectType>
-      <ObjectName>Keese</ObjectName>
-      <Location>96 224</Location>
-    </Item>
-    <Item>
-      <ObjectType>Enemy</ObjectType>
-      <ObjectName>Keese</ObjectName>
-      <Location>160 128</Location>
-    </Item>
+
   </Asset>
 </XnaContent>

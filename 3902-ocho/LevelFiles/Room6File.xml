@@ -1,0 +1,89 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>Room3</ObjectName>
+      <Location>804 0</Location>
+    </Item>
+
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName>
+      <Location>200 200</Location>
+    </Item>
+
+    <!--Walls-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 450</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>700 0</Location>
+    </Item>
+
+    <!--Blocks-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>200 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>550 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>200 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>550 300</Location>
+    </Item>
+
+    <!--Collectables-->
+
+    <!--Enemies-->
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>100 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>250 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>150 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>250 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>150 300</Location>
+    </Item>
+
+  </Asset>
+</XnaContent>

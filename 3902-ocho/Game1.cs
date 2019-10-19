@@ -67,7 +67,7 @@ namespace Legend_of_zelda_game
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
 
-            FileStream LevelFile = new FileStream("Room9File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream LevelFile = new FileStream("Room4File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
             XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
             Loader.Load(LevelFile, Reader);
