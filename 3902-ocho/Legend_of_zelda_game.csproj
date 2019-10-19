@@ -53,9 +53,7 @@
     <Compile Include="Commands\LinkPickUpItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
-    <Compile Include="Commands\LoadRoom1Command.cs" />
-    <Compile Include="Commands\LoadRoom2Command.cs" />
-    <Compile Include="Commands\LoadRoom3Command.cs" />
+    <Compile Include="Commands\LoadRoomCommand.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
@@ -174,11 +172,7 @@
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room7File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room8File.xml" />
-    <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom2File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom3File.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />
@@ -209,12 +203,8 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
-    <Content Include="bin\Windows\x86\Debug\Room1File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room2File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room3File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room4File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room5File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room6File.xml" />
+    <Content Include="LevelFiles\Room18File.xml" />
+    <Content Include="LevelFiles\Room1File.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />
