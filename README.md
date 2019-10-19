@@ -1,16 +1,13 @@
 # Legend_of_zelda_game
 OSU CSE 3902 AU19 Team Ocho
+Sprint 3
 
 This is the Legend of Zelda Game Project for Team Ocho in the 11:30 section of 3902 with Matt Boggus.
 
-The last commit for the sprint before adding this readme is 504943d07c8ae5988d8aab743dd4034eaac4f0f5.
+The last commit for the sprint before adding this readme is e7863ee4a47b7feebcbb5620b598f276d9a380b7.
 
-The program controls are listed on the program, just run it to find out.
+The program controls are the same to move and attack for link from last sprint. To switch between rooms uses the numbers above the keyboard for rooms 1-10 and the numpad for rooms 11-18.
 
-There are currently no know bugs that break the code. The couple of things to note is that the animations for Link loop repeatedly after button press, except for moving.
+In order to run the program the files in the LevelFile folder (the files themselve not the folder and the files) need to be moved to the \Legend_of_zelda_game\3902-ocho\bin\Windows\x86\Debug folder. It is recommended this is done in the file explorer. The code should then be run in debug mode.
 
-Using the code analysis tool I got two warnings which was suppressed:
-Severity	Code	Description	Project	File	Line	Suppression State
-Warning	CA0507	Post-build Code Analysis (FxCopCmd.exe) has been deprecated in favor of FxCop analyzers, which run during build. Refer to https://aka.ms/fxcopanalyzers to migrate to FxCop analyzers.				Active
-Severity	Code	Description	Project	File	Line	Suppression State
-Warning		Found conflicts between different versions of the same dependent assembly. Please set the "AutoGenerateBindingRedirects" property to true in the project file. For more information, see http://go.microsoft.com/fwlink/?LinkId=294190.	Legend_of_zelda_game			
+Using the code analysis tool I got no warnings.
