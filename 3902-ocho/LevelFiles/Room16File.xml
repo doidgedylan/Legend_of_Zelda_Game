@@ -1,0 +1,68 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>Room18</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName> 
+      <Location>155 10</Location>
+    </Item>
+
+    <!--Walls-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 450</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>700 0</Location>
+    </Item>
+    
+    <!--Blocks-->
+
+    <!--Collectables-->
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Bow</ObjectName>
+      <Location>400 200</Location>
+    </Item>
+
+    <!--Enemies-->
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Keese</ObjectName>
+      <Location>155 240</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Keese</ObjectName>
+      <Location>530 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Keese</ObjectName>
+      <Location>620 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Keese</ObjectName>
+      <Location>300 320</Location>
+    </Item>
+  </Asset>
+</XnaContent>

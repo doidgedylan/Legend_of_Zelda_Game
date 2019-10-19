@@ -1,0 +1,103 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>Room18</ObjectName>
+      <Location>808 0</Location>
+    </Item>
+
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName> 
+      <Location>650 250</Location>
+    </Item>
+
+    <!--Walls-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 450</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>700 0</Location>
+    </Item>
+    
+    <!--Blocks-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>400 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>450 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>500 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>450 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>400 350</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>350 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>300 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>350 200</Location>
+    </Item>
+
+    <!--Collectables-->
+
+    <!--Enemies-->
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Trap</ObjectName>
+      <Location>100 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Trap</ObjectName>
+      <Location>100 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Trap</ObjectName>
+      <Location>650 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Trap</ObjectName>
+      <Location>650 400</Location>
+    </Item>
+  </Asset>
+</XnaContent>

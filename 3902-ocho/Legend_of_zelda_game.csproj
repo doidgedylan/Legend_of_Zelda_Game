@@ -204,6 +204,9 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="LevelFiles\Room15File.xml" />
+    <Content Include="LevelFiles\Room16File.xml" />
+    <Content Include="LevelFiles\Room17File.xml" />
     <Content Include="LevelFiles\Room18File.xml" />
     <Content Include="LevelFiles\Room1File.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
