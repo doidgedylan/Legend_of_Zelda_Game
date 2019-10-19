@@ -12,10 +12,10 @@ namespace Legend_of_zelda_game
 {
     public class LevelLoader
     {
-        private SpriteBatch spriteBatch;
-        private Texture2D BackgroundBottomSpriteSheet;
-        private Texture2D BackgroundTopLeftSpriteSheet;
-        private Texture2D BackgroundTopRightSpriteSheet;
+        private readonly SpriteBatch spriteBatch;
+        private readonly Texture2D BackgroundBottomSpriteSheet;
+        private readonly Texture2D BackgroundTopLeftSpriteSheet;
+        private readonly Texture2D BackgroundTopRightSpriteSheet;
         public ISet<IBackground> Backgrounds { get; set; }
         public Link Link { get; set; }
         public ISet<IEnemies> Enemies { get; set; }
@@ -48,7 +48,11 @@ namespace Legend_of_zelda_game
 
         private void ProcessItem(FileStream input, XmlReader reader)
         {
-            string ObjectType = "";
+            if (input is null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
             string ObjectName = "";
             string LocationStr = "";
             Vector2 Location;
@@ -57,10 +61,6 @@ namespace Legend_of_zelda_game
             {
                 switch (reader.Name)
                 {
-                    case "ObjectType":
-                        reader.Read();
-                        ObjectType = reader.ReadContentAsString();
-                        break;
                     case "ObjectName":
                         reader.Read();
                         ObjectName = reader.ReadContentAsString();
