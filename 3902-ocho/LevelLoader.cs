@@ -85,7 +85,7 @@ namespace Legend_of_zelda_game
                 {
                     this.Backgrounds.Add(new RoomSprite(spriteBatch, Location, BackgroundBottomSpriteSheet));
                 }
-                else if ((roomNum > 8 && roomNum < 11) || roomNum == 13 || (roomNum > 15 && roomNum < 19))
+                else if ((roomNum >= 8 && roomNum < 11) || roomNum == 13 || (roomNum > 15 && roomNum < 19))
                 {
                     this.Backgrounds.Add(new RoomSprite(spriteBatch, Location, BackgroundTopLeftSpriteSheet));
                 }

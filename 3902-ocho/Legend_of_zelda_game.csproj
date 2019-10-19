@@ -190,6 +190,7 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
     <Content Include="bin\Windows\x86\Debug\WholeLevelFile.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room10File.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
     <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2DylanReadability.txt" />
