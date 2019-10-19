@@ -172,6 +172,7 @@
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room12File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom2File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom3File.xml" />
@@ -209,6 +210,7 @@
     <Content Include="LevelFiles\Room17File.xml" />
     <Content Include="LevelFiles\Room18File.xml" />
     <Content Include="LevelFiles\Room1File.xml" />
+    <Content Include="LevelFiles\Room12File.xml" />
     <Content Include="obj\x86\Debug\3902-ocho.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\3902-ocho.exe" />
     <Content Include="obj\x86\Debug\3902-ocho.pdb" />
