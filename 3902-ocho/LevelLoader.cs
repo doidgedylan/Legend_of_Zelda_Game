@@ -21,7 +21,8 @@ namespace Legend_of_zelda_game
         public ISet<IEnemies> Enemies { get; set; }
         public ISet<IBlock> Blocks { get; set; }
         public ISet<ICollectable> Collectables { get; set; }
-        public ISet<INPC> NPCs { get; set; }
+        public ISet<ISprite> NPCs { get; set; }
+        public ISet<ISprite> HUD { get; set; }
 
         public LevelLoader(SpriteBatch spriteBatch)
         {
@@ -30,7 +31,8 @@ namespace Legend_of_zelda_game
             this.Enemies = new HashSet<IEnemies>();
             this.Blocks = new HashSet<IBlock>();
             this.Collectables = new HashSet<ICollectable>();
-            this.NPCs = new HashSet<INPC>();
+            this.NPCs = new HashSet<ISprite>();
+            this.HUD = new HashSet<ISprite>();
             BackgroundBottomSpriteSheet = Texture2DStorage.GetBackgroundSpriteSheetBottom();
             BackgroundTopLeftSpriteSheet = Texture2DStorage.GetBackgroundSpriteSheetTopLeft();
             BackgroundTopRightSpriteSheet = Texture2DStorage.GetBackgroundSpriteSheetTopRight();
@@ -189,6 +191,12 @@ namespace Legend_of_zelda_game
                         break;
                     case "OldMan":
                         this.NPCs.Add(new OldManNPCSprite(spriteBatch, Location));
+                        break;
+                    case "HUDLevel":
+                        this.HUD.Add(new HUDLevelSprite(spriteBatch, Location));
+                        break;
+                    case "HUDLevelNumber":
+                        this.HUD.Add(new HUDLevelNumberSprite(spriteBatch, Location));
                         break;
                     default:
                         // do nothing

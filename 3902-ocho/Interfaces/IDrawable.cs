@@ -3,9 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game
 {
-    public interface INPC
+    public interface IDrawable
     {
-        void Update();
-        void Draw(SpriteBatch spriteBatch, Vector2 location);
+        void Draw(SpriteBatch spriteBatch);
     }
 }

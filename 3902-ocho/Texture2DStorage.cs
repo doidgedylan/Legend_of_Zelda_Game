@@ -15,6 +15,7 @@ namespace Legend_of_zelda_game
         private static Texture2D backgroundSpriteSheetBottom;
         private static Texture2D backgroundSpriteSheetTopLeft;
         private static Texture2D backgroundSpriteSheetTopRight;
+        private static Texture2D headsUpDisplaySpriteSheet;
         private static Texture2D sampleRoom1;
         private static Texture2D sampleRoom2;
         private static Texture2D sampleRoom3;
@@ -35,6 +36,7 @@ namespace Legend_of_zelda_game
             backgroundSpriteSheetBottom = content.Load<Texture2D>("BackgroundSpriteSheetBottom");
             backgroundSpriteSheetTopLeft = content.Load<Texture2D>("BackgroundSpriteSheetTopLeft");
             backgroundSpriteSheetTopRight = content.Load<Texture2D>("BackgroundSpriteSheetTopRight");
+            headsUpDisplaySpriteSheet = content.Load<Texture2D>("HUDSpriteSheet");
             sampleRoom1 = content.Load<Texture2D>("SampleRoom1");
             sampleRoom2 = content.Load<Texture2D>("SampleRoom2");
             sampleRoom3 = content.Load<Texture2D>("SampleRoom3");
@@ -87,6 +89,11 @@ namespace Legend_of_zelda_game
         public static Texture2D GetBackgroundSpriteSheetTopRight()
         {
             return backgroundSpriteSheetTopRight;
+        }
+
+        public static Texture2D GetHUDSpriteSheet()
+        {
+            return headsUpDisplaySpriteSheet;
         }
 
         public static Texture2D GetSampleRoom1SpriteSheet()

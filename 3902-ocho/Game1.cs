@@ -22,10 +22,10 @@ namespace Legend_of_zelda_game
         private Link link;
         private ISet<ICollectable> collectables;
         private ISet<IEnemies> enemies;
-        private ISet<INPC> NPCs;
+        private ISet<ISprite> NPCs;
         private ISet<IBlock> blocks;
         private ISet<IBackground> backgrounds;
-        
+        private ISet<ISprite> headsUpDisplay;
 
         public Game1()
         {
@@ -33,7 +33,7 @@ namespace Legend_of_zelda_game
             graphics.DeviceCreated += OnDeviceCreated;
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 550;
+            graphics.PreferredBackBufferHeight = 650;
             graphics.ApplyChanges();
         }
 
@@ -78,6 +78,7 @@ namespace Legend_of_zelda_game
             this.backgrounds = Loader.Backgrounds;
             this.blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
+            this.headsUpDisplay = Loader.HUD;
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
@@ -129,6 +130,7 @@ namespace Legend_of_zelda_game
             this.backgrounds = Loader.Backgrounds;
             this.blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
+            this.headsUpDisplay = Loader.HUD;
         }
 
         public void ReloadContent()
@@ -173,9 +175,14 @@ namespace Legend_of_zelda_game
                 enemy.Update();
             }
 
-            foreach (INPC NPC in NPCs)
+            foreach (ISprite NPC in NPCs)
             {
                 NPC.Update();
+            }
+
+            foreach (ISprite HUD in headsUpDisplay)
+            {
+                HUD.Update();
             }
 
             link.LinkCollisionCollectable(collectables);

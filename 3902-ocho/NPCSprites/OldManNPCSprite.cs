@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game
 {
-    public class OldManNPCSprite : INPC
+    public class OldManNPCSprite : ISprite
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
@@ -26,10 +26,10 @@ namespace Legend_of_zelda_game
         public void Update()
         {
             this.ApplyAnimation();
-            this.Draw(spriteBatch, this.location);
+            this.Draw(spriteBatch);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);

@@ -25,7 +25,7 @@ namespace Legend_of_zelda_game
         public void Draw()
         {
             Rectangle sourceRectangle = new Rectangle((int)location.X, (int)location.Y, 802, 550);
-            Rectangle destinationRectangle = new Rectangle(0, 0, 802, 550);
+            Rectangle destinationRectangle = new Rectangle(0, 100, 802, 550);
             spriteBatch.Draw(spriteSheet, destinationRectangle, sourceRectangle, Color.White);
         }
     }

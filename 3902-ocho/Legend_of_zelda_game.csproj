@@ -54,10 +54,14 @@
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Commands\LoadRoomCommand.cs" />
+    <Compile Include="HUD\HUDLevelNumberSprite.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
+    <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="HUD\HUDLevelSprite.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Interfaces\INPC.cs" />
+    <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="LevelLoader.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
@@ -173,6 +177,7 @@
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
     <Content Include="bin\Windows\x86\Debug\Room12File.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room1File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom2File.xml" />
     <Content Include="bin\Windows\x86\Debug\SampleRoom3File.xml" />

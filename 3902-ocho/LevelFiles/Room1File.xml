@@ -5,33 +5,42 @@
       <ObjectName>Room1</ObjectName>
       <Location>0 1110</Location>
     </Item>
-
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevel</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevelNumber</ObjectName>
+      <Location>48 1</Location>
+    </Item>
     <Item>
       <ObjectType>Link</ObjectType>
       <ObjectName>Link</ObjectName> 
-      <Location>300 200</Location>
+      <Location>300 300</Location>
     </Item>
 
     <!--Walls-->
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>HorizontalWall</ObjectName>
-      <Location>0 0</Location>
+      <Location>0 100</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>HorizontalWall</ObjectName>
-      <Location>0 450</Location>
+      <Location>0 550</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>VerticalWall</ObjectName>
-      <Location>0 0</Location>
+      <Location>0 100</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>VerticalWall</ObjectName>
-      <Location>700 0</Location>
+      <Location>700 100</Location>
     </Item>
     
     <!--Blocks-->
@@ -40,24 +49,24 @@
     <Item>
       <ObjectType>Collectable</ObjectType>
       <ObjectName>Key</ObjectName>
-      <Location>320 256</Location>
+      <Location>320 356</Location>
     </Item>
 
     <!--Enemies-->
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 96</Location>
+      <Location>96 196</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 224</Location>
+      <Location>96 324</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>160 128</Location>
+      <Location>160 228</Location>
     </Item>
   </Asset>
 </XnaContent>
