@@ -59,11 +59,15 @@
     <Compile Include="GameStates\ItemSelectState.cs" />
     <Compile Include="GameStates\PauseState.cs" />
     <Compile Include="GameStates\WinningState.cs" />
+    <Compile Include="HUD\HUDLevelNumberSprite.cs" />
+    <Compile Include="HUD\HUDLevelSprite.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
-    <Compile Include="Interfaces\INPC.cs" />
+    <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="LevelLoader.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />

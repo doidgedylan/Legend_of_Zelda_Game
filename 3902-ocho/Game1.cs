@@ -185,9 +185,7 @@ namespace Legend_of_zelda_game
                 HUD.Update();
             }
 
-            link.LinkCollisionCollectable(collectables);
-            link.LinkCollisionEnemy(enemies);
-            link.LinkCollisionBlock(blocks);
+            link.LinkCollisions.Update(collectables, enemies, blocks);
             link.Update();
 
             spriteBatch.End();

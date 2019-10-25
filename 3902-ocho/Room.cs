@@ -16,7 +16,7 @@ namespace _3902_ocho
         public int RoomNumber { get; }
         public ISet<ICollectable> Collectables { get; }
         public ISet<IEnemies> Enemies { get; }
-        public ISet<INPC> NPCs { get; }
+        public ISet<ISprite> NPCs { get; }
         public ISet<IBlock> Blocks { get; }
         public ISet<IBackground> Backgrounds { get; }
 

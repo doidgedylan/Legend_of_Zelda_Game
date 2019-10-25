@@ -52,14 +52,12 @@ namespace _3902_ocho.GameStates
                 enemy.Update();
             }
 
-            foreach (INPC NPC in currentRoom.NPCs)
+            foreach (ISprite NPC in currentRoom.NPCs)
             {
                 NPC.Update();
             }
 
-            link.LinkCollisionCollectable(currentRoom.Collectables);
-            link.LinkCollisionEnemy(currentRoom.Enemies);
-            link.LinkCollisionBlock(currentRoom.Blocks);
+            link.LinkCollisions.Update(currentRoom.Collectables, currentRoom.Enemies, currentRoom.Blocks);
             link.Update();
         }
     }
