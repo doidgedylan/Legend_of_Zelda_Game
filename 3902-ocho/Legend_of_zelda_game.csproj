@@ -104,6 +104,7 @@
     <Compile Include="LinkState\LinkUseItemUpState.cs" />
     <Compile Include="LinkState\LinkUseItemDownState.cs" />
     <Compile Include="LinkState\LinkPickUpItemState.cs" />
+    <Compile Include="LinkClasses\LinkCollisions.cs" />
     <Compile Include="NPCSprites\OldManNPCSprite.cs" />
     <Compile Include="CollectableSprites\CollectableBigHeartSprite.cs" />
     <Compile Include="CollectableSprites\CollectableClockSprite.cs" />
@@ -130,7 +131,7 @@
     <Compile Include="EnemySprites\EnemiesKeeseSprite.cs" />
     <Compile Include="EnemySprites\EnemiesWallmasterSprite.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
-    <Compile Include="Link\HealthStateMachine.cs" />
+    <Compile Include="LinkClasses\HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Commands\HurtLinkCommand.cs" />
     <Compile Include="Interfaces\IController.cs" />
@@ -139,7 +140,7 @@
     <Compile Include="Interfaces\ICollectable.cs" />
     <Compile Include="Interfaces\ILinkSprite.cs" />
     <Compile Include="Controllers\KeyboardController.cs" />
-    <Compile Include="Link\Link.cs" />
+    <Compile Include="LinkClasses\Link.cs" />
     <Compile Include="LinkState\LinkIdleDownState.cs" />
     <Compile Include="LinkState\LinkIdleLeftState.cs" />
     <Compile Include="Commands\LinkMoveDownCommand.cs" />
