@@ -159,6 +159,8 @@ namespace Legend_of_zelda_game
 
             spriteBatch.Begin();
 
+
+            // call IGameState.Update() here instead of the foreach loops
             foreach (IBackground background in backgrounds){
                 background.Draw();
             }
