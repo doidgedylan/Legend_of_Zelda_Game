@@ -14,7 +14,7 @@ namespace Legend_of_zelda_game
         {
             this.link = link;
             totalFrames = 20;
-            endPosition = 434;
+            endPosition = 600;
         }
 
         public void Update()
