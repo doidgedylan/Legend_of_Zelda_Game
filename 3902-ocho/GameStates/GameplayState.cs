@@ -56,8 +56,17 @@ namespace _3902_ocho.GameStates
             {
                 NPC.Update();
             }
+            foreach (ISprite HUD in currentRoom.HeadsUpDisplay)
+            {
+                HUD.Update();
+            }
+            foreach (IProjectile projectile in currentRoom.LinkProjectiles)
+            {
+                projectile.Update();
+            }
 
             link.LinkCollisions.Update(currentRoom.Collectables, currentRoom.Enemies, currentRoom.Blocks);
+            link.LinkProjectiles.Update(currentRoom.LinkProjectiles, currentRoom.Enemies, currentRoom.Blocks);
             link.Update();
         }
     }

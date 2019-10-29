@@ -8,6 +8,8 @@ using Legend_of_zelda_game.Controllers;
 using Legend_of_zelda_game.Blocks;
 using _3902_ocho.Commands;
 using Legend_of_zelda_game.Projectiles;
+using _3902_ocho.Interfaces;
+using _3902_ocho.GameStates;
 
 namespace Legend_of_zelda_game
 {
@@ -17,7 +19,7 @@ namespace Legend_of_zelda_game
     public class Game1 : Game
     {
         private SpriteBatch spriteBatch;
-        private SpriteFont controls;
+        private SpriteFont font;
         private KeyboardController keyboardController;
         private MouseController mouseController;
         private Link link;
@@ -28,6 +30,8 @@ namespace Legend_of_zelda_game
         private ISet<IBackground> backgrounds;
         private ISet<ISprite> headsUpDisplay;
         private ISet<IProjectile> linkProjectiles;
+        public IGameState CurrentState { get; set; }
+        public StateManager StateManager { get; set; }
 
         public Game1()
         {
@@ -63,8 +67,10 @@ namespace Legend_of_zelda_game
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Texture2DStorage.LoadAllTextures(Content);
-            controls = Content.Load<SpriteFont>("Controls");
+            font = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
+            StateManager = new StateManager(this, spriteBatch, font);
+            StateManager.SetGameplayState();
 
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
@@ -81,7 +87,7 @@ namespace Legend_of_zelda_game
             this.blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
             this.headsUpDisplay = Loader.HUD;
-            this.linkProjectiles = new HashSet<IProjectile>();
+            //this.linkProjectiles = new HashSet<IProjectile>();
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
@@ -101,6 +107,7 @@ namespace Legend_of_zelda_game
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
+            keyboardController.RegisterCommand(Buttons.P, new PauseCommand(this));
             keyboardController.RegisterCommand(Buttons.D1, new LoadRoomCommand(this, 1));
             keyboardController.RegisterCommand(Buttons.D2, new LoadRoomCommand(this, 2));
             keyboardController.RegisterCommand(Buttons.D3, new LoadRoomCommand(this, 3));
@@ -164,34 +171,35 @@ namespace Legend_of_zelda_game
 
             spriteBatch.Begin();
 
-            foreach (IBackground background in backgrounds){
-                background.Draw();
-            }
+            CurrentState.Update();
+            //foreach (IBackground background in backgrounds){
+            //    background.Draw();
+            //}
 
-            foreach (ICollectable collectable in collectables)
-            {
-                collectable.Update();
-            }
+            //foreach (ICollectable collectable in collectables)
+            //{
+            //    collectable.Update();
+            //}
 
-            foreach (IEnemies enemy in enemies)
-            {
-                enemy.Update();
-            }
+            //foreach (IEnemies enemy in enemies)
+            //{
+            //    enemy.Update();
+            //}
 
-            foreach (ISprite NPC in NPCs)
-            {
-                NPC.Update();
-            }
+            //foreach (ISprite NPC in NPCs)
+            //{
+            //    NPC.Update();
+            //}
 
-            foreach (ISprite HUD in headsUpDisplay)
-            {
-                HUD.Update();
-            }
+            //foreach (ISprite HUD in headsUpDisplay)
+            //{
+            //    HUD.Update();
+            //}
 
-            foreach (IProjectile projectile in linkProjectiles)
-            {
-                projectile.Update();
-            }
+            //foreach (IProjectile projectile in linkProjectiles)
+            //{
+            //    projectile.Update();
+            //}
 
             link.LinkCollisions.Update(collectables, enemies, blocks);
             link.LinkProjectiles.Update(linkProjectiles, enemies, blocks);

@@ -19,6 +19,8 @@ namespace _3902_ocho
         public ISet<ISprite> NPCs { get; }
         public ISet<IBlock> Blocks { get; }
         public ISet<IBackground> Backgrounds { get; }
+        public ISet<ISprite> HeadsUpDisplay { get; }
+        public ISet<IProjectile> LinkProjectiles { get; }
 
         public Room(int roomNumber, SpriteBatch spriteBatch)
         {
@@ -32,6 +34,8 @@ namespace _3902_ocho
             this.Backgrounds = Loader.Backgrounds;
             this.Blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
+            this.HeadsUpDisplay = Loader.HUD;
+            this.LinkProjectiles = new HashSet<IProjectile>();
         }
     }
 }
