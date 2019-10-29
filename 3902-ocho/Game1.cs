@@ -7,6 +7,7 @@ using System.Xml;
 using Legend_of_zelda_game.Controllers;
 using Legend_of_zelda_game.Blocks;
 using _3902_ocho.Commands;
+using Legend_of_zelda_game.Projectiles;
 
 namespace Legend_of_zelda_game
 {
@@ -26,6 +27,7 @@ namespace Legend_of_zelda_game
         private ISet<IBlock> blocks;
         private ISet<IBackground> backgrounds;
         private ISet<ISprite> headsUpDisplay;
+        private ISet<IProjectile> linkProjectiles;
 
         public Game1()
         {
@@ -79,6 +81,7 @@ namespace Legend_of_zelda_game
             this.blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
             this.headsUpDisplay = Loader.HUD;
+            this.linkProjectiles = new HashSet<IProjectile>();
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
@@ -185,7 +188,13 @@ namespace Legend_of_zelda_game
                 HUD.Update();
             }
 
+            foreach (IProjectile projectile in linkProjectiles)
+            {
+                projectile.Update();
+            }
+
             link.LinkCollisions.Update(collectables, enemies, blocks);
+            link.LinkProjectiles.Update(linkProjectiles, enemies, blocks);
             link.Update();
 
             spriteBatch.End();

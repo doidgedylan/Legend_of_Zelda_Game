@@ -18,6 +18,7 @@ namespace Legend_of_zelda_game
         public readonly Color[] hurtColors = new[] { Color.Green, Color.Gray, Color.Red, Color.Black, Color.Orange, Color.DarkRed, Color.Blue };
         public HealthStateMachine HealthStateMachine;
         public LinkCollisions LinkCollisions;
+        public LinkProjectiles LinkProjectiles;
 
         public Link(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -32,6 +33,7 @@ namespace Legend_of_zelda_game
             locationRect = new Rectangle((int)location.X, (int)location.Y, 16 * scale, 16 * scale);
             HealthStateMachine = new HealthStateMachine();
             LinkCollisions = new LinkCollisions(this);
+            LinkProjectiles = new LinkProjectiles(this);
         }
 
         public void Update()
