@@ -55,6 +55,7 @@
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Commands\LoadRoomCommand.cs" />
     <Compile Include="Commands\PauseCommand.cs" />
+    <Compile Include="Door.cs" />
     <Compile Include="GameStates\GameOverState.cs" />
     <Compile Include="GameStates\GameplayState.cs" />
     <Compile Include="GameStates\ItemSelectState.cs" />
