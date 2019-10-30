@@ -69,8 +69,6 @@ namespace Legend_of_zelda_game
             Texture2DStorage.LoadAllTextures(Content);
             font = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
-            StateManager = new StateManager(this, spriteBatch, font);
-            StateManager.SetGameplayState();
 
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
@@ -87,7 +85,9 @@ namespace Legend_of_zelda_game
             this.blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
             this.headsUpDisplay = Loader.HUD;
-            //this.linkProjectiles = new HashSet<IProjectile>();
+            this.linkProjectiles = new HashSet<IProjectile>();
+            StateManager = new StateManager(this, spriteBatch, font, link);
+            StateManager.SetGameplayState();
 
             HealthStateMachine healthStateMachine = new HealthStateMachine();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
@@ -201,9 +201,9 @@ namespace Legend_of_zelda_game
             //    projectile.Update();
             //}
 
-            link.LinkCollisions.Update(collectables, enemies, blocks);
-            link.LinkProjectiles.Update(linkProjectiles, enemies, blocks);
-            link.Update();
+            //link.LinkCollisions.Update(collectables, enemies, blocks);
+            //link.LinkProjectiles.Update(linkProjectiles, enemies, blocks);
+            //link.Update();
 
             spriteBatch.End();
         }

@@ -26,8 +26,9 @@ namespace _3902_ocho.GameStates
             currentRoom = rooms[destinationRoomNumber - 1];
         }
 
-        public GameplayState(SpriteBatch spriteBatch)
+        public GameplayState(SpriteBatch spriteBatch, Link link)
         {
+            this.link = link;
             int numberOfRooms = 18;
             this.spriteBatch = spriteBatch;
             this.rooms = new Room[numberOfRooms];
