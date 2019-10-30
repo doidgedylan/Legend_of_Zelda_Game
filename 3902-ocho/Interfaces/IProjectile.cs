@@ -8,7 +8,7 @@ namespace Legend_of_zelda_game.Interfaces
     {
         Vector2 Location { get; set; }
         Rectangle LocationRect { get; set; }
-        ProjectileCollisions ProjectileCollisions { get; set; }
+        //ProjectileCollisions ProjectileCollisions { get; set; }
         void Update();
         void Draw();
     }

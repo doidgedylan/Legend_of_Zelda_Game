@@ -3,18 +3,18 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game
 {
-    public class HUDLevelSprite : ISprite
+    public class HUD0SymbolSprite : ISprite
     {
         public Texture2D spriteSheet;
         private SpriteBatch spriteBatch;
         public Rectangle LocationRect { get; set; }
-        private int xPos = 584;
-        private int yPos = 1;
-        private int width = 64;
+        private int xPos = 528;
+        private int yPos = 117;
+        private int width = 8;
         private int height = 8;
         private int scale = 3;
 
-        public HUDLevelSprite(SpriteBatch spriteBatch, Vector2 location)
+        public HUD0SymbolSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetHUDSpriteSheet();
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);

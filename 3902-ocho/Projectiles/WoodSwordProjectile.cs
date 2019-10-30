@@ -13,8 +13,8 @@ namespace Legend_of_zelda_game.Projectiles
         public Vector2 Location { get => location; set => location = value; }
         private Rectangle locationRect;
         public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
-        private ProjectileCollisions projectileCollisions;
-        public ProjectileCollisions ProjectileCollisions { get => projectileCollisions; set => projectileCollisions = value; }
+        //private ProjectileCollisions projectileCollisions;
+        //public ProjectileCollisions ProjectileCollisions { get => projectileCollisions; set => projectileCollisions = value; }
         private int moveSpeed = 5;
         private int xPos = 104;
         private int yPos = 0;
@@ -31,7 +31,7 @@ namespace Legend_of_zelda_game.Projectiles
             this.Location = location;
             this.direction = direction;
             SetStartLocation();
-            ProjectileCollisions = new ProjectileCollisions();
+            //ProjectileCollisions = new ProjectileCollisions();
         }
         
         public void Update()
