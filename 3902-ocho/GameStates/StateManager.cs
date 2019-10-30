@@ -10,13 +10,15 @@ namespace _3902_ocho.GameStates
         private ItemSelectState itemSelectState;
         private GameOverState gameOverState;
         private WinningState winningState;
+        private Link link;
         private Game1 game;
 
-        public StateManager(Game1 game, SpriteBatch spriteBatch, SpriteFont font)
+        public StateManager(Game1 game, SpriteBatch spriteBatch, SpriteFont font, Link link)
         {
             this.game = game;
-            this.gameplayState = new GameplayState(spriteBatch);
-            this.pauseState = new PauseState();
+            this.link = link;
+            this.gameplayState = new GameplayState(spriteBatch, link);
+            this.pauseState = new PauseState(spriteBatch, font);
             this.gameOverState = new GameOverState(spriteBatch, font);
             this.winningState = new WinningState(spriteBatch, font);
             this.itemSelectState = new ItemSelectState();
@@ -29,7 +31,7 @@ namespace _3902_ocho.GameStates
 
         public void SetPauseState()
         {
-            if (game.CurrentState.Equals(pauseState)){
+            if (game.CurrentState == pauseState){
                 SetGameplayState();
             }
             else
