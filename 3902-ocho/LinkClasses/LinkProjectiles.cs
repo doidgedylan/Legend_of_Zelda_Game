@@ -1,6 +1,4 @@
-﻿
-
-using Legend_of_zelda_game.Blocks;
+﻿using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.Interfaces;
 using Legend_of_zelda_game.Projectiles;
 using Microsoft.Xna.Framework;
@@ -13,40 +11,19 @@ namespace Legend_of_zelda_game.LinkClasses
     {
         private Link link;
         private SpriteBatch spriteBatch;
-        private bool woodswordInAir;
+        private bool projectileInAir;
 
         public LinkProjectiles(Link link)
         {
             this.link = link;
             this.spriteBatch = link.spriteBatch;
-            woodswordInAir = false;
+            projectileInAir = false;
         }
 
         public void Update(ISet<IProjectile> projectiles, ISet<IEnemies> enemies, ISet<IBlock> blocks)
         {
-            if (!woodswordInAir)
-            {
-                if (link.state is LinkWoodSwordDownState)
-                {
-                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "down"));
-                    woodswordInAir = true;
-                }
-                else if (link.state is LinkWoodSwordUpState)
-                {
-                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "up"));
-                    woodswordInAir = true;
-                }
-                else if (link.state is LinkWoodSwordLeftState)
-                {
-                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "left"));
-                    woodswordInAir = true;
-                }
-                else if (link.state is LinkWoodSwordRightState)
-                {
-                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "right"));
-                    woodswordInAir = true;
-                }
-            }
+            UpdateWoodSwordProjectile(projectiles);
+            UpdateItemProjectile(projectiles);
 
             ISet<IProjectile> projectilesToRemove = new HashSet<IProjectile>();
             ISet<IEnemies> enemiesToRemove = new HashSet<IEnemies>();
@@ -54,19 +31,19 @@ namespace Legend_of_zelda_game.LinkClasses
             {
                 foreach (IEnemies enemy in enemies)
                 {
-                    if (woodswordInAir && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
+                    if (projectileInAir && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
                     {
-                        woodswordInAir = false;
+                        projectileInAir = false;
                         projectilesToRemove.Add(projectile);
                         enemiesToRemove.Add(enemy);
                     }
                 }
                 foreach (IBlock block in blocks)
                 {
-                    if (woodswordInAir && (block is HorizontalWall || block is VerticalWall) &&
+                    if (projectileInAir && (block is HorizontalWall || block is VerticalWall) &&
                         ProjectileCollision(projectile.LocationRect, block.LocationRect))
                     {
-                        woodswordInAir = false;
+                        projectileInAir = false;
                         projectilesToRemove.Add(projectile);
                     }
                 }
@@ -78,6 +55,69 @@ namespace Legend_of_zelda_game.LinkClasses
             foreach (IEnemies enemy in enemiesToRemove)
             {
                 enemies.Remove(enemy);
+            }
+        }
+
+        public void UpdateWoodSwordProjectile(ISet<IProjectile> projectiles)
+        {
+            if (!projectileInAir)
+            {
+                if (link.state is LinkWoodSwordDownState)
+                {
+                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "down"));
+                    projectileInAir = true;
+                }
+                else if (link.state is LinkWoodSwordUpState)
+                {
+                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "up"));
+                    projectileInAir = true;
+                }
+                else if (link.state is LinkWoodSwordLeftState)
+                {
+                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "left"));
+                    projectileInAir = true;
+                }
+                else if (link.state is LinkWoodSwordRightState)
+                {
+                    projectiles.Add(new WoodSwordProjectile(spriteBatch, link.Location, "right"));
+                    projectileInAir = true;
+                }
+            }
+        }
+
+        public void UpdateItemProjectile(ISet<IProjectile> projectiles)
+        {
+            if (!projectileInAir)
+            {
+                string direct = "none";
+                if (link.state is LinkUseItemDownState)
+                {
+                    direct = "down";
+                    projectileInAir = true;
+                }
+                else if (link.state is LinkUseItemUpState)
+                {
+                    direct = "up";
+                    projectileInAir = true;
+                }
+                else if (link.state is LinkUseItemLeftState)
+                {
+                    direct = "left";
+                    projectileInAir = true;
+                }
+                else if (link.state is LinkUseItemRightState)
+                {
+                    direct = "right";
+                    projectileInAir = true;
+                }
+
+                if(projectileInAir)
+                {
+                    if (link.currentItem.Equals("arrow"))
+                    {
+                        projectiles.Add(new ArrowProjectile(spriteBatch, link.Location, direct));
+                    }
+                }
             }
         }
 

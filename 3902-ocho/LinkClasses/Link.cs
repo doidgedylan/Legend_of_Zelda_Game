@@ -19,6 +19,7 @@ namespace Legend_of_zelda_game
         public HealthStateMachine HealthStateMachine;
         public LinkCollisions LinkCollisions;
         public LinkProjectiles LinkProjectiles;
+        public string currentItem;
 
         public Link(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -34,6 +35,7 @@ namespace Legend_of_zelda_game
             HealthStateMachine = new HealthStateMachine();
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
+            currentItem = "arrow";
         }
 
         public void Update()

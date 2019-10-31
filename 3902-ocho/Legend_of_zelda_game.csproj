@@ -138,6 +138,7 @@
     <Compile Include="CollectableSprites\CollectableMultipleRupeeSprite.cs" />
     <Compile Include="CollectableSprites\CollectableSingleRupeeSprite.cs" />
     <Compile Include="LinkClasses\LinkProjectiles.cs" />
+    <Compile Include="Projectiles\ArrowProjectile.cs" />
     <Compile Include="Projectiles\WoodSwordProjectile.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="SpriteFactories\CollectableSpriteFactory.cs" />
