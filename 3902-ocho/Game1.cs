@@ -39,7 +39,7 @@ namespace Legend_of_zelda_game
             graphics.DeviceCreated += OnDeviceCreated;
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 650;
+            graphics.PreferredBackBufferHeight = 716;
             graphics.ApplyChanges();
         }
 

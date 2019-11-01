@@ -82,7 +82,7 @@ namespace Legend_of_zelda_game
             Location = new Vector2(X, Y);
             if (ObjectName.Contains("Room"))
             {
-                Location = new Vector2(Location.X, Location.Y - 100);
+                Location = new Vector2(Location.X, Location.Y - 168);
                 int roomNum = Int32.Parse(ObjectName.Substring(4));
                 if (roomNum < 8) 
                 {

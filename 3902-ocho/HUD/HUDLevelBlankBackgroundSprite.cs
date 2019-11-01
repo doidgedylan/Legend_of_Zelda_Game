@@ -8,10 +8,10 @@ namespace Legend_of_zelda_game
         public Texture2D spriteSheet;
         private SpriteBatch spriteBatch;
         public Rectangle LocationRect { get; set; }
-        private int xPos = 1;
-        private int yPos = 112;
-        private int width = 64;
-        private int height = 32;
+        private int xPos = 2;
+        private int yPos = 113;
+        private int width = 66;
+        private int height = 34;
         private int scale = 3;
 
         public HUDLevelBlankBackgroundSprite(SpriteBatch spriteBatch, Vector2 location)
