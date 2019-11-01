@@ -155,7 +155,7 @@ namespace Legend_of_zelda_game
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGray);
+            GraphicsDevice.Clear(Color.Black);
 
             if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&

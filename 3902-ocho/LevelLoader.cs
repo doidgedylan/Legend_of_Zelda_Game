@@ -78,7 +78,7 @@ namespace Legend_of_zelda_game
             }
 
             int X = Int32.Parse(LocationStr.Substring(0, LocationStr.IndexOf(" ")));
-            int Y = 100 + Int32.Parse(LocationStr.Substring(LocationStr.IndexOf(" ") + 1));
+            int Y = 168 + Int32.Parse(LocationStr.Substring(LocationStr.IndexOf(" ") + 1));
             Location = new Vector2(X, Y);
             if (ObjectName.Contains("Room"))
             {
