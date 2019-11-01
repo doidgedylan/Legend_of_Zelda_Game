@@ -7,6 +7,154 @@
     </Item>
 
     <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBackground</ObjectName>
+      <Location>16 -100</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevel</ObjectName>
+      <Location>64 -76</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevelNumber</ObjectName>
+      <Location>208 -76</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevelBlankBackground</ObjectName>
+      <Location>63 -52</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopMap</ObjectName>
+      <Location>112 -28</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>136 -28</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>184 -28</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>208 -28</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopMap</ObjectName>
+      <Location>88 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>112 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>136 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>160 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopMap</ObjectName>
+      <Location>184 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>112 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>136 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>160 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDXSymbol</ObjectName>
+      <Location>304 -52</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUD0Symbol</ObjectName>
+      <Location>328 -52</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBlankSpace</ObjectName>
+      <Location>352 -52</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDXSymbol</ObjectName>
+      <Location>304 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUD0Symbol</ObjectName>
+      <Location>328 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBlankSpace</ObjectName>
+      <Location>352 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDXSymbol</ObjectName>
+      <Location>304 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUD0Symbol</ObjectName>
+      <Location>328 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBlankSpace</ObjectName>
+      <Location>352 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLifeBlankBackground</ObjectName>
+      <Location>544 -4</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDFullHeart</ObjectName>
+      <Location>544 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDFullHeart</ObjectName>
+      <Location>568 20</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDFullHeart</ObjectName>
+      <Location>592 20</Location>
+    </Item>
+
+    <!--Link-->
+
+    <Item>
       <ObjectType>Link</ObjectType>
       <ObjectName>Link</ObjectName>
       <Location>100 250</Location>
