@@ -10,6 +10,7 @@ using _3902_ocho.Commands;
 using Legend_of_zelda_game.Projectiles;
 using _3902_ocho.Interfaces;
 using _3902_ocho.GameStates;
+using Microsoft.Xna.Framework.Media;
 
 namespace Legend_of_zelda_game
 {
@@ -32,6 +33,8 @@ namespace Legend_of_zelda_game
         private ISet<IProjectile> linkProjectiles;
         public IGameState CurrentState { get; set; }
         public StateManager StateManager { get; set; }
+
+        private Song bgm;
 
         public Game1()
         {
@@ -77,6 +80,9 @@ namespace Legend_of_zelda_game
             XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
             Loader.Load(LevelFile, Reader);
+
+            bgm = Content.Load<Song>("OverworldSound");
+            MediaPlayer.Play(bgm);
 
             this.collectables = Loader.Collectables;
             this.enemies = Loader.Enemies;
