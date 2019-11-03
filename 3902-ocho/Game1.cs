@@ -83,6 +83,7 @@ namespace Legend_of_zelda_game
 
             bgm = Content.Load<Song>("OverworldSound");
             MediaPlayer.Play(bgm);
+            MediaPlayer.IsRepeating = true;
 
             this.collectables = Loader.Collectables;
             this.enemies = Loader.Enemies;
