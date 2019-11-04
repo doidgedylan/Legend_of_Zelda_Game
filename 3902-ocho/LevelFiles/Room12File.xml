@@ -151,6 +151,16 @@
       <ObjectName>HUDFullHeart</ObjectName>
       <Location>592 -48</Location>
     </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDWoodSword</ObjectName>
+      <Location>472 -96</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDArrow</ObjectName>
+      <Location>400 -96</Location>
+    </Item>
 
     <!--Link-->
 
