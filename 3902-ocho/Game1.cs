@@ -201,38 +201,10 @@ namespace Legend_of_zelda_game
             spriteBatch.Begin();
 
             CurrentState.Update();
-            //foreach (IBackground background in backgrounds){
-            //    background.Draw();
-            //}
-
-            //foreach (ICollectable collectable in collectables)
-            //{
-            //    collectable.Update();
-            //}
-
-            //foreach (IEnemies enemy in enemies)
-            //{
-            //    enemy.Update();
-            //}
-
-            //foreach (ISprite NPC in NPCs)
-            //{
-            //    NPC.Update();
-            //}
-
-            //foreach (ISprite HUD in headsUpDisplay)
-            //{
-            //    HUD.Update();
-            //}
-
-            //foreach (IProjectile projectile in linkProjectiles)
-            //{
-            //    projectile.Update();
-            //}
-
-            //link.LinkCollisions.Update(collectables, enemies, blocks);
-            //link.LinkProjectiles.Update(linkProjectiles, enemies, blocks);
-            //link.Update();
+            if (link.HealthStateMachine.Health == HealthStateMachine.LinkHealth.Empty)
+            {
+                StateManager.SetGameOverState();
+            }
 
             spriteBatch.End();
         }

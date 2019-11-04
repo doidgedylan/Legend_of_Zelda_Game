@@ -4,8 +4,9 @@ namespace Legend_of_zelda_game
 {
     public class HealthStateMachine
     {
-        private enum LinkHealth {Full, Half, Empty };
+        public enum LinkHealth {Full, Half, Empty };
         private LinkHealth health = LinkHealth.Full;
+        public LinkHealth Health { get => health; }
 
         public void BeHurt()
         {
