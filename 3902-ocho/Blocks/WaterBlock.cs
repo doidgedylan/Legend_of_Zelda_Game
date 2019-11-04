@@ -14,5 +14,9 @@ namespace Legend_of_zelda_game.Blocks
         {
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width*scale, height*scale);
         }
+        public void Update()
+        {
+            // do nothing
+        }
     }
 }
