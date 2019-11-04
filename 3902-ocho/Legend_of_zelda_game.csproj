@@ -62,6 +62,7 @@
     <Compile Include="GameStates\PauseState.cs" />
     <Compile Include="GameStates\StateManager.cs" />
     <Compile Include="GameStates\WinningState.cs" />
+    <Compile Include="HUD\HUDArrowSprite.cs" />
     <Compile Include="HUD\HUD0SymbolSprite.cs" />
     <Compile Include="HUD\HUDBackgroundSprite.cs" />
     <Compile Include="HUD\HUDBlankSpaceSprite.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="HUD\HUDLifeBlankBackgroundSprite.cs" />
     <Compile Include="HUD\HUDTopAndBottomMapSprite.cs" />
     <Compile Include="HUD\HUDTopMapSprite.cs" />
+    <Compile Include="HUD\HUDWoodSwordSprite.cs" />
     <Compile Include="HUD\HUDXSymbol.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />

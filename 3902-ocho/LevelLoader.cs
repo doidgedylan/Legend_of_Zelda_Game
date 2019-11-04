@@ -229,6 +229,12 @@ namespace Legend_of_zelda_game
                     case "HUDTopAndBottomMap":
                         this.HUD.Add(new HUDTopAndBottomMapSprite(spriteBatch, Location));
                         break;
+                    case "HUDWoodSword":
+                        this.HUD.Add(new HUDWoodSwordSprite(spriteBatch, Location));
+                        break;
+                    case "HUDArrow":
+                        this.HUD.Add(new HUDArrowSprite(spriteBatch, Location));
+                        break;
                     default:
                         // do nothing
                         break;
