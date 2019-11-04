@@ -17,7 +17,7 @@ namespace _3902_ocho.GameStates
         {
             this.game = game;
             this.link = link;
-            this.gameplayState = new GameplayState(spriteBatch, link);
+            this.gameplayState = new GameplayState(game, link);
             this.pauseState = new PauseState(spriteBatch, font);
             this.gameOverState = new GameOverState(spriteBatch, font);
             this.winningState = new WinningState(spriteBatch, font);

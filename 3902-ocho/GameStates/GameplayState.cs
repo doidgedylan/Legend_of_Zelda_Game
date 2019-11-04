@@ -9,65 +9,46 @@ namespace _3902_ocho.GameStates
     public class GameplayState : IGameState
     {
         private Link link;
-        private SpriteBatch spriteBatch;
-        private Room[] rooms;
-        private Room currentRoom;
+        private Game1 game;
 
-        private void LoadAllRooms(int numberOfRooms)
-        {
-            for (int i = 1; i <= numberOfRooms; i++)
-            {
-                rooms[i - 1] = new Room(i, spriteBatch);
-            }
-        }
-
-        private void SelectRoom(int destinationRoomNumber)
-        {
-            currentRoom = rooms[destinationRoomNumber - 1];
-        }
-
-        public GameplayState(SpriteBatch spriteBatch, Link link)
+        public GameplayState(Game1 game, Link link)
         {
             this.link = link;
-            int numberOfRooms = 18;
-            this.spriteBatch = spriteBatch;
-            this.rooms = new Room[numberOfRooms];
-            LoadAllRooms(numberOfRooms);
-            SelectRoom(12);
+            this.game = game;
         }
 
         public void Update()
         {
-            foreach (IBackground background in currentRoom.Backgrounds)
+            foreach (IBackground background in game.CurrentRoom.Backgrounds)
             {
                 background.Draw();
             }
 
-            foreach (ICollectable collectable in currentRoom.Collectables)
+            foreach (ICollectable collectable in game.CurrentRoom.Collectables)
             {
                 collectable.Update();
             }
 
-            foreach (IEnemies enemy in currentRoom.Enemies)
+            foreach (IEnemies enemy in game.CurrentRoom.Enemies)
             {
                 enemy.Update();
             }
 
-            foreach (ISprite NPC in currentRoom.NPCs)
+            foreach (ISprite NPC in game.CurrentRoom.NPCs)
             {
                 NPC.Update();
             }
-            foreach (ISprite HUD in currentRoom.HeadsUpDisplay)
+            foreach (ISprite HUD in game.CurrentRoom.HeadsUpDisplay)
             {
                 HUD.Update();
             }
-            foreach (IProjectile projectile in currentRoom.LinkProjectiles)
+            foreach (IProjectile projectile in game.CurrentRoom.LinkProjectiles)
             {
                 projectile.Update();
             }
 
-            link.LinkCollisions.Update(currentRoom.Collectables, currentRoom.Enemies, currentRoom.Blocks);
-            link.LinkProjectiles.Update(currentRoom.LinkProjectiles, currentRoom.Enemies, currentRoom.Blocks);
+            link.LinkCollisions.Update(game.CurrentRoom.Collectables, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks);
+            link.LinkProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks);
             link.Update();
         }
     }
