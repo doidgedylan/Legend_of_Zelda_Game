@@ -15,7 +15,7 @@ namespace _3902_ocho.Commands
         }
         public void Execute()
         {
-            this.game.LoadRoomContent(roomNum);
+            this.game.SelectRoom(roomNum);
         }
     }
 }

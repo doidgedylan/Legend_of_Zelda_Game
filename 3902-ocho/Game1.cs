@@ -11,6 +11,7 @@ using Legend_of_zelda_game.Projectiles;
 using _3902_ocho.Interfaces;
 using _3902_ocho.GameStates;
 using Microsoft.Xna.Framework.Media;
+using _3902_ocho;
 
 namespace Legend_of_zelda_game
 {
@@ -19,6 +20,7 @@ namespace Legend_of_zelda_game
     /// </summary>
     public class Game1 : Game
     {
+        public const int NUMBER_OF_ROOMS = 18;
         private SpriteBatch spriteBatch;
         private SpriteFont font;
         private KeyboardController keyboardController;
@@ -33,6 +35,8 @@ namespace Legend_of_zelda_game
         private ISet<IProjectile> linkProjectiles;
         public IGameState CurrentState { get; set; }
         public StateManager StateManager { get; set; }
+        private Room[] rooms;
+        public Room CurrentRoom { get; set; }
 
         private Song bgm;
 
@@ -44,6 +48,7 @@ namespace Legend_of_zelda_game
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 716;
             graphics.ApplyChanges();
+            this.rooms = new Room[NUMBER_OF_ROOMS];
         }
 
         private void OnDeviceCreated(object sender, System.EventArgs e)
@@ -76,23 +81,27 @@ namespace Legend_of_zelda_game
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
 
-            FileStream LevelFile = new FileStream("Room2File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
-            XmlReader Reader = XmlReader.Create(LevelFile);
+            //FileStream LevelFile = new FileStream("Room2File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
+            //XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
-            Loader.Load(LevelFile, Reader);
+            //Loader.Load(LevelFile, Reader);
+
+            LoadAllRooms(NUMBER_OF_ROOMS);
+            SelectRoom(2);
 
             bgm = Content.Load<Song>("OverworldSound");
             MediaPlayer.Play(bgm);
             MediaPlayer.IsRepeating = true;
 
-            this.collectables = Loader.Collectables;
-            this.enemies = Loader.Enemies;
-            this.link = Loader.Link;
-            this.backgrounds = Loader.Backgrounds;
-            this.blocks = Loader.Blocks;
-            this.NPCs = Loader.NPCs;
-            this.headsUpDisplay = Loader.HUD;
-            this.linkProjectiles = new HashSet<IProjectile>();
+            //this.collectables = Loader.Collectables;
+            //this.enemies = Loader.Enemies;
+            //this.link = Loader.Link;
+            //this.backgrounds = Loader.Backgrounds;
+            //this.blocks = Loader.Blocks;
+            //this.NPCs = Loader.NPCs;
+            //this.headsUpDisplay = Loader.HUD;
+            //this.linkProjectiles = new HashSet<IProjectile>();
+            this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
             StateManager.SetGameplayState();
 
@@ -133,6 +142,19 @@ namespace Legend_of_zelda_game
             keyboardController.RegisterCommand(Buttons.NumPad6, new LoadRoomCommand(this, 16));
             keyboardController.RegisterCommand(Buttons.NumPad7, new LoadRoomCommand(this, 17));
             keyboardController.RegisterCommand(Buttons.NumPad8, new LoadRoomCommand(this, 18));
+        }
+
+        private void LoadAllRooms(int numberOfRooms)
+        {
+            for (int i = 1; i <= numberOfRooms; i++)
+            {
+                rooms[i - 1] = new Room(i, spriteBatch);
+            }
+        }
+
+        public void SelectRoom(int destinationRoomNumber)
+        {
+            CurrentRoom = rooms[destinationRoomNumber - 1];
         }
 
         public void LoadRoomContent(int roomNumber)
@@ -214,5 +236,6 @@ namespace Legend_of_zelda_game
 
             spriteBatch.End();
         }
+
     }
 }
