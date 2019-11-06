@@ -176,6 +176,18 @@ namespace Legend_of_zelda_game.LinkClasses
             {
                 foreach (ICollectable collectable in collectableCollisions)
                 {
+                    if(collectable is CollectableSingleRubeeSprite)
+                    {
+                        link.numGems++;
+                    }
+                    else if (collectable is CollectableKeySprite)
+                    {
+                        link.numKeys++;
+                    }
+                    else if(collectable is CollectableBombSprite)
+                    {
+                        link.numBombs++;
+                    }
                     collectables.Remove(collectable);
                 }
                 link.state = new LinkPickUpItemState(link);

@@ -20,6 +20,9 @@ namespace Legend_of_zelda_game
         public LinkCollisions LinkCollisions;
         public LinkProjectiles LinkProjectiles;
         public string currentItem;
+        public int numGems;
+        public int numKeys;
+        public int numBombs;
 
         public Link(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -36,6 +39,9 @@ namespace Legend_of_zelda_game
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
             currentItem = "arrow";
+            numGems = 0;
+            numKeys = 0;
+            numBombs = 5;
         }
 
         public void Update()

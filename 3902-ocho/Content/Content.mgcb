@@ -13,18 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../../../Desktop/HUD.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../../../../../Desktop/HUD.png;HUDSpriteSheet.png
-
 #begin BackgroundSpriteSheetBottom.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -114,7 +102,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:HUD.png;HUDSpriteSheet.png
+/build:HUD.png
 
 #begin ItemSpriteSheet.png
 /importer:TextureImporter
