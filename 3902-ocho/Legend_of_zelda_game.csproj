@@ -69,6 +69,7 @@
     <Compile Include="HUD\HUDBlankSpaceSprite.cs" />
     <Compile Include="HUD\HUDBottomMapSprite.cs" />
     <Compile Include="HUD\HUDFullHeartSprite.cs" />
+    <Compile Include="HUD\HUDKeyNumberState.cs" />
     <Compile Include="HUD\HUDLevelBlankBackgroundSprite.cs" />
     <Compile Include="HUD\HUDLevelNumberSprite.cs" />
     <Compile Include="HUD\HUDLevelSprite.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Interfaces\ISprite.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="LevelLoader.cs" />
+    <Compile Include="LinkClasses\CollectableSingleRubeeSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtUpSprite.cs" />
@@ -196,6 +198,9 @@
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -284,6 +289,7 @@
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="bin\Windows\x86\Debug\Content\ItemSpriteSheet.xnb" />
     <None Include="bin\Windows\x86\Debug\Content\LinkSpriteSheet.xnb" />
@@ -293,6 +299,7 @@
     <None Include="obj\x86\Debug\build.force" />
     <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\x86\Release\3902-ocho.csproj.CoreCompileInputs.cache" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Windows\Content\" />

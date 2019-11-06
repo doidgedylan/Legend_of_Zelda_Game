@@ -102,7 +102,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:HUD.png;HUDSpriteSheet.png
+/build:HUD.png
 
 #begin HUD.png
 /importer:TextureImporter
