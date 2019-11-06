@@ -192,7 +192,7 @@ namespace Legend_of_zelda_game
                 !(link.state is LinkHurtLeftState) && !(link.state is LinkHurtRightState) &&
                 !(link.state is LinkUseItemDownState) && !(link.state is LinkUseItemUpState) &&
                 !(link.state is LinkUseItemLeftState) && !(link.state is LinkUseItemRightState) &&
-                !(link.state is LinkPickUpItemState)) 
+                !(link.state is LinkPickUpItemState) && !(this.CurrentState is ScrollingTransitionState)) 
             {
                 keyboardController.Update();
                 mouseController.Update();

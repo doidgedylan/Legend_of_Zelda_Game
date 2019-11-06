@@ -16,15 +16,15 @@ namespace _3902_ocho
         public int width = 25;
         public int height = 25;
         public Direction direction { get; }
-        public Room destinationRoom { get; }
+        public int destinationRoomNumber { get; }
         private bool locked;
 
         public enum Direction { Left, Right, Up, Down }
-        public Door(Vector2 location, Room destinationRoom, Direction direction, bool locked)
+        public Door(Vector2 location, int destinationRoomNumber, Direction direction, bool locked)
         {
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             this.direction = direction;
-            this.destinationRoom = destinationRoom;
+            this.destinationRoomNumber = destinationRoomNumber;
             this.locked = locked;
         }
 
