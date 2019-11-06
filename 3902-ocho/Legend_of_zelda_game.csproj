@@ -68,6 +68,7 @@
     <Compile Include="HUD\HUDBlankSpaceSprite.cs" />
     <Compile Include="HUD\HUDBottomMapSprite.cs" />
     <Compile Include="HUD\HUDFullHeartSprite.cs" />
+    <Compile Include="HUD\HUDKeyNumberState.cs" />
     <Compile Include="HUD\HUDLevelBlankBackgroundSprite.cs" />
     <Compile Include="HUD\HUDLevelNumberSprite.cs" />
     <Compile Include="HUD\HUDLevelSprite.cs" />
