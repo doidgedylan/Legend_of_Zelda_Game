@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
-using Legend_of_zelda_game;
 using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace _3902_ocho
+namespace Legend_of_zelda_game
 {
     public class Room
     {

@@ -1,4 +1,5 @@
-﻿using Legend_of_zelda_game.Interfaces;
+﻿using Legend_of_zelda_game.Blocks;
+using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace Legend_of_zelda_game.LinkClasses
         public void LinkCollisionBlock(ISet<IBlock> blocks)
         {
             IList<string> blockCollisionSides = new List<string>();
+            IList<IBlock> blocksCollided = new List<IBlock>();
             Dictionary<Rectangle, string> blockCollisions = new Dictionary<Rectangle, string>();
             foreach (IBlock block in blocks)
             {
@@ -38,9 +40,11 @@ namespace Legend_of_zelda_game.LinkClasses
                         blockCollisions.Add(intersect, linkCollision);
                     }
                     blockCollisionSides.Add(linkCollision);
+                    blocksCollided.Add(block);
                 }
             }
 
+            bool collisionDetected = false;
             int maxArea = 0;
             Rectangle MaxAreaRect = new Rectangle(0, 0, 0, 0);
             bool equalAreas = false;
@@ -67,6 +71,7 @@ namespace Legend_of_zelda_game.LinkClasses
                     (blockCollisionSides.Contains("left") && link.state is LinkMoveLeftState))
                 {
                     link.moveSpeed = 0;
+                    collisionDetected = true;
                 }
                 else if ((blockCollisionSides.Contains("top") && link.state is LinkHurtDownState) ||
                     (blockCollisionSides.Contains("bottom") && link.state is LinkHurtUpState) ||
@@ -74,6 +79,7 @@ namespace Legend_of_zelda_game.LinkClasses
                     (blockCollisionSides.Contains("left") && link.state is LinkHurtRightState))
                 {
                     link.hurtSpeed = 0;
+                    collisionDetected = true;
                 }
                 else
                 {
@@ -90,6 +96,7 @@ namespace Legend_of_zelda_game.LinkClasses
                     (val.Equals("left") && link.state is LinkMoveLeftState))
                 {
                     link.moveSpeed = 0;
+                    collisionDetected = true;
                 }
                 else if ((val.Equals("top") && link.state is LinkHurtDownState) ||
                     (val.Equals("bottom") && link.state is LinkHurtUpState) ||
@@ -97,13 +104,29 @@ namespace Legend_of_zelda_game.LinkClasses
                     (val.Equals("left") && link.state is LinkHurtRightState))
                 {
                     link.hurtSpeed = 0;
+                    collisionDetected = true;
                 }
                 else
                 {
                     link.moveSpeed = 3;
                     link.hurtSpeed = 5;
                 }
-            } 
+            }
+
+            if(collisionDetected)
+            {
+                foreach(IBlock block in blocksCollided)
+                {
+                    if (block is Door)
+                    {
+                        if(link.numKeys < 0)
+                        {
+                            link.numKeys--;
+                        }
+                        //TODO: add call to room switching method
+                    }
+                }
+            }
         }
 
         public void LinkCollisionEnemy(ISet<IEnemies> enemies)
