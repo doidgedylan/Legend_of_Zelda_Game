@@ -78,11 +78,11 @@ namespace Legend_of_zelda_game.EnemySprites
             }
             if (xPosition == 1 && yPosition == -1)
             {
-                destinationRectangle.X += 1;
+                destinationRectangle.Y -= 1;
             }
             if (xPosition == 1 && yPosition == 1)
             {
-                destinationRectangle.Y += 1;
+                destinationRectangle.X += 1;
             }
             if (destinationRectangle.Y >= (480) || destinationRectangle.Y <= 0)
             {

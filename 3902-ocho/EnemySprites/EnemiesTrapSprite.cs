@@ -19,6 +19,9 @@ namespace Legend_of_zelda_game
         private int height = 16;
         private int scale = 3;
 
+        private int xPosition = -1;
+        private int yPosition = -1;
+
         public EnemiesTrapSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetEnemiesSpriteSheet();
@@ -30,6 +33,8 @@ namespace Legend_of_zelda_game
         public void Update()
         {
             this.Draw(spriteBatch);
+            this.ApplyMovement();
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -37,6 +42,36 @@ namespace Legend_of_zelda_game
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
 
             spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White);
+        }
+
+        private void ApplyMovement()
+        {
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            if (xPosition == -1 && yPosition == -1)
+            {
+                destinationRectangle.X -= 1;
+            }
+            if (xPosition == -1 && yPosition == 1)
+            {
+                destinationRectangle.Y += 1;
+            }
+            if (xPosition == 1 && yPosition == -1)
+            {
+                destinationRectangle.Y -= 1;
+            }
+            if (xPosition == 1 && yPosition == 1)
+            {
+                destinationRectangle.X += 1;
+            }
+            if (destinationRectangle.Y >= (480) || destinationRectangle.Y <= 0)
+            {
+                yPosition *= -1;
+            }
+            if (destinationRectangle.X >= (800) || destinationRectangle.X <= 0)
+            {
+                xPosition *= -1;
+            }
+            LocationRect = destinationRectangle;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Legend_of_zelda_game.EnemySprites
         private int width = 24;
         private int height = 32;
         private int scale = 3;
-
+        private int yPosition = -1;
 
         public EnemiesDragonSprite(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -30,6 +30,20 @@ namespace Legend_of_zelda_game.EnemySprites
         }
 
         public void Update()
+        {
+            this.Draw(spriteBatch);
+            this.ApplyAnimation();
+            this.ApplyMovement();
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
+
+            spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White);
+        }
+
+        private void ApplyAnimation()
         {
             currentFrame++;
 
@@ -47,15 +61,26 @@ namespace Legend_of_zelda_game.EnemySprites
                 currentFrame = 0;
                 xPos = 1;
             }
-
-            this.Draw(spriteBatch);
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        private void ApplyMovement()
         {
-            Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
-
-            spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White);
+            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            if (yPosition == -1)
+            {
+                destinationRectangle.Y -= 1;
+            }
+            if (yPosition == 1)
+            {
+                destinationRectangle.Y += 1;
+            }
+            
+            if (destinationRectangle.Y >= (480) || destinationRectangle.Y <= 0)
+            {
+                yPosition *= -1;
+            }
+            
+            LocationRect = destinationRectangle;
         }
 
 
