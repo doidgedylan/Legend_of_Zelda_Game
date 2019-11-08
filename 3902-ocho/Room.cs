@@ -13,7 +13,7 @@ namespace Legend_of_zelda_game
         public ISet<IEnemies> Enemies { get; }
         public ISet<ISprite> NPCs { get; }
         public ISet<IBlock> Blocks { get; }
-        public ISet<IBackground> Backgrounds { get; }
+        public IBackground Background { get; }
         public ISet<ISprite> HeadsUpDisplay { get; }
         public ISet<IProjectile> LinkProjectiles { get; }
 
@@ -26,7 +26,7 @@ namespace Legend_of_zelda_game
 
             this.Collectables = Loader.Collectables;
             this.Enemies = Loader.Enemies;
-            this.Backgrounds = Loader.Backgrounds;
+            this.Background = Loader.Background;
             this.Blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
             this.HeadsUpDisplay = Loader.HUD;

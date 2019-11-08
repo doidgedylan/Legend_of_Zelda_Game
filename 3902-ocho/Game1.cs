@@ -30,12 +30,12 @@ namespace Legend_of_zelda_game
         private ISet<IEnemies> enemies;
         private ISet<ISprite> NPCs;
         private ISet<IBlock> blocks;
-        private ISet<IBackground> backgrounds;
+        private IBackground background;
         private ISet<ISprite> headsUpDisplay;
         private ISet<IProjectile> linkProjectiles;
         public IGameState CurrentState { get; set; }
         public StateManager StateManager { get; set; }
-        private Room[] rooms;
+        public Room[] Rooms { get; set; }
         public Room CurrentRoom { get; set; }
 
         private Song bgm;
@@ -48,7 +48,7 @@ namespace Legend_of_zelda_game
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 716;
             graphics.ApplyChanges();
-            this.rooms = new Room[NUMBER_OF_ROOMS];
+            this.Rooms = new Room[NUMBER_OF_ROOMS];
         }
 
         private void OnDeviceCreated(object sender, System.EventArgs e)
@@ -148,13 +148,13 @@ namespace Legend_of_zelda_game
         {
             for (int i = 1; i <= numberOfRooms; i++)
             {
-                rooms[i - 1] = new Room(i, spriteBatch);
+                Rooms[i - 1] = new Room(i, spriteBatch);
             }
         }
 
         public void SelectRoom(int destinationRoomNumber)
         {
-            CurrentRoom = rooms[destinationRoomNumber - 1];
+            CurrentRoom = Rooms[destinationRoomNumber - 1];
         }
 
         public void LoadRoomContent(int roomNumber)
@@ -166,7 +166,7 @@ namespace Legend_of_zelda_game
 
             this.collectables = Loader.Collectables;
             this.enemies = Loader.Enemies;
-            this.backgrounds = Loader.Backgrounds;
+            this.background = Loader.Background;
             this.blocks = Loader.Blocks;
             this.NPCs = Loader.NPCs;
             this.headsUpDisplay = Loader.HUD;

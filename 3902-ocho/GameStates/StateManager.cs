@@ -1,4 +1,5 @@
 ﻿using Legend_of_zelda_game;
+using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -54,7 +55,14 @@ namespace _3902_ocho.GameStates
             game.CurrentState = gameOverState;
         }
 
-        public void ScrollingTransition(IBackground originalBackground, IBackground destinationBackground, TransitionType type, Door door)
+        public void RoomTransition(Door door)
+        {
+            int originalRoomNumber = game.CurrentRoom.RoomNumber;
+            int destinationRoomNumber = door.destinationRoomNumber;
+            ScrollingTransition(game.Rooms[originalRoomNumber - 1].Background, game.Rooms[destinationRoomNumber - 1].Background, TransitionType.TO_ROOM, door);
+        }
+
+        private void ScrollingTransition(IBackground originalBackground, IBackground destinationBackground, TransitionType type, Door door)
         {
             game.CurrentState = new ScrollingTransitionState(originalBackground, destinationBackground, door.direction);
             game.CurrentState.Update();
