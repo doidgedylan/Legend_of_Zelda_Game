@@ -1,6 +1,7 @@
 ﻿using Legend_of_zelda_game.LinkClasses;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
 
 namespace Legend_of_zelda_game
 {
@@ -20,6 +21,7 @@ namespace Legend_of_zelda_game
         public LinkCollisions LinkCollisions;
         public LinkProjectiles LinkProjectiles;
         public string currentItem;
+        public ISet<ICollectable> LinkItems;
         public int numGems;
         public int numKeys;
         public int numBombs;
@@ -35,10 +37,11 @@ namespace Legend_of_zelda_game
             currentFrame = 0;
             tint = Color.White;
             locationRect = new Rectangle((int)location.X, (int)location.Y, 16 * scale, 16 * scale);
-            HealthStateMachine = new HealthStateMachine();
+            HealthStateMachine = new HealthStateMachine(6,1);
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
             currentItem = "arrow";
+            LinkItems = new HashSet<ICollectable>();
             numGems = 0;
             numKeys = 0;
             numBombs = 5;

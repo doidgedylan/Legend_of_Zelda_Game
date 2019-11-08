@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Legend_of_zelda_game.Blocks;
 
 namespace Legend_of_zelda_game
 {
@@ -26,6 +27,16 @@ namespace Legend_of_zelda_game
         {
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, (int)location.X + 2400, (int)location.Y + 1650);
             spriteBatch.Draw(spriteSheet, destinationRectangle, Color.White);
+        }
+
+        public void ScrollIn(Door.Direction direction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ScrollOut(Door.Direction direction)
+        {
+            throw new NotImplementedException();
         }
     }
 }
