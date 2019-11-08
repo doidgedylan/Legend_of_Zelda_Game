@@ -105,7 +105,6 @@ namespace Legend_of_zelda_game
             StateManager = new StateManager(this, spriteBatch, font, link);
             StateManager.SetGameplayState();
 
-            HealthStateMachine healthStateMachine = new HealthStateMachine();
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
             keyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));
             keyboardController.RegisterCommand(Buttons.A, new LinkMoveLeftCommand(link));
@@ -201,7 +200,7 @@ namespace Legend_of_zelda_game
             spriteBatch.Begin();
 
             CurrentState.Update();
-            if (link.HealthStateMachine.Health == HealthStateMachine.LinkHealth.Empty)
+            if (link.HealthStateMachine.GetHealth() == 0)
             {
                 StateManager.SetGameOverState();
             }

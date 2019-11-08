@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using static _3902_ocho.Door;
+using static Legend_of_zelda_game.Blocks.Door;
 
 namespace Legend_of_zelda_game.Interfaces
 {

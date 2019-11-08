@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static _3902_ocho.Door;
+using Legend_of_zelda_game.Blocks;
+using static Legend_of_zelda_game.Blocks.Door;
 
 namespace Legend_of_zelda_game
 {
@@ -33,6 +34,7 @@ namespace Legend_of_zelda_game
         {
 
         }
+
         public void ScrollOut(Direction direction)
         {
 

@@ -156,7 +156,7 @@
     <Compile Include="EnemySprites\EnemiesKeeseSprite.cs" />
     <Compile Include="EnemySprites\EnemiesWallmasterSprite.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
-    <Compile Include="LinkClasses\HealthStateMachine.cs" />
+    <Compile Include="HealthStateMachine.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Commands\HurtLinkCommand.cs" />
     <Compile Include="Interfaces\IController.cs" />

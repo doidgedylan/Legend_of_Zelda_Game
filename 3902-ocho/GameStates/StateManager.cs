@@ -1,4 +1,5 @@
 ﻿using Legend_of_zelda_game;
+using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework.Graphics;
 
