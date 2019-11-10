@@ -259,14 +259,14 @@
     <Content Include="Icon.ico" />
     <Content Include="LevelFiles\Room10File.xml" />
     <Content Include="LevelFiles\Room11File.xml" />
+    <Content Include="LevelFiles\Room12File.xml" />
     <Content Include="LevelFiles\Room13File.xml" />
+    <Content Include="LevelFiles\Room14File.xml" />
     <Content Include="LevelFiles\Room15File.xml" />
     <Content Include="LevelFiles\Room16File.xml" />
     <Content Include="LevelFiles\Room17File.xml" />
     <Content Include="LevelFiles\Room18File.xml" />
-    <Content Include="LevelFiles\Room14File.xml" />
     <Content Include="LevelFiles\Room1File.xml" />
-    <Content Include="LevelFiles\Room12File.xml" />
     <Content Include="LevelFiles\Room2File.xml" />
     <Content Include="LevelFiles\Room3File.xml" />
     <Content Include="LevelFiles\Room4File.xml" />

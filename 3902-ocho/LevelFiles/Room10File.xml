@@ -36,55 +36,38 @@
 
     <!--Blocks-->
 
+    <!--Doors-->
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>150 150</Location>
+      <ObjectName>Door</ObjectName>
+      <Location>375 51</Location>
+      <DestinationRoomNumber>13</DestinationRoomNumber>
+      <Direction>Up</Direction>
+      <Locked>False</Locked>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>200 150</Location>
+      <ObjectName>Door</ObjectName>
+      <Location>375 449</Location>
+      <DestinationRoomNumber>6</DestinationRoomNumber>
+      <Direction>Down</Direction>
+      <Locked>False</Locked>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>550 150</Location>
+      <ObjectName>Door</ObjectName>
+      <Location>51 250</Location>
+      <DestinationRoomNumber>9</DestinationRoomNumber>
+      <Direction>Left</Direction>
+      <Locked>False</Locked>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>600 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>350 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>400 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>150 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>200 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>550 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>600 350</Location>
+      <ObjectName>Door</ObjectName>
+      <Location>699 250</Location>
+      <DestinationRoomNumber>11</DestinationRoomNumber>
+      <Direction>Right</Direction>
+      <Locked>True</Locked>
     </Item>
 
     <!--Collectables-->

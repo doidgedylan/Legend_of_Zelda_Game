@@ -96,6 +96,16 @@
       <Location>550 300</Location>
     </Item>
 
+    <!--Doors-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>51 250</Location>
+      <DestinationRoomNumber>2</DestinationRoomNumber>
+      <Direction>Left</Direction>
+      <Locked>False</Locked>
+    </Item>
+
     <!--Collectables-->
     <Item>
       <ObjectType>Collectable</ObjectType>

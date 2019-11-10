@@ -65,6 +65,24 @@
       <ObjectName>Block</ObjectName>
       <Location>400 300</Location>
     </Item>
+    
+    <!--Doors-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>375 51</Location>
+      <DestinationRoomNumber>9</DestinationRoomNumber>
+      <Direction>Up</Direction>
+      <Locked>True</Locked>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>699 250</Location>
+      <DestinationRoomNumber>6</DestinationRoomNumber>
+      <Direction>Right</Direction>
+      <Locked>False</Locked>
+    </Item>
 
     <!--Collectables-->
 

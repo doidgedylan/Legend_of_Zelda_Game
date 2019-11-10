@@ -6,209 +6,68 @@
       <Location>0 1110</Location>
     </Item>
 
-    <!--HUD-->
-    
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDLevel</ObjectName>
-      <Location>16 8</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDLevelNumber</ObjectName>
-      <Location>64 8</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDLevelBlankBackground</ObjectName>
-      <Location>16 16</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDLifeBlankBackground</ObjectName>
-      <Location>175 31</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBackground</ObjectName>
-      <Location>0 0</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDXSymbol</ObjectName>
-      <Location>96 15</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDXSymbol</ObjectName>
-      <Location>96 31</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDXSymbol</ObjectName>
-      <Location>96 39</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUD0Symbol</ObjectName>
-      <Location>104 15</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUD0Symbol</ObjectName>
-      <Location>104 31</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUD0Symbol</ObjectName>
-      <Location>104 39</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDFullHeart</ObjectName>
-      <Location>175 39</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDFullHeart</ObjectName>
-      <Location>183 39</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDFullHeart</ObjectName>
-      <Location>191 39</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBlankSpace</ObjectName>
-      <Location>112 15</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBlankSpace</ObjectName>
-      <Location>112 31</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBlankSpace</ObjectName>
-      <Location>112 39</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopMap</ObjectName>
-      <Location>32 24</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopMap</ObjectName>
-      <Location>24 32</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopMap</ObjectName>
-      <Location>56 32</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>56 24</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>64 24</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>32 40</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>48 40</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>40 24</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>40 32</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>32 32</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>48 32</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>40 40</Location>
-    </Item>
-
-    <!--Link-->
-    
     <Item>
       <ObjectType>Link</ObjectType>
       <ObjectName>Link</ObjectName> 
-      <Location>300 300</Location>
+      <Location>300 200</Location>
     </Item>
 
     <!--Walls-->
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>HorizontalWall</ObjectName>
-      <Location>0 100</Location>
+      <Location>0 0</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>HorizontalWall</ObjectName>
-      <Location>0 550</Location>
+      <Location>0 450</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>VerticalWall</ObjectName>
-      <Location>0 100</Location>
+      <Location>0 0</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>VerticalWall</ObjectName>
-      <Location>700 100</Location>
+      <Location>700 0</Location>
     </Item>
-    
     
     <!--Blocks-->
+
+    <!--Doors-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>699 250</Location>
+      <DestinationRoomNumber>2</DestinationRoomNumber>
+      <Direction>Right</Direction>
+      <Locked>False</Locked>
+    </Item>
 
     <!--Collectables-->
     <Item>
       <ObjectType>Collectable</ObjectType>
       <ObjectName>Key</ObjectName>
-      <Location>320 356</Location>
+      <Location>320 256</Location>
     </Item>
 
     <!--Enemies-->
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 196</Location>
+      <Location>96 96</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 324</Location>
+      <Location>96 224</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>160 228</Location>
+      <Location>160 128</Location>
     </Item>
   </Asset>
 </XnaContent>

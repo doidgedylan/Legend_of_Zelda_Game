@@ -36,6 +36,16 @@
     
     <!--Blocks-->
 
+    <!--Doors-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>699 250</Location>
+      <DestinationRoomNumber>17</DestinationRoomNumber>
+      <Direction>Right</Direction>
+      <Locked>False</Locked>
+    </Item>
+
     <!--Collectables-->
     <Item>
       <ObjectType>Collectable</ObjectType>

@@ -103,7 +103,7 @@
       <Location>375 51</Location>
       <DestinationRoomNumber>4</DestinationRoomNumber>
       <Direction>Up</Direction>
-      <Locked>False</Locked>
+      <Locked>True</Locked>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
