@@ -19,10 +19,7 @@ namespace _3902_ocho.GameStates
         }
         public void Update()
         {
-            foreach (IBackground background in game.CurrentRoom.Backgrounds)
-            {
-                background.Draw();
-            }
+            game.CurrentRoom.Background.Draw();
             spriteBatch.DrawString(font, "Press P to unpause", new Vector2(300, 400), Color.Black);
         }
     }

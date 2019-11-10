@@ -33,12 +33,18 @@ namespace _3902_ocho.GameStates
                     return;
                 case Direction.Down:
                     // scroll down
+                    originalBackground.ScrollOut(Direction.Down);
+                    destinationBackground.ScrollIn(Direction.Down);
                     return;
                 case Direction.Left:
                     // scroll left
+                    originalBackground.ScrollOut(Direction.Down);
+                    destinationBackground.ScrollIn(Direction.Down);
                     return;
                 case Direction.Right:
                     // scroll right
+                    originalBackground.ScrollOut(Direction.Down);
+                    destinationBackground.ScrollIn(Direction.Down);
                     return;
                 default:
                     // do nothing;

@@ -1,4 +1,5 @@
-﻿using Legend_of_zelda_game.Blocks;
+﻿using _3902_ocho.GameStates;
+using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using System;
@@ -16,14 +17,14 @@ namespace Legend_of_zelda_game.LinkClasses
             this.link = link;
         }
 
-        public void Update(ISet<ICollectable> collectables, ISet<IEnemies> enemies, ISet<IBlock> blocks)
+        public void Update(ISet<ICollectable> collectables, ISet<IEnemies> enemies, ISet<IBlock> blocks, StateManager stateManager)
         {
             LinkCollisionCollectable(collectables);
             LinkCollisionEnemy(enemies);
-            LinkCollisionBlock(blocks);
+            LinkCollisionBlock(blocks, stateManager);
         }
 
-        public void LinkCollisionBlock(ISet<IBlock> blocks)
+        public void LinkCollisionBlock(ISet<IBlock> blocks, StateManager stateManager)
         {
             IList<string> blockCollisionSides = new List<string>();
             IList<IBlock> blocksCollided = new List<IBlock>();
@@ -124,6 +125,7 @@ namespace Legend_of_zelda_game.LinkClasses
                             link.numKeys--;
                         }
                         //TODO: add call to room switching method
+                        stateManager.RoomTransition(block as Door);
                     }
                 }
             }

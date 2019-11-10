@@ -19,10 +19,7 @@ namespace _3902_ocho.GameStates
 
         public void Update()
         {
-            foreach (IBackground background in game.CurrentRoom.Backgrounds)
-            {
-                background.Draw();
-            }
+            game.CurrentRoom.Background.Draw();
 
             foreach (ICollectable collectable in game.CurrentRoom.Collectables)
             {
@@ -47,7 +44,7 @@ namespace _3902_ocho.GameStates
                 projectile.Update();
             }
 
-            link.LinkCollisions.Update(game.CurrentRoom.Collectables, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks);
+            link.LinkCollisions.Update(game.CurrentRoom.Collectables, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks, game.StateManager);
             link.LinkProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks);
             link.Update();
         }
