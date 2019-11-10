@@ -49,7 +49,7 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         y--;
                     }
-                    return;
+                    break;
                 case Direction.Up:
                     x = 0;
                     y = -382;
@@ -58,7 +58,7 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         y++;
                     }
-                    return;
+                    break;
                 case Direction.Right:
                     x = 802;
                     y = 168;
@@ -67,7 +67,7 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         x--;
                     }
-                    return;
+                    break;
                 case Direction.Left:
                     x = -802;
                     y = 168;
@@ -76,10 +76,10 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         x++;
                     }
-                    return;
+                    break;
                 default:
                     // do nothing
-                    return;
+                    break;
             }
         }
         public void ScrollOut(Direction direction)
@@ -95,7 +95,7 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         y--;
                     }
-                    return;
+                    break;
                 case Direction.Up:
                     x = 0;
                     y = 168;
@@ -104,7 +104,7 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         y++;
                     }
-                    return;
+                    break;
                 case Direction.Right:
                     x = 0;
                     y = 168;
@@ -113,7 +113,7 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         x--;
                     }
-                    return;
+                    break;
                 case Direction.Left:
                     x = 0;
                     y = 168;
@@ -122,10 +122,10 @@ namespace Legend_of_zelda_game
                         DrawAtPoint(x, y);
                         x++;
                     }
-                    return;
+                    break;
                 default:
                     // do nothing
-                    return;
+                    break;
             }
         }
     }

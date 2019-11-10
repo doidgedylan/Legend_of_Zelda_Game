@@ -216,7 +216,8 @@ namespace Legend_of_zelda_game
                         this.Enemies.Add(new EnemiesWallmasterSprite(spriteBatch, Location));
                         break;
                     case "Link":
-                        this.Link = new Link(spriteBatch, Location);
+                        //this.Link = new Link(spriteBatch, Location);
+                        //this.Link.Location = Location;
                         break;
                     case "OldMan":
                         this.NPCs.Add(new OldManNPCSprite(spriteBatch, Location));
