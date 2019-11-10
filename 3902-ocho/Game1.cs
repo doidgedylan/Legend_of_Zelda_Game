@@ -89,9 +89,9 @@ namespace Legend_of_zelda_game
             LoadAllRooms(NUMBER_OF_ROOMS);
             SelectRoom(2);
 
-            bgm = Content.Load<Song>("OverworldSound");
-            MediaPlayer.Play(bgm);
-            MediaPlayer.IsRepeating = true;
+            //bgm = Content.Load<Song>("OverworldSound");
+            //MediaPlayer.Play(bgm);
+            //MediaPlayer.IsRepeating = true;
 
             //this.collectables = Loader.Collectables;
             //this.enemies = Loader.Enemies;

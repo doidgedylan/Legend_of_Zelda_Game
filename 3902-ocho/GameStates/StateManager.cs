@@ -59,7 +59,7 @@ namespace _3902_ocho.GameStates
         {
             int originalRoomNumber = game.CurrentRoom.RoomNumber;
             int destinationRoomNumber = door.destinationRoomNumber;
-            ScrollingTransition(game.Rooms[originalRoomNumber - 1].Background, game.Rooms[destinationRoomNumber - 1].Background, TransitionType.TO_ROOM, door);
+            ScrollingTransition(game.Rooms[originalRoomNumber].Background, game.Rooms[destinationRoomNumber].Background, TransitionType.TO_ROOM, door);
         }
 
         private void ScrollingTransition(IBackground originalBackground, IBackground destinationBackground, TransitionType type, Door door)

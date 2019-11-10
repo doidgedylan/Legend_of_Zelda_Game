@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.EnemySprites;
+using static Legend_of_zelda_game.Blocks.Door;
 
 namespace Legend_of_zelda_game
 {
@@ -58,6 +59,9 @@ namespace Legend_of_zelda_game
 
             string ObjectName = "";
             string LocationStr = "";
+            string DestRoomNumberStr = "";
+            string DirectionStr = "";
+            string LockedStr = "";
             Vector2 Location;
 
             while (reader.Read() && !reader.Name.Equals("Item"))
@@ -71,6 +75,18 @@ namespace Legend_of_zelda_game
                     case "Location":
                         reader.Read();
                         LocationStr = reader.ReadContentAsString();
+                        break;
+                    case "DestinationRoomNumber":
+                        reader.Read();
+                        DestRoomNumberStr = reader.ReadContentAsString();
+                        break;
+                    case "Direction":
+                        reader.Read();
+                        DirectionStr = reader.ReadContentAsString();
+                        break;
+                    case "Locked":
+                        reader.Read();
+                        LockedStr = reader.ReadContentAsString();
                         break;
                     default:
                         //do nothing
@@ -100,7 +116,15 @@ namespace Legend_of_zelda_game
                     //this.Backgrounds.Add(new RoomSprite(spriteBatch, Location, BackgroundTopRightSpriteSheet));
                     this.Background = new RoomSprite(spriteBatch, Location, BackgroundTopRightSpriteSheet);
                 }
-            } else
+            }
+            else if (ObjectName.Contains("Door"))
+            {
+                int DestRoomNumber = Int32.Parse(DestRoomNumberStr);
+                Direction direction = (Direction)Enum.Parse(typeof(Direction), DirectionStr);
+                bool locked = Boolean.Parse(LockedStr);
+                this.Blocks.Add(new Door(Location, DestRoomNumber, direction, locked));
+            }
+            else
             {
                 switch (ObjectName)
                 {

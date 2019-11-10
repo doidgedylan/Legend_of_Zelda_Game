@@ -96,6 +96,32 @@
       <Location>600 350</Location>
     </Item>
     
+    <!--Doors-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>375 51</Location>
+      <DestinationRoomNumber>4</DestinationRoomNumber>
+      <Direction>Up</Direction>
+      <Locked>False</Locked>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>51 250</Location>
+      <DestinationRoomNumber>1</DestinationRoomNumber>
+      <Direction>Left</Direction>
+      <Locked>False</Locked>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>699 250</Location>
+      <DestinationRoomNumber>3</DestinationRoomNumber>
+      <Direction>Right</Direction>
+      <Locked>False</Locked>
+    </Item>
+    
     <!--Collectables-->
 
     <!--Enemies-->

@@ -41,7 +41,7 @@ namespace Legend_of_zelda_game
             int x, y;
             switch (direction)
             {
-                case Direction.Up:
+                case Direction.Down:
                     x = 0;
                     y = 718;
                     while (y > 168)
@@ -50,7 +50,7 @@ namespace Legend_of_zelda_game
                         y--;
                     }
                     return;
-                case Direction.Down:
+                case Direction.Up:
                     x = 0;
                     y = -382;
                     while (y < 168)
@@ -59,7 +59,7 @@ namespace Legend_of_zelda_game
                         y++;
                     }
                     return;
-                case Direction.Left:
+                case Direction.Right:
                     x = 802;
                     y = 168;
                     while (x > 0)
@@ -68,7 +68,7 @@ namespace Legend_of_zelda_game
                         x--;
                     }
                     return;
-                case Direction.Right:
+                case Direction.Left:
                     x = -802;
                     y = 168;
                     while (x < 0)
@@ -87,7 +87,7 @@ namespace Legend_of_zelda_game
             int x, y;
             switch (direction)
             {
-                case Direction.Up:
+                case Direction.Down:
                     x = 0;
                     y = 168;
                     while (y > -382)
@@ -96,7 +96,7 @@ namespace Legend_of_zelda_game
                         y--;
                     }
                     return;
-                case Direction.Down:
+                case Direction.Up:
                     x = 0;
                     y = 168;
                     while (y < 718)
@@ -105,7 +105,7 @@ namespace Legend_of_zelda_game
                         y++;
                     }
                     return;
-                case Direction.Left:
+                case Direction.Right:
                     x = 0;
                     y = 168;
                     while (x > -802)
@@ -114,7 +114,7 @@ namespace Legend_of_zelda_game
                         x--;
                     }
                     return;
-                case Direction.Right:
+                case Direction.Left:
                     x = 0;
                     y = 168;
                     while (x < 802)
