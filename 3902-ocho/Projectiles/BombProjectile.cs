@@ -34,7 +34,7 @@ namespace Legend_of_zelda_game.Projectiles
             projectileFinished = false;
             SetStartLocation();
         }
-        
+
         public void Update()
         {
             currentFrame++;
@@ -70,6 +70,7 @@ namespace Legend_of_zelda_game.Projectiles
                 currentFrame = 0;
                 projectileFinished = true;
             }
+
             Draw();
         }
 

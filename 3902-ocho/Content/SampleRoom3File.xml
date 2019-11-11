@@ -1,0 +1,74 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>SampleRoom3</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName>
+      <Location>300 200</Location>
+    </Item>
+
+    <!--Walls-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 450</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>700 0</Location>
+    </Item>
+
+    <!--Blocks-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>200 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>550 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>200 350</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>550 350</Location>
+    </Item>
+
+    <!--Collectables-->
+    <Item>
+      <ObjectType>Collectable</ObjectType>
+      <ObjectName>Triforce</ObjectName>
+      <Location>600 240</Location>
+    </Item>
+
+    <!--Enemies-->
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Dragon</ObjectName>
+      <Location>200 240</Location>
+    </Item>
+    
+  </Asset>
+</XnaContent>
