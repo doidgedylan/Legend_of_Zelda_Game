@@ -69,21 +69,20 @@ namespace _3902_ocho.GameStates
             SetLinkLocation(door.direction);
         }
 
-        public void ItemSelectTransition()
+        public void ToItemSelectTransition()
         {
             int originalRoomNumber = game.CurrentRoom.RoomNumber;
-            if (game.CurrentState is GameplayState)
-            {
-                //game.CurrentState = new ScrollingTransitionState(game.Rooms[originalRoomNumber].Background, game.ItemSelectRoom.Background, Direction.Up);
-                //game.CurrentState.Update();
-                SetItemSelectState();
-            }
-            else
-            {
-                //game.CurrentState = new ScrollingTransitionState(game.ItemSelectRoom.Background, game.Rooms[originalRoomNumber].Background, Direction.Down);
-                //game.CurrentState.Update();
-                SetGameplayState();
-            }
+            game.CurrentState = new ScrollingTransitionState(game.Rooms[originalRoomNumber].Background, game.ItemSelectRoom.Background, Direction.Up);
+            game.CurrentState.Update();
+            SetItemSelectState();
+        }
+
+        public void FromItemSelectTransition()
+        {
+            int originalRoomNumber = game.CurrentRoom.RoomNumber;
+            game.CurrentState = new ScrollingTransitionState(game.ItemSelectRoom.Background, game.Rooms[originalRoomNumber].Background, Direction.Down);
+            game.CurrentState.Update();
+            SetGameplayState();
         }
 
         private void SetLinkLocation(Direction direction)
@@ -117,8 +116,8 @@ namespace _3902_ocho.GameStates
 
         private void ScrollingTransitionToRoom(IBackground originalBackground, IBackground destinationBackground, Door door)
         {
-            //game.CurrentState = new ScrollingTransitionState(originalBackground, destinationBackground, door.direction);
-            //game.CurrentState.Update();
+            game.CurrentState = new ScrollingTransitionState(originalBackground, destinationBackground, door.direction);
+            game.CurrentState.Update();
             game.SelectRoom(door.destinationRoomNumber);
             SetGameplayState();
         }

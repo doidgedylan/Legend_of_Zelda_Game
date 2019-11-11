@@ -85,6 +85,7 @@
     <Compile Include="Interfaces\IProjectile.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
+    <Compile Include="Interfaces\UnpauseCommand.cs" />
     <Compile Include="LevelLoader.cs" />
     <Compile Include="LinkClasses\CollectableSingleRubeeSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />

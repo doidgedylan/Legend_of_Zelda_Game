@@ -2,18 +2,18 @@
 
 namespace Legend_of_zelda_game
 {
-    class PauseCommand : ICommand
+    class UnpauseCommand : ICommand
     {
         private Game1 game;
 
-        public PauseCommand(Game1 game)
+        public UnpauseCommand(Game1 game)
         {
             this.game = game;
         }
 
         public void Execute()
         {
-            this.game.StateManager.ToItemSelectTransition();
+            this.game.StateManager.FromItemSelectTransition();
         }
 
     }
