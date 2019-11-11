@@ -40,7 +40,7 @@ namespace Legend_of_zelda_game
             HealthStateMachine = new HealthStateMachine(6,1);
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
-            currentItem = "bomb";
+            currentItem = "boomerang";
             LinkItems = new HashSet<ICollectable>();
             numGems = 0;
             numKeys = 0;

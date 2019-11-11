@@ -51,6 +51,13 @@ namespace Legend_of_zelda_game.LinkClasses
                         projectilesToRemove.Add(projectile);
                     }
                 }
+
+                if (projectile is BoomerangProjectile && projectileInAir && ProjectileCollision(projectile.LocationRect, link.locationRect))
+                {
+                    projectileInAir = false;
+                    projectilesToRemove.Add(projectile);
+                }
+
                 if (projectile is BombProjectile && projectile.ProjectileFinished)
                 {
                     projectilesToRemove.Add(projectile);
@@ -129,6 +136,10 @@ namespace Legend_of_zelda_game.LinkClasses
                     else if (link.currentItem.Equals("bomb"))
                     {
                         projectiles.Add(new BombProjectile(spriteBatch, link.Location, direct));
+                    }
+                    else if (link.currentItem.Equals("boomerang"))
+                    {
+                        projectiles.Add(new BoomerangProjectile(spriteBatch, link.Location, direct));
                     }
                 }
             }

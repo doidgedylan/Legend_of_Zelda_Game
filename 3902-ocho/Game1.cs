@@ -87,6 +87,10 @@ namespace Legend_of_zelda_game
             SelectRoom(2);
             ItemSelectRoom = new Room(0, spriteBatch);
 
+            /* The code commented out below is the background sound. Currently, the background
+             * sound does not work for some group members. The professor has been contacted and
+             * a resolution cannot currently be found.
+             */
             //bgm = Content.Load<Song>("OverworldSound");
             //MediaPlayer.Play(bgm);
             //MediaPlayer.IsRepeating = true;
