@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Legend_of_zelda_game.CollectableSprites;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 

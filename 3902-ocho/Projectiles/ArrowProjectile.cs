@@ -13,6 +13,8 @@ namespace Legend_of_zelda_game.Projectiles
         public Vector2 Location { get => location; set => location = value; }
         private Rectangle locationRect;
         public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
+        private bool projectileFinished;
+        public bool ProjectileFinished { get => projectileFinished; set => projectileFinished = value; }
         private int moveSpeed = 5;
         private int xPos = 154;
         private int yPos = 0;
@@ -28,6 +30,7 @@ namespace Legend_of_zelda_game.Projectiles
             this.spriteBatch = spriteBatch;
             this.Location = location;
             this.direction = direction;
+            projectileFinished = false;
             SetStartLocation();
         }
         

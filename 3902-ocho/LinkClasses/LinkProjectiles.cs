@@ -31,7 +31,11 @@ namespace Legend_of_zelda_game.LinkClasses
             {
                 foreach (IEnemies enemy in enemies)
                 {
-                    if (projectileInAir && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
+                    if (projectile is BombProjectile && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
+                    {
+                        enemiesToRemove.Add(enemy);
+                    }
+                    else if (projectileInAir && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
                     {
                         projectileInAir = false;
                         projectilesToRemove.Add(projectile);
@@ -46,6 +50,11 @@ namespace Legend_of_zelda_game.LinkClasses
                         projectileInAir = false;
                         projectilesToRemove.Add(projectile);
                     }
+                }
+                if (projectile is BombProjectile && projectile.ProjectileFinished)
+                {
+                    projectilesToRemove.Add(projectile);
+                    projectileInAir = false;
                 }
             }
             foreach (IProjectile projectile in projectilesToRemove)
@@ -116,6 +125,10 @@ namespace Legend_of_zelda_game.LinkClasses
                     if (link.currentItem.Equals("arrow"))
                     {
                         projectiles.Add(new ArrowProjectile(spriteBatch, link.Location, direct));
+                    }
+                    else if (link.currentItem.Equals("bomb"))
+                    {
+                        projectiles.Add(new BombProjectile(spriteBatch, link.Location, direct));
                     }
                 }
             }
