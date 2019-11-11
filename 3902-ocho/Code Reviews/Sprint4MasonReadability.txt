@@ -1,0 +1,10 @@
+﻿Author: Dylan Doidge
+Date: 11/11/19
+Sprint: 4
+Name of reviewed file: HealthStateMachine.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 15
+Specific comments: The class is concise and has understandable variable names for the reader.  There are only three
+variables to keep track of and each method is named for the reader to understand without getting lost. Each of these
+are also short and only do one thing, so it is simple to follow and know exactly what's going on in each of them.
+Keeping track of the health is kept short for the reader with loose coupling and high cohesion.

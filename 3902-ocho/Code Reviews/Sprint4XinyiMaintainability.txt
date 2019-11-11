@@ -1,0 +1,10 @@
+﻿Author: Dylan Doidge
+Date: 11/11/19
+Sprint: 4
+Name of reviewed file: EnemiesGelSprite.cs
+Author of reviewed file: Xinyi Zhao
+Specific comments on code quality: The class animates and moves the an enemy around the map in the dungeon area.
+Based on different positions the enemy can be apart of, the enemy will move in a certain direction.  The variables
+used in the class can be easily modified for future maintainability whether someone would like to adjust the speed
+or direction of movement since there is high cohesion and low coupling.  Both of these factors open many different
+options involving the movement of enemies.

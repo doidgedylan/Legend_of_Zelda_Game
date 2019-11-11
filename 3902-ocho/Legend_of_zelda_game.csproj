@@ -258,7 +258,9 @@
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Code Reviews\Sprint4DylanReadability.txt" />
     <Content Include="Code Reviews\Sprint4MasonMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint4MasonReadability.txt" />
     <Content Include="Code Reviews\Sprint4ReflectionEvan.txt" />
+    <Content Include="Code Reviews\Sprint4XinyiMaintainability.txt" />
     <Content Include="Icon.ico" />
     <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />
