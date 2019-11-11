@@ -209,7 +209,6 @@
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room10File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room11File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room12File.xml" />
@@ -220,7 +219,9 @@
     <Content Include="bin\Windows\x86\Debug\Room17File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room18File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room1File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room2File.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room2File.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="bin\Windows\x86\Debug\Room3File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room4File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room5File.xml" />
@@ -256,7 +257,7 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
-    <Content Include="LevelFiles\Room0File.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />
     <Content Include="LevelFiles\Room11File.xml" />
     <Content Include="LevelFiles\Room12File.xml" />

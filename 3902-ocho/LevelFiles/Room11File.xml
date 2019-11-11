@@ -194,6 +194,27 @@
 
     <!--Blocks-->
 
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>200 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>200 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>550 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Block</ObjectName>
+      <Location>550 300</Location>
+    </Item>
+
     <!--Doors-->
     <Item>
       <ObjectType>Block</ObjectType>
