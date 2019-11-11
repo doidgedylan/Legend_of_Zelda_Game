@@ -2,8 +2,8 @@
   <Asset Type="MyDataTypes.LevelObjectData[]">
     <Item>
       <ObjectType>Background</ObjectType>
-      <ObjectName>Room10</ObjectName>
-      <Location>1609 1109</Location>
+      <ObjectName>Room11</ObjectName>
+      <Location>0 1109</Location>
     </Item>
 
     <!--HUD-->
@@ -193,73 +193,34 @@
     </Item>
 
     <!--Blocks-->
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>150 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>200 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>150 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>200 350</Location>
-    </Item>
 
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>Block</ObjectName>
-      <Location>350 250</Location>
+      <Location>200 200</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>Block</ObjectName>
-      <Location>400 250</Location>
-    </Item>
-    
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>550 150</Location>
+      <Location>200 300</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>Block</ObjectName>
-      <Location>600 150</Location>
+      <Location>550 200</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>Block</ObjectName>
-      <Location>550 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>600 350</Location>
+      <Location>550 300</Location>
     </Item>
 
     <!--Doors-->
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>Door</ObjectName>
-      <Location>375 51</Location>
-      <DestinationRoomNumber>13</DestinationRoomNumber>
-      <Direction>Up</Direction>
-      <Locked>False</Locked>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Door</ObjectName>
       <Location>375 449</Location>
-      <DestinationRoomNumber>6</DestinationRoomNumber>
+      <DestinationRoomNumber>7</DestinationRoomNumber>
       <Direction>Down</Direction>
       <Locked>False</Locked>
     </Item>
@@ -267,41 +228,36 @@
       <ObjectType>Block</ObjectType>
       <ObjectName>Door</ObjectName>
       <Location>51 250</Location>
-      <DestinationRoomNumber>9</DestinationRoomNumber>
+      <DestinationRoomNumber>10</DestinationRoomNumber>
       <Direction>Left</Direction>
-      <Locked>False</Locked>
+      <Locked>True</Locked>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>Door</ObjectName>
       <Location>699 250</Location>
-      <DestinationRoomNumber>11</DestinationRoomNumber>
+      <DestinationRoomNumber>12</DestinationRoomNumber>
       <Direction>Right</Direction>
-      <Locked>True</Locked>
+      <Locked>False</Locked>
     </Item>
 
     <!--Collectables-->
-    <Item>
-      <ObjectType>Collectable</ObjectType>
-      <ObjectName>Letter</ObjectName>
-      <Location>600 250</Location>
-    </Item>
 
     <!--Enemies-->
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Gel</ObjectName>
-      <Location>150 100</Location>
+      <ObjectName>Goriya</ObjectName>
+      <Location>200 150</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Gel</ObjectName>
-      <Location>650 100</Location>
+      <ObjectName>Goriya</ObjectName>
+      <Location>250 150</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Gel</ObjectName>
-      <Location>650 400</Location>
+      <ObjectName>Goriya</ObjectName>
+      <Location>150 300</Location>
     </Item>
   </Asset>
 </XnaContent>

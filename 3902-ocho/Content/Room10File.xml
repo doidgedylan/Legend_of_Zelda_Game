@@ -193,58 +193,6 @@
     </Item>
 
     <!--Blocks-->
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>150 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>200 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>150 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>200 350</Location>
-    </Item>
-
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>350 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>400 250</Location>
-    </Item>
-    
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>550 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>600 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>550 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>600 350</Location>
-    </Item>
 
     <!--Doors-->
     <Item>

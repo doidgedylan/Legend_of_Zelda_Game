@@ -1,0 +1,473 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>Room13</ObjectName>
+      <Location>1615 555</Location>
+    </Item>
+
+    <!--HUD-->
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBackground</ObjectName>
+      <Location>16 -168</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevel</ObjectName>
+      <Location>64 -144</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevelNumber</ObjectName>
+      <Location>208 -144</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLevelBlankBackground</ObjectName>
+      <Location>63 -120</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopMap</ObjectName>
+      <Location>112 -96</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>136 -96</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>184 -96</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>208 -96</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopMap</ObjectName>
+      <Location>88 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>112 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>136 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>160 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopMap</ObjectName>
+      <Location>184 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>112 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDTopAndBottomMap</ObjectName>
+      <Location>136 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBottomMap</ObjectName>
+      <Location>160 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDXSymbol</ObjectName>
+      <Location>304 -120</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUD0Symbol</ObjectName>
+      <Location>328 -120</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBlankSpace</ObjectName>
+      <Location>352 -120</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDXSymbol</ObjectName>
+      <Location>304 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUD0Symbol</ObjectName>
+      <Location>328 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBlankSpace</ObjectName>
+      <Location>352 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDXSymbol</ObjectName>
+      <Location>304 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUD0Symbol</ObjectName>
+      <Location>328 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDBlankSpace</ObjectName>
+      <Location>352 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDLifeBlankBackground</ObjectName>
+      <Location>544 -72</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDFullHeart</ObjectName>
+      <Location>544 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDFullHeart</ObjectName>
+      <Location>568 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDFullHeart</ObjectName>
+      <Location>592 -48</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDWoodSword</ObjectName>
+      <Location>472 -96</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDArrow</ObjectName>
+      <Location>400 -96</Location>
+    </Item>
+
+
+    <Item>
+      <ObjectType>Link</ObjectType>
+      <ObjectName>Link</ObjectName> 
+      <Location>375 400</Location>
+    </Item>
+
+    <!--Walls-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>HorizontalWall</ObjectName>
+      <Location>0 450</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>0 0</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>VerticalWall</ObjectName>
+      <Location>700 0</Location>
+    </Item>
+    
+    <!--Blocks-->
+    <!--Top Left Water-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>100 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>100 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>100 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>150 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>200 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>250 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>300 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>300 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>300 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>300 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>300 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>350 300</Location>
+    </Item>
+    <!--Bottom Left Water-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>100 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>100 350</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>100 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>150 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>200 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>250 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>300 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>350 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>200 350</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>200 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>200 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>200 200</Location>
+    </Item>
+    <!--Top Right Water-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>450 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>500 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>500 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>600 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>650 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>650 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>650 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>550 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>550 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>550 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>550 300</Location>
+    </Item>
+    <!--Bottom Right Water-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>450 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>500 200</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>450 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>450 300</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>450 350</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>450 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>500 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>550 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>600 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>650 400</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>650 350</Location>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>WaterBlock</ObjectName>
+      <Location>650 300</Location>
+    </Item>
+
+    <!--Doors-->
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>375 51</Location>
+      <DestinationRoomNumber>17</DestinationRoomNumber>
+      <Direction>Up</Direction>
+      <Locked>True</Locked>
+    </Item>
+    <Item>
+      <ObjectType>Block</ObjectType>
+      <ObjectName>Door</ObjectName>
+      <Location>375 449</Location>
+      <DestinationRoomNumber>10</DestinationRoomNumber>
+      <Direction>Down</Direction>
+      <Locked>False</Locked>
+    </Item>
+
+    <!--Collectables-->
+
+    <!--Enemies-->
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>250 150</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>200 250</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Stalfos</ObjectName>
+      <Location>600 200</Location>
+    </Item>
+  </Asset>
+</XnaContent>
