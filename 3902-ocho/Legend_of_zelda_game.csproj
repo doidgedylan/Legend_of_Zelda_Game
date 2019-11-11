@@ -209,6 +209,7 @@
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
     <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room10File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room11File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room12File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room13File.xml" />
@@ -226,9 +227,6 @@
     <Content Include="bin\Windows\x86\Debug\Room7File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room8File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room9File.xml" />
-    <Content Include="bin\Windows\x86\Debug\SampleRoom1File.xml" />
-    <Content Include="bin\Windows\x86\Debug\SampleRoom2File.xml" />
-    <Content Include="bin\Windows\x86\Debug\SampleRoom3File.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.dll" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct2D1.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.Direct3D11.dll" />
@@ -244,7 +242,6 @@
     <Content Include="bin\Windows\x86\Debug\SharpDX.XInput.xml" />
     <Content Include="bin\Windows\x86\Debug\SharpDX.xml" />
     <Content Include="bin\Windows\x86\Debug\WholeLevelFile.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room10File.xml" />
     <Content Include="Code Reviews\Sprint2DylanMaintabilty.txt" />
     <Content Include="Code Reviews\Sprint2DylanMaintainability2.txt" />
     <Content Include="Code Reviews\Sprint2DylanReadability.txt" />

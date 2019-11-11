@@ -19,6 +19,10 @@ namespace _3902_ocho.GameStates
         }
         public void Update()
         {
+            foreach (ISprite HUD in game.ItemSelectRoom.HeadsUpDisplay)
+            {
+                HUD.Update();
+            }
             game.ItemSelectRoom.Background.Draw();
         }
     }
