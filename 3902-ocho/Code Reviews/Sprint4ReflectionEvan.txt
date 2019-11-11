@@ -1,0 +1,7 @@
+﻿Evan's Sprint 4 Reflection
+
+When the sprint started, we split up the tasks and delegated them amongst the group members. Group members stuck to these tasks
+throughout the sprint, as the workload was split fairly evenly. Throughout the course of this sprint, some group members had heavy
+workloads from other commitments, and so weren't able to complete all of the assigned tasks. This led, on my part, to rushing and some
+sloppily written code, which may come back to haunt us in the future. For the upcoming final sprint, I and the rest of the team will have
+to work extra hard to implement all of the assigned features, as well as a couple additional features of our choosing.

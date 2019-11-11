@@ -255,6 +255,9 @@
     <Content Include="Code Reviews\Sprint3EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
+    <Content Include="Code Reviews\Sprint4DylanReadability.txt" />
+    <Content Include="Code Reviews\Sprint4MasonMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint4ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
     <Content Include="LevelFiles\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />

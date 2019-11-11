@@ -1,0 +1,8 @@
+﻿Author: Evan Standerwick
+Date: 11/11/19
+Sprint: 4
+Name of reviewed file: HUDArrowSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 5
+Specific comments: I found the class easy to read. It was concise, and all the methods and variables had clear, concise names. There
+	were no comments, and I found no need for any, as the code documented itself well.

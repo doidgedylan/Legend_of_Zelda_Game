@@ -1,0 +1,11 @@
+﻿Author: Evan Standerwick
+Date: 11/11/19
+Sprint: 4
+Name of reviewed file: ArrowProjectile.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 12
+Specific comments on code quality: The class is cohesive, as it only contains all the logic for a particular type of projectile.
+	However, this approach to projectiles may make it cumbersome if we were to add many more projectiles in the future. However,
+	the current approach works very well for this project, where there are few types of projectiles.
+Hypothetical change and response: To make projectiles more easily extensible, it could be beneficial to use the Strategy pattern.
+	In other words, having one projectile class, with settable fields such as sprite, speed, size, damage, etc.
