@@ -124,8 +124,9 @@ namespace Legend_of_zelda_game.LinkClasses
                         {
                             link.numKeys--;
                         }
-                        //TODO: add call to room switching method
                         stateManager.RoomTransition(block as Door);
+                        link.moveSpeed = 3;
+                        link.hurtSpeed = 5;
                     }
                 }
             }
