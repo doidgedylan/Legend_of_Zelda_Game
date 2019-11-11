@@ -50,7 +50,7 @@
     <Compile Include="Blocks\VerticalWall.cs" />
     <Compile Include="Blocks\WaterBlock.cs" />
     <Compile Include="Camera.cs" />
-    <Compile Include="Commands\LinkPickUpItemCommand.cs" />
+    <Compile Include="Commands\LinkSwitchItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Commands\LoadRoomCommand.cs" />

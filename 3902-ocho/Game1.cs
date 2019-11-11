@@ -114,7 +114,7 @@ namespace Legend_of_zelda_game
             mouseController.RegisterCommand(Buttons.LeftClick, new LinkWoodSwordCommand(link));
             mouseController.RegisterCommand(Buttons.RightClick, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
-            keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
+            keyboardController.RegisterCommand(Buttons.C, new LinkSwitchItemCommand(link));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
             keyboardController.RegisterCommand(Buttons.B, new PauseCommand(this));
             keyboardController.RegisterCommand(Buttons.G, new UnpauseCommand(this));
