@@ -23,33 +23,8 @@ namespace _3902_ocho.GameStates
         }
         public void Update()
         {
-            // stop the game, do the scrolling stuff
-            switch (direction)
-            {
-                case Direction.Up:
-                    // scroll up
-                    originalBackground.ScrollOut(Direction.Up);
-                    destinationBackground.ScrollIn(Direction.Up);
-                    return;
-                case Direction.Down:
-                    // scroll down
-                    originalBackground.ScrollOut(Direction.Down);
-                    destinationBackground.ScrollIn(Direction.Down);
-                    return;
-                case Direction.Left:
-                    // scroll left
-                    originalBackground.ScrollOut(Direction.Down);
-                    destinationBackground.ScrollIn(Direction.Down);
-                    return;
-                case Direction.Right:
-                    // scroll right
-                    originalBackground.ScrollOut(Direction.Down);
-                    destinationBackground.ScrollIn(Direction.Down);
-                    return;
-                default:
-                    // do nothing;
-                    return;
-            }
+            originalBackground.ScrollOut(direction);
+            destinationBackground.ScrollIn(direction);
         }
     }
 }
