@@ -13,7 +13,7 @@ namespace Legend_of_zelda_game
 
         public void Execute()
         {
-            this.game.StateManager.SetPauseState();
+            this.game.StateManager.ItemSelectTransition();
         }
 
     }

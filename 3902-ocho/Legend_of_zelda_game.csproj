@@ -208,6 +208,7 @@
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room11File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room12File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room13File.xml" />
@@ -257,6 +258,7 @@
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
+    <Content Include="LevelFiles\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />
     <Content Include="LevelFiles\Room11File.xml" />
     <Content Include="LevelFiles\Room12File.xml" />
@@ -281,10 +283,6 @@
     <Content Include="Code Reviews\Sprint2XinyiMaintainability.txt" />
     <Content Include="Code Reviews\Sprint2MasonReadability.txt" />
     <Content Include="Code Reviews\Sprint2ReflectionDylan.txt" />
-    <Content Include="LevelFiles\SampleRoom1File.xml" />
-    <Content Include="LevelFiles\SampleRoom2File.xml" />
-    <Content Include="LevelFiles\SampleRoom3File.xml" />
-    <Content Include="LevelFiles\WholeLevelFile.xml" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />

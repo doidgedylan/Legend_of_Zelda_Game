@@ -37,6 +37,7 @@ namespace Legend_of_zelda_game
         public StateManager StateManager { get; set; }
         public Room[] Rooms { get; set; }
         public Room CurrentRoom { get; set; }
+        public Room ItemSelectRoom { get; set; }
         private Song bgm;
 
         public Game1()
@@ -80,26 +81,16 @@ namespace Legend_of_zelda_game
             keyboardController = new KeyboardController();
             mouseController = new MouseController();
 
-            //FileStream LevelFile = new FileStream("Room2File.xml", FileMode.Open, FileAccess.Read, FileShare.Read);
-            //XmlReader Reader = XmlReader.Create(LevelFile);
             LevelLoader Loader = new LevelLoader(spriteBatch);
-            //Loader.Load(LevelFile, Reader);
 
             LoadAllRooms(NUMBER_OF_ROOMS);
             SelectRoom(2);
+            ItemSelectRoom = new Room(0, spriteBatch);
 
             //bgm = Content.Load<Song>("OverworldSound");
             //MediaPlayer.Play(bgm);
             //MediaPlayer.IsRepeating = true;
 
-            //this.collectables = Loader.Collectables;
-            //this.enemies = Loader.Enemies;
-            //this.link = Loader.Link;
-            //this.backgrounds = Loader.Backgrounds;
-            //this.blocks = Loader.Blocks;
-            //this.NPCs = Loader.NPCs;
-            //this.headsUpDisplay = Loader.HUD;
-            //this.linkProjectiles = new HashSet<IProjectile>();
             this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
             StateManager.SetGameplayState();
@@ -121,7 +112,7 @@ namespace Legend_of_zelda_game
             keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
             keyboardController.RegisterCommand(Buttons.C, new LinkPickUpItemCommand(link));
             keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
-            keyboardController.RegisterCommand(Buttons.P, new PauseCommand(this));
+            keyboardController.RegisterCommand(Buttons.B, new PauseCommand(this));
             keyboardController.RegisterCommand(Buttons.D1, new LoadRoomCommand(this, 1));
             keyboardController.RegisterCommand(Buttons.D2, new LoadRoomCommand(this, 2));
             keyboardController.RegisterCommand(Buttons.D3, new LoadRoomCommand(this, 3));
@@ -183,6 +174,7 @@ namespace Legend_of_zelda_game
         protected override void Update(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin();
 
             if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
@@ -196,8 +188,6 @@ namespace Legend_of_zelda_game
                 mouseController.Update();
             }
 
-            spriteBatch.Begin();
-
             CurrentState.Update();
             if (link.currentItem.Equals("Triforce"))
             {
@@ -206,6 +196,7 @@ namespace Legend_of_zelda_game
             if (link.HealthStateMachine.GetHealth() == 0)
             {
                 StateManager.SetGameOverState();
+                keyboardController.Update();
             }
 
             spriteBatch.End();

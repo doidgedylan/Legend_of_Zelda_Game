@@ -103,17 +103,14 @@ namespace Legend_of_zelda_game
                 int roomNum = Int32.Parse(ObjectName.Substring(4));
                 if (roomNum < 8) 
                 {
-                    //this.Backgrounds.Add(new RoomSprite(spriteBatch, Location, BackgroundBottomSpriteSheet));
                     this.Background = new RoomSprite(spriteBatch, Location, BackgroundBottomSpriteSheet);
                 }
                 else if ((roomNum >= 8 && roomNum < 11) || roomNum == 13 || (roomNum > 15 && roomNum < 19))
                 {
-                    //this.Backgrounds.Add(new RoomSprite(spriteBatch, Location, BackgroundTopLeftSpriteSheet));
                     this.Background = new RoomSprite(spriteBatch, Location, BackgroundTopLeftSpriteSheet);
                 }
                 else if ((roomNum > 10 && roomNum < 16) || roomNum != 13)
                 {
-                    //this.Backgrounds.Add(new RoomSprite(spriteBatch, Location, BackgroundTopRightSpriteSheet));
                     this.Background = new RoomSprite(spriteBatch, Location, BackgroundTopRightSpriteSheet);
                 }
             }

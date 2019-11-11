@@ -1,0 +1,9 @@
+﻿<XnaContent>
+  <Asset Type="MyDataTypes.LevelObjectData[]">
+    <Item>
+      <ObjectType>Background</ObjectType>
+      <ObjectName>Room0</ObjectName>
+      <Location>0 551</Location>
+    </Item>
+  </Asset>
+</XnaContent>
