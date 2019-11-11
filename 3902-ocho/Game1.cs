@@ -87,9 +87,9 @@ namespace Legend_of_zelda_game
             SelectRoom(2);
             ItemSelectRoom = new Room(0, spriteBatch);
 
-            //bgm = Content.Load<Song>("OverworldSound");
-            //MediaPlayer.Play(bgm);
-            //MediaPlayer.IsRepeating = true;
+            bgm = Content.Load<Song>("OverworldSound");
+            MediaPlayer.Play(bgm);
+            MediaPlayer.IsRepeating = true;
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
