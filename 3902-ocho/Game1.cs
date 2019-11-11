@@ -175,7 +175,6 @@ namespace Legend_of_zelda_game
         protected override void Update(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-            spriteBatch.Begin();
 
             if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
@@ -188,6 +187,8 @@ namespace Legend_of_zelda_game
                 keyboardController.Update();
                 mouseController.Update();
             }
+
+            spriteBatch.Begin();
 
             CurrentState.Update();
             if (link.currentItem.Equals("Triforce"))
