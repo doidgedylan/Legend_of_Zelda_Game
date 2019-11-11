@@ -37,7 +37,6 @@ namespace Legend_of_zelda_game
         public StateManager StateManager { get; set; }
         public Room[] Rooms { get; set; }
         public Room CurrentRoom { get; set; }
-
         private Song bgm;
 
         public Game1()
@@ -89,9 +88,9 @@ namespace Legend_of_zelda_game
             LoadAllRooms(NUMBER_OF_ROOMS);
             SelectRoom(2);
 
-            bgm = Content.Load<Song>("OverworldSound");
-            MediaPlayer.Play(bgm);
-            MediaPlayer.IsRepeating = true;
+            //bgm = Content.Load<Song>("OverworldSound");
+            //MediaPlayer.Play(bgm);
+            //MediaPlayer.IsRepeating = true;
 
             //this.collectables = Loader.Collectables;
             //this.enemies = Loader.Enemies;
@@ -200,6 +199,10 @@ namespace Legend_of_zelda_game
             spriteBatch.Begin();
 
             CurrentState.Update();
+            if (link.currentItem.Equals("Triforce"))
+            {
+                StateManager.SetWinningState();
+            }
             if (link.HealthStateMachine.GetHealth() == 0)
             {
                 StateManager.SetGameOverState();

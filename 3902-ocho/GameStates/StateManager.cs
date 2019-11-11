@@ -23,8 +23,8 @@ namespace _3902_ocho.GameStates
             this.link = link;
             this.gameplayState = new GameplayState(game, link);
             this.pauseState = new PauseState(game, spriteBatch, font);
-            this.gameOverState = new GameOverState(spriteBatch, font);
-            this.winningState = new WinningState(spriteBatch, font);
+            this.gameOverState = new GameOverState(game, spriteBatch, font);
+            this.winningState = new WinningState(game, spriteBatch, font);
             this.itemSelectState = new ItemSelectState();
         }
 

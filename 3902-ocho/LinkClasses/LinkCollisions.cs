@@ -213,6 +213,10 @@ namespace Legend_of_zelda_game.LinkClasses
                     {
                         link.numBombs++;
                     } 
+                    else if (collectable is CollectableTriforceSprite)
+                    {
+                        link.currentItem = "Triforce";
+                    }
                     else if (collectable is CollectableSwordSprite || 
                         collectable is CollectableBowSprite ||
                         collectable is CollectableBoomerangSprite ||
