@@ -71,18 +71,22 @@ namespace _3902_ocho.GameStates
 
         public void ToItemSelectTransition()
         {
+            spriteBatch.Begin();
             int originalRoomNumber = game.CurrentRoom.RoomNumber;
             game.CurrentState = new ScrollingTransitionState(game.Rooms[originalRoomNumber].Background, game.ItemSelectRoom.Background, Direction.Up);
             game.CurrentState.Update();
             SetItemSelectState();
+            spriteBatch.End();
         }
 
         public void FromItemSelectTransition()
         {
+            spriteBatch.Begin();
             int originalRoomNumber = game.CurrentRoom.RoomNumber;
             game.CurrentState = new ScrollingTransitionState(game.ItemSelectRoom.Background, game.Rooms[originalRoomNumber].Background, Direction.Down);
             game.CurrentState.Update();
             SetGameplayState();
+            spriteBatch.End();
         }
 
         private void SetLinkLocation(Direction direction)
