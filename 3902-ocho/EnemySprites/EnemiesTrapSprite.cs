@@ -11,6 +11,8 @@ namespace Legend_of_zelda_game
 
         public Rectangle locationRect;
         public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
+        public HealthStateMachine healthStateMachine;
+        public HealthStateMachine HealthStateMachine { get => healthStateMachine; set => healthStateMachine = value; }
         private Vector2 location;
 
         private int xPos = 164;
@@ -28,6 +30,7 @@ namespace Legend_of_zelda_game
             this.spriteBatch = spriteBatch;
             this.location = location;
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+            HealthStateMachine = new HealthStateMachine(100, 1);
         }
 
         public void Update()

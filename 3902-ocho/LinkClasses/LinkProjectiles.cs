@@ -26,20 +26,19 @@ namespace Legend_of_zelda_game.LinkClasses
             UpdateItemProjectile(projectiles);
 
             ISet<IProjectile> projectilesToRemove = new HashSet<IProjectile>();
-            ISet<IEnemies> enemiesToRemove = new HashSet<IEnemies>();
             foreach (IProjectile projectile in projectiles)
             {
                 foreach (IEnemies enemy in enemies)
                 {
                     if (projectile is BombProjectile && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
                     {
-                        enemiesToRemove.Add(enemy);
+                        enemy.HealthStateMachine.BeHurt(); ;
                     }
                     else if (projectileInAir && ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
                     {
                         projectileInAir = false;
                         projectilesToRemove.Add(projectile);
-                        enemiesToRemove.Add(enemy);
+                        enemy.HealthStateMachine.BeHurt(); ;
                     }
                 }
                 foreach (IBlock block in blocks)
@@ -67,10 +66,6 @@ namespace Legend_of_zelda_game.LinkClasses
             foreach (IProjectile projectile in projectilesToRemove)
             {
                 projectiles.Remove(projectile);
-            }
-            foreach (IEnemies enemy in enemiesToRemove)
-            {
-                enemies.Remove(enemy);
             }
         }
 

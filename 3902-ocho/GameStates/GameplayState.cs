@@ -26,9 +26,18 @@ namespace _3902_ocho.GameStates
                 collectable.Update();
             }
 
+            ISet<IEnemies> enemiesToRemove = new HashSet<IEnemies>();
             foreach (IEnemies enemy in game.CurrentRoom.Enemies)
             {
                 enemy.Update();
+                if (enemy.HealthStateMachine.GetHealth() == 0)
+                {
+                    enemiesToRemove.Add(enemy);
+                }
+            }
+            foreach (IEnemies enemy in enemiesToRemove)
+            {
+                game.CurrentRoom.Enemies.Remove(enemy);
             }
 
             foreach (ISprite NPC in game.CurrentRoom.NPCs)

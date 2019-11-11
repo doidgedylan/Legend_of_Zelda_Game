@@ -176,7 +176,7 @@ namespace Legend_of_zelda_game.LinkClasses
                 {
                     if (!(enemy is EnemiesTrapSprite))
                     {
-                        enemies.Remove(enemy);
+                        enemy.HealthStateMachine.BeHurt();
                     }
                 }
             }

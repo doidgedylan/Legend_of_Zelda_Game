@@ -6,6 +6,7 @@ namespace Legend_of_zelda_game
     public interface IEnemies
     {
         Rectangle LocationRect { get; set; }
+        HealthStateMachine HealthStateMachine { get; set; }
         void Update();
         void Draw(SpriteBatch spriteBatch);
     }
