@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3902_ocho.Interfaces
+namespace Legend_of_zelda_game.Interfaces
 {
     public interface IGameState
     {

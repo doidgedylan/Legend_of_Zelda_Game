@@ -2,7 +2,7 @@
 using Legend_of_zelda_game.Interfaces;
 using System;
 
-namespace _3902_ocho.Commands
+namespace Legend_of_zelda_game.Commands
 {
     public class LoadRoomCommand : ICommand
     {

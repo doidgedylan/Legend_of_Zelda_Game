@@ -1,11 +1,13 @@
-﻿Readability
-Author: Xinyi Zhao
-Date: 11/11/2019
+﻿Author: Mason Rye
+Date: 11/11/19
 Sprint: 4
-Reviewing: Room.cs
-Author of .cs file: Evan Standerwick
-Minutes: 15 min
-
-In every function the name are used straightforward and directly convey what they supposed to do, and formatting is readable. 
-All the functions are small and functionable which helps read. 
-In the room function, although the function is relative long, it also just has few variables and call the function of other classes.
+Name of reviewed file: StateManager.cs
+Author of reviewed file: Evan Standerwick
+Minutes to complete review: 15
+Comments:
+	-Overall it looks pretty readable:
+		-All the methods are named aproppiatly.
+		-Variables seem to be named correctly.
+	-I know what each piece of code does at first glance.
+	-One change would be in the switch case to change it from using x and y variables,
+	to just setting the location vector directly in each slot.

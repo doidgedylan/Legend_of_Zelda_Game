@@ -5,13 +5,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using Legend_of_zelda_game.Controllers;
-using Legend_of_zelda_game.Blocks;
-using _3902_ocho.Commands;
-using Legend_of_zelda_game.Projectiles;
-using _3902_ocho.Interfaces;
-using _3902_ocho.GameStates;
+using Legend_of_zelda_game.Commands;
+using Legend_of_zelda_game.GameStates;
 using Microsoft.Xna.Framework.Media;
-using _3902_ocho;
 
 namespace Legend_of_zelda_game
 {
@@ -21,7 +17,7 @@ namespace Legend_of_zelda_game
     public class Game1 : Game
     {
         public const int NUMBER_OF_ROOMS = 18;
-        private SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
         private SpriteFont font;
         private KeyboardController keyboardController;
         private MouseController mouseController;
@@ -32,7 +28,6 @@ namespace Legend_of_zelda_game
         private ISet<IBlock> blocks;
         private IBackground background;
         private ISet<ISprite> headsUpDisplay;
-        private ISet<IProjectile> linkProjectiles;
         public IGameState CurrentState { get; set; }
         public StateManager StateManager { get; set; }
         public Room[] Rooms { get; set; }
@@ -97,7 +92,7 @@ namespace Legend_of_zelda_game
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
-            StateManager.SetGameplayState();
+            StateManager.SetLegend_of_zelda_game();
 
             keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
             keyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));

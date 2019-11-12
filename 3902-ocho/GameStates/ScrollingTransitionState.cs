@@ -1,4 +1,4 @@
-﻿using _3902_ocho.Interfaces;
+﻿using Legend_of_zelda_game.Interfaces;
 using Legend_of_zelda_game.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Legend_of_zelda_game.Blocks.Door;
 
-namespace _3902_ocho.GameStates
+namespace Legend_of_zelda_game.GameStates
 {
     public enum TransitionType { TO_ROOM, TO_ITEMSELECT }
     public class ScrollingTransitionState : IGameState

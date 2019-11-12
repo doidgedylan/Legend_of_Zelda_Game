@@ -1,0 +1,12 @@
+﻿Author: Mason Rye
+Date: 11/11/19
+Sprint: 4
+Name of reviewed file: HUDBackgroundSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 15
+Comments:
+	-The class is highly cohesive due to the fact it focuses on producing the HUD Background Sprite,
+	which helps with maintianabilty
+	-The class is easy to read and I know what it does from a glance which will make making changes
+	easy in the future.
+	-You might want to make the namespace name a bit more tell like IHUDSprite.

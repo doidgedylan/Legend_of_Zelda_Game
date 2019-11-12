@@ -1,9 +1,9 @@
-﻿using _3902_ocho.Interfaces;
+﻿using Legend_of_zelda_game.Interfaces;
 using Legend_of_zelda_game;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace _3902_ocho.GameStates
+namespace Legend_of_zelda_game.GameStates
 {
     public class GameOverState : IGameState
     {
