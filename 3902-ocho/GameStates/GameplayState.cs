@@ -1,7 +1,6 @@
 ﻿using _3902_ocho.Interfaces;
 using Legend_of_zelda_game;
 using Legend_of_zelda_game.Interfaces;
-using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace _3902_ocho.GameStates
@@ -29,6 +28,7 @@ namespace _3902_ocho.GameStates
             ISet<IEnemies> enemiesToRemove = new HashSet<IEnemies>();
             foreach (IEnemies enemy in game.CurrentRoom.Enemies)
             {
+                enemy.EnemyCollisions.Update(game.CurrentRoom.Blocks);
                 enemy.Update();
                 if (enemy.HealthStateMachine.GetHealth() == 0)
                 {

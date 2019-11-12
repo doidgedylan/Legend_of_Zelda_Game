@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Legend_of_zelda_game.Interfaces;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game.EnemySprites
@@ -12,6 +13,10 @@ namespace Legend_of_zelda_game.EnemySprites
         public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
         public HealthStateMachine healthStateMachine;
         public HealthStateMachine HealthStateMachine { get => healthStateMachine; set => healthStateMachine = value; }
+        private EnemyCollisions enemyCollisions;
+        public EnemyCollisions EnemyCollisions { get => enemyCollisions; set => enemyCollisions = value; }
+        private string direction;
+        public string Direction { get => direction; set => direction = value; }
         private Vector2 location;
 
         private int currentFrame = 0;
@@ -21,10 +26,7 @@ namespace Legend_of_zelda_game.EnemySprites
         private int width = 14;
         private int height = 16;
         private int scale = 3;
-
-        private int xPosition = -1;
-        private int yPosition = -1;
-
+        private int moveSpeed = 2;
 
         public EnemiesGoriyaSprite(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -33,13 +35,37 @@ namespace Legend_of_zelda_game.EnemySprites
             this.location = location;
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             HealthStateMachine = new HealthStateMachine(3, 1);
+            EnemyCollisions = new EnemyCollisions(this);
+            direction = EnemyCollisions.RandomDirection("start");
         }
 
         public void Update()
         {
-            this.Draw(spriteBatch);
-            this.ApplyAnimation();
-            this.ApplyMovement();
+            ApplyAnimation();
+            ApplyMovement();
+            Draw(spriteBatch);
+        }
+
+        public void UndoCollision()
+        {
+            switch (Direction)
+            {
+                case "up":
+                    location = Vector2.Add(location, new Vector2(0, moveSpeed));
+                    break;
+                case "right":
+                    location = Vector2.Subtract(location, new Vector2(moveSpeed, 0));
+                    break;
+                case "down":
+                    location = Vector2.Subtract(location, new Vector2(0, moveSpeed));
+                    break;
+                case "left":
+                    location = Vector2.Add(location, new Vector2(moveSpeed, 0));
+                    break;
+                default:
+                    break;
+            }
+            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -69,36 +95,26 @@ namespace Legend_of_zelda_game.EnemySprites
             }
 
         }
-
         private void ApplyMovement()
         {
-            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
-            if (xPosition == -1 && yPosition == -1)
+            switch (Direction)
             {
-                destinationRectangle.X -= 1;
+                case "up":
+                    location = Vector2.Subtract(location, new Vector2(0, moveSpeed));
+                    break;
+                case "right":
+                    location = Vector2.Add(location, new Vector2(moveSpeed, 0));
+                    break;
+                case "down":
+                    location = Vector2.Add(location, new Vector2(0, moveSpeed));
+                    break;
+                case "left":
+                    location = Vector2.Subtract(location, new Vector2(moveSpeed, 0));
+                    break;
+                default:
+                    break;
             }
-            if (xPosition == -1 && yPosition == 1)
-            {
-                destinationRectangle.Y += 1;
-            }
-            if (xPosition == 1 && yPosition == -1)
-            {
-                destinationRectangle.Y -= 1;
-            }
-            if (xPosition == 1 && yPosition == 1)
-            {
-                destinationRectangle.X += 1;
-            }
-            if (destinationRectangle.Y >= (480) || destinationRectangle.Y <= 0)
-            {
-                yPosition *= -1;
-            }
-            if (destinationRectangle.X >= (800) || destinationRectangle.X <= 0)
-            {
-                xPosition *= -1;
-            }
-            LocationRect = destinationRectangle;
+            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
         }
-
     }
 }

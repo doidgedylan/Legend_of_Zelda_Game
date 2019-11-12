@@ -1,18 +1,22 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Legend_of_zelda_game.Interfaces;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Legend_of_zelda_game
+namespace Legend_of_zelda_game.EnemySprites
 {
     public class EnemiesTrapSprite : IEnemies
     {
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
 
-
         public Rectangle locationRect;
         public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
         public HealthStateMachine healthStateMachine;
         public HealthStateMachine HealthStateMachine { get => healthStateMachine; set => healthStateMachine = value; }
+        private EnemyCollisions enemyCollisions;
+        public EnemyCollisions EnemyCollisions { get => enemyCollisions; set => enemyCollisions = value; }
+        private string direction;
+        public string Direction { get => direction; set => direction = value; }
         private Vector2 location;
 
         private int xPos = 164;
@@ -21,9 +25,6 @@ namespace Legend_of_zelda_game
         private int height = 16;
         private int scale = 3;
 
-        private int xPosition = -1;
-        private int yPosition = -1;
-
         public EnemiesTrapSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetEnemiesSpriteSheet();
@@ -31,13 +32,13 @@ namespace Legend_of_zelda_game
             this.location = location;
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             HealthStateMachine = new HealthStateMachine(100, 1);
+            EnemyCollisions = new EnemyCollisions(this);
+            direction = "none";
         }
 
         public void Update()
         {
-            this.Draw(spriteBatch);
-            this.ApplyMovement();
-
+            Draw(spriteBatch);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -47,34 +48,9 @@ namespace Legend_of_zelda_game
             spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White);
         }
 
-        private void ApplyMovement()
+        public void UndoCollision()
         {
-            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
-            if (xPosition == -1 && yPosition == -1)
-            {
-                destinationRectangle.X -= 1;
-            }
-            if (xPosition == -1 && yPosition == 1)
-            {
-                destinationRectangle.Y += 1;
-            }
-            if (xPosition == 1 && yPosition == -1)
-            {
-                destinationRectangle.Y -= 1;
-            }
-            if (xPosition == 1 && yPosition == 1)
-            {
-                destinationRectangle.X += 1;
-            }
-            if (destinationRectangle.Y >= (480) || destinationRectangle.Y <= 0)
-            {
-                yPosition *= -1;
-            }
-            if (destinationRectangle.X >= (800) || destinationRectangle.X <= 0)
-            {
-                xPosition *= -1;
-            }
-            LocationRect = destinationRectangle;
+            //Do Nothing
         }
     }
 }

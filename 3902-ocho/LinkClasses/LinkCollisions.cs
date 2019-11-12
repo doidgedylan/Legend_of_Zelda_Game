@@ -1,6 +1,7 @@
 ﻿using _3902_ocho.GameStates;
 using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.CollectableSprites;
+using Legend_of_zelda_game.EnemySprites;
 using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using System;

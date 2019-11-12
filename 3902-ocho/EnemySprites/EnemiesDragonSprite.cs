@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Legend_of_zelda_game.Interfaces;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game.EnemySprites
@@ -8,10 +9,14 @@ namespace Legend_of_zelda_game.EnemySprites
         Texture2D spriteSheet;
         SpriteBatch spriteBatch;
 
-        public Rectangle locationRect;
+        private Rectangle locationRect;
         public Rectangle LocationRect { get => locationRect; set => locationRect = value; }
-        public HealthStateMachine healthStateMachine;
+        private HealthStateMachine healthStateMachine;
         public HealthStateMachine HealthStateMachine { get => healthStateMachine; set => healthStateMachine = value; }
+        private EnemyCollisions enemyCollisions;
+        public EnemyCollisions EnemyCollisions { get => enemyCollisions; set => enemyCollisions = value; }
+        private string direction;
+        public string Direction { get => direction; set => direction = value; }
         private Vector2 location;
 
         private int currentFrame = 0;
@@ -21,7 +26,6 @@ namespace Legend_of_zelda_game.EnemySprites
         private int width = 24;
         private int height = 32;
         private int scale = 3;
-        private int yPosition = -1;
 
         public EnemiesDragonSprite(SpriteBatch spriteBatch, Vector2 location)
         {
@@ -30,13 +34,14 @@ namespace Legend_of_zelda_game.EnemySprites
             this.location = location;
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             HealthStateMachine = new HealthStateMachine(10, 1);
+            EnemyCollisions = new EnemyCollisions(this);
+            direction = "none";
         }
 
         public void Update()
         {
-            this.Draw(spriteBatch);
-            this.ApplyAnimation();
-            this.ApplyMovement();
+            ApplyAnimation();
+            Draw(spriteBatch);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -65,27 +70,9 @@ namespace Legend_of_zelda_game.EnemySprites
                 xPos = 1;
             }
         }
-
-        private void ApplyMovement()
+        public void UndoCollision()
         {
-            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
-            if (yPosition == -1)
-            {
-                destinationRectangle.Y -= 1;
-            }
-            if (yPosition == 1)
-            {
-                destinationRectangle.Y += 1;
-            }
-            
-            if (destinationRectangle.Y >= (480) || destinationRectangle.Y <= 0)
-            {
-                yPosition *= -1;
-            }
-            
-            LocationRect = destinationRectangle;
+            //Do Nothing
         }
-
-
     }
 }
