@@ -258,7 +258,9 @@
     <Content Include="Code Reviews\Sprint3EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint3MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint3ReflectionEvan.txt" />
+    <Content Include="Code Reviews\Sprint4DylanMaintainability.txt" />
     <Content Include="Code Reviews\Sprint4DylanReadability.txt" />
+    <Content Include="Code Reviews\Sprint4EvanReadability.txt" />
     <Content Include="Code Reviews\Sprint4MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint4MasonReadability.txt" />
     <Content Include="Code Reviews\Sprint4ReflectionEvan.txt" />

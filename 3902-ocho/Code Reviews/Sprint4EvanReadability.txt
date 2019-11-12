@@ -1,0 +1,11 @@
+﻿Readability
+Author: Xinyi Zhao
+Date: 11/11/2019
+Sprint: 4
+Reviewing: Room.cs
+Author of .cs file: Evan Standerwick
+Minutes: 15 min
+
+In every function the name are used straightforward and directly convey what they supposed to do, and formatting is readable. 
+All the functions are small and functionable which helps read. 
+In the room function, although the function is relative long, it also just has few variables and call the function of other classes.

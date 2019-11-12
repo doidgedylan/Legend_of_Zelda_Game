@@ -1,0 +1,12 @@
+﻿Maintainability
+Author: Xinyi Zhao
+Date: 11/11/2019
+Sprint: 4
+Name of .cs: HUD0SymbolSprint.cs
+Author of the .cs: Dylan Doidge
+
+Quality of the HUD0SymbolSprint class is good, and we can easily manage code and maintenance code. 
+The code is simple with a few variables and methods, and every function is necessary. 
+It also has high cohesion since the functions in it are well defined, and when need to add some method, it is easy. 
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+If we want to change the HUD’s location or add some new features, the general logic will not be affected.
