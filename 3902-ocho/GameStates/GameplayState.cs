@@ -1,6 +1,4 @@
 ﻿using Legend_of_zelda_game.Interfaces;
-using Legend_of_zelda_game;
-using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;

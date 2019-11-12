@@ -1,7 +1,4 @@
 ﻿using Legend_of_zelda_game.Interfaces;
-using Legend_of_zelda_game;
-using Legend_of_zelda_game.Interfaces;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game.GameStates

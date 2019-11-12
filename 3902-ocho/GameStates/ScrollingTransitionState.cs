@@ -1,10 +1,4 @@
 ﻿using Legend_of_zelda_game.Interfaces;
-using Legend_of_zelda_game.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static Legend_of_zelda_game.Blocks.Door;
 
 namespace Legend_of_zelda_game.GameStates
