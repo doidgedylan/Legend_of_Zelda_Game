@@ -215,7 +215,11 @@ namespace Legend_of_zelda_game.LinkClasses
                     else if(collectable is CollectableBombSprite)
                     {
                         link.numBombs++;
-                    } 
+                    }
+                    else if (collectable is CollectableLittleHeartSprite)
+                    {
+                        link.HealthStateMachine.AddToHealth(2);
+                    }
                     else if (collectable is CollectableTriforceSprite)
                     {
                         link.currentItem = "Triforce";

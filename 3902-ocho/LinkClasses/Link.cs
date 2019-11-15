@@ -8,6 +8,7 @@ namespace Legend_of_zelda_game
     public class Link
     {
         public ILinkState state;
+        public ILinkState previousState;
         public SpriteBatch spriteBatch;
         public Vector2 Location { get; set; }
         public Rectangle locationRect;
@@ -30,6 +31,7 @@ namespace Legend_of_zelda_game
         {
             this.spriteBatch = spriteBatch;
             state = new LinkIdleDownState(this);
+            previousState = state;
             this.Location = location;
             moveSpeed = 3;
             hurtSpeed = 5;
@@ -50,6 +52,7 @@ namespace Legend_of_zelda_game
         public void Update()
         {
             state.Update();
+            previousState = state;
         }
     }
 }

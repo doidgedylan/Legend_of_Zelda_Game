@@ -30,6 +30,18 @@ namespace Legend_of_zelda_game
             return Health;
         }
 
+        public void AddToHealth(int num)
+        {
+            if(Health + num <= TotalHealth)
+            {
+                Health = Health + num;
+            }
+            else
+            {
+                Health = TotalHealth;
+            }
+        }
+
         public void BeHurt()
         {
             if (Health - damageValue >= 0)

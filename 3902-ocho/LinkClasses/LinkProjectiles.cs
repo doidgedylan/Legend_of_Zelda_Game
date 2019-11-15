@@ -12,6 +12,7 @@ namespace Legend_of_zelda_game.LinkClasses
         private Link link;
         private SpriteBatch spriteBatch;
         private bool projectileInAir;
+        private bool linkInAttackState = false;
 
         public LinkProjectiles(Link link)
         {
@@ -22,8 +23,14 @@ namespace Legend_of_zelda_game.LinkClasses
 
         public void Update(ISet<IProjectile> projectiles, ISet<IEnemies> enemies, ISet<IBlock> blocks)
         {
-            UpdateWoodSwordProjectile(projectiles);
-            UpdateItemProjectile(projectiles);
+            if(checkLinkState())
+            {
+                if (link.HealthStateMachine.GetHealth() == link.HealthStateMachine.GetTotalHealth())
+                {
+                    UpdateWoodSwordProjectile(projectiles);
+                }
+                UpdateItemProjectile(projectiles);
+            }
 
             ISet<IProjectile> projectilesToRemove = new HashSet<IProjectile>();
             foreach (IProjectile projectile in projectiles)
@@ -64,6 +71,25 @@ namespace Legend_of_zelda_game.LinkClasses
             {
                 projectiles.Remove(projectile);
             }
+        }
+
+        private bool checkLinkState()
+        {
+            bool okToAddProjectile = true;
+
+            if ((link.state is LinkWoodSwordDownState || link.state is LinkWoodSwordLeftState ||
+                link.state is LinkWoodSwordRightState || link.state is LinkWoodSwordUpState ||
+                link.state is LinkUseItemDownState || link.state is LinkUseItemLeftState ||
+                link.state is LinkUseItemRightState || link.state is LinkUseItemUpState) &&
+                (link.previousState is LinkWoodSwordDownState || link.previousState is LinkWoodSwordLeftState ||
+                link.previousState is LinkWoodSwordRightState || link.previousState is LinkWoodSwordUpState ||
+                link.previousState is LinkUseItemDownState || link.previousState is LinkUseItemLeftState ||
+                link.previousState is LinkUseItemRightState || link.previousState is LinkUseItemUpState))
+            {
+                okToAddProjectile = false;
+            }
+
+            return okToAddProjectile;
         }
 
         public void UpdateWoodSwordProjectile(ISet<IProjectile> projectiles)
