@@ -41,14 +41,11 @@ namespace Legend_of_zelda_game.LinkClasses
                         enemy.HealthStateMachine.BeHurt(); ;
                     }
                 }
-                foreach (IBlock block in blocks)
+                if(projectileInAir && (projectile.Location.X < 100 || projectile.Location.X > 700 ||
+                    projectile.Location.Y < 266 || projectile.Location.Y > 616))
                 {
-                    if (projectileInAir && (block is HorizontalWall || block is VerticalWall) &&
-                        ProjectileCollision(projectile.LocationRect, block.LocationRect))
-                    {
-                        projectileInAir = false;
-                        projectilesToRemove.Add(projectile);
-                    }
+                    projectileInAir = false;
+                    projectilesToRemove.Add(projectile);
                 }
 
                 if (projectile is BoomerangProjectile && projectileInAir && ProjectileCollision(projectile.LocationRect, link.locationRect))
