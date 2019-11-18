@@ -50,9 +50,32 @@ namespace Legend_of_zelda_game.GameStates
                     break;
             }
             currentItemSprite.Draw(spriteBatch);
+
             // draw map sprite if link has it at (130, 350), then draw the dungeon map
             // draw compass if link has it at (130, 470)
             // draw the rest of link's items in their places in the inventory
+            foreach (ICollectable item in link.LinkItems)
+            {
+                ICollectable itemSprite = null;
+                if (item is CollectableMapSprite)
+                {
+                    // location of map sprite
+                    x = 150;
+                    y = 350 + 168;
+                    itemSprite = CollectableSpriteFactory.Instance.CreateMapSprite(spriteBatch, new Vector2(x, y));
+                }
+                else if (item is CollectableCompassSprite)
+                {
+                    // location of compass sprite
+                    x = 150;
+                    y = 470 + 168;
+                    itemSprite = CollectableSpriteFactory.Instance.CreateCompassSprite(spriteBatch, new Vector2(x, y));
+                }
+                //else if (item is a different sprite){
+                //  ...
+                //}
+                itemSprite.Draw(spriteBatch);
+            }
         }
     }
 }

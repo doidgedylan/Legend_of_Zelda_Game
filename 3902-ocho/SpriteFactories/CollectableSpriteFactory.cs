@@ -73,9 +73,9 @@ namespace Legend_of_zelda_game
             return new CollectableKeySprite(spriteBatch, location);
         }
 
-        public ICollectable CreateLetterSprite(SpriteBatch spriteBatch, Vector2 location)
+        public ICollectable CreateMapSprite(SpriteBatch spriteBatch, Vector2 location)
         {
-            return new CollectableLetterSprite(spriteBatch, location);
+            return new CollectableMapSprite(spriteBatch, location);
         }
 
         public ICollectable CreateLittleHeartSprite(SpriteBatch spriteBatch, Vector2 location)

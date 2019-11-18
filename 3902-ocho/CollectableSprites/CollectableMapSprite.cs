@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game.CollectableSprites
 {
-    public class CollectableLetterSprite : ICollectable
+    public class CollectableMapSprite : ICollectable
     {
         SpriteBatch spriteBatch;
         private Vector2 location;
@@ -16,7 +16,7 @@ namespace Legend_of_zelda_game.CollectableSprites
         private int height = 16;
         private int scale = 3;
 
-        public CollectableLetterSprite(SpriteBatch spriteBatch, Vector2 location)
+        public CollectableMapSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteSheet = Texture2DStorage.GetCollectableSpriteSheet();
             this.spriteBatch = spriteBatch;

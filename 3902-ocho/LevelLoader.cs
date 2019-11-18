@@ -174,7 +174,7 @@ namespace Legend_of_zelda_game
                         this.Collectables.Add(CollectableSpriteFactory.Instance.CreateKeySprite(spriteBatch, Location));
                         break;
                     case "Letter":
-                        this.Collectables.Add(CollectableSpriteFactory.Instance.CreateLetterSprite(spriteBatch, Location));
+                        this.Collectables.Add(CollectableSpriteFactory.Instance.CreateMapSprite(spriteBatch, Location));
                         break;
                     case "LittleHeart":
                         this.Collectables.Add(CollectableSpriteFactory.Instance.CreateLittleHeartSprite(spriteBatch, Location));

@@ -139,7 +139,7 @@
     <Compile Include="CollectableSprites\CollectableCompassSprite.cs" />
     <Compile Include="CollectableSprites\CollectableFairySprite.cs" />
     <Compile Include="CollectableSprites\CollectableKeySprite.cs" />
-    <Compile Include="CollectableSprites\CollectableLetterSprite.cs" />
+    <Compile Include="CollectableSprites\CollectableMapSprite.cs" />
     <Compile Include="CollectableSprites\CollectableLittleHeartSprite.cs" />
     <Compile Include="CollectableSprites\CollectableMultipleRupeeSprite.cs" />
     <Compile Include="CollectableSprites\CollectableSingleRupeeSprite.cs" />

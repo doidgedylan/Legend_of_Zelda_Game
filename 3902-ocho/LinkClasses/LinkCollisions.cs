@@ -220,6 +220,10 @@ namespace Legend_of_zelda_game.LinkClasses
                     {
                         link.HealthStateMachine.AddToHealth(2);
                     }
+                    else if (collectable is CollectableMapSprite || collectable is CollectableCompassSprite)
+                    {
+                        link.LinkItems.Add(collectable);
+                    }
                     else if (collectable is CollectableTriforceSprite)
                     {
                         link.currentItem = "Triforce";

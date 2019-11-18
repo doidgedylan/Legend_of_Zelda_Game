@@ -283,7 +283,7 @@
     <!--Collectables-->
     <Item>
       <ObjectType>Collectable</ObjectType>
-      <ObjectName>Letter</ObjectName>
+      <ObjectName>Map</ObjectName>
       <Location>600 250</Location>
     </Item>
 
