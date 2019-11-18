@@ -26,7 +26,7 @@ namespace Legend_of_zelda_game.GameStates
             this.pauseState = new PauseState(game, spriteBatch, font);
             this.gameOverState = new GameOverState(game, spriteBatch, font);
             this.winningState = new WinningState(game, spriteBatch, font);
-            this.itemSelectState = new ItemSelectState(game, spriteBatch, font);
+            this.itemSelectState = new ItemSelectState(game, link, spriteBatch, font);
         }
 
         public void SetLegend_of_zelda_game()
