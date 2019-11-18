@@ -50,6 +50,7 @@
     <Compile Include="Blocks\VerticalWall.cs" />
     <Compile Include="Blocks\WaterBlock.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="CollectableSprites\CollectablePortalSprite.cs" />
     <Compile Include="Commands\LinkSwitchItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
@@ -144,8 +145,10 @@
     <Compile Include="CollectableSprites\CollectableSingleRupeeSprite.cs" />
     <Compile Include="LinkClasses\LinkProjectiles.cs" />
     <Compile Include="Projectiles\ArrowProjectile.cs" />
+    <Compile Include="Projectiles\RedPortalProjectile.cs" />
     <Compile Include="Projectiles\BombProjectile.cs" />
     <Compile Include="Projectiles\BoomerangProjectile.cs" />
+    <Compile Include="Projectiles\BluePortalProjectile.cs" />
     <Compile Include="Projectiles\WoodSwordProjectile.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="SpriteFactories\CollectableSpriteFactory.cs" />

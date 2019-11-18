@@ -78,7 +78,7 @@ namespace Legend_of_zelda_game.Projectiles
         {
             Rectangle sourceRectangle = new Rectangle(xPos, yPos, width, height);
             LocationRect = new Rectangle((int)Location.X, (int)Location.Y, width * scale, height * scale);
-            SpriteEffects s = SpriteEffects.FlipHorizontally;
+            SpriteEffects s = SpriteEffects.None;
             spriteBatch.Draw(spriteSheet, LocationRect, sourceRectangle, Color.White, rotation, new Vector2(0, 0), s, 0f);
         }
 

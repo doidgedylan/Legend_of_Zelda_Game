@@ -16,6 +16,7 @@ namespace Legend_of_zelda_game
         private static Texture2D backgroundSpriteSheetTopLeft;
         private static Texture2D backgroundSpriteSheetTopRight;
         private static Texture2D headsUpDisplaySpriteSheet;
+        private static Texture2D portalSpriteSheet;
 
         public Texture2DStorage()
         {
@@ -34,6 +35,7 @@ namespace Legend_of_zelda_game
             backgroundSpriteSheetTopLeft = content.Load<Texture2D>("BackgroundSpriteSheetTopLeft");
             backgroundSpriteSheetTopRight = content.Load<Texture2D>("BackgroundSpriteSheetTopRight");
             headsUpDisplaySpriteSheet = content.Load<Texture2D>("HUD");
+            portalSpriteSheet = content.Load<Texture2D>("portals");
         }
 
         public static Texture2D GetLinkSpriteSheet()
@@ -88,6 +90,10 @@ namespace Legend_of_zelda_game
         public static Texture2D GetHUDSpriteSheet()
         {
             return headsUpDisplaySpriteSheet;
+        }
+        public static Texture2D GetPortalSpriteSheet()
+        {
+            return portalSpriteSheet;
         }
 
     }
