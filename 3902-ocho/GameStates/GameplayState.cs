@@ -70,9 +70,14 @@ namespace Legend_of_zelda_game.GameStates
             {
                 projectile.Update();
             }
+            foreach (IProjectile portal in game.CurrentRoom.LinkPortals)
+            {
+                portal.Update();
+            }
 
             link.LinkCollisions.Update(game.CurrentRoom.Collectables, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks, game.StateManager);
-            link.LinkProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies, game.CurrentRoom.Blocks);
+            link.LinkProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies);
+            link.LinkPortals.Update(game.CurrentRoom.LinkPortals, game.CurrentRoom.Blocks);
             link.Update();
         }
 

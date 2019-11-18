@@ -21,6 +21,7 @@ namespace Legend_of_zelda_game
         public HealthStateMachine HealthStateMachine;
         public LinkCollisions LinkCollisions;
         public LinkProjectiles LinkProjectiles;
+        public LinkPortals LinkPortals;
         public string currentItem;
         public ISet<ICollectable> LinkItems;
         public int numGems;
@@ -42,7 +43,8 @@ namespace Legend_of_zelda_game
             HealthStateMachine = new HealthStateMachine(6,1);
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
-            currentItem = "arrow";
+            LinkPortals = new LinkPortals(this);
+            currentItem = "portals";
             LinkItems = new HashSet<ICollectable>();
             numGems = 0;
             numKeys = 0;

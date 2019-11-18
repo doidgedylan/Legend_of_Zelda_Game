@@ -16,6 +16,7 @@ namespace Legend_of_zelda_game
         public IBackground Background { get; }
         public ISet<ISprite> HeadsUpDisplay { get; }
         public ISet<IProjectile> LinkProjectiles { get; }
+        public ISet<IProjectile> LinkPortals { get; }
 
         public Room(int roomNumber, SpriteBatch spriteBatch)
         {
@@ -31,6 +32,7 @@ namespace Legend_of_zelda_game
             this.NPCs = Loader.NPCs;
             this.HeadsUpDisplay = Loader.HUD;
             this.LinkProjectiles = new HashSet<IProjectile>();
+            this.LinkPortals = new HashSet<IProjectile>();
         }
     }
 }

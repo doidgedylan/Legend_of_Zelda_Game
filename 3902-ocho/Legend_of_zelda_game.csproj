@@ -89,6 +89,8 @@
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Interfaces\UnpauseCommand.cs" />
     <Compile Include="LevelLoader.cs" />
+    <Compile Include="LinkClasses\ProjectileAndPortalSharedMethods.cs" />
+    <Compile Include="LinkClasses\LinkPortals.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtUpSprite.cs" />
