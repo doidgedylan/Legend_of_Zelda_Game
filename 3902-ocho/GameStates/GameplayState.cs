@@ -1,4 +1,5 @@
-﻿using Legend_of_zelda_game.Interfaces;
+﻿using Legend_of_zelda_game.EnemySprites;
+using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,14 @@ namespace Legend_of_zelda_game.GameStates
     {
         private Link link;
         private Game1 game;
+        private EnemyProjectiles EnemyProjectiles;
         private string[] drops = new string[4] { "bomb", "fairy", "little-heart", "single-rupee" };
 
         public Legend_of_zelda_game(Game1 game, Link link)
         {
             this.link = link;
             this.game = game;
+            EnemyProjectiles = new EnemyProjectiles(link);
         }
 
         public void Update()
@@ -57,6 +60,12 @@ namespace Legend_of_zelda_game.GameStates
             {
                 game.CurrentRoom.Enemies.Remove(enemy);
             }
+            foreach (IProjectile projectile in game.CurrentRoom.LinkProjectiles)
+            {
+                projectile.Update();
+            }
+            EnemyProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies);
+
 
             foreach (ISprite NPC in game.CurrentRoom.NPCs)
             {

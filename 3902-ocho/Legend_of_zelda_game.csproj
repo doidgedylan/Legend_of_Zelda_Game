@@ -58,6 +58,7 @@
     <Compile Include="Commands\PauseCommand.cs" />
     <Compile Include="Blocks\Door.cs" />
     <Compile Include="EnemySprites\EnemyCollisions.cs" />
+    <Compile Include="EnemySprites\EnemyProjectiles.cs" />
     <Compile Include="GameStates\GameOverState.cs" />
     <Compile Include="GameStates\GameplayState.cs" />
     <Compile Include="GameStates\ItemSelectState.cs" />
@@ -89,7 +90,8 @@
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Interfaces\UnpauseCommand.cs" />
     <Compile Include="LevelLoader.cs" />
-    <Compile Include="LinkClasses\ProjectileAndPortalSharedMethods.cs" />
+    <Compile Include="Projectiles\SharedProjectileMethods.cs" />
+    <Compile Include="LinkClasses\SharedLinkProjectileMethods.cs" />
     <Compile Include="LinkClasses\LinkPortals.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
@@ -146,6 +148,7 @@
     <Compile Include="CollectableSprites\CollectableMultipleRupeeSprite.cs" />
     <Compile Include="CollectableSprites\CollectableSingleRupeeSprite.cs" />
     <Compile Include="LinkClasses\LinkProjectiles.cs" />
+    <Compile Include="Projectiles\DragonFireballProjectile.cs" />
     <Compile Include="Projectiles\ArrowProjectile.cs" />
     <Compile Include="Projectiles\RedPortalProjectile.cs" />
     <Compile Include="Projectiles\BombProjectile.cs" />

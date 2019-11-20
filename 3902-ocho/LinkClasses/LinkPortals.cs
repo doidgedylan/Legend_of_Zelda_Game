@@ -12,7 +12,8 @@ namespace Legend_of_zelda_game.LinkClasses
     {
         private Link link;
         private SpriteBatch spriteBatch;
-        private ProjectileAndPortalSharedMethods ProjectileAndPortalSharedMethods;
+        private SharedLinkProjectileMethods SharedLinkProjectileMethods;
+        private SharedProjectileMethods SharedProjectileMethods;
         private bool bluePortalDeployed;
         private bool redPortalDeployed;
         private string portalCollision;
@@ -23,7 +24,8 @@ namespace Legend_of_zelda_game.LinkClasses
         {
             this.link = link;
             this.spriteBatch = link.spriteBatch;
-            ProjectileAndPortalSharedMethods = new ProjectileAndPortalSharedMethods(this.link);
+            SharedLinkProjectileMethods = new SharedLinkProjectileMethods(this.link);
+            SharedProjectileMethods = new SharedProjectileMethods();
             bluePortalDeployed = false;
             redPortalDeployed = false;
             portalCollision = "none";
@@ -33,7 +35,7 @@ namespace Legend_of_zelda_game.LinkClasses
 
         public void Update(ISet<IProjectile> portals, ISet<IBlock> blocks)
         {
-            if (link.currentItem.Equals("portals") && ProjectileAndPortalSharedMethods.checkLinkState())
+            if (link.currentItem.Equals("portals") && SharedLinkProjectileMethods.checkLinkState())
             {
                 AddPortals(portals);
             }
@@ -42,7 +44,7 @@ namespace Legend_of_zelda_game.LinkClasses
             foreach (IProjectile portal in portals)
             {
                 //Check if portal hit wall
-                if (ProjectileAndPortalSharedMethods.LocationOutOfBounds(portal.Location))
+                if (SharedProjectileMethods.LocationOutOfBounds(portal.Location))
                 {
                     portalsToRemove.Add(portal);
                     if (portal is BluePortalProjectile)
@@ -55,7 +57,7 @@ namespace Legend_of_zelda_game.LinkClasses
                 if (portal is BluePortalProjectile)
                 {
                     bluePortalLocation = new Vector2(portal.Location.X, portal.Location.Y);
-                    if (redPortalDeployed && ProjectileAndPortalSharedMethods.ProjectileCollision(portal.LocationRect, link.locationRect))
+                    if (redPortalDeployed && SharedProjectileMethods.ProjectileCollision(portal.LocationRect, link.locationRect))
                     {
                         portalCollision = "blue";
                     }
@@ -63,7 +65,7 @@ namespace Legend_of_zelda_game.LinkClasses
                 if (portal is RedPortalProjectile)
                 {
                     redPortalLocation = new Vector2(portal.Location.X, portal.Location.Y);
-                    if (bluePortalDeployed && ProjectileAndPortalSharedMethods.ProjectileCollision(portal.LocationRect, link.locationRect))
+                    if (bluePortalDeployed && SharedProjectileMethods.ProjectileCollision(portal.LocationRect, link.locationRect))
                     {
                         portalCollision = "red";
                     }
@@ -90,7 +92,7 @@ namespace Legend_of_zelda_game.LinkClasses
 
         public void AddPortals(ISet<IProjectile> portals)
         {
-            string direct = ProjectileAndPortalSharedMethods.FindUseItemDirection();
+            string direct = SharedLinkProjectileMethods.FindUseItemDirection();
             if(!direct.Equals("none"))
             {
                 if (bluePortalDeployed && redPortalDeployed)
@@ -148,7 +150,7 @@ namespace Legend_of_zelda_game.LinkClasses
                         break;
                 }
                 locationFound = true;
-                if (ProjectileAndPortalSharedMethods.LocationOutOfBounds(possibleLocation))
+                if (SharedProjectileMethods.LocationOutOfBounds(possibleLocation))
                 {
                     locationFound = false;
                 }
@@ -156,7 +158,7 @@ namespace Legend_of_zelda_game.LinkClasses
                 {
                     foreach (IBlock block in blocks)
                     {
-                        if (ProjectileAndPortalSharedMethods.ProjectileCollision(new Rectangle((int)possibleLocation.X, (int)possibleLocation.Y, 48, 48), block.LocationRect))
+                        if (SharedProjectileMethods.ProjectileCollision(new Rectangle((int)possibleLocation.X, (int)possibleLocation.Y, 48, 48), block.LocationRect))
                         {
                             locationFound = false;
                         }

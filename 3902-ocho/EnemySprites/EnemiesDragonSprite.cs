@@ -17,10 +17,13 @@ namespace Legend_of_zelda_game.EnemySprites
         public EnemyCollisions EnemyCollisions { get => enemyCollisions; set => enemyCollisions = value; }
         private string direction;
         public string Direction { get => direction; set => direction = value; }
+
+        private int currentFrame;
+        public int CurrentFrame { get => currentFrame; set => currentFrame = value; }
         private Vector2 location;
 
-        private int currentFrame = 0;
-        private int totalFrames = 20;
+        private float moveSpeed = 1;
+        private int totalFrames = 80;
         private int xPos = 0;
         private int yPos = 10;
         private int width = 24;
@@ -35,12 +38,14 @@ namespace Legend_of_zelda_game.EnemySprites
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             HealthStateMachine = new HealthStateMachine(10, 1);
             EnemyCollisions = new EnemyCollisions(this);
-            direction = "none";
+            Direction = "none";
+            CurrentFrame = 0;
         }
 
         public void Update()
         {
             ApplyAnimation();
+            ApplyMovement();
             Draw(spriteBatch);
         }
 
@@ -55,13 +60,21 @@ namespace Legend_of_zelda_game.EnemySprites
         {
             currentFrame++;
 
-            if (currentFrame <= 10)
+            if (currentFrame <= 20)
             {
                 xPos = 1;
             }
-            else if (currentFrame > 10 && currentFrame <= 20)
+            else if (currentFrame > 20 && currentFrame <= 40)
             {
                 xPos = 26;
+            }
+            else if (currentFrame > 40 && currentFrame <= 60)
+            {
+                xPos = 51;
+            }
+            else if (currentFrame > 60 && currentFrame <= 80)
+            {
+                xPos = 76;
             }
 
             if (currentFrame == totalFrames)
@@ -70,6 +83,20 @@ namespace Legend_of_zelda_game.EnemySprites
                 xPos = 1;
             }
         }
+
+        private void ApplyMovement()
+        {
+            if(currentFrame > 20 && currentFrame <= 40)
+            {
+                location = Vector2.Subtract(location, new Vector2(moveSpeed, 0));
+            }
+            else if (currentFrame > 60 && currentFrame <= 80)
+            {
+                location = Vector2.Add(location, new Vector2(moveSpeed, 0));
+            }
+            LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
+        }
+
         public void UndoCollision()
         {
             //Do Nothing

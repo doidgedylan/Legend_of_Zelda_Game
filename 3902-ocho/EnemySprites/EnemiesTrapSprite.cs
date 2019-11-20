@@ -17,6 +17,8 @@ namespace Legend_of_zelda_game.EnemySprites
         public EnemyCollisions EnemyCollisions { get => enemyCollisions; set => enemyCollisions = value; }
         private string direction;
         public string Direction { get => direction; set => direction = value; }
+        private int currentFrame;
+        public int CurrentFrame { get => currentFrame; set => currentFrame = value; }
         private Vector2 location;
 
         private int xPos = 164;
@@ -33,7 +35,8 @@ namespace Legend_of_zelda_game.EnemySprites
             LocationRect = new Rectangle((int)location.X, (int)location.Y, width * scale, height * scale);
             HealthStateMachine = new HealthStateMachine(100, 1);
             EnemyCollisions = new EnemyCollisions(this);
-            direction = "none";
+            Direction = "none";
+            currentFrame = 0;
         }
 
         public void Update()
