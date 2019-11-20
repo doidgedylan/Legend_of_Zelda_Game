@@ -10,6 +10,7 @@ namespace Legend_of_zelda_game.Interfaces
         HealthStateMachine HealthStateMachine { get; set; }
         EnemyCollisions EnemyCollisions { get; set; }
         string Direction { get; set; }
+        int CurrentFrame { get; set; }
         void Update();
         void Draw(SpriteBatch spriteBatch);
         void UndoCollision();

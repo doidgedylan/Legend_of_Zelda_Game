@@ -259,7 +259,7 @@
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Dragon</ObjectName>
-      <Location>500 200</Location>
+      <Location>550 200</Location>
     </Item>
   </Asset>
 </XnaContent>

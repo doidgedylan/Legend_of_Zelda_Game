@@ -51,14 +51,18 @@
     <Compile Include="Blocks\WaterBlock.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="CollectableSprites\CollectablePortalSprite.cs" />
+    <Compile Include="Commands\DoNothingCommand.cs" />
     <Compile Include="Commands\LinkSwitchItemCommand.cs" />
     <Compile Include="Commands\LinkWoodSwordCommand.cs" />
     <Compile Include="Commands\LinkUseItemCommand.cs" />
     <Compile Include="Commands\LoadRoomCommand.cs" />
+    <Compile Include="Commands\SwitchToGameplayCommand.cs" />
     <Compile Include="Commands\PauseCommand.cs" />
     <Compile Include="Blocks\Door.cs" />
     <Compile Include="EnemySprites\EnemyCollisions.cs" />
+    <Compile Include="EnemySprites\EnemyProjectiles.cs" />
     <Compile Include="GameStates\GameOverState.cs" />
+    <Compile Include="GameStates\TitleScreenState.cs" />
     <Compile Include="GameStates\GameplayState.cs" />
     <Compile Include="GameStates\ItemSelectState.cs" />
     <Compile Include="GameStates\PauseState.cs" />
@@ -83,6 +87,7 @@
     <Compile Include="HUD\HUDTopMapSprite.cs" />
     <Compile Include="HUD\HUDWoodSwordSprite.cs" />
     <Compile Include="HUD\HUDXSymbol.cs" />
+    <Compile Include="Interfaces\ITitleScreen.cs" />
     <Compile Include="Interfaces\IBackground.cs" />
     <Compile Include="Interfaces\IBlock.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
@@ -94,7 +99,8 @@
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Interfaces\UnpauseCommand.cs" />
     <Compile Include="LevelLoader.cs" />
-    <Compile Include="LinkClasses\ProjectileAndPortalSharedMethods.cs" />
+    <Compile Include="Projectiles\SharedProjectileMethods.cs" />
+    <Compile Include="LinkClasses\SharedLinkProjectileMethods.cs" />
     <Compile Include="LinkClasses\LinkPortals.cs" />
     <Compile Include="LinkSprites\LinkHurtRightSprite.cs" />
     <Compile Include="LinkSprites\LinkHurtLeftSprite.cs" />
@@ -151,6 +157,7 @@
     <Compile Include="CollectableSprites\CollectableMultipleRupeeSprite.cs" />
     <Compile Include="CollectableSprites\CollectableSingleRupeeSprite.cs" />
     <Compile Include="LinkClasses\LinkProjectiles.cs" />
+    <Compile Include="Projectiles\DragonFireballProjectile.cs" />
     <Compile Include="Projectiles\ArrowProjectile.cs" />
     <Compile Include="Projectiles\RedPortalProjectile.cs" />
     <Compile Include="Projectiles\BombProjectile.cs" />
@@ -205,6 +212,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\ResetCommand.cs" />
     <Compile Include="Texture2DStorage.cs" />
+    <Compile Include="TitleScreen\TitleScreenWaterFallSpraySprite.cs" />
+    <Compile Include="TitleScreen\TitleScreenWaterFallFoamSprite.cs" />
+    <Compile Include="TitleScreen\TitleScreenBackgroundSprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -12,19 +12,21 @@ namespace Legend_of_zelda_game.LinkClasses
         private Link link;
         private SpriteBatch spriteBatch;
         private bool projectileInAir;
-        private ProjectileAndPortalSharedMethods ProjectileAndPortalSharedMethods;
+        private SharedLinkProjectileMethods SharedLinkProjectileMethods;
+        private SharedProjectileMethods SharedProjectileMethods;
 
         public LinkProjectiles(Link link)
         {
             this.link = link;
             this.spriteBatch = link.spriteBatch;
             projectileInAir = false;
-            ProjectileAndPortalSharedMethods = new ProjectileAndPortalSharedMethods(this.link);
+            SharedLinkProjectileMethods = new SharedLinkProjectileMethods(this.link);
+            SharedProjectileMethods = new SharedProjectileMethods();
         }
 
         public void Update(ISet<IProjectile> projectiles, ISet<IEnemies> enemies)
         {
-            if (ProjectileAndPortalSharedMethods.checkLinkState())
+            if (SharedLinkProjectileMethods.checkLinkState())
             {
                 if (link.HealthStateMachine.GetHealth() == link.HealthStateMachine.GetTotalHealth())
                 {
@@ -41,11 +43,11 @@ namespace Legend_of_zelda_game.LinkClasses
                 {
                     //If projectile bomb, dont delete if comes in contanct with enemies
                     //Else delete when comes in contact with enemies
-                    if (projectile is BombProjectile && ProjectileAndPortalSharedMethods.ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
+                    if (projectile is BombProjectile && SharedProjectileMethods.ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
                     {
                         enemy.HealthStateMachine.BeHurt(); ;
                     }
-                    else if (projectileInAir && ProjectileAndPortalSharedMethods.ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
+                    else if (projectileInAir && SharedProjectileMethods.ProjectileCollision(projectile.LocationRect, enemy.LocationRect))
                     {
                         projectileInAir = false;
                         projectilesToRemove.Add(projectile);
@@ -54,14 +56,14 @@ namespace Legend_of_zelda_game.LinkClasses
                 }
 
                 //Check if projectile hit wall
-                if(projectileInAir && ProjectileAndPortalSharedMethods.LocationOutOfBounds(projectile.Location))
+                if(projectileInAir && SharedProjectileMethods.LocationOutOfBounds(projectile.Location))
                 {
                     projectileInAir = false;
                     projectilesToRemove.Add(projectile);
                 }
 
                 //Check if boomerang hit link
-                if (projectile is BoomerangProjectile && projectileInAir && ProjectileAndPortalSharedMethods.ProjectileCollision(projectile.LocationRect, link.locationRect))
+                if (projectile is BoomerangProjectile && projectileInAir && SharedProjectileMethods.ProjectileCollision(projectile.LocationRect, link.locationRect))
                 {
                     projectileInAir = false;
                     projectilesToRemove.Add(projectile);
@@ -111,7 +113,7 @@ namespace Legend_of_zelda_game.LinkClasses
 
         public void AddItemProjectile(ISet<IProjectile> projectiles)
         {
-            string direct = ProjectileAndPortalSharedMethods.FindUseItemDirection();
+            string direct = SharedLinkProjectileMethods.FindUseItemDirection();
 
             if (!projectileInAir)
             {
