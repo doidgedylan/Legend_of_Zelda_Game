@@ -78,6 +78,7 @@
     <Compile Include="HUD\HUDCommonMethods.cs" />
     <Compile Include="HUD\HUDFullHeartSprite.cs" />
     <Compile Include="HUD\HUDGemNumbersSprite.cs" />
+    <Compile Include="HUD\HUDHealthNumbersSprite.cs" />
     <Compile Include="HUD\HUDKeyNumbersSprite.cs" />
     <Compile Include="HUD\HUDLevelBlankBackgroundSprite.cs" />
     <Compile Include="HUD\HUDLevelNumberSprite.cs" />

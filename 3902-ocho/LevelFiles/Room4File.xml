@@ -124,18 +124,8 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDFullHeart</ObjectName>
+      <ObjectName>HUDHealth</ObjectName>
       <Location>544 -48</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDFullHeart</ObjectName>
-      <Location>568 -48</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDFullHeart</ObjectName>
-      <Location>592 -48</Location>
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>

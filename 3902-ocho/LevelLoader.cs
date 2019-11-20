@@ -240,8 +240,8 @@ namespace Legend_of_zelda_game
                     case "HUDBombNumbers":
                         this.HUD.Add(new HUDBombNumbersSprite(spriteBatch, Location, Link));
                         break;
-                    case "HUDFullHeart":
-                        this.HUD.Add(new HUDFullHeartSprite(spriteBatch, Location));
+                    case "HUDHealth":
+                        this.HUD.Add(new HUDHealthNumbersSprite(spriteBatch, Location, Link));
                         break;
                     case "HUDBlankSpace":
                         this.HUD.Add(new HUDBlankSpaceSprite(spriteBatch, Location));
