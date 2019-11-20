@@ -21,9 +21,9 @@ namespace Legend_of_zelda_game.GameStates
         public void Update()
         {
             ICollectable currentItemSprite;
-            foreach (ISprite HUD in game.ItemSelectRoom.HeadsUpDisplay)
+            foreach (IHUD HUD in game.ItemSelectRoom.HeadsUpDisplay)
             {
-                HUD.Update();
+                HUD.Update(link);
             }
             game.ItemSelectRoom.Background.Draw();
 

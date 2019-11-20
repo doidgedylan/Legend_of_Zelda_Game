@@ -62,9 +62,9 @@ namespace Legend_of_zelda_game.GameStates
             {
                 NPC.Update();
             }
-            foreach (ISprite HUD in game.CurrentRoom.HeadsUpDisplay)
+            foreach (IHUD HUD in game.CurrentRoom.HeadsUpDisplay)
             {
-                HUD.Update();
+                HUD.Update(link);
             }
             foreach (IProjectile projectile in game.CurrentRoom.LinkProjectiles)
             {

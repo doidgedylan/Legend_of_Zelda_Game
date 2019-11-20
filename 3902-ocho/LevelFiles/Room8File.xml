@@ -94,13 +94,8 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUD0Symbol</ObjectName>
+      <ObjectName>HUDGemNumbers</ObjectName>
       <Location>328 -120</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBlankSpace</ObjectName>
-      <Location>352 -120</Location>
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
@@ -109,13 +104,8 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUD0Symbol</ObjectName>
+      <ObjectName>HUDKeyNumbers</ObjectName>
       <Location>328 -72</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBlankSpace</ObjectName>
-      <Location>352 -72</Location>
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
@@ -124,13 +114,8 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUD0Symbol</ObjectName>
+      <ObjectName>HUDBombNumbers</ObjectName>
       <Location>328 -48</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBlankSpace</ObjectName>
-      <Location>352 -48</Location>
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>

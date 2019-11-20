@@ -14,7 +14,7 @@ namespace Legend_of_zelda_game
         public ISet<ISprite> NPCs { get; }
         public ISet<IBlock> Blocks { get; }
         public IBackground Background { get; }
-        public ISet<ISprite> HeadsUpDisplay { get; }
+        public ISet<IHUD> HeadsUpDisplay { get; }
         public ISet<IProjectile> LinkProjectiles { get; }
         public ISet<IProjectile> LinkPortals { get; }
 

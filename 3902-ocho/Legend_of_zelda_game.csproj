@@ -69,8 +69,12 @@
     <Compile Include="HUD\HUD0SymbolSprite.cs" />
     <Compile Include="HUD\HUDBackgroundSprite.cs" />
     <Compile Include="HUD\HUDBlankSpaceSprite.cs" />
+    <Compile Include="HUD\HUDBombNumbersSprite.cs" />
     <Compile Include="HUD\HUDBottomMapSprite.cs" />
+    <Compile Include="HUD\HUDCommonMethods.cs" />
     <Compile Include="HUD\HUDFullHeartSprite.cs" />
+    <Compile Include="HUD\HUDGemNumbersSprite.cs" />
+    <Compile Include="HUD\HUDKeyNumbersSprite.cs" />
     <Compile Include="HUD\HUDLevelBlankBackgroundSprite.cs" />
     <Compile Include="HUD\HUDLevelNumberSprite.cs" />
     <Compile Include="HUD\HUDLevelSprite.cs" />
@@ -84,6 +88,7 @@
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IDrawable.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
+    <Compile Include="Interfaces\IHUD.cs" />
     <Compile Include="Interfaces\IProjectile.cs" />
     <Compile Include="Interfaces\ISprite.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
@@ -225,7 +230,9 @@
     <Content Include="bin\Windows\x86\Debug\Room16File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room17File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room18File.xml" />
-    <Content Include="bin\Windows\x86\Debug\Room1File.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room1File.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="bin\Windows\x86\Debug\Room2File.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -281,7 +288,9 @@
     <Content Include="LevelFiles\Room16File.xml" />
     <Content Include="LevelFiles\Room17File.xml" />
     <Content Include="LevelFiles\Room18File.xml" />
-    <Content Include="LevelFiles\Room1File.xml" />
+    <Content Include="LevelFiles\Room1File.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="LevelFiles\Room2File.xml" />
     <Content Include="LevelFiles\Room3File.xml" />
     <Content Include="LevelFiles\Room4File.xml" />

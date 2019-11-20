@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Legend_of_zelda_game
 {
-    public class HUDXSymbolSprite : ISprite
+    public class HUDXSymbolSprite : IHUD
     {
         public Texture2D spriteSheet;
         private SpriteBatch spriteBatch;
@@ -21,9 +21,10 @@ namespace Legend_of_zelda_game
             this.spriteBatch = spriteBatch;
         }
 
-        public void Update()
+        public void Update(Link link)
         {
             this.Draw(spriteBatch);
+
         }
 
         public void Draw(SpriteBatch spriteBatch)

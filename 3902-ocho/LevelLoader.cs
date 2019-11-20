@@ -24,7 +24,7 @@ namespace Legend_of_zelda_game
         public ISet<IBlock> Blocks { get; set; }
         public ISet<ICollectable> Collectables { get; set; }
         public ISet<ISprite> NPCs { get; set; }
-        public ISet<ISprite> HUD { get; set; }
+        public ISet<IHUD> HUD { get; set; }
 
         public LevelLoader(SpriteBatch spriteBatch)
         {
@@ -34,7 +34,7 @@ namespace Legend_of_zelda_game
             this.Blocks = new HashSet<IBlock>();
             this.Collectables = new HashSet<ICollectable>();
             this.NPCs = new HashSet<ISprite>();
-            this.HUD = new HashSet<ISprite>();
+            this.HUD = new HashSet<IHUD>();
             BackgroundBottomSpriteSheet = Texture2DStorage.GetBackgroundSpriteSheetBottom();
             BackgroundTopLeftSpriteSheet = Texture2DStorage.GetBackgroundSpriteSheetTopLeft();
             BackgroundTopRightSpriteSheet = Texture2DStorage.GetBackgroundSpriteSheetTopRight();
@@ -231,8 +231,14 @@ namespace Legend_of_zelda_game
                     case "HUDXSymbol":
                         this.HUD.Add(new HUDXSymbolSprite(spriteBatch, Location));
                         break;
-                    case "HUD0Symbol":
-                        this.HUD.Add(new HUD0SymbolSprite(spriteBatch, Location));
+                    case "HUDKeyNumbers":
+                        this.HUD.Add(new HUDKeyNumbersSprite(spriteBatch, Location, Link));
+                        break;
+                    case "HUDGemNumbers":
+                        this.HUD.Add(new HUDGemNumbersSprite(spriteBatch, Location, Link));
+                        break;
+                    case "HUDBombNumbers":
+                        this.HUD.Add(new HUDBombNumbersSprite(spriteBatch, Location, Link));
                         break;
                     case "HUDFullHeart":
                         this.HUD.Add(new HUDFullHeartSprite(spriteBatch, Location));

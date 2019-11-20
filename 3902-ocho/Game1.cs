@@ -27,7 +27,7 @@ namespace Legend_of_zelda_game
         private ISet<ISprite> NPCs;
         private ISet<IBlock> blocks;
         private IBackground background;
-        private ISet<ISprite> headsUpDisplay;
+        private ISet<IHUD> headsUpDisplay;
         public IGameState CurrentState { get; set; }
         public StateManager StateManager { get; set; }
         public Room[] Rooms { get; set; }
@@ -188,7 +188,6 @@ namespace Legend_of_zelda_game
             }
 
             spriteBatch.Begin();
-
             CurrentState.Update();
             if (link.currentItem.Equals("Triforce"))
             {
