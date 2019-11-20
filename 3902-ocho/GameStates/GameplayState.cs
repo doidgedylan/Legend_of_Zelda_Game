@@ -6,14 +6,14 @@ using System.Collections.Generic;
 
 namespace Legend_of_zelda_game.GameStates
 {
-    public class Legend_of_zelda_game : IGameState
+    public class GameplayState : IGameState
     {
         private Link link;
         private Game1 game;
         private EnemyProjectiles EnemyProjectiles;
         private string[] drops = new string[4] { "bomb", "fairy", "little-heart", "single-rupee" };
 
-        public Legend_of_zelda_game(Game1 game, Link link)
+        public GameplayState(Game1 game, Link link)
         {
             this.link = link;
             this.game = game;

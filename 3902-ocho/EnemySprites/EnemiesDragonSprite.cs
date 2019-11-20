@@ -80,7 +80,6 @@ namespace Legend_of_zelda_game.EnemySprites
             if (currentFrame == totalFrames)
             {
                 currentFrame = 0;
-                xPos = 1;
             }
         }
 

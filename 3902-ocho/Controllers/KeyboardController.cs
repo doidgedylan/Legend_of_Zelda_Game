@@ -18,6 +18,7 @@ namespace Legend_of_zelda_game.Controllers
             commandMappings = new Dictionary<Buttons, ICommand>();
             keyMappings = new Dictionary<Keys, Buttons>();
 
+            keyMappings.Add(Keys.Enter, Buttons.Enter);
             keyMappings.Add(Keys.Up, Buttons.Up);
             keyMappings.Add(Keys.Down, Buttons.Down);
             keyMappings.Add(Keys.Left, Buttons.Left);

@@ -19,8 +19,10 @@ namespace Legend_of_zelda_game
         public const int NUMBER_OF_ROOMS = 18;
         public SpriteBatch spriteBatch;
         private SpriteFont font;
-        private KeyboardController keyboardController;
-        private MouseController mouseController;
+        private KeyboardController gameplayKeyboardController;
+        private MouseController gameplayMouseController;
+        private KeyboardController titleScreenKeyboardController;
+        private MouseController titleScreenMouseController;
         private Link link;
         private ISet<ICollectable> collectables;
         private ISet<IEnemies> enemies;
@@ -73,9 +75,6 @@ namespace Legend_of_zelda_game
             font = Content.Load<SpriteFont>("Controls");
             CollectableSpriteFactory.Instance.LoadAllTextures(Content);
 
-            keyboardController = new KeyboardController();
-            mouseController = new MouseController();
-
             LevelLoader Loader = new LevelLoader(spriteBatch);
 
             LoadAllRooms(NUMBER_OF_ROOMS);
@@ -92,45 +91,57 @@ namespace Legend_of_zelda_game
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
-            StateManager.SetLegend_of_zelda_game();
+            StateManager.SetTitleScreenState();
 
-            keyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
-            keyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));
-            keyboardController.RegisterCommand(Buttons.A, new LinkMoveLeftCommand(link));
-            keyboardController.RegisterCommand(Buttons.S, new LinkMoveDownCommand(link));
-            keyboardController.RegisterCommand(Buttons.D, new LinkMoveRightCommand(link));
-            keyboardController.RegisterCommand(Buttons.Up, new LinkMoveUpCommand(link));
-            keyboardController.RegisterCommand(Buttons.Left, new LinkMoveLeftCommand(link));
-            keyboardController.RegisterCommand(Buttons.Down, new LinkMoveDownCommand(link));
-            keyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
-            keyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
-            keyboardController.RegisterCommand(Buttons.Z, new LinkWoodSwordCommand(link));
-            keyboardController.RegisterCommand(Buttons.N, new LinkWoodSwordCommand(link));
-            mouseController.RegisterCommand(Buttons.LeftClick, new LinkWoodSwordCommand(link));
-            mouseController.RegisterCommand(Buttons.RightClick, new LinkUseItemCommand(link));
-            keyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
-            keyboardController.RegisterCommand(Buttons.C, new LinkSwitchItemCommand(link));
-            keyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
-            keyboardController.RegisterCommand(Buttons.B, new PauseCommand(this));
-            keyboardController.RegisterCommand(Buttons.G, new UnpauseCommand(this));
-            keyboardController.RegisterCommand(Buttons.D1, new LoadRoomCommand(this, 1));
-            keyboardController.RegisterCommand(Buttons.D2, new LoadRoomCommand(this, 2));
-            keyboardController.RegisterCommand(Buttons.D3, new LoadRoomCommand(this, 3));
-            keyboardController.RegisterCommand(Buttons.D4, new LoadRoomCommand(this, 4));
-            keyboardController.RegisterCommand(Buttons.D5, new LoadRoomCommand(this, 5));
-            keyboardController.RegisterCommand(Buttons.D6, new LoadRoomCommand(this, 6));
-            keyboardController.RegisterCommand(Buttons.D7, new LoadRoomCommand(this, 7));
-            keyboardController.RegisterCommand(Buttons.D8, new LoadRoomCommand(this, 8));
-            keyboardController.RegisterCommand(Buttons.D9, new LoadRoomCommand(this, 9));
-            keyboardController.RegisterCommand(Buttons.D0, new LoadRoomCommand(this, 10));
-            keyboardController.RegisterCommand(Buttons.NumPad1, new LoadRoomCommand(this, 11));
-            keyboardController.RegisterCommand(Buttons.NumPad2, new LoadRoomCommand(this, 12));
-            keyboardController.RegisterCommand(Buttons.NumPad3, new LoadRoomCommand(this, 13));
-            keyboardController.RegisterCommand(Buttons.NumPad4, new LoadRoomCommand(this, 14));
-            keyboardController.RegisterCommand(Buttons.NumPad5, new LoadRoomCommand(this, 15));
-            keyboardController.RegisterCommand(Buttons.NumPad6, new LoadRoomCommand(this, 16));
-            keyboardController.RegisterCommand(Buttons.NumPad7, new LoadRoomCommand(this, 17));
-            keyboardController.RegisterCommand(Buttons.NumPad8, new LoadRoomCommand(this, 18));
+            //Set up title screen keyboard and mouse controller
+            titleScreenKeyboardController = new KeyboardController();
+            titleScreenMouseController = new MouseController();
+            titleScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGamePlayCommand(this));
+            titleScreenKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new DoNothingCommand());
+            titleScreenMouseController.RegisterCommand(Buttons.LeftClick, new SwitchToGamePlayCommand(this));
+            titleScreenMouseController.RegisterCommand(Buttons.RightClick, new DoNothingCommand());
+
+            //Set up gameplay keyboard and mouse controller
+            gameplayKeyboardController = new KeyboardController();
+            gameplayMouseController = new MouseController();
+            gameplayKeyboardController.RegisterCommand(Buttons.Enter, new DoNothingCommand());
+            gameplayKeyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
+            gameplayKeyboardController.RegisterCommand(Buttons.W, new LinkMoveUpCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.A, new LinkMoveLeftCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.S, new LinkMoveDownCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.D, new LinkMoveRightCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.Up, new LinkMoveUpCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.Left, new LinkMoveLeftCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.Down, new LinkMoveDownCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.Right, new LinkMoveRightCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new LinkStopCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.Z, new LinkWoodSwordCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.N, new LinkWoodSwordCommand(link));
+            gameplayMouseController.RegisterCommand(Buttons.LeftClick, new LinkWoodSwordCommand(link));
+            gameplayMouseController.RegisterCommand(Buttons.RightClick, new LinkUseItemCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.X, new LinkUseItemCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.C, new LinkSwitchItemCommand(link));
+            gameplayKeyboardController.RegisterCommand(Buttons.R, new ResetCommand(this));
+            gameplayKeyboardController.RegisterCommand(Buttons.B, new PauseCommand(this));
+            gameplayKeyboardController.RegisterCommand(Buttons.G, new UnpauseCommand(this));
+            gameplayKeyboardController.RegisterCommand(Buttons.D1, new LoadRoomCommand(this, 1));
+            gameplayKeyboardController.RegisterCommand(Buttons.D2, new LoadRoomCommand(this, 2));
+            gameplayKeyboardController.RegisterCommand(Buttons.D3, new LoadRoomCommand(this, 3));
+            gameplayKeyboardController.RegisterCommand(Buttons.D4, new LoadRoomCommand(this, 4));
+            gameplayKeyboardController.RegisterCommand(Buttons.D5, new LoadRoomCommand(this, 5));
+            gameplayKeyboardController.RegisterCommand(Buttons.D6, new LoadRoomCommand(this, 6));
+            gameplayKeyboardController.RegisterCommand(Buttons.D7, new LoadRoomCommand(this, 7));
+            gameplayKeyboardController.RegisterCommand(Buttons.D8, new LoadRoomCommand(this, 8));
+            gameplayKeyboardController.RegisterCommand(Buttons.D9, new LoadRoomCommand(this, 9));
+            gameplayKeyboardController.RegisterCommand(Buttons.D0, new LoadRoomCommand(this, 10));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad1, new LoadRoomCommand(this, 11));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad2, new LoadRoomCommand(this, 12));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad3, new LoadRoomCommand(this, 13));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad4, new LoadRoomCommand(this, 14));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad5, new LoadRoomCommand(this, 15));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad6, new LoadRoomCommand(this, 16));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad7, new LoadRoomCommand(this, 17));
+            gameplayKeyboardController.RegisterCommand(Buttons.NumPad8, new LoadRoomCommand(this, 18));
         }
 
         private void LoadAllRooms(int numberOfRooms)
@@ -175,7 +186,13 @@ namespace Legend_of_zelda_game
         {
             GraphicsDevice.Clear(Color.Black);
 
-            if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
+            if (CurrentState is TitleScreenState)
+            {
+                titleScreenKeyboardController.Update();
+                titleScreenMouseController.Update();
+            }
+            else if (CurrentState is GameplayState &&
+                !(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
                 !(link.state is LinkHurtDownState) && !(link.state is LinkHurtUpState) &&
                 !(link.state is LinkHurtLeftState) && !(link.state is LinkHurtRightState) &&
@@ -183,8 +200,8 @@ namespace Legend_of_zelda_game
                 !(link.state is LinkUseItemLeftState) && !(link.state is LinkUseItemRightState) &&
                 !(link.state is LinkPickUpItemState) && !(this.CurrentState is ScrollingTransitionState)) 
             {
-                keyboardController.Update();
-                mouseController.Update();
+                gameplayKeyboardController.Update();
+                gameplayMouseController.Update();
             }
 
             spriteBatch.Begin();
@@ -197,11 +214,10 @@ namespace Legend_of_zelda_game
             if (link.HealthStateMachine.GetHealth() == 0)
             {
                 StateManager.SetGameOverState();
-                keyboardController.Update();
+                gameplayKeyboardController.Update();
             }
 
             spriteBatch.End();
         }
-
     }
 }

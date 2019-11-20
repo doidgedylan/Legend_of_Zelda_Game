@@ -8,7 +8,8 @@ namespace Legend_of_zelda_game.GameStates
 {
     public class StateManager
     {
-        private Legend_of_zelda_game gameplayState;
+        private TitleScreenState titleScreenState;
+        private GameplayState gameplayState;
         private PauseState pauseState;
         private ItemSelectState itemSelectState;
         private GameOverState gameOverState;
@@ -22,14 +23,20 @@ namespace Legend_of_zelda_game.GameStates
             this.spriteBatch = spriteBatch;
             this.game = game;
             this.link = link;
-            this.gameplayState = new Legend_of_zelda_game(game, link);
+            this.titleScreenState = new TitleScreenState(game);
+            this.gameplayState = new GameplayState(game, link);
             this.pauseState = new PauseState(game, spriteBatch, font);
             this.gameOverState = new GameOverState(game, spriteBatch, font);
             this.winningState = new WinningState(game, spriteBatch, font);
             this.itemSelectState = new ItemSelectState(game, link, spriteBatch, font);
         }
 
-        public void SetLegend_of_zelda_game()
+        public void SetTitleScreenState()
+        {
+            game.CurrentState = titleScreenState;
+        }
+
+        public void SetGameplayState()
         {
             game.CurrentState = gameplayState;
         }
@@ -37,7 +44,7 @@ namespace Legend_of_zelda_game.GameStates
         public void SetPauseState()
         {
             if (game.CurrentState == pauseState){
-                SetLegend_of_zelda_game();
+                SetGameplayState();
             }
             else
             {
@@ -84,7 +91,7 @@ namespace Legend_of_zelda_game.GameStates
             int originalRoomNumber = game.CurrentRoom.RoomNumber;
             game.CurrentState = new ScrollingTransitionState(game.ItemSelectRoom.Background, game.Rooms[originalRoomNumber].Background, Direction.Down);
             game.CurrentState.Update();
-            SetLegend_of_zelda_game();
+            SetGameplayState();
             spriteBatch.End();
         }
 
@@ -122,7 +129,7 @@ namespace Legend_of_zelda_game.GameStates
             game.CurrentState = new ScrollingTransitionState(originalBackground, destinationBackground, door.direction);
             game.CurrentState.Update();
             game.SelectRoom(door.destinationRoomNumber);
-            SetLegend_of_zelda_game();
+            SetGameplayState();
         }
     }
 }
