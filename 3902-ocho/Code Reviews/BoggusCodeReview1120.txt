@@ -1,0 +1,43 @@
+﻿Feedback from 11/20 in class code review
+
+Overall
+-separate update and draw into distinct operations. But this will be a lot of effort late in the project, so maybe don't.
+-separate states and sprites into distinct classes.
+
+Game1
+-lots of types in game1
+-long conditional at game1 194. "invert this logic. In link state have a boolean deciding if the state can or can't be interrupted."
+-lots of length in controller registration. Possibly move this logic into a dedicated class for setting up controllers.
+
+Link
+-lots of public fields -> Very coupled. Make them properties. Could hide more details in a different dedicated class, such as for items.
+-define constants outside of constructors, as global constants so you can change them more easily.
+
+LinkState
+-see overall feedback
+
+LinkSprite
+-have each sprite class contain all of the animation, instead of switching between classes for the animations
+
+LinkCollisions
+-segment the collisionBlock method into pieces to improve readability
+-checking for linkStates might not be necessary in some of the cases, eg collectables.
+-at 244 "this is the collision detector part", the rest are the collision response parts. These are maybe points to segment and encapsulate from.
+
+StateManager
+-decouple this some
+-"states are usually internal"
+-this is more of a storage unit, or transitioner, than a manager
+
+GameplayState
+-see overall feedback
+-move all of item spawning into a dedicated method"
+-"it's not really ideal to have to grab stuff from the game class"
+-just have a currentRoom.update method instead of the foreach loops happening directly inside the gameplay state
+
+HUD
+-inside keynumbersprite: to cut down on cases, maybe do text drawing or some sort of formula. But also there's advantages to doing it like we are.
+-it might be useful to have one central hud element that contains all the hud stuff, but don't trip about it right now.
+
+Sound
+-maybe try a different object type for sound and songs, eg MediaPlayer object. Just try different, non-SharpDX types.
