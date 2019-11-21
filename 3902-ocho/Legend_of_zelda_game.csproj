@@ -84,6 +84,7 @@
     <Compile Include="HUD\HUDLevelNumberSprite.cs" />
     <Compile Include="HUD\HUDLevelSprite.cs" />
     <Compile Include="HUD\HUDLifeBlankBackgroundSprite.cs" />
+    <Compile Include="HUD\HUDMapSprite.cs" />
     <Compile Include="HUD\HUDTopAndBottomMapSprite.cs" />
     <Compile Include="HUD\HUDTopMapSprite.cs" />
     <Compile Include="HUD\HUDWoodSwordSprite.cs" />

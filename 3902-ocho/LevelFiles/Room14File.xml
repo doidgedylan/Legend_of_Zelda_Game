@@ -29,63 +29,8 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopMap</ObjectName>
+      <ObjectName>HUDMap</ObjectName>
       <Location>112 -96</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>136 -96</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>184 -96</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>208 -96</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopMap</ObjectName>
-      <Location>88 -72</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>112 -72</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>136 -72</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>160 -72</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopMap</ObjectName>
-      <Location>184 -72</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>112 -48</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDTopAndBottomMap</ObjectName>
-      <Location>136 -48</Location>
-    </Item>
-    <Item>
-      <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDBottomMap</ObjectName>
-      <Location>160 -48</Location>
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>

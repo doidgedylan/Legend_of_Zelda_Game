@@ -173,7 +173,7 @@ namespace Legend_of_zelda_game
                     case "Key":
                         this.Collectables.Add(CollectableSpriteFactory.Instance.CreateKeySprite(spriteBatch, Location));
                         break;
-                    case "Letter":
+                    case "Map":
                         this.Collectables.Add(CollectableSpriteFactory.Instance.CreateMapSprite(spriteBatch, Location));
                         break;
                     case "LittleHeart":
@@ -243,8 +243,8 @@ namespace Legend_of_zelda_game
                     case "HUDHealth":
                         this.HUD.Add(new HUDHealthNumbersSprite(spriteBatch, Location, Link));
                         break;
-                    case "HUDBlankSpace":
-                        this.HUD.Add(new HUDBlankSpaceSprite(spriteBatch, Location));
+                    case "HUDMap":
+                        this.HUD.Add(new HUDMapSprite(spriteBatch, Location, Link));
                         break;
                     case "HUDLevelBlankBackground":
                         this.HUD.Add(new HUDLevelBlankBackgroundSprite(spriteBatch, Location));

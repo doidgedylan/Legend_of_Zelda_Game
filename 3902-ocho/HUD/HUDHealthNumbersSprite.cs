@@ -6,7 +6,6 @@ namespace Legend_of_zelda_game
     public class HUDHealthNumbersSprite : IHUD
     {
         public Link link;
-        private HUDCommonMethods hudMethods = new HUDCommonMethods();
         public Texture2D spriteSheet;
         private SpriteBatch spriteBatch;
         private Rectangle sourceRectangle;
