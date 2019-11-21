@@ -34,6 +34,11 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDMapLocation</ObjectName>
+      <Location>142 -36</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
       <ObjectName>HUDXSymbol</ObjectName>
       <Location>304 -120</Location>
     </Item>

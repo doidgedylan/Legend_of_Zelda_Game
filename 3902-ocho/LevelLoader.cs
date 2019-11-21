@@ -246,6 +246,9 @@ namespace Legend_of_zelda_game
                     case "HUDMap":
                         this.HUD.Add(new HUDMapSprite(spriteBatch, Location, Link));
                         break;
+                    case "HUDMapLocation":
+                        this.HUD.Add(new HUDMapLocation(spriteBatch, Location, Link));
+                        break;
                     case "HUDLevelBlankBackground":
                         this.HUD.Add(new HUDLevelBlankBackgroundSprite(spriteBatch, Location));
                         break;
