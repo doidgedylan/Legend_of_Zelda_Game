@@ -15,7 +15,7 @@ namespace Legend_of_zelda_game
         private Rectangle destinationRectangle;
         private int width = 8;
         private int height = 8;
-        private int scale = 3;
+        public int scale = 3;
 
         public HUDMapSprite(SpriteBatch spriteBatch, Vector2 location, Link link)
         {

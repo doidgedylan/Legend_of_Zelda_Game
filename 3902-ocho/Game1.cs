@@ -98,6 +98,8 @@ namespace Legend_of_zelda_game
             titleScreenMouseController = new MouseController();
             titleScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGamePlayCommand(this));
             titleScreenKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new DoNothingCommand());
+            titleScreenKeyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
+            titleScreenKeyboardController.RegisterCommand(Buttons.R, new DoNothingCommand());
             titleScreenMouseController.RegisterCommand(Buttons.LeftClick, new SwitchToGamePlayCommand(this));
             titleScreenMouseController.RegisterCommand(Buttons.RightClick, new DoNothingCommand());
 
@@ -191,14 +193,13 @@ namespace Legend_of_zelda_game
                 titleScreenKeyboardController.Update();
                 titleScreenMouseController.Update();
             }
-            else if ((CurrentState is GameplayState || CurrentState is ItemSelectState) &&
-                !(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
+            else if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
                 !(link.state is LinkHurtDownState) && !(link.state is LinkHurtUpState) &&
                 !(link.state is LinkHurtLeftState) && !(link.state is LinkHurtRightState) &&
                 !(link.state is LinkUseItemDownState) && !(link.state is LinkUseItemUpState) &&
                 !(link.state is LinkUseItemLeftState) && !(link.state is LinkUseItemRightState) &&
-                !(link.state is LinkPickUpItemState)) 
+                !(link.state is LinkPickUpItemState))
             {
                 gameplayKeyboardController.Update();
                 gameplayMouseController.Update();
