@@ -120,12 +120,22 @@ namespace Legend_of_zelda_game.LinkClasses
             {
                 foreach(IBlock block in blocksCollided)
                 {
+                    if (block is LockedDoor)
+                    {
+                        if (link.numKeys > 0)
+                        {
+                            blocks.Remove(block);
+                            link.numKeys--;
+                            link.moveSpeed = 3;
+                            link.hurtSpeed = 5;
+                        }
+                    }
                     if (block is Door)
                     {
-                        if(link.numKeys < 0)
-                        {
-                            link.numKeys--;
-                        }
+//                        if(link.numKeys < 0)
+//                        {
+//                            link.numKeys--;
+//                        }
                         stateManager.RoomTransition(block as Door);
                         link.moveSpeed = 3;
                         link.hurtSpeed = 5;

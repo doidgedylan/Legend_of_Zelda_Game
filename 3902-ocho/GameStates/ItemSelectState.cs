@@ -61,6 +61,7 @@ namespace Legend_of_zelda_game.GameStates
                     y = 350 + 168;
                     itemSprite = CollectableSpriteFactory.Instance.CreateMapSprite(spriteBatch, new Vector2(x, y));
                     // draw dungeon map here
+                    // int dotLocation = getDotLocation(currentRoom);
                     //HUDMapLocation dot = new HUDMapLocation(spriteBatch, new Vector2(idk, idk), link);
                     HUDMapSprite map = new HUDMapSprite(spriteBatch, new Vector2(370, 325 + 168), link);
                     map.Update(link);
