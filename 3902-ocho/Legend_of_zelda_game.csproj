@@ -246,9 +246,7 @@
     <Content Include="bin\Windows\x86\Debug\Room1File.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="bin\Windows\x86\Debug\Room2File.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="bin\Windows\x86\Debug\Room2File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room3File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room4File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room5File.xml" />

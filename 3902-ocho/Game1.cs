@@ -191,14 +191,14 @@ namespace Legend_of_zelda_game
                 titleScreenKeyboardController.Update();
                 titleScreenMouseController.Update();
             }
-            else if (CurrentState is GameplayState &&
+            else if ((CurrentState is GameplayState || CurrentState is ItemSelectState) &&
                 !(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
                 !(link.state is LinkHurtDownState) && !(link.state is LinkHurtUpState) &&
                 !(link.state is LinkHurtLeftState) && !(link.state is LinkHurtRightState) &&
                 !(link.state is LinkUseItemDownState) && !(link.state is LinkUseItemUpState) &&
                 !(link.state is LinkUseItemLeftState) && !(link.state is LinkUseItemRightState) &&
-                !(link.state is LinkPickUpItemState) && !(this.CurrentState is ScrollingTransitionState)) 
+                !(link.state is LinkPickUpItemState)) 
             {
                 gameplayKeyboardController.Update();
                 gameplayMouseController.Update();
