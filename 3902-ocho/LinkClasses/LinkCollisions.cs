@@ -147,23 +147,23 @@ namespace Legend_of_zelda_game.LinkClasses
                     enemyCollisions.Add(enemy);
                 }
             }
-
-            if (enemyCollisionSides.Contains("bottom") && link.state is LinkMoveDownState)
+            
+            if (enemyCollisionSides.Contains("bottom") && (link.state is LinkMoveDownState || link.state is LinkIdleDownState))
             {
                 link.state = new LinkHurtDownState(link);
                 link.HealthStateMachine.BeHurt();
             }
-            else if (enemyCollisionSides.Contains("top") && link.state is LinkMoveUpState)
+            else if (enemyCollisionSides.Contains("top") && (link.state is LinkMoveUpState || link.state is LinkIdleUpState))
             {
                 link.state = new LinkHurtUpState(link);
                 link. HealthStateMachine.BeHurt();
             }
-            else if (enemyCollisionSides.Contains("left") && link.state is LinkMoveLeftState)
+            else if (enemyCollisionSides.Contains("left") && (link.state is LinkMoveLeftState || link.state is LinkIdleLeftState))
             {
                 link.state = new LinkHurtLeftState(link);
                 link.HealthStateMachine.BeHurt();
             }
-            else if (enemyCollisionSides.Contains("right") && link.state is LinkMoveRightState)
+            else if (enemyCollisionSides.Contains("right") && (link.state is LinkMoveRightState || link.state is LinkIdleRightState))
             {
                 link.state = new LinkHurtRightState(link);
                 link.HealthStateMachine.BeHurt();
