@@ -2,8 +2,8 @@
   <Asset Type="MyDataTypes.LevelObjectData[]">
     <Item>
       <ObjectType>Background</ObjectType>
-      <ObjectName>Room1</ObjectName>
-      <Location>0 1110</Location>
+      <ObjectName>Room0</ObjectName>
+      <Location>0 551</Location>
     </Item>
 
     <!--HUD-->
@@ -35,7 +35,7 @@
     <Item>
       <ObjectType>HUD</ObjectType>
       <ObjectName>HUDMapLocation</ObjectName>
-      <Location>118 -36</Location>
+      <Location>-1 -1</Location>
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
@@ -93,69 +93,5 @@
       <Location>400 -96</Location>
     </Item>
 
-
-    <Item>
-      <ObjectType>Link</ObjectType>
-      <ObjectName>Link</ObjectName> 
-      <Location>300 200</Location>
-    </Item>
-
-    <!--Walls-->
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>HorizontalWall</ObjectName>
-      <Location>0 0</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>HorizontalWall</ObjectName>
-      <Location>0 450</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>VerticalWall</ObjectName>
-      <Location>0 0</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>VerticalWall</ObjectName>
-      <Location>700 0</Location>
-    </Item>
-    
-    <!--Blocks-->
-
-    <!--Doors-->
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Door</ObjectName>
-      <Location>699 250</Location>
-      <DestinationRoomNumber>2</DestinationRoomNumber>
-      <Direction>Right</Direction>
-      <Locked>False</Locked>
-    </Item>
-
-    <!--Collectables-->
-    <Item>
-      <ObjectType>Collectable</ObjectType>
-      <ObjectName>Key</ObjectName>
-      <Location>320 256</Location>
-    </Item>
-
-    <!--Enemies-->
-    <Item>
-      <ObjectType>Enemy</ObjectType>
-      <ObjectName>Keese</ObjectName>
-      <Location>96 96</Location>
-    </Item>
-    <Item>
-      <ObjectType>Enemy</ObjectType>
-      <ObjectName>Keese</ObjectName>
-      <Location>96 224</Location>
-    </Item>
-    <Item>
-      <ObjectType>Enemy</ObjectType>
-      <ObjectName>Keese</ObjectName>
-      <Location>160 128</Location>
-    </Item>
   </Asset>
 </XnaContent>

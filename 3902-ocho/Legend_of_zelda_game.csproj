@@ -70,12 +70,11 @@
     <Compile Include="GameStates\StateManager.cs" />
     <Compile Include="GameStates\WinningState.cs" />
     <Compile Include="HUD\HUDArrowSprite.cs" />
-    <Compile Include="HUD\HUD0SymbolSprite.cs" />
     <Compile Include="HUD\HUDBackgroundSprite.cs" />
-    <Compile Include="HUD\HUDBlankSpaceSprite.cs" />
     <Compile Include="HUD\HUDBombNumbersSprite.cs" />
     <Compile Include="HUD\HUDBottomMapSprite.cs" />
     <Compile Include="HUD\HUDCommonMethods.cs" />
+    <Compile Include="HUD\HUDCompassLocation.cs" />
     <Compile Include="HUD\HUDFullHeartSprite.cs" />
     <Compile Include="HUD\HUDGemNumbersSprite.cs" />
     <Compile Include="HUD\HUDHealthNumbersSprite.cs" />
@@ -234,6 +233,7 @@
     <Content Include="bin\Windows\x86\Debug\3902-ocho.pdb" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.dll" />
     <Content Include="bin\Windows\x86\Debug\MonoGame.Framework.xml" />
+    <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room10File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room11File.xml" />
     <Content Include="bin\Windows\x86\Debug\Room12File.xml" />
@@ -292,7 +292,7 @@
     <Content Include="Code Reviews\Sprint4ReflectionEvan.txt" />
     <Content Include="Code Reviews\Sprint4XinyiMaintainability.txt" />
     <Content Include="Icon.ico" />
-    <Content Include="bin\Windows\x86\Debug\Room0File.xml" />
+    <Content Include="LevelFiles\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />
     <Content Include="LevelFiles\Room11File.xml" />
     <Content Include="LevelFiles\Room12File.xml" />

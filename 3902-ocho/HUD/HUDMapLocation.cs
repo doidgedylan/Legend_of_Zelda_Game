@@ -8,7 +8,6 @@ namespace Legend_of_zelda_game
     public class HUDMapLocation : IHUD
     {
         public Link link;
-        private ISet<ICollectable> collectableSet;
         public Texture2D spriteSheet;
         private SpriteBatch spriteBatch;
         private Rectangle sourceRectangle;
@@ -27,15 +26,8 @@ namespace Legend_of_zelda_game
 
         public void Update(Link link)
         {
-            collectableSet = link.LinkItems;
             sourceRectangle = GetMapDotSourceRectangle();
-            foreach (ICollectable collectable in collectableSet)
-            {
-                if (collectable is CollectableMapSprite)
-                {
-                    Draw();
-                }
-            }
+            Draw();
         }
 
         public void Draw()

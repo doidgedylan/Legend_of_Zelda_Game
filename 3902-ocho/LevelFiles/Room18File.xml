@@ -39,6 +39,11 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
+      <ObjectName>HUDCompassLocation</ObjectName>
+      <Location>214 -84</Location>
+    </Item>
+    <Item>
+      <ObjectType>HUD</ObjectType>
       <ObjectName>HUDGemNumbers</ObjectName>
       <Location>328 -120</Location>
     </Item>
