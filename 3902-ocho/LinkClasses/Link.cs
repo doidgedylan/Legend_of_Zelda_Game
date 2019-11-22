@@ -45,7 +45,7 @@ namespace Legend_of_zelda_game
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
             LinkPortals = new LinkPortals(this);
-            currentItem = "portals";
+            currentItem = "arrow";
             LinkItems = new HashSet<ICollectable>();
             LinkItems.Add(CollectableSpriteFactory.Instance.CreateBombSprite(spriteBatch, new Vector2(0, 0)));
             LinkItems.Add(CollectableSpriteFactory.Instance.CreateBoomerangSprite(spriteBatch, new Vector2(0, 0)));
