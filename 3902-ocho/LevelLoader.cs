@@ -119,7 +119,11 @@ namespace Legend_of_zelda_game
                 int DestRoomNumber = Int32.Parse(DestRoomNumberStr);
                 Direction direction = (Direction)Enum.Parse(typeof(Direction), DirectionStr);
                 bool locked = Boolean.Parse(LockedStr);
-                this.Blocks.Add(new Door(Location, DestRoomNumber, direction, locked));
+                this.Blocks.Add(new Door(Location, DestRoomNumber, direction));
+                if (locked)
+                {
+                    this.Blocks.Add(new LockedDoor(Location, direction, spriteBatch));
+                }
             }
             else
             {

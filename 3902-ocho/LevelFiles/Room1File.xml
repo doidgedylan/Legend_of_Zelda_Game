@@ -145,12 +145,12 @@
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 96</Location>
+      <Location>101 101</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 224</Location>
+      <Location>101 224</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>

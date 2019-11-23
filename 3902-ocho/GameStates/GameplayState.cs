@@ -67,6 +67,10 @@ namespace Legend_of_zelda_game.GameStates
             EnemyProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies);
 
 
+            foreach(IBlock block in game.CurrentRoom.Blocks)
+            {
+                block.Update();
+            }
             foreach (ISprite NPC in game.CurrentRoom.NPCs)
             {
                 NPC.Update();

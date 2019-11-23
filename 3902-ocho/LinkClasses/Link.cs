@@ -1,4 +1,5 @@
-﻿using Legend_of_zelda_game.LinkClasses;
+﻿using Legend_of_zelda_game.CollectableSprites;
+using Legend_of_zelda_game.LinkClasses;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -44,8 +45,12 @@ namespace Legend_of_zelda_game
             LinkCollisions = new LinkCollisions(this);
             LinkProjectiles = new LinkProjectiles(this);
             LinkPortals = new LinkPortals(this);
-            currentItem = "portals";
+            currentItem = "arrow";
             LinkItems = new HashSet<ICollectable>();
+            LinkItems.Add(CollectableSpriteFactory.Instance.CreateBombSprite(spriteBatch, new Vector2(0, 0)));
+            LinkItems.Add(CollectableSpriteFactory.Instance.CreateBoomerangSprite(spriteBatch, new Vector2(0, 0)));
+            LinkItems.Add(CollectableSpriteFactory.Instance.CreateArrowSprite(spriteBatch, new Vector2(0, 0)));
+            LinkItems.Add(new CollectablePortalSprite(spriteBatch, new Vector2(0, 0)));
             numGems = 0;
             numKeys = 0;
             numBombs = 5;

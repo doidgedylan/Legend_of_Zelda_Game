@@ -28,7 +28,7 @@ namespace Legend_of_zelda_game.GameStates
             game.ItemSelectRoom.Background.Draw();
 
             // location of current item box
-            int x = 215;
+            int x = 210;
             int y = 155 + 168;
             switch (link.currentItem)
             {
@@ -41,7 +41,7 @@ namespace Legend_of_zelda_game.GameStates
                 case "boomerang":
                     currentItemSprite = CollectableSpriteFactory.Instance.CreateBoomerangSprite(spriteBatch, new Vector2(x, y));
                     break;
-                case "portal":
+                case "portals":
                     currentItemSprite = new CollectablePortalSprite(spriteBatch, new Vector2(x, y));
                     break;
                 default:
@@ -51,9 +51,6 @@ namespace Legend_of_zelda_game.GameStates
             }
             currentItemSprite.Draw(spriteBatch);
 
-            // draw map sprite if link has it at (130, 350), then draw the dungeon map
-            // draw compass if link has it at (130, 470)
-            // draw the rest of link's items in their places in the inventory
             foreach (ICollectable item in link.LinkItems)
             {
                 ICollectable itemSprite = null;
@@ -63,6 +60,12 @@ namespace Legend_of_zelda_game.GameStates
                     x = 150;
                     y = 350 + 168;
                     itemSprite = CollectableSpriteFactory.Instance.CreateMapSprite(spriteBatch, new Vector2(x, y));
+                    // draw dungeon map here
+                    // int dotLocation = getDotLocation(currentRoom);
+                    //HUDMapLocation dot = new HUDMapLocation(spriteBatch, new Vector2(idk, idk), link);
+                    HUDMapSprite map = new HUDMapSprite(spriteBatch, new Vector2(370, 325 + 168), link);
+                    map.Update(link);
+                    map.Draw();
                 }
                 else if (item is CollectableCompassSprite)
                 {
@@ -71,9 +74,30 @@ namespace Legend_of_zelda_game.GameStates
                     y = 470 + 168;
                     itemSprite = CollectableSpriteFactory.Instance.CreateCompassSprite(spriteBatch, new Vector2(x, y));
                 }
-                //else if (item is a different sprite){
-                //  ...
-                //}
+                else if (item is CollectableBoomerangSprite)
+                {
+                    x = 420;
+                    y = 160 + 168;
+                    itemSprite = CollectableSpriteFactory.Instance.CreateBoomerangSprite(spriteBatch, new Vector2(x, y));
+                }
+                else if (item is CollectableBombSprite)
+                {
+                    x = 490;
+                    y = 160 + 168;
+                    itemSprite = CollectableSpriteFactory.Instance.CreateBombSprite(spriteBatch, new Vector2(x, y));
+                }
+                else if (item is CollectableArrowSprite)
+                {
+                    x = 560;
+                    y = 160 + 168;
+                    itemSprite = CollectableSpriteFactory.Instance.CreateArrowSprite(spriteBatch, new Vector2(x, y));
+                }
+                else if (item is CollectablePortalSprite)
+                {
+                    x = 630;
+                    y = 160 + 168;
+                    itemSprite = new CollectablePortalSprite(spriteBatch, new Vector2(x, y));
+                }
                 itemSprite.Draw(spriteBatch);
             }
         }
