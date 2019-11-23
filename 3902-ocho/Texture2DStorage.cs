@@ -35,7 +35,7 @@ namespace Legend_of_zelda_game
             backgroundSpriteSheetBottom = content.Load<Texture2D>("BackgroundSpriteSheetBottom");
             backgroundSpriteSheetTopLeft = content.Load<Texture2D>("BackgroundSpriteSheetTopLeft");
             backgroundSpriteSheetTopRight = content.Load<Texture2D>("BackgroundSpriteSheetTopRight");
-            headsUpDisplaySpriteSheet = content.Load<Texture2D>("HUD");
+            headsUpDisplaySpriteSheet = content.Load<Texture2D>("HUD2");
             portalSpriteSheet = content.Load<Texture2D>("portals");
             titleScreenSpriteSheet = content.Load<Texture2D>("TitleScreenSpriteSheet");
         }
