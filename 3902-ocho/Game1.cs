@@ -8,6 +8,7 @@ using Legend_of_zelda_game.Controllers;
 using Legend_of_zelda_game.Commands;
 using Legend_of_zelda_game.GameStates;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Legend_of_zelda_game
 {
@@ -35,7 +36,8 @@ namespace Legend_of_zelda_game
         public Room[] Rooms { get; set; }
         public Room CurrentRoom { get; set; }
         public Room ItemSelectRoom { get; set; }
-        private Song bgm;
+        //private Song bgm;
+        private SoundEffect effect;
 
         public Game1()
         {
@@ -88,6 +90,12 @@ namespace Legend_of_zelda_game
             //bgm = Content.Load<Song>("OverworldSound");
             //MediaPlayer.Play(bgm);
             //MediaPlayer.IsRepeating = true;
+
+
+            effect = Content.Load<SoundEffect>("OverworldSound");
+            SoundEffectInstance instance = effect.CreateInstance();
+            instance.Play();
+
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
