@@ -160,7 +160,7 @@
       <Location>51 250</Location>
       <DestinationRoomNumber>10</DestinationRoomNumber>
       <Direction>Left</Direction>
-      <Locked>True</Locked>
+      <Locked>False</Locked>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>

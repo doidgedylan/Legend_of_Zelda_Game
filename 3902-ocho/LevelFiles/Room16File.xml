@@ -3,7 +3,7 @@
     <Item>
       <ObjectType>Background</ObjectType>
       <ObjectName>Room18</ObjectName>
-      <Location>807 0</Location>
+      <Location>0 0</Location>
     </Item>
 
     <!--HUD-->
@@ -123,47 +123,7 @@
     </Item>
     
     <!--Blocks-->
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>400 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>450 200</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>500 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>450 300</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>400 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>350 300</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>300 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>Block</ObjectName>
-      <Location>350 200</Location>
-    </Item>
-    
+
     <!--Doors-->
     <Item>
       <ObjectType>Block</ObjectType>
@@ -184,23 +144,23 @@
     <!--Enemies-->
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Trap</ObjectName>
-      <Location>100 100</Location>
+      <ObjectName>Keese</ObjectName>
+      <Location>155 240</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Trap</ObjectName>
-      <Location>100 400</Location>
+      <ObjectName>Keese</ObjectName>
+      <Location>530 200</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Trap</ObjectName>
-      <Location>650 100</Location>
+      <ObjectName>Keese</ObjectName>
+      <Location>620 250</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Trap</ObjectName>
-      <Location>650 400</Location>
+      <ObjectName>Keese</ObjectName>
+      <Location>300 320</Location>
     </Item>
   </Asset>
 </XnaContent>

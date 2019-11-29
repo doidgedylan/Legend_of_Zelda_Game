@@ -89,7 +89,7 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDItemB</ObjectName>
+      <ObjectName>HUDArrow</ObjectName>
       <Location>400 -96</Location>
     </Item>
 
@@ -145,12 +145,12 @@
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>101 101</Location>
+      <Location>96 96</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>101 224</Location>
+      <Location>96 224</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>

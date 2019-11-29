@@ -169,7 +169,7 @@
       <Location>375 449</Location>
       <DestinationRoomNumber>2</DestinationRoomNumber>
       <Direction>Down</Direction>
-      <Locked>True</Locked>
+      <Locked>False</Locked>
     </Item>
 
     <!--Collectables-->

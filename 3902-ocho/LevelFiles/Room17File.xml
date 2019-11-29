@@ -3,7 +3,7 @@
     <Item>
       <ObjectType>Background</ObjectType>
       <ObjectName>Room18</ObjectName>
-      <Location>1615 0</Location>
+      <Location>808 0</Location>
     </Item>
 
     <!--HUD-->
@@ -125,123 +125,43 @@
     <!--Blocks-->
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>150 150</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>400 150</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>200 150</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>450 200</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>250 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>500 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>550 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>600 150</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>150 200</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>150 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>150 300</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>150 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>200 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>250 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>250 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>300 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>350 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>400 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>450 250</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
+      <ObjectName>Block</ObjectName>
       <Location>500 250</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>600 200</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>450 300</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>600 250</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>400 350</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>600 300</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>350 300</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>600 350</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>300 250</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>550 350</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
-      <Location>500 350</Location>
+      <ObjectName>Block</ObjectName>
+      <Location>350 200</Location>
     </Item>
 
     <!--Doors-->
@@ -267,18 +187,23 @@
     <!--Enemies-->
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Goriya</ObjectName>
-      <Location>300 200</Location>
+      <ObjectName>Trap</ObjectName>
+      <Location>100 100</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Goriya</ObjectName>
-      <Location>450 200</Location>
+      <ObjectName>Trap</ObjectName>
+      <Location>100 400</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
-      <ObjectName>Goriya</ObjectName>
-      <Location>500 100</Location>
+      <ObjectName>Trap</ObjectName>
+      <Location>650 100</Location>
+    </Item>
+    <Item>
+      <ObjectType>Enemy</ObjectType>
+      <ObjectName>Trap</ObjectName>
+      <Location>650 400</Location>
     </Item>
   </Asset>
 </XnaContent>
