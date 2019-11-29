@@ -10,7 +10,6 @@ namespace Legend_of_zelda_game.GameStates
     {
         private TitleScreenState titleScreenState;
         private GameplayState gameplayState;
-        private PauseState pauseState;
         private ItemSelectState itemSelectState;
         private GameOverState gameOverState;
         private WinningState winningState;
@@ -25,7 +24,6 @@ namespace Legend_of_zelda_game.GameStates
             this.link = link;
             this.titleScreenState = new TitleScreenState(game);
             this.gameplayState = new GameplayState(game, link);
-            this.pauseState = new PauseState(game, spriteBatch, font);
             this.gameOverState = new GameOverState(game, spriteBatch, font);
             this.winningState = new WinningState(game, spriteBatch, font);
             this.itemSelectState = new ItemSelectState(game, link, spriteBatch, font);
@@ -39,17 +37,6 @@ namespace Legend_of_zelda_game.GameStates
         public void SetGameplayState()
         {
             game.CurrentState = gameplayState;
-        }
-
-        public void SetPauseState()
-        {
-            if (game.CurrentState == pauseState){
-                SetGameplayState();
-            }
-            else
-            {
-                game.CurrentState = pauseState;
-            }
         }
 
         public void SetItemSelectState()

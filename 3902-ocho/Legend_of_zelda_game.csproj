@@ -66,7 +66,6 @@
     <Compile Include="GameStates\TitleScreenState.cs" />
     <Compile Include="GameStates\GameplayState.cs" />
     <Compile Include="GameStates\ItemSelectState.cs" />
-    <Compile Include="GameStates\PauseState.cs" />
     <Compile Include="GameStates\ScrollingTransitionState.cs" />
     <Compile Include="GameStates\StateManager.cs" />
     <Compile Include="GameStates\WinningState.cs" />
