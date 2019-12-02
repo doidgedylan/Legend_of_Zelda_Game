@@ -1,10 +1,6 @@
-﻿using Legend_of_zelda_game.EnemySprites;
-using Legend_of_zelda_game.Interfaces;
-using Legend_of_zelda_game.TitleScreen;
+﻿using Legend_of_zelda_game.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
 
 namespace Legend_of_zelda_game.GameStates
 {

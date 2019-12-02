@@ -1,0 +1,9 @@
+﻿Author: Evan Standerwick
+Date: 12/2/19
+Sprint: 5
+Name of reviewed file: HUDLifeBlankBackgroundSprite.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 5
+Specific comments: The class could be named better, in my opinion, as I'm not entirely sure upon first glance what it is implementing. 
+	However, the variables were named well and I didn't find any need for them to be explained further, as the code was essentially
+	self-documenting.

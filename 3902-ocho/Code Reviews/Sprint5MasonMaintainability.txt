@@ -1,0 +1,11 @@
+﻿Author: Evan Standerwick
+Date: 12/2/19
+Sprint: 5
+Name of reviewed file: GameModeSelectScreenState.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 10
+Specific comments on code quality: The class is both cohesive and loosely coupled. Essentially, all it does is allow the user to 
+	choose which game mode they would like to play. The class only relies on outside logic where absolutely necessary,
+	and is very readable.
+Hypothetical change and response: The class could become even less coupled if changes to the Game class were made, such as making it
+	a static class. But, as the project is currently structured, it's about as loosely coupled as can be reasonably expected.
