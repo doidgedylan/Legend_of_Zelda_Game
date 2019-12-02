@@ -8,52 +8,76 @@ namespace Legend_of_zelda_game.Controllers
     {
         private Dictionary<Buttons, ICommand> commandMappings;
         private Dictionary<Keys, Buttons> keyMappings;
+        private string screenState;
         public KeyboardState previousState;
         public KeyboardState currentState;
 
-        public KeyboardController()
+        public KeyboardController(string screenState)
         {
+            this.screenState = screenState;
             previousState = Keyboard.GetState();
             currentState = Keyboard.GetState();
             commandMappings = new Dictionary<Buttons, ICommand>();
             keyMappings = new Dictionary<Keys, Buttons>();
+            AddKeyMappings();
+        }
 
-            keyMappings.Add(Keys.Enter, Buttons.Enter);
-            keyMappings.Add(Keys.Up, Buttons.Up);
-            keyMappings.Add(Keys.Down, Buttons.Down);
-            keyMappings.Add(Keys.Left, Buttons.Left);
-            keyMappings.Add(Keys.Right, Buttons.Right);
-            keyMappings.Add(Keys.W, Buttons.W);
-            keyMappings.Add(Keys.A, Buttons.A);
-            keyMappings.Add(Keys.S, Buttons.S);
-            keyMappings.Add(Keys.D, Buttons.D);
-            keyMappings.Add(Keys.Z, Buttons.Z);
-            keyMappings.Add(Keys.X, Buttons.X);
-            keyMappings.Add(Keys.C, Buttons.C);
-            keyMappings.Add(Keys.N, Buttons.N);
-            keyMappings.Add(Keys.Q, Buttons.Q);
-            keyMappings.Add(Keys.R, Buttons.R);
-            keyMappings.Add(Keys.B, Buttons.B);
-            keyMappings.Add(Keys.G, Buttons.G);
-            keyMappings.Add(Keys.D1, Buttons.D1);
-            keyMappings.Add(Keys.D2, Buttons.D2);
-            keyMappings.Add(Keys.D3, Buttons.D3);
-            keyMappings.Add(Keys.D4, Buttons.D4);
-            keyMappings.Add(Keys.D5, Buttons.D5);
-            keyMappings.Add(Keys.D6, Buttons.D6);
-            keyMappings.Add(Keys.D7, Buttons.D7);
-            keyMappings.Add(Keys.D8, Buttons.D8);
-            keyMappings.Add(Keys.D9, Buttons.D9);
-            keyMappings.Add(Keys.D0, Buttons.D0);
-            keyMappings.Add(Keys.NumPad1, Buttons.NumPad1);
-            keyMappings.Add(Keys.NumPad2, Buttons.NumPad2);
-            keyMappings.Add(Keys.NumPad3, Buttons.NumPad3);
-            keyMappings.Add(Keys.NumPad4, Buttons.NumPad4);
-            keyMappings.Add(Keys.NumPad5, Buttons.NumPad5);
-            keyMappings.Add(Keys.NumPad6, Buttons.NumPad6);
-            keyMappings.Add(Keys.NumPad7, Buttons.NumPad7);
-            keyMappings.Add(Keys.NumPad8, Buttons.NumPad8);
+        public void AddKeyMappings()
+        {
+            //Add unanimous keys
             keyMappings.Add(Keys.None, Buttons.NoButtonsPressed);
+            keyMappings.Add(Keys.Q, Buttons.Q);
+
+            //Add unique keys
+            switch (screenState)
+            {
+                case "titleScreen":
+                    keyMappings.Add(Keys.Enter, Buttons.Enter);
+                    break;
+                case "gameModeSelectScreen":
+                    keyMappings.Add(Keys.Enter, Buttons.Enter);
+                    keyMappings.Add(Keys.Down, Buttons.Down);
+                    keyMappings.Add(Keys.Up, Buttons.Up);
+                    break;
+                case "gameplay":
+                    keyMappings.Add(Keys.Enter, Buttons.Enter);
+                    keyMappings.Add(Keys.Up, Buttons.Up);
+                    keyMappings.Add(Keys.Down, Buttons.Down);
+                    keyMappings.Add(Keys.Left, Buttons.Left);
+                    keyMappings.Add(Keys.Right, Buttons.Right);
+                    keyMappings.Add(Keys.W, Buttons.W);
+                    keyMappings.Add(Keys.A, Buttons.A);
+                    keyMappings.Add(Keys.S, Buttons.S);
+                    keyMappings.Add(Keys.D, Buttons.D);
+                    keyMappings.Add(Keys.Z, Buttons.Z);
+                    keyMappings.Add(Keys.X, Buttons.X);
+                    keyMappings.Add(Keys.C, Buttons.C);
+                    keyMappings.Add(Keys.N, Buttons.N);
+                    keyMappings.Add(Keys.R, Buttons.R);
+                    keyMappings.Add(Keys.B, Buttons.B);
+                    keyMappings.Add(Keys.G, Buttons.G);
+                    keyMappings.Add(Keys.D1, Buttons.D1);
+                    keyMappings.Add(Keys.D2, Buttons.D2);
+                    keyMappings.Add(Keys.D3, Buttons.D3);
+                    keyMappings.Add(Keys.D4, Buttons.D4);
+                    keyMappings.Add(Keys.D5, Buttons.D5);
+                    keyMappings.Add(Keys.D6, Buttons.D6);
+                    keyMappings.Add(Keys.D7, Buttons.D7);
+                    keyMappings.Add(Keys.D8, Buttons.D8);
+                    keyMappings.Add(Keys.D9, Buttons.D9);
+                    keyMappings.Add(Keys.D0, Buttons.D0);
+                    keyMappings.Add(Keys.NumPad1, Buttons.NumPad1);
+                    keyMappings.Add(Keys.NumPad2, Buttons.NumPad2);
+                    keyMappings.Add(Keys.NumPad3, Buttons.NumPad3);
+                    keyMappings.Add(Keys.NumPad4, Buttons.NumPad4);
+                    keyMappings.Add(Keys.NumPad5, Buttons.NumPad5);
+                    keyMappings.Add(Keys.NumPad6, Buttons.NumPad6);
+                    keyMappings.Add(Keys.NumPad7, Buttons.NumPad7);
+                    keyMappings.Add(Keys.NumPad8, Buttons.NumPad8);
+                    break;
+                default :
+                    break;
+            }
         }
 
         public void RegisterCommand(Buttons button, ICommand command)

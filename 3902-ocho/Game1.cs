@@ -107,7 +107,7 @@ namespace Legend_of_zelda_game
             StateManager.SetTitleScreenState();
 
             //Set up title screen keyboard and mouse controller
-            titleScreenKeyboardController = new KeyboardController();
+            titleScreenKeyboardController = new KeyboardController("titleScreen");
             titleScreenMouseController = new MouseController();
             titleScreenKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new DoNothingCommand());
             titleScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGameModeSelectScreenCommand(this));
@@ -116,7 +116,7 @@ namespace Legend_of_zelda_game
             titleScreenMouseController.RegisterCommand(Buttons.RightClick, new DoNothingCommand());
 
             //Set up game mode select screen keyboard and mouse controller
-            gameModeSelectScreenKeyboardController = new KeyboardController();
+            gameModeSelectScreenKeyboardController = new KeyboardController("gameModeSelectScreen");
             gameModeSelectScreenMouseController = new MouseController();
             gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new DoNothingCommand());
             gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGamePlayCommand(this));
@@ -127,7 +127,7 @@ namespace Legend_of_zelda_game
             gameModeSelectScreenMouseController.RegisterCommand(Buttons.RightClick, new DoNothingCommand());
 
             //Set up gameplay keyboard and mouse controller
-            gameplayKeyboardController = new KeyboardController();
+            gameplayKeyboardController = new KeyboardController("gameplay");
             gameplayMouseController = new MouseController();
             gameplayKeyboardController.RegisterCommand(Buttons.Enter, new DoNothingCommand());
             gameplayKeyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
