@@ -280,20 +280,14 @@ namespace Legend_of_zelda_game
                     case "HUDLifeBlankBackground":
                         this.HUD.Add(new HUDLifeBlankBackgroundSprite(spriteBatch, Location));
                         break;
-                    case "HUDTopMap":
-                        this.HUD.Add(new HUDTopMapSprite(spriteBatch, Location));
-                        break;
-                    case "HUDBottomMap":
-                        this.HUD.Add(new HUDBottomMapSprite(spriteBatch, Location));
-                        break;
-                    case "HUDTopAndBottomMap":
-                        this.HUD.Add(new HUDTopAndBottomMapSprite(spriteBatch, Location));
-                        break;
                     case "HUDWoodSword":
                         this.HUD.Add(new HUDWoodSwordSprite(spriteBatch, Location));
                         break;
                     case "HUDArrow":
                         this.HUD.Add(new HUDArrowSprite(spriteBatch, Location));
+                        break;
+                    case "HUDItemB":
+                        this.HUD.Add(new HUDItemBSprite(spriteBatch, Location, Link));
                         break;
                     default:
                         // do nothing

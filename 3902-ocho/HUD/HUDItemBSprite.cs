@@ -46,6 +46,10 @@ namespace Legend_of_zelda_game
                 currentSpriteSheet = PortalSpriteSheet;
                 sourceRectangle = GetPortalSourceRectangle();
             }
+            else if (currentItem.Equals("boomerang"))
+            {
+                sourceRectangle = GetBoomerangSourceRectangle();
+            }
             Draw();
         }
 
@@ -82,7 +86,7 @@ namespace Legend_of_zelda_game
         {
             width = 8;
             height = 16;
-            Rectangle rectangle = new Rectangle(136, 126, width, height);
+            Rectangle rectangle = new Rectangle(136, 0, width, height);
             return rectangle;
         }
 

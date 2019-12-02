@@ -89,7 +89,7 @@
     </Item>
     <Item>
       <ObjectType>HUD</ObjectType>
-      <ObjectName>HUDArrow</ObjectName>
+      <ObjectName>HUDItemB</ObjectName>
       <Location>400 -96</Location>
     </Item>
 
