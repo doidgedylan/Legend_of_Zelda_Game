@@ -10,6 +10,8 @@ using Legend_of_zelda_game.GameStates;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
+using System;
+//using SharpDX.MediaFoundation.Topology;
 
 namespace Legend_of_zelda_game
 {
@@ -41,7 +43,7 @@ namespace Legend_of_zelda_game
         public Room ItemSelectRoom { get; set; }
         public bool HordeMode;
         //private Song bgm;
-        private SoundEffect effect;
+        //private SoundEffect effect;
 
         public Game1()
         {
@@ -95,11 +97,12 @@ namespace Legend_of_zelda_game
             //bgm = Content.Load<Song>("OverworldSound");
             //MediaPlayer.Play(bgm);
             //MediaPlayer.IsRepeating = true;
-
-
             //effect = Content.Load<SoundEffect>("OverworldSound");
             //SoundEffectInstance instance = effect.CreateInstance();
             //instance.Play();
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Magical.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
+            player.Play();
 
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
