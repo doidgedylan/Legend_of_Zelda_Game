@@ -11,6 +11,7 @@ namespace Legend_of_zelda_game.EnemySprites
     {
         private IEnemies enemy;
         private string[] directions = new string[4];
+        private int movementTimer;
         
         public EnemyCollisions(IEnemies enemy)
         {
@@ -19,10 +20,13 @@ namespace Legend_of_zelda_game.EnemySprites
             directions[1] = "right";
             directions[2] = "down";
             directions[3] = "left";
+            movementTimer = 0;
         }
 
         public void Update(ISet<IBlock> blocks)
         {
+            movementTimer++;
+            bool collidedWithBlock = false;
             if (!enemy.Direction.Equals("none"))
             {
                 foreach (IBlock block in blocks)
@@ -31,7 +35,14 @@ namespace Legend_of_zelda_game.EnemySprites
                     {
                         enemy.UndoCollision();
                         enemy.Direction = RandomDirection(enemy.Direction);
+                        collidedWithBlock = true;
                     }
+                }
+
+                if (!collidedWithBlock && movementTimer > RandomMovementTimerMax())
+                {
+                    enemy.Direction = RandomDirection(enemy.Direction);
+                    movementTimer = 0;
                 }
             }
         }
@@ -62,6 +73,12 @@ namespace Legend_of_zelda_game.EnemySprites
             
 
             return direction;
+        }
+
+        public int RandomMovementTimerMax()
+        {
+            Random random = new Random();
+            return random.Next(100, 300);
         }
 
         public bool EnemyCollision(Rectangle colliderRect, Rectangle collideeRect)

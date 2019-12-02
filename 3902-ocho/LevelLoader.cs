@@ -189,6 +189,9 @@ namespace Legend_of_zelda_game
                     case "MultipleRupee":
                         this.Collectables.Add(CollectableSpriteFactory.Instance.CreateMultipleRupeeSprite(spriteBatch, Location));
                         break;
+                    case "Portal":
+                        this.Collectables.Add(CollectableSpriteFactory.Instance.CreatePortalSprite(spriteBatch, Location));
+                        break;
                     case "SingleRupee":
                         this.Collectables.Add(CollectableSpriteFactory.Instance.CreateSingleRupeeSprite(spriteBatch, Location));
                         break;

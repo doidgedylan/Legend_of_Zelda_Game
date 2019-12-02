@@ -1,4 +1,5 @@
 ﻿using Legend_of_zelda_game.LinkSprites;
+using Microsoft.Xna.Framework;
 
 namespace Legend_of_zelda_game
 {
@@ -6,12 +7,15 @@ namespace Legend_of_zelda_game
     public class LinkPickUpItemState : ILinkState
     {
         private Link link;
+        ICollectable collectable;
         int currentFrame;
         int totalFrames;
 
-        public LinkPickUpItemState(Link link)
+        public LinkPickUpItemState(Link link, ICollectable collectable)
         {
             this.link = link;
+            this.collectable = collectable;
+            this.collectable.LocationRect = new Rectangle((int)link.Location.X, (int)link.Location.Y - collectable.LocationRect.Height, collectable.LocationRect.Width, collectable.LocationRect.Height);
             currentFrame = 0;
             totalFrames = 100;
         }
@@ -31,6 +35,7 @@ namespace Legend_of_zelda_game
             {
                 linkPickUpItemSprite2.Draw();
             }
+            collectable.Update();
 
             if (currentFrame == totalFrames)
             {

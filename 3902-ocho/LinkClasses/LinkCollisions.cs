@@ -296,10 +296,11 @@ namespace Legend_of_zelda_game.LinkClasses
                     else if (collectable is CollectableSwordSprite || 
                         collectable is CollectableBowSprite ||
                         collectable is CollectableBoomerangSprite ||
-                        collectable is CollectableBombSprite)
+                        collectable is CollectableBombSprite ||
+                        collectable is CollectablePortalSprite)
                     {
                         link.LinkItems.Add(collectable);
-                        link.state = new LinkPickUpItemState(link);
+                        link.state = new LinkPickUpItemState(link, collectable);
                     }
                     collectables.Remove(collectable);
                 }

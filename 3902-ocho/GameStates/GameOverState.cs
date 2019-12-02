@@ -8,19 +8,32 @@ namespace Legend_of_zelda_game.GameStates
     public class GameOverState : IGameState
     {
         private Game1 game;
+        private Texture2D spriteSheet;
         private SpriteFont font;
         private SpriteBatch spriteBatch;
+        private int timer;
         public GameOverState(Game1 game, SpriteBatch spriteBatch, SpriteFont font)
         {
             this.game = game;
-            this.font = font;
+            spriteSheet = Texture2DStorage.GetYouDiedSpriteSheet();
             this.spriteBatch = spriteBatch;
+            this.font = font;
+            timer = 0;
         }
         public void Update()
         {
-            game.CurrentRoom.Background.Draw();
-            spriteBatch.DrawString(font, "Game Over", new Vector2(300, 250), Color.Black);
-            spriteBatch.DrawString(font, "Press R to replay, or Q to quit", new Vector2(300, 350), Color.Black);
+            if (timer < 50)
+            {
+                timer++;
+                game.CurrentRoom.Background.Draw();
+            } 
+            else
+            {
+                game.GraphicsDevice.Clear(Color.Black);
+                spriteBatch.Draw(spriteSheet, new Rectangle(100, 100, 600, 250), new Rectangle(0, 0, 574, 235), Color.White);
+                spriteBatch.DrawString(font, "Press R to Replay", new Vector2(250, 500), Color.White);
+                spriteBatch.DrawString(font, "Press Q to Quit", new Vector2(250, 525), Color.White);
+            }
         }
     }
 }

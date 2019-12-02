@@ -88,6 +88,11 @@ namespace Legend_of_zelda_game
             return new CollectableMultipleRupeeSprite(spriteBatch, location);
         }
 
+        public ICollectable CreatePortalSprite(SpriteBatch spriteBatch, Vector2 location)
+        {
+            return new CollectablePortalSprite(spriteBatch, location);
+        }
+
         public ICollectable CreateSingleRupeeSprite(SpriteBatch spriteBatch, Vector2 location)
         {
             return new CollectableSingleRupeeSprite(spriteBatch, location);

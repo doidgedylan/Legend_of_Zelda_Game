@@ -211,6 +211,11 @@
     </Item>
     
     <!--Collectables-->
+    <Item>
+      <ObjectType>Portal</ObjectType>
+      <ObjectName>Portal</ObjectName>
+      <Location>250 250</Location>
+    </Item>
 
     <!--Enemies-->
     
