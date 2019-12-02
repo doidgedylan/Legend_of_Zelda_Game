@@ -13,12 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../bgm/New folder/OverworldSound.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:../../../../bgm/New folder/OverworldSound.mp3;OverworldSound.mp3
-
 #begin BackgroundSpriteSheetBottom.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -85,6 +79,25 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:DungeonEnemiesSpriteSheet.png
+
+#begin EnemySpawnerSprite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:EnemySpawnerSprite.png
+
+#begin GameModeSelectScreenFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:GameModeSelectScreenFont.spritefont
 
 #begin GoriyaSpriteSheet.png
 /importer:TextureImporter
@@ -169,6 +182,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:NPCOldMan.png
+
+#begin OverworldSound.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:OverworldSound.mp3
 
 #begin portals.png
 /importer:TextureImporter

@@ -9,6 +9,7 @@ namespace Legend_of_zelda_game.GameStates
     public class StateManager
     {
         private TitleScreenState titleScreenState;
+        private GameModeSelectScreenState gameModeSelectScreenState;
         private GameplayState gameplayState;
         private ItemSelectState itemSelectState;
         private GameOverState gameOverState;
@@ -23,6 +24,7 @@ namespace Legend_of_zelda_game.GameStates
             this.game = game;
             this.link = link;
             this.titleScreenState = new TitleScreenState(game);
+            this.gameModeSelectScreenState = new GameModeSelectScreenState(game);
             this.gameplayState = new GameplayState(game, link);
             this.gameOverState = new GameOverState(game, spriteBatch, font);
             this.winningState = new WinningState(game, spriteBatch, font);
@@ -32,6 +34,11 @@ namespace Legend_of_zelda_game.GameStates
         public void SetTitleScreenState()
         {
             game.CurrentState = titleScreenState;
+        }
+
+        public void SetGameModeSelectScreenState()
+        {
+            game.CurrentState = gameModeSelectScreenState;
         }
 
         public void SetGameplayState()
@@ -52,6 +59,11 @@ namespace Legend_of_zelda_game.GameStates
         public void SetGameOverState()
         {
             game.CurrentState = gameOverState;
+        }
+
+        public GameModeSelectScreenState GetGameModeSelectState()
+        {
+            return gameModeSelectScreenState;
         }
 
         public void RoomTransition(Door door)

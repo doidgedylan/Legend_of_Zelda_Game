@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Legend_of_zelda_game.Blocks;
 using Legend_of_zelda_game.EnemySprites;
 using static Legend_of_zelda_game.Blocks.Door;
+using Legend_of_zelda_game.EnemySpawners;
 
 namespace Legend_of_zelda_game
 {
@@ -21,6 +22,7 @@ namespace Legend_of_zelda_game
         public IBackground Background { get; set; }
         public Link Link { get; set; }
         public ISet<IEnemies> Enemies { get; set; }
+        public ISet<IEnemySpawner> EnemySpawners { get; set; }
         public ISet<IBlock> Blocks { get; set; }
         public ISet<ICollectable> Collectables { get; set; }
         public ISet<ISprite> NPCs { get; set; }
@@ -31,6 +33,7 @@ namespace Legend_of_zelda_game
             this.spriteBatch = spriteBatch;
             this.Backgrounds = new HashSet<IBackground>();
             this.Enemies = new HashSet<IEnemies>();
+            this.EnemySpawners = new HashSet<IEnemySpawner>();
             this.Blocks = new HashSet<IBlock>();
             this.Collectables = new HashSet<ICollectable>();
             this.NPCs = new HashSet<ISprite>();
@@ -215,6 +218,9 @@ namespace Legend_of_zelda_game
                         break;
                     case "Wallmaster":
                         this.Enemies.Add(new EnemiesWallmasterSprite(spriteBatch, Location));
+                        break;
+                    case "StalfosSpawner":
+                        this.EnemySpawners.Add(new EnemySpawner(spriteBatch, Location, "Stalfos"));
                         break;
                     case "Link":
                         //this.Link = new Link(spriteBatch, Location);

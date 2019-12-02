@@ -3,6 +3,7 @@ using Legend_of_zelda_game.Interfaces;
 using Legend_of_zelda_game.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 
 namespace Legend_of_zelda_game.LinkClasses
@@ -24,7 +25,7 @@ namespace Legend_of_zelda_game.LinkClasses
             SharedProjectileMethods = new SharedProjectileMethods();
         }
 
-        public void Update(ISet<IProjectile> projectiles, ISet<IEnemies> enemies)
+        public void Update(ISet<IProjectile> projectiles, ISet<IEnemies> enemies, ISet<IEnemySpawner> enemySpawners)
         {
             if (SharedLinkProjectileMethods.checkLinkState())
             {
@@ -51,12 +52,22 @@ namespace Legend_of_zelda_game.LinkClasses
                     {
                         projectileInAir = false;
                         projectilesToRemove.Add(projectile);
-                        enemy.HealthStateMachine.BeHurt(); ;
+                        enemy.HealthStateMachine.BeHurt();
                     }
                 }
 
-                //Check if projectile hit wall
-                if(projectileInAir && SharedProjectileMethods.LocationOutOfBounds(projectile.Location))
+                foreach (IEnemySpawner enemySpawner in enemySpawners)
+                {
+                    if (projectileInAir && SharedProjectileMethods.ProjectileCollision(projectile.LocationRect, enemySpawner.LocationRect))
+                    {
+                        projectileInAir = false;
+                        projectilesToRemove.Add(projectile);
+                        enemySpawner.HealthStateMachine.BeHurt();
+                    }
+                }
+
+                    //Check if projectile hit wall
+                    if (projectileInAir && SharedProjectileMethods.LocationOutOfBounds(projectile.Location))
                 {
                     projectileInAir = false;
                     projectilesToRemove.Add(projectile);

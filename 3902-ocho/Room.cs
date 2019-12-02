@@ -18,6 +18,7 @@ namespace Legend_of_zelda_game
         public ISet<IProjectile> LinkProjectiles { get; }
         public ISet<IProjectile> LinkPortals { get; }
         public ISet<IProjectile> EnemyProjectiles { get; }
+        public ISet<IEnemySpawner> EnemySpawners { get; }
 
         public Room(int roomNumber, SpriteBatch spriteBatch)
         {
@@ -35,6 +36,7 @@ namespace Legend_of_zelda_game
             this.LinkProjectiles = new HashSet<IProjectile>();
             this.LinkPortals = new HashSet<IProjectile>();
             this.EnemyProjectiles = new HashSet<IProjectile>();
+            this.EnemySpawners = Loader.EnemySpawners;
         }
     }
 }

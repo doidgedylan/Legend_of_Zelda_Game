@@ -8,9 +8,13 @@ namespace Legend_of_zelda_game.Controllers
     {
         private readonly int[] WindowSize = { 800, 480 };
         private Dictionary<Buttons, ICommand> buttonMappings;
+        public MouseState previousState;
+        public MouseState currentState;
 
         public MouseController()
         {
+            previousState = Mouse.GetState();
+            currentState = Mouse.GetState();
             buttonMappings = new Dictionary<Buttons, ICommand>();
         }
 
@@ -26,17 +30,23 @@ namespace Legend_of_zelda_game.Controllers
 
         public void Update()
         {
-            MouseState CurrentState = Mouse.GetState();
-            int MouseX = CurrentState.X;
-            int MouseY = CurrentState.Y;
-            if (CursorIsInBounds(CurrentState, WindowSize[0], WindowSize[1]) && (CurrentState.RightButton == ButtonState.Pressed))
+            UpdateStates();
+            int MouseX = currentState.X;
+            int MouseY = currentState.Y;
+            if (CursorIsInBounds(currentState, WindowSize[0], WindowSize[1]) && (currentState.RightButton == ButtonState.Pressed))
             {
                 buttonMappings[Buttons.RightClick].Execute();
             }
-            else if(CursorIsInBounds(CurrentState, WindowSize[0], WindowSize[1]) && (CurrentState.LeftButton == ButtonState.Pressed))
+            else if(CursorIsInBounds(currentState, WindowSize[0], WindowSize[1]) && (currentState.LeftButton == ButtonState.Pressed))
             {
                 buttonMappings[Buttons.LeftClick].Execute();
             }
+        }
+
+        public void UpdateStates()
+        {
+            previousState = currentState;
+            currentState = Mouse.GetState();
         }
     }
 }

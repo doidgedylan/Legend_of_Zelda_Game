@@ -63,13 +63,13 @@ namespace Legend_of_zelda_game.Controllers
 
         public void Update()
         {
-            previousState = currentState;
-            currentState = Keyboard.GetState();
+            UpdateStates();
             Keys[] pressedKeys = currentState.GetPressedKeys();
             foreach (Keys key in pressedKeys)
             {
                 if (keyMappings.ContainsKey(key))
                 {
+                    
                     commandMappings[keyMappings[key]].Execute();
                 }
             }
@@ -77,6 +77,12 @@ namespace Legend_of_zelda_game.Controllers
             {
                 commandMappings[keyMappings[Keys.None]].Execute();
             }
+        }
+
+        public void UpdateStates()
+        {
+            previousState = currentState;
+            currentState = Keyboard.GetState();
         }
     }
 }

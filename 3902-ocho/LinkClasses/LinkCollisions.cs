@@ -19,10 +19,11 @@ namespace Legend_of_zelda_game.LinkClasses
             this.link = link;
         }
 
-        public void Update(ISet<ICollectable> collectables, ISet<IEnemies> enemies, ISet<IBlock> blocks, StateManager stateManager)
+        public void Update(ISet<ICollectable> collectables, ISet<IEnemies> enemies, ISet<IEnemySpawner> enemySpawners, ISet<IBlock> blocks, StateManager stateManager)
         {
             LinkCollisionCollectable(collectables);
             LinkCollisionEnemy(enemies);
+            LinkCollisionEnemySpawner(enemySpawners);
             LinkCollisionBlock(blocks, stateManager);
         }
 
@@ -189,6 +190,52 @@ namespace Legend_of_zelda_game.LinkClasses
                     {
                         enemy.HealthStateMachine.BeHurt();
                     }
+                }
+            }
+        }
+
+        public void LinkCollisionEnemySpawner(ISet<IEnemySpawner> enemySpawners)
+        {
+            IList<string> enemySpawnerCollisionSides = new List<string>();
+            IList<IEnemySpawner> enemySpawnerCollisions = new List<IEnemySpawner>();
+            foreach (IEnemySpawner enemySpawner in enemySpawners)
+            {
+                string linkCollision = LinkCollison(link.locationRect, enemySpawner.LocationRect).Item1;
+                if (linkCollision != "none")
+                {
+                    enemySpawnerCollisionSides.Add(linkCollision);
+                    enemySpawnerCollisions.Add(enemySpawner);
+                }
+            }
+
+            if (enemySpawnerCollisionSides.Contains("bottom") && (link.state is LinkMoveDownState || link.state is LinkIdleDownState))
+            {
+                link.state = new LinkHurtDownState(link);
+                link.HealthStateMachine.BeHurt();
+            }
+            else if (enemySpawnerCollisionSides.Contains("top") && (link.state is LinkMoveUpState || link.state is LinkIdleUpState))
+            {
+                link.state = new LinkHurtUpState(link);
+                link.HealthStateMachine.BeHurt();
+            }
+            else if (enemySpawnerCollisionSides.Contains("left") && (link.state is LinkMoveLeftState || link.state is LinkIdleLeftState))
+            {
+                link.state = new LinkHurtLeftState(link);
+                link.HealthStateMachine.BeHurt();
+            }
+            else if (enemySpawnerCollisionSides.Contains("right") && (link.state is LinkMoveRightState || link.state is LinkIdleRightState))
+            {
+                link.state = new LinkHurtRightState(link);
+                link.HealthStateMachine.BeHurt();
+            }
+            else if ((enemySpawnerCollisionSides.Contains("bottom") && link.state is LinkWoodSwordDownState) ||
+                (enemySpawnerCollisionSides.Contains("top") && link.state is LinkWoodSwordUpState) ||
+                (enemySpawnerCollisionSides.Contains("left") && link.state is LinkWoodSwordLeftState) ||
+                (enemySpawnerCollisionSides.Contains("right") && link.state is LinkWoodSwordRightState))
+            {
+                foreach (IEnemySpawner enemySpawner in enemySpawnerCollisions)
+                {
+                    enemySpawner.HealthStateMachine.BeHurt();
                 }
             }
         }

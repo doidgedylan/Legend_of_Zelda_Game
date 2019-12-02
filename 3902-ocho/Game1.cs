@@ -9,6 +9,7 @@ using Legend_of_zelda_game.Commands;
 using Legend_of_zelda_game.GameStates;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Input;
 
 namespace Legend_of_zelda_game
 {
@@ -24,6 +25,8 @@ namespace Legend_of_zelda_game
         private MouseController gameplayMouseController;
         private KeyboardController titleScreenKeyboardController;
         private MouseController titleScreenMouseController;
+        private KeyboardController gameModeSelectScreenKeyboardController;
+        private MouseController gameModeSelectScreenMouseController;
         private Link link;
         private ISet<ICollectable> collectables;
         private ISet<IEnemies> enemies;
@@ -36,6 +39,7 @@ namespace Legend_of_zelda_game
         public Room[] Rooms { get; set; }
         public Room CurrentRoom { get; set; }
         public Room ItemSelectRoom { get; set; }
+        public bool HordeMode;
         //private Song bgm;
         private SoundEffect effect;
 
@@ -48,6 +52,7 @@ namespace Legend_of_zelda_game
             graphics.PreferredBackBufferHeight = 716;
             graphics.ApplyChanges();
             this.Rooms = new Room[NUMBER_OF_ROOMS];
+            HordeMode = false;
         }
 
         private void OnDeviceCreated(object sender, System.EventArgs e)
@@ -92,9 +97,9 @@ namespace Legend_of_zelda_game
             //MediaPlayer.IsRepeating = true;
 
 
-            effect = Content.Load<SoundEffect>("OverworldSound");
-            SoundEffectInstance instance = effect.CreateInstance();
-            instance.Play();
+            //effect = Content.Load<SoundEffect>("OverworldSound");
+            //SoundEffectInstance instance = effect.CreateInstance();
+            //instance.Play();
 
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
@@ -104,12 +109,22 @@ namespace Legend_of_zelda_game
             //Set up title screen keyboard and mouse controller
             titleScreenKeyboardController = new KeyboardController();
             titleScreenMouseController = new MouseController();
-            titleScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGamePlayCommand(this));
             titleScreenKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new DoNothingCommand());
+            titleScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGameModeSelectScreenCommand(this));
             titleScreenKeyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
-            titleScreenKeyboardController.RegisterCommand(Buttons.R, new DoNothingCommand());
-            titleScreenMouseController.RegisterCommand(Buttons.LeftClick, new SwitchToGamePlayCommand(this));
+            titleScreenMouseController.RegisterCommand(Buttons.LeftClick, new SwitchToGameModeSelectScreenCommand(this));
             titleScreenMouseController.RegisterCommand(Buttons.RightClick, new DoNothingCommand());
+
+            //Set up game mode select screen keyboard and mouse controller
+            gameModeSelectScreenKeyboardController = new KeyboardController();
+            gameModeSelectScreenMouseController = new MouseController();
+            gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.NoButtonsPressed, new DoNothingCommand());
+            gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.Enter, new SwitchToGamePlayCommand(this));
+            gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.Q, new ExitCommand(this));
+            gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.Down, new SwitchHordeAndNormalModeCommand(StateManager.GetGameModeSelectState()));
+            gameModeSelectScreenKeyboardController.RegisterCommand(Buttons.Up, new SwitchHordeAndNormalModeCommand(StateManager.GetGameModeSelectState()));
+            gameModeSelectScreenMouseController.RegisterCommand(Buttons.LeftClick, new SwitchToGamePlayCommand(this));
+            gameModeSelectScreenMouseController.RegisterCommand(Buttons.RightClick, new DoNothingCommand());
 
             //Set up gameplay keyboard and mouse controller
             gameplayKeyboardController = new KeyboardController();
@@ -196,10 +211,25 @@ namespace Legend_of_zelda_game
         {
             GraphicsDevice.Clear(Color.Black);
 
-            if (CurrentState is TitleScreenState)
+            if (CurrentState is TitleScreenState || titleScreenKeyboardController.currentState.IsKeyDown(Keys.Enter) ||
+                titleScreenMouseController.currentState.LeftButton == ButtonState.Pressed)
             {
                 titleScreenKeyboardController.Update();
                 titleScreenMouseController.Update();
+            }
+            else if (CurrentState is GameModeSelectScreenState || gameModeSelectScreenKeyboardController.currentState.IsKeyDown(Keys.Enter) ||
+                gameModeSelectScreenMouseController.currentState.LeftButton == ButtonState.Pressed)
+            {
+                if (!gameModeSelectScreenKeyboardController.currentState.IsKeyDown(Keys.Down) &&
+                !gameModeSelectScreenKeyboardController.currentState.IsKeyDown(Keys.Up))
+                {
+                    gameModeSelectScreenKeyboardController.Update();
+                    gameModeSelectScreenMouseController.Update();
+                } 
+                else
+                {
+                    gameModeSelectScreenKeyboardController.UpdateStates();
+                }
             }
             else if (!(link.state is LinkWoodSwordDownState) && !(link.state is LinkWoodSwordUpState) &&
                 !(link.state is LinkWoodSwordLeftState) && !(link.state is LinkWoodSwordRightState) &&
