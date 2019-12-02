@@ -206,5 +206,11 @@
       <Location>500 150</Location>
     </Item>
 
+    <!--Enemy Spawners-->
+    <Item>
+      <ObjectType>KeeseSpawner</ObjectType>
+      <ObjectName>KeeseSpawner</ObjectName>
+      <Location>101 101</Location>
+    </Item>
   </Asset>
 </XnaContent>

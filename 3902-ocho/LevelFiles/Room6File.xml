@@ -207,5 +207,11 @@
       <Location>150 300</Location>
     </Item>
 
+    <!--Enemy Spawners-->
+    <Item>
+      <ObjectType>StalfosSpawner</ObjectType>
+      <ObjectName>StalfosSpawner</ObjectName>
+      <Location>101 101</Location>
+    </Item>
   </Asset>
 </XnaContent>

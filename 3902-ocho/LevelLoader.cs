@@ -219,8 +219,20 @@ namespace Legend_of_zelda_game
                     case "Wallmaster":
                         this.Enemies.Add(new EnemiesWallmasterSprite(spriteBatch, Location));
                         break;
+                    case "GelSpawner":
+                        this.EnemySpawners.Add(new EnemySpawner(spriteBatch, Location, "Gel"));
+                        break;
+                    case "GoriyaSpawner":
+                        this.EnemySpawners.Add(new EnemySpawner(spriteBatch, Location, "Goriya"));
+                        break;
+                    case "KeeseSpawner":
+                        this.EnemySpawners.Add(new EnemySpawner(spriteBatch, Location, "Keese"));
+                        break;
                     case "StalfosSpawner":
                         this.EnemySpawners.Add(new EnemySpawner(spriteBatch, Location, "Stalfos"));
+                        break;
+                    case "WallmasterSpawner":
+                        this.EnemySpawners.Add(new EnemySpawner(spriteBatch, Location, "Wallmaster"));
                         break;
                     case "Link":
                         //this.Link = new Link(spriteBatch, Location);

@@ -240,5 +240,12 @@
     </Item>
 
     <!--Enemies-->
+
+    <!--Enemy Spawners-->
+    <Item>
+      <ObjectType>WallmasterSpawner</ObjectType>
+      <ObjectName>WallmasterSpawner</ObjectName>
+      <Location>101 101</Location>
+    </Item>
   </Asset>
 </XnaContent>

@@ -145,17 +145,24 @@
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 96</Location>
+      <Location>201 101</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
-      <Location>96 224</Location>
+      <Location>101 224</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Keese</ObjectName>
       <Location>160 128</Location>
+    </Item>
+
+    <!--Enemy Spawners-->
+    <Item>
+      <ObjectType>KeeseSpawner</ObjectType>
+      <ObjectName>KeeseSpawner</ObjectName>
+      <Location>101 101</Location>
     </Item>
   </Asset>
 </XnaContent>

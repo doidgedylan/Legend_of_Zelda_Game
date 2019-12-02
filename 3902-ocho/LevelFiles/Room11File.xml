@@ -189,5 +189,12 @@
       <ObjectName>Goriya</ObjectName>
       <Location>150 300</Location>
     </Item>
+
+    <!--Enemy Spawners-->
+    <Item>
+      <ObjectType>GoriyaSpawner</ObjectType>
+      <ObjectName>GoriyaSpawner</ObjectName>
+      <Location>101 101</Location>
+    </Item>
   </Asset>
 </XnaContent>

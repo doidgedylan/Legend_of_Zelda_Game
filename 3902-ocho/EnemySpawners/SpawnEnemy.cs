@@ -39,8 +39,20 @@ namespace Legend_of_zelda_game.EnemySpawners
             {
                 switch (enemyType)
                 {
+                    case "Gel":
+                        enemies.Add(new EnemiesGelSprite(spriteBatch, location));
+                        break;
+                    case "Goriya":
+                        enemies.Add(new EnemiesGoriyaSprite(spriteBatch, location));
+                        break;
+                    case "Keese":
+                        enemies.Add(new EnemiesKeeseSprite(spriteBatch, location));
+                        break;
                     case "Stalfos":
                         enemies.Add(new EnemiesStalfosSprite(spriteBatch, location));
+                        break;
+                    case "Wallmaster":
+                        enemies.Add(new EnemiesWallmasterSprite(spriteBatch, location));
                         break;
                     default:
                         break;

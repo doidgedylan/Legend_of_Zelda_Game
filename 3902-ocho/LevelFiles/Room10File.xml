@@ -233,5 +233,12 @@
       <ObjectName>Gel</ObjectName>
       <Location>650 400</Location>
     </Item>
+
+    <!--Enemy Spawners-->
+    <Item>
+      <ObjectType>GelSpawner</ObjectType>
+      <ObjectName>GelSpawner</ObjectName>
+      <Location>101 101</Location>
+    </Item>
   </Asset>
 </XnaContent>
