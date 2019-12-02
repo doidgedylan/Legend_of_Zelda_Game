@@ -102,7 +102,7 @@ namespace Legend_of_zelda_game
             //instance.Play();
             string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Magical.wav";
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
-            player.Play();
+            //player.Play();
 
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));

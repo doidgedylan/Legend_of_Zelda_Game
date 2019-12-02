@@ -41,7 +41,7 @@ namespace Legend_of_zelda_game.Blocks
                     height = 30;
                     x = (int)location.X - 25;
                     y = (int)location.Y - 8;
-                    sourceRectangle = new Rectangle(0, 0, width, height);
+                    sourceRectangle = new Rectangle(0, 20, width, height);
                     LocationRect = new Rectangle(x, y, width * scale, height * scale);
                     break;
                 case Direction.Down:
@@ -50,7 +50,7 @@ namespace Legend_of_zelda_game.Blocks
                     x = (int)location.X - 25;
                     y = (int)location.Y - 4;
                     LocationRect = new Rectangle(x, y, width * scale, height * scale);
-                    sourceRectangle = new Rectangle(0, 130, width, height);
+                    sourceRectangle = new Rectangle(0, 154, width, height);
                     break;
                 case Direction.Left:
                     width = 30;
@@ -58,7 +58,7 @@ namespace Legend_of_zelda_game.Blocks
                     x = (int)location.X - 8;
                     y = (int)location.Y - 15;
                     LocationRect = new Rectangle(x, y, width * scale, height * scale);
-                    sourceRectangle = new Rectangle(0, 30, width, height);
+                    sourceRectangle = new Rectangle(20, 51, width, height);
                     break;
                 case Direction.Right:
                     width = 30;
@@ -66,7 +66,7 @@ namespace Legend_of_zelda_game.Blocks
                     x = (int)location.X - 2;
                     y = (int)location.Y - 15;
                     LocationRect = new Rectangle(x, y, width * scale, height * scale);
-                    sourceRectangle = new Rectangle(0, 80, width, height);
+                    sourceRectangle = new Rectangle(0, 103, width, height);
                     break;
                 default:
                     width = 50;
