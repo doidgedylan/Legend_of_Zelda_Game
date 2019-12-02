@@ -156,7 +156,7 @@ namespace Legend_of_zelda_game
             gameplayKeyboardController.RegisterCommand(Buttons.D2, new LoadRoomCommand(this, 2));
             gameplayKeyboardController.RegisterCommand(Buttons.D3, new LoadRoomCommand(this, 3));
             gameplayKeyboardController.RegisterCommand(Buttons.D4, new LoadRoomCommand(this, 4));
-            gameplayKeyboardController.RegisterCommand(Buttons.D5, new LoadRoomCommand(this, 5));
+            gameplayKeyboardController.RegisterCommand(Buttons.D5, new LoadRoomCommand(this, 15));//new LoadRoomCommand(this, 5));
             gameplayKeyboardController.RegisterCommand(Buttons.D6, new LoadRoomCommand(this, 6));
             gameplayKeyboardController.RegisterCommand(Buttons.D7, new LoadRoomCommand(this, 7));
             gameplayKeyboardController.RegisterCommand(Buttons.D8, new LoadRoomCommand(this, 8));

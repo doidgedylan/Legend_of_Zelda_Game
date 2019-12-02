@@ -8,19 +8,38 @@ namespace Legend_of_zelda_game.GameStates
     public class WinningState : IGameState
     {
         private Game1 game;
-        private SpriteFont font;
+        private Link link;
+        private Texture2D spriteSheet;
         private SpriteBatch spriteBatch;
-        public WinningState(Game1 game, SpriteBatch spriteBatch, SpriteFont font)
+        private SpriteFont font;
+        private int timer;
+
+        public WinningState(Game1 game, Link link, SpriteBatch spriteBatch, SpriteFont font)
         {
             this.game = game;
+            this.link = link;
+            spriteSheet = Texture2DStorage.GetYouWinSpriteSheet();
             this.font = font;
             this.spriteBatch = spriteBatch;
         }
         public void Update()
         {
-            game.CurrentRoom.Background.Draw();
-            spriteBatch.DrawString(font, "You Win!!!", new Vector2(300, 250), Color.Black);
-            spriteBatch.DrawString(font, "Press R to replay, or Q to quit", new Vector2(300, 350), Color.Black);
+            if (timer < 50)
+            {
+                timer++;
+                game.CurrentRoom.Background.Draw();
+                
+            }
+            else
+            {
+                game.GraphicsDevice.Clear(Color.Black);
+                spriteBatch.Draw(spriteSheet, new Rectangle(100, 100, 600, 250), new Rectangle(160, 120, 290, 50), Color.White);
+                spriteBatch.DrawString(font, "Press R to Replay", new Vector2(250, 600), Color.White);
+                spriteBatch.DrawString(font, "Press Q to Quit", new Vector2(250, 625), Color.White);
+            }
+
+            link.state = new LinkWinState(link);
+            link.Update();
         }
     }
 }

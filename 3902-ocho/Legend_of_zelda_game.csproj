@@ -108,6 +108,7 @@
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Interfaces\UnpauseCommand.cs" />
     <Compile Include="LevelLoader.cs" />
+    <Compile Include="LinkState\LinkWinState.cs" />
     <Compile Include="Projectiles\SharedProjectileMethods.cs" />
     <Compile Include="LinkClasses\SharedLinkProjectileMethods.cs" />
     <Compile Include="LinkClasses\LinkPortals.cs" />

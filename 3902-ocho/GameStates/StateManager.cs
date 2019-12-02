@@ -27,7 +27,7 @@ namespace Legend_of_zelda_game.GameStates
             this.gameModeSelectScreenState = new GameModeSelectScreenState(game);
             this.gameplayState = new GameplayState(game, link);
             this.gameOverState = new GameOverState(game, spriteBatch, font);
-            this.winningState = new WinningState(game, spriteBatch, font);
+            this.winningState = new WinningState(game, link, spriteBatch, font);
             this.itemSelectState = new ItemSelectState(game, link, spriteBatch, font);
         }
 

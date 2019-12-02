@@ -8,7 +8,7 @@ namespace Legend_of_zelda_game.GameStates
     public class GameOverState : IGameState
     {
         private Game1 game;
-        Texture2D spriteSheet;
+        private Texture2D spriteSheet;
         private SpriteFont font;
         private SpriteBatch spriteBatch;
         private int timer;

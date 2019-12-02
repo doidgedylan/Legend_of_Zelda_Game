@@ -21,6 +21,7 @@ namespace Legend_of_zelda_game
         private static Texture2D lockedDoorsSpriteSheet;
         private static Texture2D enemySpawnerSpriteSheet;
         private static Texture2D youDiedSpriteSheet;
+        private static Texture2D youWinSpriteSheet;
 
         public Texture2DStorage()
         {
@@ -44,6 +45,7 @@ namespace Legend_of_zelda_game
             lockedDoorsSpriteSheet = content.Load<Texture2D>("LockedDoorsSpriteSheet");
             enemySpawnerSpriteSheet = content.Load<Texture2D>("EnemySpawnerSprite");
             youDiedSpriteSheet = content.Load<Texture2D>("YouDied");
+            youWinSpriteSheet = content.Load<Texture2D>("YouWin");
         }
 
         public static Texture2D GetLinkSpriteSheet()
@@ -122,6 +124,11 @@ namespace Legend_of_zelda_game
         public static Texture2D GetYouDiedSpriteSheet()
         {
             return youDiedSpriteSheet;
+        }
+
+        public static Texture2D GetYouWinSpriteSheet()
+        {
+            return youWinSpriteSheet;
         }
     }
 }
