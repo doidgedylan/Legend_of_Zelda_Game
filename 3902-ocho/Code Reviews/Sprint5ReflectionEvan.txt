@@ -1,0 +1,6 @@
+﻿Evan's Sprint 5 Reflection
+
+At the start of the sprint, we figured out all we had left to accomplish. This was mostly bug fixes and a couple new additions.
+This workload wasn't split up super evenly, as some team members had more time and energy than others. More coordination could've
+been done earlier in the sprint to ensure that all work items could be completed well, but this didn't occur in time for things to be done
+smoothly.

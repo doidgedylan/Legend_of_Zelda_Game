@@ -299,6 +299,7 @@
     <Content Include="Code Reviews\Sprint4XinyiMaintainability.txt" />
     <Content Include="Code Reviews\Sprint5DylanReadability.txt" />
     <Content Include="Code Reviews\Sprint5MasonMaintainability.txt" />
+    <Content Include="Code Reviews\Sprint5ReflectionEvan.txt" />
     <Content Include="Icon.ico" />
     <Content Include="LevelFiles\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />
