@@ -223,7 +223,7 @@
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>WaterBlock</ObjectName>
-      <Location>350 400</Location>
+      <Location>400 200</Location>
     </Item>
     <Item>
       <ObjectType>Block</ObjectType>
@@ -310,11 +310,6 @@
     <Item>
       <ObjectType>Block</ObjectType>
       <ObjectName>WaterBlock</ObjectName>
-      <Location>500 200</Location>
-    </Item>
-    <Item>
-      <ObjectType>Block</ObjectType>
-      <ObjectName>WaterBlock</ObjectName>
       <Location>450 250</Location>
     </Item>
     <Item>
@@ -387,17 +382,17 @@
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Stalfos</ObjectName>
-      <Location>250 150</Location>
+      <Location>150 150</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Stalfos</ObjectName>
-      <Location>200 250</Location>
+      <Location>500 300</Location>
     </Item>
     <Item>
       <ObjectType>Enemy</ObjectType>
       <ObjectName>Stalfos</ObjectName>
-      <Location>600 200</Location>
+      <Location>600 150</Location>
     </Item>
 
     <!--Enemy Spawners-->
