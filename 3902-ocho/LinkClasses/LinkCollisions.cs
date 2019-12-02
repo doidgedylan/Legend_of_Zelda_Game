@@ -19,11 +19,14 @@ namespace Legend_of_zelda_game.LinkClasses
             this.link = link;
         }
 
-        public void Update(ISet<ICollectable> collectables, ISet<IEnemies> enemies, ISet<IEnemySpawner> enemySpawners, ISet<IBlock> blocks, StateManager stateManager)
+        public void Update(ISet<ICollectable> collectables, ISet<IEnemies> enemies, ISet<IEnemySpawner> enemySpawners, ISet<IBlock> blocks, StateManager stateManager, bool HordeMode)
         {
             LinkCollisionCollectable(collectables);
             LinkCollisionEnemy(enemies);
-            LinkCollisionEnemySpawner(enemySpawners);
+            if (HordeMode)
+            {
+                LinkCollisionEnemySpawner(enemySpawners);
+            }
             LinkCollisionBlock(blocks, stateManager);
         }
 

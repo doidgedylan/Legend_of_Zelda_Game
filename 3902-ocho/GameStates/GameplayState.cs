@@ -105,8 +105,8 @@ namespace Legend_of_zelda_game.GameStates
             }
 
             //Update Link
-            link.LinkCollisions.Update(game.CurrentRoom.Collectables, game.CurrentRoom.Enemies, game.CurrentRoom.EnemySpawners, game.CurrentRoom.Blocks, game.StateManager);
-            link.LinkProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies, game.CurrentRoom.EnemySpawners);
+            link.LinkCollisions.Update(game.CurrentRoom.Collectables, game.CurrentRoom.Enemies, game.CurrentRoom.EnemySpawners, game.CurrentRoom.Blocks, game.StateManager, game.HordeMode);
+            link.LinkProjectiles.Update(game.CurrentRoom.LinkProjectiles, game.CurrentRoom.Enemies, game.CurrentRoom.EnemySpawners, game.HordeMode);
             link.LinkPortals.Update(game.CurrentRoom.LinkPortals, game.CurrentRoom.Blocks);
             link.Update();
         }
