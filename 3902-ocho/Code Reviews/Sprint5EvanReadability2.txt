@@ -1,0 +1,11 @@
+﻿Readability
+Author: Xinyi Zhao
+Date: 12/2/2019
+Sprint: 5
+Reviewing: LinkIdleUpState.cs
+Author of .cs file: Evan Standerwick
+Minutes: 10 min
+
+In every function the name are used straightforward and directly convey what they supposed to do, and formatting is readable. 
+All the functions are small and functionable which helps read. 
+

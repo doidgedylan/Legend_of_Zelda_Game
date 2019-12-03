@@ -1,0 +1,11 @@
+﻿Maintainability
+Author: Xinyi Zhao
+Date: 12/2/2019
+Sprint: 5
+Name of .cs: HUDBombNumbersSprite.cs
+Author of the .cs: Dylan Doidge
+Comments: Quality is good, and we can easily manage code and maintenance code. 
+The code is simple with a few variables and methods, and with high cohesion with the interfaces and the main class.
+Although there are some bigger functions, the switch case make the functions maintainable.
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change: 
+If we add more rectangles for the sprite, the general logic will not be affected.
