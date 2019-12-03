@@ -1,0 +1,12 @@
+﻿Author: Mason Rye
+Date: 12/2/19
+Sprint: 5
+Name of reviewed file: HUDCommonMethods.cs
+Author of reviewed file: Dylan Doidge
+Minutes to complete review: 15
+Comments:
+	-The class is kind of cohesive due to the fact it focuses on producing methods used only by HUD members and those
+	methods mostly have to due with obtaining the numbers for links collectables and displaying them in the HUD
+	-The class is very easy to read and I know exactly which method does which helps to be maintainted in the
+	future
+	-The only change is the file needs to be added to the folder namespace.

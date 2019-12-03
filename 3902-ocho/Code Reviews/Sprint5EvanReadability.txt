@@ -1,0 +1,13 @@
+﻿Author: Mason Rye
+Date: 11/11/19
+Sprint: 4
+Name of reviewed file: LockedDoor.cs
+Author of reviewed file: Evan Standerwick
+Minutes to complete review: 15
+Comments:
+	-Overall it looks pretty readable:
+		-All the methods are named aproppiatly.
+		-Variables seem to be named correctly.
+	-I know what each piece of code does at first glance.
+	-One change would to set the rectangles after the switch to reduce the amount of 
+	redundent code.

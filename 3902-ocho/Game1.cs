@@ -7,11 +7,7 @@ using System.Xml;
 using Legend_of_zelda_game.Controllers;
 using Legend_of_zelda_game.Commands;
 using Legend_of_zelda_game.GameStates;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
-using System;
-//using SharpDX.MediaFoundation.Topology;
 
 namespace Legend_of_zelda_game
 {
@@ -36,13 +32,13 @@ namespace Legend_of_zelda_game
         private ISet<IBlock> blocks;
         private IBackground background;
         private ISet<IHUD> headsUpDisplay;
+        private System.Media.SoundPlayer player;
         public IGameState CurrentState { get; set; }
         public StateManager StateManager { get; set; }
         public Room[] Rooms { get; set; }
         public Room CurrentRoom { get; set; }
         public Room ItemSelectRoom { get; set; }
         public bool HordeMode;
-        
 
         public Game1()
         {
@@ -89,12 +85,9 @@ namespace Legend_of_zelda_game
             SelectRoom(2);
             ItemSelectRoom = new Room(0, spriteBatch);
 
-           
             string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Triforce Piece Obtained.wav";
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
-            player.Play();
+            player = new System.Media.SoundPlayer(path);
             player.PlayLooping();
-
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));
             StateManager = new StateManager(this, spriteBatch, font, link);
