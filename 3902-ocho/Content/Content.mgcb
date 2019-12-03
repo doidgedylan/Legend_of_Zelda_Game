@@ -183,12 +183,6 @@
 /processorParam:TextureFormat=Color
 /build:NPCOldMan.png
 
-#begin OverworldSound.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:OverworldSound.mp3
-
 #begin portals.png
 /importer:TextureImporter
 /processor:TextureProcessor

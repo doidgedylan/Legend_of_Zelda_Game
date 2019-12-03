@@ -1,4 +1,5 @@
 ﻿using Legend_of_zelda_game.Interfaces;
+using System.IO;
 using static Legend_of_zelda_game.Blocks.Door;
 
 namespace Legend_of_zelda_game.GameStates
@@ -14,6 +15,10 @@ namespace Legend_of_zelda_game.GameStates
             this.originalBackground = originalBackground;
             this.destinationBackground = destinationBackground;
             this.direction = direction;
+
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Door Opened.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
+            player.Play();
         }
         public void Update()
         {

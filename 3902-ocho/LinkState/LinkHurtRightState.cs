@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Legend_of_zelda_game.LinkSprites;
+using System.IO;
 
 namespace Legend_of_zelda_game
 {
@@ -17,16 +18,23 @@ namespace Legend_of_zelda_game
             currentFrame = 0;
             totalFrames = 30;
             endPosition = 0;
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Enemy Zapped.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
+            player.Play();
+
+            
         }
 
         public void Update()
         {
+
             LinkHurtRightSprite linkHurtRightSprite = new LinkHurtRightSprite(link);
 
             currentFrame++;
             if (currentFrame <= 15 && link.Location.X >= endPosition)
             {
                 link.Location = Vector2.Subtract(link.Location, new Vector2(link.hurtSpeed, 0));
+
             }
             else if (link.Location.X <= endPosition)
             {
@@ -42,6 +50,7 @@ namespace Legend_of_zelda_game
                 link.state = new LinkIdleRightState(link);
                 link.tint = Color.White;
             }
+            
         }
     }
 }

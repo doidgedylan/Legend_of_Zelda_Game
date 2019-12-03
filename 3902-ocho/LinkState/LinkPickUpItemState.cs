@@ -1,5 +1,6 @@
 ﻿using Legend_of_zelda_game.LinkSprites;
 using Microsoft.Xna.Framework;
+using System.IO;
 
 namespace Legend_of_zelda_game
 {
@@ -18,6 +19,10 @@ namespace Legend_of_zelda_game
             this.collectable.LocationRect = new Rectangle((int)link.Location.X, (int)link.Location.Y - collectable.LocationRect.Height, collectable.LocationRect.Width, collectable.LocationRect.Height);
             currentFrame = 0;
             totalFrames = 100;
+
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Item Obtained.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
+            player.Play();
         }
 
         public void Update()
@@ -42,6 +47,7 @@ namespace Legend_of_zelda_game
                 currentFrame = 0;
                 link.state = new LinkIdleDownState(link);
             }
+
         }
     }
 }

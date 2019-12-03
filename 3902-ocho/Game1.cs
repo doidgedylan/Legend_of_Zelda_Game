@@ -42,8 +42,7 @@ namespace Legend_of_zelda_game
         public Room CurrentRoom { get; set; }
         public Room ItemSelectRoom { get; set; }
         public bool HordeMode;
-        //private Song bgm;
-        //private SoundEffect effect;
+        
 
         public Game1()
         {
@@ -90,19 +89,11 @@ namespace Legend_of_zelda_game
             SelectRoom(2);
             ItemSelectRoom = new Room(0, spriteBatch);
 
-            /* The code commented out below is the background sound. Currently, the background
-             * sound does not work for some group members. The professor has been contacted and
-             * a resolution cannot currently be found.
-             */
-            //bgm = Content.Load<Song>("OverworldSound");
-            //MediaPlayer.Play(bgm);
-            //MediaPlayer.IsRepeating = true;
-            //effect = Content.Load<SoundEffect>("OverworldSound");
-            //SoundEffectInstance instance = effect.CreateInstance();
-            //instance.Play();
-            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Magical.wav";
+           
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Triforce Piece Obtained.wav";
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
-            //player.Play();
+            player.Play();
+            player.PlayLooping();
 
 
             this.link = new Link(spriteBatch, new Vector2(390, 570));

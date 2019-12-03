@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Legend_of_zelda_game.LinkSprites;
+using System.IO;
 
 namespace Legend_of_zelda_game
 {
@@ -17,6 +18,11 @@ namespace Legend_of_zelda_game
             currentFrame = 0;
             totalFrames = 30;
             endPosition = 750;
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Enemy Zapped.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
+            player.Play();
+
+            
         }
 
         public void Update()
@@ -43,6 +49,7 @@ namespace Legend_of_zelda_game
                 link.state = new LinkIdleLeftState(link);
                 link.tint = Color.White;
             }
+            
         }
     }
 }

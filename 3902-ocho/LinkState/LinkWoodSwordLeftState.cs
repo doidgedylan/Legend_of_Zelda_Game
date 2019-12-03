@@ -1,4 +1,5 @@
 ﻿using Legend_of_zelda_game.LinkSprites;
+using System.IO;
 
 namespace Legend_of_zelda_game
 {
@@ -14,6 +15,10 @@ namespace Legend_of_zelda_game
             this.link = link;
             currentFrame = 0;
             totalFrames = 20;
+
+            string path = Directory.GetCurrentDirectory() + "\\The Legend of Zelda Cartoon Sound Effects\\The Legend of Zelda Cartoon Sound Effects Sword Zap SFX.wav";
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(path);
+            player.Play();
         }
 
         public void Update()
