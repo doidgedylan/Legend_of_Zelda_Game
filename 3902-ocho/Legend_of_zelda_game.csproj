@@ -74,6 +74,7 @@
     <Compile Include="GameStates\ScrollingTransitionState.cs" />
     <Compile Include="GameStates\StateManager.cs" />
     <Compile Include="GameStates\WinningState.cs" />
+    <Compile Include="HUD\HUDPauseMapSprite.cs" />
     <Compile Include="HUD\HUDArrowSprite.cs" />
     <Compile Include="HUD\HUDBackgroundSprite.cs" />
     <Compile Include="HUD\HUDBombNumbersSprite.cs" />
@@ -300,6 +301,8 @@
     <Content Include="Code Reviews\Sprint5DylanReadability.txt" />
     <Content Include="Code Reviews\Sprint5MasonMaintainability.txt" />
     <Content Include="Code Reviews\Sprint5ReflectionEvan.txt" />
+    <Content Include="Code Reviews\Sprint5MasonReadability.txt" />
+    <Content Include="Code Reviews\Sprint5XinyiMaintainability.txt" />
     <Content Include="Icon.ico" />
     <Content Include="LevelFiles\Room0File.xml" />
     <Content Include="LevelFiles\Room10File.xml" />

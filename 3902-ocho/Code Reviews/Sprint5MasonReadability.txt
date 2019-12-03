@@ -1,0 +1,10 @@
+﻿Author: Dylan Doidge
+Date: 12/2/19
+Sprint: 5
+Name of reviewed file: SpawnEnemy.cs
+Author of reviewed file: Mason Rye
+Minutes to complete review: 15
+Specific comments: The class does not have many varaibles to keep track of which is easier for the viewer to read.
+Also, there is only one update method to worry about where a timer is determined, and the spawner will spawn enemies
+of a certain type based on the room.  Overall, the class is simple and to the point as to what it does, and it does
+it efficiently.
