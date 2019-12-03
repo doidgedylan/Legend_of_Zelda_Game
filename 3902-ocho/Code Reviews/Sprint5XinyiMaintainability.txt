@@ -1,0 +1,12 @@
+﻿Author: Dylan Doidge
+Date: 12/2/19
+Sprint: 5
+Name of reviewed file: EnemiesGelSprite.cs
+Author of reviewed file: Xinyi Zhao
+Specific comments on code quality: The class looks to be cohesive since the methods involved, Update and Draw, have their own specific purposes 
+and only contribute to that one purpose. The Update method changes the frames for the animation while the Draw method takes the dimensions and
+places the rectangle in the game window.  The class also has low coupling since it references a minimal amount of other dependencies.  Update is
+reduced by the given classes, ApplyAnimation and ApplyMovement, so it is easier to follow, and someone could change these methods instead of the
+update method itself.
+Hypothetical changes: There could be a reduced number of dependencies at the beginning of the class to make maintainability easier, but
+it depends on what is absolutely necessary versus what is used only to make implementation simpler.
